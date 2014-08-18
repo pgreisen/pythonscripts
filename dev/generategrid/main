@@ -1,0 +1,26 @@
+import sys
+import numpy as np
+
+def get_coordinates(inputfile):
+
+    coordinates = np.array([])
+
+    help(np.insert)
+
+    with open(inputfile) as f:
+        for line in f:
+            x = str(line[30:38]).rstrip()
+            y = str(line[38:46]).rstrip()
+            z = str(line[46:54]).rstrip()
+            coordinates.append( [ float(x), float(y), float(z) ] )
+    print "coordinates are ", coordinates
+
+
+def main():
+    inputfile = sys.argv[1]
+    get_coordinates( inputfile )
+
+
+if __name__ == "__main__":
+    main()
+
