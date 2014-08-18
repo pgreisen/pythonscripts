@@ -1,0 +1,45 @@
+<ROSETTASCRIPTS>
+
+        <TASKOPERATIONS>
+
+          <InitializeFromCommandline name=init/>
+
+          <LimitAromaChi2 name=limchi2/>
+
+          <RestrictToRepacking name=repack_only />
+
+        </TASKOPERATIONS>
+
+
+ <SCOREFXNS>
+   Optional any score function could be used here
+   It is only important for the IFE
+   <enzdes weights=enzdes />
+
+</SCOREFXNS>
+
+
+      <MOVERS>
+
+	<TaskAwareMinMover name=min bb=0 chi=1 jump=1 scorefxn=enzdes task_operations=init/>
+	<ScoreMover name=score scorefxn=enzdes verbose=0 />
+
+        </MOVERS>
+
+
+        <FILTERS>
+
+       </FILTERS>
+
+        <PROTOCOLS>
+
+                Add filter=interfE/>
+                Add filter=SC/>
+		Add filter=packstat/>
+		Add filter=sasa/>
+		<Add mover=min/>
+		<Add mover=score/>
+        </PROTOCOLS>
+
+<OUTPUT scorefxn=enzdes /> 
+</ROSETTASCRIPTS>

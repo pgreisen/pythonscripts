@@ -1,0 +1,162 @@
+
+# We use this template
+trajin MD_1/mdcrd
+trajin MD_2/mdcrd
+
+# Remove water
+##strip :WAT
+
+# Removes water, output stripped topology as stripped.prmtop
+strip :WAT outprefix stripped
+
+# first center the solute by itself
+center origin :1-177
+# now image the whole system about the centered origin
+image origin center
+
+##average avg.pdb pdb
+
+reference avg.pdb
+
+dihedral TRPchi1_24  :24@N :24@CA :24@CB :24@CG out 24_TRP_chi_1_chi.dat
+dihedral TRPchi2_24  :24@CA :24@CB :24@CG :24@CD1 out 24_TRP_chi_2_chi.dat
+dihedral TYRchi1_133  :133@N :133@CA :133@CB :133@CG out 133_TYR_chi_1_chi.dat
+dihedral TYRchi2_133  :133@CA :133@CB :133@CG :133@CD1 out 133_TYR_chi_2_chi.dat
+dihedral PHEchi1_20  :20@N :20@CA :20@CB :20@CG out 20_PHE_chi_1_chi.dat
+dihedral PHEchi2_20  :20@CA :20@CB :20@CG :20@CD1 out 20_PHE_chi_2_chi.dat
+dihedral THRchi1_57  :57@N :57@CA :57@CB :57@OG1 out 57_THR_chi_1_chi.dat
+dihedral PHEchi1_45  :45@N :45@CA :45@CB :45@CG out 45_PHE_chi_1_chi.dat
+dihedral PHEchi2_45  :45@CA :45@CB :45@CG :45@CD1 out 45_PHE_chi_2_chi.dat
+dihedral LEUchi1_37  :37@N :37@CA :37@CB :37@CG out 37_LEU_chi_1_chi.dat
+dihedral LEUchi2_37  :37@CA :37@CB :37@CG :37@CD1 out 37_LEU_chi_2_chi.dat
+dihedral THRchi1_117  :117@N :117@CA :117@CB :117@OG1 out 117_THR_chi_1_chi.dat
+dihedral SERchi1_137  :137@N :137@CA :137@CB :137@OG out 137_SER_chi_1_chi.dat
+dihedral ILEchi1_41  :41@N :41@CA :41@CB :41@CG1 out 41_ILE_chi_1_chi.dat
+dihedral ILEchi2_41  :41@CA :41@CB :41@CG1 :41@CD1 out 41_ILE_chi_2_chi.dat
+dihedral PHEchi1_77  :77@N :77@CA :77@CB :77@CG out 77_PHE_chi_1_chi.dat
+dihedral PHEchi2_77  :77@CA :77@CB :77@CG :77@CD1 out 77_PHE_chi_2_chi.dat
+dihedral METchi1_88  :88@N :88@CA :88@CB :88@CG out 88_MET_chi_1_chi.dat
+dihedral METchi2_88  :88@CA :88@CB :88@CG :88@SD out 88_MET_chi_2_chi.dat
+dihedral METchi3_88  :88@CB :88@CG :88@SD :88@CE out 88_MET_chi_3_chi.dat
+dihedral METchi1_73  :73@N :73@CA :73@CB :73@CG out 73_MET_chi_1_chi.dat
+dihedral METchi2_73  :73@CA :73@CB :73@CG :73@SD out 73_MET_chi_2_chi.dat
+dihedral METchi3_73  :73@CB :73@CG :73@SD :73@CE out 73_MET_chi_3_chi.dat
+dihedral PHEchi1_135  :135@N :135@CA :135@CB :135@CG out 135_PHE_chi_1_chi.dat
+dihedral PHEchi2_135  :135@CA :135@CB :135@CG :135@CD1 out 135_PHE_chi_2_chi.dat
+dihedral ASPchi1_102  :102@N :102@CA :102@CB :102@CG out 102_ASP_chi_1_chi.dat
+dihedral ASPchi2_102  :102@CA :102@CB :102@CG :102@OD1 out 102_ASP_chi_2_chi.dat
+dihedral TYRchi1_90  :90@N :90@CA :90@CB :90@CG out 90_TYR_chi_1_chi.dat
+dihedral TYRchi2_90  :90@CA :90@CB :90@CG :90@CD1 out 90_TYR_chi_2_chi.dat
+dihedral SERchi1_119  :119@N :119@CA :119@CB :119@OG out 119_SER_chi_1_chi.dat
+dihedral HISchi1_104  :104@N :104@CA :104@CB :104@CG out 104_HIS_chi_1_chi.dat
+dihedral HISchi2_104  :104@CA :104@CB :104@CG :104@ND1 out 104_HIS_chi_2_chi.dat
+
+# save the final "new" snapshot as a PDB file
+# for alternate veiwing
+
+#trajout last_frame.pdb PDB
+
+# need rms to remove rotation and translation
+rms first mass :1-176
+
+# rmsd per residue
+rms reference out TRP_24_rmsd.dat :24 nofit
+rms reference out TYR_133_rmsd.dat :133 nofit
+rms reference out PHE_20_rmsd.dat :20 nofit
+rms reference out THR_57_rmsd.dat :57 nofit
+rms reference out PHE_45_rmsd.dat :45 nofit
+rms reference out LEU_37_rmsd.dat :37 nofit
+rms reference out THR_117_rmsd.dat :117 nofit
+rms reference out SER_137_rmsd.dat :137 nofit
+rms reference out ILE_41_rmsd.dat :41 nofit
+rms reference out PHE_77_rmsd.dat :77 nofit
+rms reference out MET_88_rmsd.dat :88 nofit
+rms reference out MET_73_rmsd.dat :73 nofit
+rms reference out PHE_135_rmsd.dat :135 nofit
+rms reference out ASP_102_rmsd.dat :102 nofit
+rms reference out TYR_90_rmsd.dat :90 nofit
+rms reference out SER_119_rmsd.dat :119 nofit
+rms reference out HIS_104_rmsd.dat :104 nofit
+
+# need to check this command 06-11-2013
+
+
+            atomicfluct out rmsf.data :1-177 byres
+            atomicfluct out rmsf_ligand.data :177 byres
+            diffusion :177
+            
+
+atomicfluct out rmsf_protein.data :1-176 byres
+
+matrix mwcovar out mwcor.dat
+
+#rms reference cc
+matrix correl out cross_correlation.dat @CA
+
+
+
+# Hydrogen bond analysis
+# If a ligand is present you will need
+# add those atoms as well for the analysis
+#-- Donors from standard amino acids
+donor mask :GLN@OE1
+donor mask :GLN@NE2
+donor mask :ASN@OD1
+donor mask :ASN@ND2
+donor mask :TYR@OH
+donor mask :ASP@OD1
+donor mask :ASP@OD2
+donor mask :GLU@OE1
+donor mask :GLU@OE2
+donor mask :SER@OG
+donor mask :THR@OG1
+donor mask :HIS@ND1
+donor mask :HIE@ND1
+donor mask :HID@NE2
+
+#-- Acceptors from standard amino acids
+acceptor mask  :ASN@ND2 :ASN@HD21
+acceptor mask  :ASN@ND2 :ASN@HD22
+acceptor mask  :TYR@OH  :TYR@HH
+acceptor mask  :GLN@NE2 :GLN@HE21
+acceptor mask  :GLN@NE2 :GLN@HE22
+acceptor mask  :TRP@NE1 :TRP@HE1
+acceptor mask  :LYS@NZ  :LYS@HZ1
+acceptor mask  :LYS@NZ  :LYS@HZ2
+acceptor mask  :LYS@NZ  :LYS@HZ3
+acceptor mask  :SER@OG  :SER@HG
+acceptor mask  :THR@OG1 :THR@HG1
+acceptor mask  :ARG@NH2 :ARG@HH21
+acceptor mask  :ARG@NH2 :ARG@HH22
+acceptor mask  :ARG@NH1 :ARG@HH11
+acceptor mask  :ARG@NH1 :ARG@HH12
+acceptor mask  :ARG@NE  :ARG@HE
+acceptor mask  :HIS@NE2 :HIS@HE2
+acceptor mask  :HIE@NE2 :HIE@HE2
+acceptor mask  :HID@ND1 :HID@HD1
+acceptor mask  :HIP@ND1,NE2 :HIP@HE2,HD1
+
+#-- Backbone donors and acceptors for this particular molecule
+#   N-H for prolines do not exist so are not in the mask
+#
+donor mask @O
+
+# Here one has to exclude all the prolines from the analysis.
+acceptor mask  :2-11,13-16,20@N :2-20@H
+#Terminal residues have different atom names
+donor mask @OXT
+acceptor mask :1@N :1@H1
+acceptor mask :1@N :1@H2
+acceptor mask :1@N :1@H3
+
+# -- series hbt is just a placeholder to ensure we get the full analysis. If you don't
+# have the word series you don't get a full analysis.
+# print only hydrogen bonds that are resident for more than 5% of the simulation
+hbond print .05 series hbt
+
+
+
+
+quit
+
+        

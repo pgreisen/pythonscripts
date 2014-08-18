@@ -1,0 +1,2 @@
+Name	NR	chi1	chi2	chi3	chi4	chi5 
+ARG	25	-63.46	153.63	-175.58	-104.69	-0.14	

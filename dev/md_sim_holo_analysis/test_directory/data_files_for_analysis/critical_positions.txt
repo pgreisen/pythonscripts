@@ -1,0 +1,19 @@
+These rotamers changes: 
+RMSD is high for: 
+Residue ASP 102 with max RMSD 1.49
+Residue HIS 104 with max RMSD 1.94
+Residue ILE 41 with max RMSD 1.69
+Residue LEU 37 with max RMSD 2.16
+Residue MET 73 with max RMSD 2.56
+Residue MET 88 with max RMSD 2.03
+Residue PHE 135 with max RMSD 2.26
+Residue PHE 20 with max RMSD 1.31
+Residue PHE 45 with max RMSD 1.2
+Residue PHE 77 with max RMSD 1.3
+Residue SER 119 with max RMSD 1.52
+Residue SER 137 with max RMSD 1.41
+Residue THR 117 with max RMSD 1.44
+Residue THR 57 with max RMSD 2.21
+Residue TRP 24 with max RMSD 1.33
+Residue TYR 133 with max RMSD 1.38
+Residue TYR 90 with max RMSD 1.86
