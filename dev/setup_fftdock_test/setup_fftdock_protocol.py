@@ -8,7 +8,7 @@ class SetupFFTdockProtocol():
         self.side2 = "B"
         self.rot_step = 60
         self.nmodels = 10
-        self.trans_step = 0.7
+        self.trans_step = 1.0
         self.electrostatics = "false"
 
 
