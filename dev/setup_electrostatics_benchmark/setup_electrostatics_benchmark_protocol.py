@@ -28,9 +28,11 @@ class SetupElectrostaticsBenchmarkProtocol():
                 break
 
         if file_is_present == False :
-            exe = "~nivon/install/openbabel/bin/babel -imol ligand.mol -omol2 l.mol2"
-            subprocess.Popen(exe,stdin=PIPE, stdout=PIPE, stderr=STDOUT,shell=True).wait()
+            exe = "~nivon/install/openbabel/bin/babel -imol ligand.mol -omol2 ligand.mol2"
+            p = subprocess.Popen(exe,stdin=PIPE, stdout=PIPE, stderr=STDOUT,shell=True)# .wait()
             file_is_present = True
+            stdout, stderr = p.communicate()
+            print p, stderr
 
         os.chdir("../")
 
@@ -38,7 +40,7 @@ class SetupElectrostaticsBenchmarkProtocol():
             shutil.copy(self.rosetta_charge+"/ligand.mol2", dst)
         except:
             print "The ligand.mol2 is not generated"
-            #sys.exit()
+            sys.exit()
 
 
 

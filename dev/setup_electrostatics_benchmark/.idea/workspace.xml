@@ -26,8 +26,10 @@
       <file leaf-file-name="setup_electrostatics_benchmark_protocol.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setup_electrostatics_benchmark_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="56" selection-end="57" vertical-scroll-proportion="0.0330033" vertical-offset="0" max-vertical-offset="2220">
-              <folding />
+            <state line="30" column="84" selection-start="848" selection-end="848" vertical-scroll-proportion="0.4950495" vertical-offset="0" max-vertical-offset="2250">
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -308,8 +310,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setup_electrostatics_benchmark_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="56" selection-end="57" vertical-scroll-proportion="0.0330033" vertical-offset="0" max-vertical-offset="2220">
-          <folding />
+        <state line="30" column="84" selection-start="848" selection-end="848" vertical-scroll-proportion="0.4950495" vertical-offset="0" max-vertical-offset="2250">
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
