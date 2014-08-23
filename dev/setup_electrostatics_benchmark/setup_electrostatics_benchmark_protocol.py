@@ -59,7 +59,7 @@ class SetupElectrostaticsBenchmarkProtocol():
         # run the AmberTools implementation of the cmd.
         subprocess.Popen(exe,shell=True).wait()
 
-        exe_rosetta = "python ~/rosetta/rosetta_source/src/python/apps/public/molfile_to_params.py ligand_am1_bcc.mol2 -n LG1 -c"
+        exe_rosetta = "python ~/git_rosetta/Rosetta/main/source/src/python/apps/public/molfile_to_params.py ligand_am1_bcc.mol2 -n LG1 -c"
 
         subprocess.Popen(exe_rosetta,shell=True).wait()
 
