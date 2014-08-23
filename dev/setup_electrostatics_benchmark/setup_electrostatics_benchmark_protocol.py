@@ -52,7 +52,6 @@ class SetupElectrostaticsBenchmarkProtocol():
         self.get_missing_files( self.am1bcc )
 
         os.chdir( self.am1bcc )
-        import pdb; pdb.set_trace()
 
         exe = "~/amber12/bin/antechamber -i ligand.mol2 -fi mol2 -o ligand_am1_bcc.mol2 -fo mol2 -c bcc"
 
