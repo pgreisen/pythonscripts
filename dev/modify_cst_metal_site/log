@@ -1,0 +1,44 @@
+core.init: Rosetta version d06f0782250932a8b418fb0cd9c2b53e302f3275 2013-11-19 16:15:44 -0800 from git@github.com:RosettaCommons/main.git
+core.init: command: /Users/greisen/Library/Developer/Xcode/DerivedData/Rosetta-ewikrpnfibaqliatrefrmizrpewh/Build/Products/Release/rosetta_scripts -database /Users/greisen/git_rosetta/Rosetta/main/database @flags -parser:protocol sc_ife.xml -in:file:s rosetta_cst.pdb -overwrite -enzdes:cstfile constraint.cst
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=-1960616000 seed_offset=0 real_seed=-1960616000
+core.init.random: RandomGenerator:init: Normal mode, seed=-1960616000 RG_type=mt19937
+protocols.jd2.PDBJobInputter: Instantiate PDBJobInputter
+protocols.jd2.PDBJobInputter: PDBJobInputter::fill_jobs
+protocols.jd2.PDBJobInputter: pushed rosetta_cst.pdb nstruct index 1
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+protocols.jd2.JobDistributor: Parser is present.  Input mover will be overwritten with whatever the parser creates.
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB rosetta_cst.pdb
+core.chemical.ResidueTypeSet: Finished initializing fa_standard residue type set.  Created 9280 residue types
+core.io.pdb.file_data: [ WARNING ] discarding 6 atoms at position 1 in file rosetta_cst.pdb. Best match rsd_type:  ALA_p:NtermProteinFull
+core.io.pdb.file_data: [ WARNING ] discarding 2 atoms at position 2 in file rosetta_cst.pdb. Best match rsd_type:  ASP
+core.io.pdb.file_data: [ WARNING ] discarding 6 atoms at position 3 in file rosetta_cst.pdb. Best match rsd_type:  PRO
+core.io.pdb.file_data: [ WARNING ] discarding 4 atoms at position 4 in file rosetta_cst.pdb. Best match rsd_type:  GLU
+core.io.pdb.file_data: [ WARNING ] discarding 11 atoms at position 5 in file rosetta_cst.pdb. Best match rsd_type:  LYS
+core.io.pdb.file_data: [ WARNING ] discarding 10 atoms at position 6 in file rosetta_cst.pdb. Best match rsd_type:  ARG
+core.io.pdb.file_data: [ WARNING ] discarding 11 atoms at position 7 in file rosetta_cst.pdb. Best match rsd_type:  LYS
+core.io.pdb.file_data: [ WARNING ] discarding 8 atoms at position 8 in file rosetta_cst.pdb. Best match rsd_type:  LEU
+core.io.pdb.file_data: [ WARNING ] discarding 8 atoms at position 9 in file rosetta_cst.pdb. Best match rsd_type:  ILE
+core.io.pdb.file_data: [ WARNING ] discarding 6 atoms at position 10 in file rosetta_cst.pdb. Best match rsd_type:  GLN
+core.io.pdb.file_data: [ WARNING ] discarding 6 atoms at position 11 in file rosetta_cst.pdb. Best match rsd_type:  GLN
+core.io.pdb.file_data: [ WARNING ] discarding 6 atoms at position 12 in file rosetta_cst.pdb. Best match rsd_type:  GLN
+core.io.pdb.file_data: [ WARNING ] discarding 8 atoms at position 13 in file rosetta_cst.pdb. Best match rsd_type:  LEU
+core.io.pdb.file_data: [ WARNING ] discarding 6 atoms at position 14 in file rosetta_cst.pdb. Best match rsd_type:  VAL
+core.io.pdb.file_data: [ WARNING ] discarding 8 atoms at position 15 in file rosetta_cst.pdb. Best match rsd_type:  LEU
+core.io.pdb.file_data: [ WARNING ] discarding 8 atoms at position 16 in file rosetta_cst.pdb. Best match rsd_type:  LEU
+core.io.pdb.file_data: [ WARNING ] discarding 8 atoms at position 17 in file rosetta_cst.pdb. Best match rsd_type:  LEU
+core.io.pdb.file_data: [ WARNING ] discarding 2 atoms at position 18 in file rosetta_cst.pdb. Best match rsd_type:  HIS_D
+core.io.pdb.file_data: [ WARNING ] discarding 3 atoms at position 19 in file rosetta_cst.pdb. Best match rsd_type:  ALA
+core.io.pdb.file_data: [ WARNING ] discarding 3 atoms at position 20 in file rosetta_cst.pdb. Best match rsd_type:  HIS
+core.io.pdb.file_data: [ WARNING ] discarding 11 atoms at position 21 in file rosetta_cst.pdb. Best match rsd_type:  LYS
+Error: ERROR: Exception caught by JobDistributor while trying to get pose from job 'rosetta_cst_0001'
+Error: 
+
+[ERROR] EXCN_utility_exit has been thrown from: /Users/greisen/git_rosetta/Rosetta/main/source/xcode/../src/core/io/pdb/file_data.cc line: 1173
+ERROR: Unrecognized residue: CYZ
+
+
+Error: Treating failure as bad input; canceling similar jobs
+protocols.jd2.FileSystemJobDistributor: job failed, reporting bad input; other jobs of same input will be canceled: rosetta_cst_0001
+protocols.jd2.JobDistributor: no more batches to process... 
+protocols.jd2.JobDistributor: 1 jobs considered, 1 jobs attempted in 3 seconds

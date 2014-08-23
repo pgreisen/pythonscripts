@@ -1,0 +1,22 @@
+<dock_design>
+
+<TASKOPERATIONS>
+</TASKOPERATIONS>
+
+<SCOREFXNS>
+<myscore weights=talaris2013/>
+
+</SCOREFXNS>
+
+<FILTERS>
+</FILTERS>
+
+<MOVERS>
+<ddG name=ddG scorefxn=myscore chain_num=2/>
+</MOVERS>
+
+<PROTOCOLS>
+<Add mover=ddG/>
+</PROTOCOLS>
+
+</dock_design>

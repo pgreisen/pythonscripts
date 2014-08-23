@@ -1,0 +1,18 @@
+
+# We use this template
+trajin MD_1/mdcrd
+trajin MD_2/mdcrd
+
+# Remove water
+strip :WAT
+
+# first center the solute by itself
+center origin :1-177
+# now image the whole system about the centered origin
+image origin center
+
+average avg.pdb pdb
+
+quit
+
+        
