@@ -1,0 +1,1 @@
+python ~/pythonbin/dev/from_amber_to_rosetta_format/convert_from_amber_format_to_rosetta.py apo_structure_ensemble_every_20_struc.pdb END

@@ -1,0 +1,123 @@
+TRP [-73.2, 95.01]
+TYR [70.96, 85.88]
+PHE [-167.81, 78.29]
+THR [-174.53]
+PHE [-70.21, 81.95]
+LEU [-62.65, 174.71]
+THR [62.42]
+SER [-62.68]
+ILE [-57.48, 167.81]
+PHE [-60.95, 88.96]
+MET [-179.91, -171.19, 66.95]
+MET [-63.15, -179.01, -178.58]
+PHE [-65.31, -84.05]
+ASP [-65.92, -19.32]
+TYR [63.57, 92.51]
+SER [-179.18]
+HIS [-179.54, 71.59]
+
+  \-/  
+  -/-   PTRAJ: a utility for processing trajectory files
+  /-\  
+  \-/   Version: "AMBER 12.0 integrated" (4/2012)
+  -/-   Executable is: "/Users/greisen/amber12/bin/ptraj"
+  /-\   Running on 1 processor(s)
+  \-/   Residue labels:
+
+ GLU  ARG  ASP  CYS  ARG  VAL  SER  SER  PHE  ARG 
+ VAL  LYS  GLU  ASN  PHE  ASP  LYS  ALA  ARG  PHE 
+ ALA  GLY  THR  TRP  TYR  ALA  MET  ALA  LYS  LYS 
+ ASP  PRO  GLU  GLY  LEU  PHE  LEU  GLN  ASP  ASN 
+ ILE  VAL  ALA  GLU  PHE  SER  VAL  ASP  GLU  ASN 
+ GLY  HIE  MET  SER  ALA  THR  THR  LYS  GLY  ARG 
+ VAL  ARG  LEU  LEU  ASN  ASN  TRP  ASP  VAL  CYS 
+ ALA  ASP  MET  VAL  ALA  THR  PHE  THR  ASP  THR 
+ GLU  ASP  PRO  ALA  LYS  PHE  LYS  MET  LYS  TYR 
+ TRP  GLY  VAL  ALA  SER  PHE  LEU  GLN  LYS  GLY 
+ ASN  ASP  ASP  HID  TRP  ILE  ILE  ASP  THR  ASP 
+ TYR  GLU  THR  PHE  ALA  VAL  THR  TYR  SER  CYS 
+ ARG  LEU  LEU  ASN  LEU  ASP  GLY  THR  CYS  ALA 
+ ASP  SER  TYR  SER  PHE  VAL  SER  ALA  ARG  ASP 
+ PRO  SER  GLY  PHE  SER  PRO  GLU  VAL  GLN  LYS 
+ ILE  VAL  ARG  GLN  ARG  GLN  GLU  GLU  LEU  CYS 
+ LEU  ALA  ARG  GLN  TYR  ARG  LEU  ILE  PRO  HIE 
+ ASN  GLY  TYR  CYS  ASP  GLY  SRO  Na+  Na+  Na+ 
+ Na+  WAT  WAT  WAT  WAT  WAT  WAT  WAT  WAT  WAT 
+ WAT  WAT  WAT  WAT  WAT  WAT  WAT  WAT  WAT  WAT 
+ ...
+ WAT  WAT  WAT  WAT  WAT  WAT  WAT 
+
+
+PTRAJ: Processing input from "STDIN" ...
+
+PTRAJ: trajin MD_1/mdcrd
+  Checking coordinates: MD_1/mdcrd
+Rank: 0 Atoms: 30112 FrameSize: 731747 TitleSize: 81 NumBox: 3 Seekable 1
+
+
+PTRAJ: trajin MD_2/mdcrd
+  Checking coordinates: MD_2/mdcrd
+Rank: 0 Atoms: 30112 FrameSize: 731747 TitleSize: 81 NumBox: 3 Seekable 1
+
+
+PTRAJ: strip :WAT
+Mask [:WAT] represents 27318 atoms
+
+PTRAJ: center origin :1-177
+Mask [:1-177] represents 2790 atoms
+
+PTRAJ: image origin center
+Mask [*] represents 2794 atoms
+
+PTRAJ: average avg.pdb pdb
+Mask [*] represents 2794 atoms
+
+PTRAJ: quit
+[No output trajectory specified (trajout)]
+  MD_1/mdcrd: 50 frames.
+  MD_2/mdcrd: 50 frames.
+
+PTRAJ: Successfully read the input file.
+       Coordinate processing will occur on 100 frames.
+       Summary of I/O and actions follows:
+
+INPUT COORDINATE FILES
+  File (MD_1/mdcrd) is an AMBER trajectory (with box info) with 50 sets
+  File (MD_2/mdcrd) is an AMBER trajectory (with box info) with 50 sets
+
+NO OUTPUT COORDINATE FILE WAS SPECIFIED
+
+ACTIONS
+  1>  STRIP: 27318 atoms will be removed from trajectory: :182-9287
+  2>  CENTER to origin via center of geometry, atom selection follows :1-177
+  3>  IMAGE  by molecule to origin using the center of mass, atom selection   * (All atoms are selected)
+  4>  AVERAGE: dumping the average of the coordinates to file avg.pdb
+      start: 1  Stop [at final frame]  Offset: 1
+      Atom selection   * (All atoms are selected)
+      Output file information:  File (avg.pdb) is a PDB file
+
+
+Processing AMBER trajectory file MD_1/mdcrd
+
+........................ 75%  100% 
+
+Processing AMBER trajectory file MD_2/mdcrd
+
+........................ 75%  100% 
+
+
+PTRAJ: Successfully read in 100 sets and processed 100 sets.
+
+Dumping accumulated results (if any)
+
+Constructor initialized
+How to run the script
+python rotamer_analysis_from_md_simulation.py -f UM_1_S137F135T57_1fen_match4_11_.pdb -n SRO -a false
+getting pdb file from MD simulation in directory MD_1 holo_solv.prmtop
+getting pdb file from MD simulation in directory MD_1 holo_solv.prmtop
+THE LIGAND NUMBER IS  177
+THE LIGAND NUMBER IS  177
+['2-31', '33-82', '84-140', '142-145', '147-168'] proline
+['32', '83', '141', '146', '169']
+Done with analysis
+Done with whole analysis

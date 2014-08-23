@@ -1,0 +1,19 @@
+-run::preserve_header
+# Insert name of parameter file e.g., VXS
+#-in
+#  -file:extra_res_fa FEN.params
+#-out::overwrite
+-out::file::o sc.out
+-out::file::output_virtual
+-no_optH false
+-flip_HNQ
+-no_his_his_pairE
+#-chemical:exclude_patches LowerDNA  UpperDNA Cterm_amidation VirtualBB
+#ShoveBB VirtualDNAPhosphate VirtualNTerm CTermConnect sc_orbitals
+#pro_hydroxylated_case1 pro_hydroxylated_case2 ser_phosphorylated
+#thr_phosphorylated  tyr_phosphorylated tyr_sulfated lys_dimethylated
+#lys_monomethylated  lys_trimethylated lys_acetylated glu_carboxylated
+#cys_acetylated tyr_diiodinated N_acetylated C_methylamidated
+#MethylatedProteinCterm
+-nblist_autoupdate
+#-mute all
