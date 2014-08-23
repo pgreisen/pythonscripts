@@ -1,0 +1,12 @@
+core.init: Rosetta version 588cc63a36916f1552ce7734a90641c8842a49a9 2013-11-03 15:58:28 -0800 from git@github.com:RosettaCommons/main.git
+core.init: command: /work/greisen/git_rosetta/Rosetta/main/source/bin/match.static.linuxgccrelease @/work/greisen/files/run_matcher_on_digs/general_matching.flags @/work/greisen/files/run_matcher_on_digs/scaf.flags -linmem_ig 10 -in:file::s *pdb -database /work/greisen/git_rosetta/Rosetta/main/database -extra_res_fa /work/greisen/files/parameters/VXM.fa.params -match:lig_name VXM -match:geometric_constraint_file /work/greisen/Projects/LigandBinding/VX/Cstfiles/vx_charge_charge_native.cst
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=2083401035 seed_offset=0 real_seed=2083401035
+core.init.random: RandomGenerator:init: Normal mode, seed=2083401035 RG_type=mt19937
+core.chemical.ResidueTypeSet: Finished initializing fa_standard residue type set.  Created 9281 residue types
+core.import_pose.import_pose: PDB File:*pdb not found!
+caught exception 
+
+[ERROR] EXCN_utility_exit has been thrown from: src/core/import_pose/import_pose.cc line: 218
+ERROR: Cannot open PDB file "*pdb"
+
+
