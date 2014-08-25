@@ -63,9 +63,6 @@ class SetupFFTdockProtocol():
                 f.write(line)
 
 
-
-
-
     def main(self):
         path = './'
         dirs = os.listdir( path )

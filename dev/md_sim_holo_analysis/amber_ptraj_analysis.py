@@ -10,7 +10,6 @@ class amber_ptraj_analysis:
         self.RMSD_CUT_OFF = 1
         self.CHI_ANGLE_SD_CUT_OFF = 20
         self.pdbfile = 0
-        # what to insert here
 
 
 
@@ -695,14 +694,17 @@ mol addrep top
             pymol_session.write("show sticks, het\n")
 
             pymol_session.write("create protein_rmsf, all and not het\n")
-            pymol_session.write("create torsional_angles, resi "+tp+"\n")
-            pymol_session.write("create rmsd_residues, resi "+rp+"\n")
 
-            pymol_session.write("show sticks, torsional_angles\n")
-            pymol_session.write("show sticks, rmsd_residues\n")
+            if( len(tp) > 0):
 
-            pymol_session.write("color red, torsional_angles and name c*\n")
-            pymol_session.write("color yellow, rmsd_residues and name c*\n")
+                pymol_session.write("create torsional_angles, resi "+tp+"\n")
+                pymol_session.write("create rmsd_residues, resi "+rp+"\n")
+
+                pymol_session.write("show sticks, torsional_angles\n")
+                pymol_session.write("show sticks, rmsd_residues\n")
+
+                pymol_session.write("color red, torsional_angles and name c*\n")
+                pymol_session.write("color yellow, rmsd_residues and name c*\n")
 
             pymol_session.write("inFile = open(\"bfactor_data\", 'r')\n")
             pymol_session.write("stored.newB = []\n")
