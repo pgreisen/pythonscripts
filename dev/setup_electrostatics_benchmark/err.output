@@ -1,0 +1,18 @@
+Centering ligands at (  22.853,   10.480,   60.058)
+Atom names contain duplications -- renaming all atoms.
+WARNING:  structure contains double bonds but no aromatic bonds
+  Aromatic bonds must be identified explicitly --
+  alternating single/double bonds (Kekule structure) won't cut it.
+  This warning does not apply to you if your molecule really isn't aromatic.
+WARNING:  structure does not contain any hydrogens
+  Hydrogens aren't automatically added. --
+  Check your PDB -> mol conversion program for hydrogen-addition options.
+  This warning does not apply to you if your molecule shouldn't contain any hydrogens.
+Traceback (most recent call last):
+  File "/work/greisen/git_rosetta/Rosetta/main/source/src/python/apps/public/molfile_to_params.py", line 1469, in <module>
+    sys.exit(main(sys.argv[1:]))
+  File "/work/greisen/git_rosetta/Rosetta/main/source/src/python/apps/public/molfile_to_params.py", line 1422, in main
+    assign_rosetta_types(m.atoms)
+  File "/work/greisen/git_rosetta/Rosetta/main/source/src/python/apps/public/molfile_to_params.py", line 306, in assign_rosetta_types
+    else: raise ValueError("Unknown element '%s'" % a.elem)
+ValueError: Unknown element 'C3'
