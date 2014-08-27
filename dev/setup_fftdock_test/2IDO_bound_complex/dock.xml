@@ -1,0 +1,19 @@
+
+<dock_design>
+<TASKOPERATIONS>
+</TASKOPERATIONS>
+<SCOREFXNS>
+</SCOREFXNS>
+<FILTERS>
+</FILTERS>
+<MOVERS>
+    <FFTdockallatoms name=dock side1=A side2=B rot_step=60 nmodels=10 electrostatics=false density=true scale_radii=1 trans_step=0.7/>
+</MOVERS>
+<APPLY_TO_POSE>
+</APPLY_TO_POSE>
+<PROTOCOLS>
+    <Add mover=dock/>
+</PROTOCOLS>
+</dock_design>
+
+        

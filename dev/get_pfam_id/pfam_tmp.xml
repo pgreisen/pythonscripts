@@ -1,0 +1,4 @@
+<?xml version='1.0' standalone='no' ?>
+<hmmer3>
+  <pfamHit structureId="1AAQ" chainId="A" pdbResNumStart="5" pdbResNumEnd="98" pfamAcc="PF00077.15" pfamName="RVP" pfamDesc="Retroviral aspartyl protease" eValue="1.7E-34" />
+</hmmer3>
