@@ -1,0 +1,3 @@
+SEQUENCE: 
+SCORE: total_score          SC ch_bond_bb_bb ddg_complex       dsasa dslf_ca_dih dslf_cs_ang dslf_ss_dih dslf_ss_dst      fa_atr fa_cust_pair_dist            fa_dun fa_intra_rep      fa_pair       fa_rep       fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb     interfE       omega     p_aa_pp pro_close     pstat      rama       ref description 
+SCORE:    -489.340       0.586       -25.198     -13.596       0.963       0.000       0.000       0.000       0.000   -1708.868             0.600           557.894        3.677      -38.200      169.376      822.040     -50.823     -95.413     -33.474     -43.692     -13.901      17.807     -36.613     1.913     0.657     2.300   -32.665 protein_ligand_0001_0001

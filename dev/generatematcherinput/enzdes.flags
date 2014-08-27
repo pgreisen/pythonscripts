@@ -1,0 +1,42 @@
+-in
+  -file:extra_res_fa CFN.fa.params
+-out::overwrite
+-out::file::o enz_score.out
+-out::file::output_virtual
+-database ~/rosetta/rosetta_database
+-packing
+  -use_input_sc
+  -ex1:level 4
+  -ex2:level 4
+  -soft_rep_design
+ # -resfile resfile 
+-enzdes
+  -cstfile match.cst
+  -cst_opt
+  -cst_design
+  -cst_min
+  -detect_design_interface
+  -cut1 6.0
+  -cut2 8.0
+  -cut3 10.0
+  -cut4 12.0
+  -lig_packer_weight 1.5
+  -no_unconstrained_repack
+  -design_min_cycles 3
+  -chi_min
+  -minimize_all_ligand_torsions 10.0
+  -loop_bb_min_allowed_dev 0.01
+  -favor_native_res 1.5
+  -fix_catalytic_aa
+-flip_HNQ
+-no_optH false
+-linmem_ig 10
+-no_his_his_pairE
+-hbond_params sp2_params
+-lj_hbond_hdis 1.75
+-lj_hbond_OH_donor_dis 2.6
+-correct
+-chemical:exclude_patches LowerDNA  UpperDNA Cterm_amidation VirtualBB ShoveBB VirtualDNAPhosphate Vd thr_phosphorylated  tyr_phosphorylated tyr_sulfated lys_dimethylated lys_monomethylated  lys_trimethylated lys_acetylated glu_carboxylated cys_acetylated tyr_diiodinated N_acetylated C_methylamidated MethylatedProteinCterm
+-nstruct 5
+-nblist_autoupdate
+#-mute all

@@ -1,0 +1,66 @@
+set start 1
+# file name is apo_solv.prmtop
+mol load parm7 MD_1/apo_solv.prmtop
+
+set end 25
+
+for {set start 1} {$start < $end } {incr start} {
+    puts "MD_$start"
+    mol addfile MD_$start/mdcrd type crdbox waitfor all
+}
+color Display Background white
+# orthographic
+display projection orthographic
+
+# Reset the view of the window
+mol delrep 0 all
+# Make dssp representation of protein
+# Numbers at the end are taken from
+mol representation NewCartoon
+# add color
+mol color SecondaryStructure
+# The material used for the representation
+mol material Opaque
+# The selection for all of this
+mol selection {all}
+# Now update the window
+mol addrep top
+
+# show critical residues in CPK
+## Color part of selection a certain color
+mol representation CPK
+# 0 is blue
+mol material Opaque
+mol selection { residue  101 103 40 36 72 87 134 19 44 76 118 136 116 56 23 132 89 and not hydrogen }
+# uncomment to change color
+# mol color ColorID 23
+mol addrep top
+
+# Load design into trajectory
+mol load pdb Minimization/design1.pdb
+
+# align the two
+# need to insert this into the analyze script:
+# this should align.
+# superposition of sel1 onto sel0
+
+set sel0 [atomselect 0 "backbone and resid 1 to 176 "]
+set sel1 [atomselect 1 "backbone and resid 1 to 176 "]
+set M [measure fit $sel1 $sel0]
+
+#$sel1 move $M
+
+# move this with an additional residue which is the ligand
+# if not the ligand will just stay with its original coordinates.
+# set sel2 [atomselect 1 "resid 177 "]
+set sel2 [atomselect 1 "all "]
+$sel2 move $M
+
+mol representation CPK
+# 0 is blue
+mol material Opaque
+mol selection { residue 177 }
+mol addrep top
+
+
+        

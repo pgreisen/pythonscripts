@@ -1,0 +1,1 @@
+python2.7 ../plot_data_w_mean_sd.py -f sc.dat -n SC -c True --histogram True

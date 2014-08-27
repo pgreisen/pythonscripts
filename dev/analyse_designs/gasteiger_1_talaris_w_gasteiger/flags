@@ -1,0 +1,9 @@
+#-database /work/hpark/database.trunk
+#-score:weights scorefacts.wts
+-parser:protocol ddg.xml
+-overwrite
+#-facts_default
+#-score:facts_asp_patch 3
+# commented, turning on will change paramerters for carbonyl Oxygen (OOC) 
+# to tolerate errors from interacting with explicit waters
+#-score:facts_binding_affinity true
