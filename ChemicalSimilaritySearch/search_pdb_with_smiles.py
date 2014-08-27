@@ -14,13 +14,16 @@ How is this executed
 ##smiles = '''C1(=O)OCc2c(C)c(OC)cc(O)c12'''
 ##smiles = '''O(C)c1c(C)ccc(O)c1'''
 # methoxy
-smiles='COC1=CC=CC=C1'
+#smiles='COC1=CC=CC=C1'
+# HCY 
+smiles='O[C@@H](C)C(=O)CO'
+
 # Requires ent.gz file
 # Returns pdb file and remove ent.gz file
 
 # The chemical similarity between query and 
 # target
-similarity="0.9"
+similarity="0.99"
 
 # maximum length of the protein
 maxlength ="200"
