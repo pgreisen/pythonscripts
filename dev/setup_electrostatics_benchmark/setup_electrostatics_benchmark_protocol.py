@@ -84,8 +84,6 @@ class SetupElectrostaticsBenchmarkProtocol():
             for line in f:
                 if ( len(line) > 13 and line.find("@<TRIPOS>ATOM")):
                     atoms = True
-                print "ATOM", line.find("@<TRIPOS>ATOM")
-                print "BOND", line.find("@<TRIPOS>BOND")
                 elif ( len(line) > 13 and line.find("@<TRIPOS>BOND")):
                     atoms = False
                 elif( atoms == True and len(line) > 75 ):
@@ -117,9 +115,6 @@ class SetupElectrostaticsBenchmarkProtocol():
                     if(os.path.isdir( sdir )):
 
                         subdirs[ sdir ] = True
-
-
-
 
                 # Setup and run the am1-bcc in AmberTool
                 self.setup_am1_bcc_and_generate_rosetta_parameters()
