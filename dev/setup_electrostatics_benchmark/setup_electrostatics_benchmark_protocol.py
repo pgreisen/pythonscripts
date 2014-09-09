@@ -79,15 +79,14 @@ class SetupElectrostaticsBenchmarkProtocol():
         with open("ligand_am1_bcc.mol2",'r') as f:
             atoms = False
             for line in f:
-                if( len(line) > 13):
+                if ( len(line) > 13 and line.find("@<TRIPOS>ATOM")):
                     atoms = True
-
                 elif ( len(line) > 13 and line.find("@<TRIPOS>BOND")):
                     atoms = False
-
                 elif( atoms == True and len(line) > 75 ):
                     tmp_characters = line[47]+"."+line[48]
                     line = line[0:47]+tmp_characters+line[50:]
+                print line
                 tmpfile.write(line)
         tmpfile.close()
 
