@@ -102,7 +102,7 @@ class SetupElectrostaticsBenchmarkProtocol():
         # loop over all the directories
         for dir in dirs:
             if ( os.path.isdir ( dir ) and not dir.startswith('.') ):
-                # chdir
+                # chdir to PDBID NAME
                 os.chdir( dir )
                 sdirs = os.listdir( path )
 
@@ -113,54 +113,18 @@ class SetupElectrostaticsBenchmarkProtocol():
                 for sdir in sdirs:
 
                     if(os.path.isdir( sdir )):
-
                         subdirs[ sdir ] = True
 
                 # Setup and run the am1-bcc in AmberTool
                 self.setup_am1_bcc_and_generate_rosetta_parameters()
 
                 # make sure the pdb file has the pdbid present in its name
-
-
-
                 if( subdirs[ self.gasteiger_charge] and subdirs[ self.rosetta_charge] ):
                     continue
                 else:
                     print "Directories are missing"
-                    sys.exit()
+                    # sys.exit()
 
-
-
-
-                    if( os.path.isfile(pdbfile) and pdbfile.endswith("pdb")):
-                        pdbs.append( pdbfile )
-                        tmp = self.get_chain_id_and_pdb_length(pdbfile)
-                        print "THE CHAIN OF THE PROTEIN IS DETERMINED TO BE ", tmp
-                        length_of_protein[ pdbfile ] = tmp[1]
-                        chain[pdbfile] = tmp[0]
-                        contains_pdbs = True
-
-                if( contains_pdbs ):
-                    if( len(pdbs) > 2 ):
-                        print "More than two pdb files", len(pdbfiles), dir
-                    if( len(pdbs) == 2):
-
-                        if(chain[pdbs[0]] == chain[pdbs[1]]):
-                            print "These pdbfiles contain the chain ID", chain[pdbs[0]], chain[pdbs[1]]
-
-                            if(chain[pdbs[0]] == "A"):
-                                self.set_chain_id( pdbs[0],'B')
-                                chain[ pdbs[0]] = 'B'
-                            else:
-                                self.set_chain_id( pdbs[0],'A')
-                                chain[ pdbs[0]] = 'A'
-
-                    if( length_of_protein[pdbs[0] ] > length_of_protein[pdbs[1] ] ):
-                        xml_template = self.get_xml_file(chain[ pdbs[0]], chain[ pdbs[1]], self.rot_step, self.nmodels, self.trans_step, self.electrostatics)
-
-                    else:
-                        xml_template = self.get_xml_file(chain[ pdbs[1]], chain[ pdbs[0]], self.rot_step, self.nmodels, self.trans_step, self.electrostatics)
-                    self.write_xml( xml_template )
                 os.chdir("../")
 
 
