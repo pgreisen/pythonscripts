@@ -67,6 +67,32 @@ class SetupElectrostaticsBenchmarkProtocol():
         os.chdir("../")
 
 
+    def convert_amber_atomtype_to_rosetta_atomtype(self):
+        """
+        @requieres that ligand_am1_bcc.mol2 files is already generated
+
+        @returns a mol2 with atomtypes readable for Rosetta's mol_to_parameter scripts
+
+        """
+
+        tmpfile = open("tmp.pdb", 'w')
+        with open("ligand_am1_bcc.mol2",'r') as f:
+            atoms = False
+            for line in f:
+                if( len(line) > 13):
+                    atoms = True
+
+                elif ( len(line) > 13 and line.find("@<TRIPOS>BOND")):
+                    atoms = False
+
+                elif( atoms == True and len(line) > 75 ):
+                    tmp_characters = line[47]+"."+line[48]
+                    line = line[0:47]+tmp_characters+line[50:]
+                tmpfile.write(line)
+        tmpfile.close()
+
+
+
     def main(self):
         path = './'
         dirs = os.listdir( path )
@@ -93,6 +119,9 @@ class SetupElectrostaticsBenchmarkProtocol():
 
                 # Setup and run the am1-bcc in AmberTool
                 self.setup_am1_bcc_and_generate_rosetta_parameters()
+
+                # change the atomtypes such that Rosetta can convert it into parameter file
+                self.convert_amber_atomtype_to_rosetta_atomtype()
 
                 # make sure the pdb file has the pdbid present in its name
 
