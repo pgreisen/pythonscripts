@@ -138,45 +138,11 @@ class SetupElectrostaticsBenchmarkProtocol():
                 self.setup_am1_bcc_and_generate_rosetta_parameters()
 
                 # make sure the pdb file has the pdbid present in its name
-<<<<<<< HEAD
-
-=======
->>>>>>> 5c47be890434776e9f4dca4f8dad062e2dd4dc50
                 if( subdirs[ self.gasteiger_charge] and subdirs[ self.rosetta_charge] ):
                     continue
                 else:
                     print "Directories are missing"
-<<<<<<< HEAD
-                    sys.exit()
-
-                    if( os.path.isfile(pdbfile) and pdbfile.endswith("pdb")):
-                        pdbs.append( pdbfile )
-                        tmp = self.get_chain_id_and_pdb_length(pdbfile)
-                        print "THE CHAIN OF THE PROTEIN IS DETERMINED TO BE ", tmp
-                        length_of_protein[ pdbfile ] = tmp[1]
-                        chain[pdbfile] = tmp[0]
-                        contains_pdbs = True
-
-                if( contains_pdbs ):
-                    if( len(pdbs) > 2 ):
-                        print "More than two pdb files", len(pdbfiles), dir
-                    if( len(pdbs) == 2):
-
-                        if(chain[pdbs[0]] == chain[pdbs[1]]):
-                            print "These pdbfiles contain the chain ID", chain[pdbs[0]], chain[pdbs[1]]
-
-                            if(chain[pdbs[0]] == "A"):
-                                self.set_chain_id( pdbs[0],'B')
-                                chain[ pdbs[0]] = 'B'
-                            else:
-                                self.set_chain_id( pdbs[0],'A')
-                                chain[ pdbs[0]] = 'A'
-
-                    if( length_of_protein[pdbs[0] ] > length_of_protein[pdbs[1] ] ):
-                        xml_template = self.get_xml_file(chain[ pdbs[0]], chain[ pdbs[1]], self.rot_step, self.nmodels, self.trans_step, self.electrostatics)
-=======
                     # sys.exit()
->>>>>>> 5c47be890434776e9f4dca4f8dad062e2dd4dc50
 
                 os.chdir("../")
                 print "The path is now ",os.getcwd()
