@@ -102,7 +102,6 @@ class SetupElectrostaticsBenchmarkProtocol():
                 
                 if ( len(line) > 13 and line.find("@<TRIPOS>ATOM") >-1.0):
                     atoms = True
-
                 elif ( len(line) > 13 and line.find("@<TRIPOS>BOND") >-1.0):
                     atoms = False
 
@@ -122,7 +121,7 @@ class SetupElectrostaticsBenchmarkProtocol():
         # loop over all the directories
         for dir in dirs:
             if ( os.path.isdir ( dir ) and not dir.startswith('.') ):
-                # chdir
+                # chdir to PDBID NAME
                 os.chdir( dir )
                 sdirs = os.listdir( path )
 
@@ -133,18 +132,21 @@ class SetupElectrostaticsBenchmarkProtocol():
                 for sdir in sdirs:
 
                     if(os.path.isdir( sdir )):
-
                         subdirs[ sdir ] = True
 
                 # Setup and run the am1-bcc in AmberTool
                 self.setup_am1_bcc_and_generate_rosetta_parameters()
 
                 # make sure the pdb file has the pdbid present in its name
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5c47be890434776e9f4dca4f8dad062e2dd4dc50
                 if( subdirs[ self.gasteiger_charge] and subdirs[ self.rosetta_charge] ):
                     continue
                 else:
                     print "Directories are missing"
+<<<<<<< HEAD
                     sys.exit()
 
                     if( os.path.isfile(pdbfile) and pdbfile.endswith("pdb")):
@@ -172,10 +174,10 @@ class SetupElectrostaticsBenchmarkProtocol():
 
                     if( length_of_protein[pdbs[0] ] > length_of_protein[pdbs[1] ] ):
                         xml_template = self.get_xml_file(chain[ pdbs[0]], chain[ pdbs[1]], self.rot_step, self.nmodels, self.trans_step, self.electrostatics)
+=======
+                    # sys.exit()
+>>>>>>> 5c47be890434776e9f4dca4f8dad062e2dd4dc50
 
-                    else:
-                        xml_template = self.get_xml_file(chain[ pdbs[1]], chain[ pdbs[0]], self.rot_step, self.nmodels, self.trans_step, self.electrostatics)
-                    self.write_xml( xml_template )
                 os.chdir("../")
                 print "The path is now ",os.getcwd()
 
