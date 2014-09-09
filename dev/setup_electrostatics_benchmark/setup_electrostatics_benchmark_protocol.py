@@ -60,6 +60,9 @@ class SetupElectrostaticsBenchmarkProtocol():
         # run the AmberTools implementation of the cmd.
         subprocess.Popen(exe,shell=True).wait()
 
+        # change atomtypes from Amber to Rosetta
+        self.convert_amber_atomtype_to_rosetta_atomtype()
+
         exe_rosetta = "python ~/git_rosetta/Rosetta/main/source/src/python/apps/public/molfile_to_params.py ligand_am1_bcc.mol2 -n LG1 -c"
 
         subprocess.Popen(exe_rosetta,shell=True).wait()
@@ -118,9 +121,6 @@ class SetupElectrostaticsBenchmarkProtocol():
 
                 # Setup and run the am1-bcc in AmberTool
                 self.setup_am1_bcc_and_generate_rosetta_parameters()
-
-                # change the atomtypes such that Rosetta can convert it into parameter file
-                self.convert_amber_atomtype_to_rosetta_atomtype()
 
                 # make sure the pdb file has the pdbid present in its name
 
