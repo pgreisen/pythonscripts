@@ -55,8 +55,10 @@
       <file leaf-file-name="amber_ptraj_analysis.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/amber_ptraj_analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="698" column="0" selection-start="22614" selection-end="22614" vertical-scroll-proportion="5.1657753" vertical-offset="5610" max-vertical-offset="12090">
-              <folding />
+            <state line="698" column="0" selection-start="22614" selection-end="22614" vertical-scroll-proportion="4.909091" vertical-offset="5850" max-vertical-offset="12090">
+              <folding>
+                <marker date="1408980562000" expanded="true" signature="146:240" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,24 +126,6 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="md_sim_holo_analysis">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="md_sim_holo_analysis">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT=".idea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -160,7 +144,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../setup_electrostatics_benchmark" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -322,13 +306,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="22" width="1884" height="1058" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24840765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24840765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -449,8 +433,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/amber_ptraj_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="698" column="0" selection-start="22614" selection-end="22614" vertical-scroll-proportion="5.1657753" vertical-offset="5610" max-vertical-offset="12090">
-          <folding />
+        <state line="698" column="0" selection-start="22614" selection-end="22614" vertical-scroll-proportion="4.909091" vertical-offset="5850" max-vertical-offset="12090">
+          <folding>
+            <marker date="1408980562000" expanded="true" signature="146:240" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
