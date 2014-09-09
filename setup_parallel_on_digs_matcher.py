@@ -27,7 +27,7 @@ run_file = open( "run_file.txt", 'w' )
 
 for dir in dirs:
     if ( os.path.isdir ( dir ) ):
-        run_file.write( "cd "+dir+"/; sh "+str(run_string)+" *.pdb "+str( parameterfile )+" "+str(residue)+" /work/greisen/Projects/LigandBinding/VX/Cstfiles/"+str(cstfile)+" > logfile_"+str(cstfile)+";  cd ..;\n"  )
+        run_file.write( "cd "+dir+"/; sh "+str(run_string)+" *.pdb "+str( parameterfile )+" "+str(residue)+" /work/greisen/Projects/LigandBinding/HCY/Matcher/NTF2_based_on_TMscore_HCY/"+str(cstfile)+" > logfile_"+str(cstfile)+";  cd ..;\n"  )
 
 exe = "cat run_file.txt | parallel -j "+str( number_of_processors )
 print exe

@@ -2,6 +2,16 @@ import os, shutil,sys
 import subprocess
 from subprocess import Popen, PIPE, STDOUT
 
+"""
+
+The script sets up directories for the different charge sets and runs am1-bcc computation using AmberTools. 
+
+python setup_electrostatics_benchmark_protocol.py
+
+
+"""
+
+
 class SetupElectrostaticsBenchmarkProtocol():
 
 
@@ -63,7 +73,10 @@ class SetupElectrostaticsBenchmarkProtocol():
         # change atomtypes from Amber to Rosetta
         self.convert_amber_atomtype_to_rosetta_atomtype()
 
-        exe_rosetta = "python ~/git_rosetta/Rosetta/main/source/src/python/apps/public/molfile_to_params.py ligand_am1_bcc.mol2 -n LG1 -c"
+        # copy to rename file over to the original name 
+        shutil.move("tmp.mol2","ligand_am1_bcc.mol2")
+
+        exe_rosetta = "python ~/git_rosetta/Rosetta/main/source/src/python/apps/public/molfile_to_params.py ligand_am1_bcc.mol2 -n LG1 -c --clobber"
 
         subprocess.Popen(exe_rosetta,shell=True).wait()
 
@@ -78,20 +91,25 @@ class SetupElectrostaticsBenchmarkProtocol():
 
         """
 
-        tmpfile = open("tmp.pdb", 'w')
+        tmpfile = open("tmp.mol2", 'w')
         with open("ligand_am1_bcc.mol2",'r') as f:
             atoms = False
             for line in f:
-                if ( len(line) > 13 and line.find("@<TRIPOS>ATOM")):
+
+                print "ATOM", line.find("@<TRIPOS>ATOM"),line
+                print "BOND", line.find("@<TRIPOS>BOND"),line
+
+                
+                if ( len(line) > 13 and line.find("@<TRIPOS>ATOM") >-1.0):
                     atoms = True
-                print "ATOM", line.find("@<TRIPOS>ATOM")
-                print "BOND", line.find("@<TRIPOS>BOND")
-                elif ( len(line) > 13 and line.find("@<TRIPOS>BOND")):
+
+                elif ( len(line) > 13 and line.find("@<TRIPOS>BOND") >-1.0):
                     atoms = False
+
                 elif( atoms == True and len(line) > 75 ):
                     tmp_characters = line[47]+"."+line[48]
                     line = line[0:47]+tmp_characters+line[50:]
-                print line
+
                 tmpfile.write(line)
         tmpfile.close()
 
@@ -118,24 +136,16 @@ class SetupElectrostaticsBenchmarkProtocol():
 
                         subdirs[ sdir ] = True
 
-
-
-
                 # Setup and run the am1-bcc in AmberTool
                 self.setup_am1_bcc_and_generate_rosetta_parameters()
 
                 # make sure the pdb file has the pdbid present in its name
-
-
 
                 if( subdirs[ self.gasteiger_charge] and subdirs[ self.rosetta_charge] ):
                     continue
                 else:
                     print "Directories are missing"
                     sys.exit()
-
-
-
 
                     if( os.path.isfile(pdbfile) and pdbfile.endswith("pdb")):
                         pdbs.append( pdbfile )
@@ -167,6 +177,7 @@ class SetupElectrostaticsBenchmarkProtocol():
                         xml_template = self.get_xml_file(chain[ pdbs[1]], chain[ pdbs[0]], self.rot_step, self.nmodels, self.trans_step, self.electrostatics)
                     self.write_xml( xml_template )
                 os.chdir("../")
+                print "The path is now ",os.getcwd()
 
 
 if __name__ == '__main__':

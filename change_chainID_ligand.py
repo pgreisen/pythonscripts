@@ -12,7 +12,8 @@ def main():
     
     for line in filename:
 
-        if line[0:4] == 'HETA':
+        #        if line[0:4] == 'HETA':
+        if line[0:4] == "ATOM":
             newline = str(line[0:20])+' '+str(newchainid)+str(line[22:])
             tmpfile.write(newline)
         else:
