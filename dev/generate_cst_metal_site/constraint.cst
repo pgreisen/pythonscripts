@@ -1,0 +1,115 @@
+
+
+        # CU - CYS 136
+
+        CST::BEGIN
+        TEMPLATE::   ATOM_MAP: 1 atom_name:  ZN1 O2 P1
+        TEMPLATE::   ATOM_MAP: 1 residue3:  LG1
+
+        TEMPLATE::   ATOM_MAP: 2 atom_type: S ,
+        TEMPLATE::   ATOM_MAP: 2 residue1:  C
+
+        CONSTRAINT:: distanceAB:  2.18  0.20  100.  1
+        CONSTRAINT::    angle_A:  0   25.0  10.0  180.
+        CONSTRAINT::    angle_B:  107.28   10.0  10.0  180.
+
+        CONSTRAINT::  torsion_A:   60.0    30.0  1.0  120.
+        CONSTRAINT:: torsion_AB: 0   10.0  10.00  360.
+        CONSTRAINT::  torsion_B:  178.34   10.0  10.00  360.
+
+        CST::END
+
+        # CU - HIS2 145
+
+        CST::BEGIN
+        TEMPLATE::   ATOM_MAP: 1 atom_name:  ZN1 O2 P1
+        TEMPLATE::   ATOM_MAP: 1 residue3:  LG1
+
+        TEMPLATE::   ATOM_MAP: 2 atom_type: Nhis ,
+        TEMPLATE::   ATOM_MAP: 2 residue1:  H
+
+        CONSTRAINT:: distanceAB:  2.03  0.20  100.  1
+        CONSTRAINT::    angle_A:  0   25.0  10.0  180.
+        CONSTRAINT::    angle_B:  124.38   10.0  10.0  180.
+
+        CONSTRAINT::  torsion_A:   60.0    30.0  1.0  120.
+        CONSTRAINT:: torsion_AB: 0   10.0  10.00  360.
+        CONSTRAINT::  torsion_B:  181.94   10.0  10.00  360.
+
+        CST::END
+
+        # CU - HIS2 95
+
+        CST::BEGIN
+        TEMPLATE::   ATOM_MAP: 1 atom_name:  ZN1 O2 P1
+        TEMPLATE::   ATOM_MAP: 1 residue3:  LG1
+
+        TEMPLATE::   ATOM_MAP: 2 atom_type: Nhis ,
+        TEMPLATE::   ATOM_MAP: 2 residue1:  H
+
+        CONSTRAINT:: distanceAB:  2.02  0.20  100.  1
+        CONSTRAINT::    angle_A:  0   25.0  10.0  180.
+        CONSTRAINT::    angle_B:  124.43   10.0  10.0  180.
+
+        CONSTRAINT::  torsion_A:   60.0    30.0  1.0  120.
+        CONSTRAINT:: torsion_AB: 0   10.0  10.00  360.
+        CONSTRAINT::  torsion_B:  183.49   10.0  10.00  360.
+
+        CST::END
+
+        # CU - MET 150
+
+        CST::BEGIN
+        TEMPLATE::   ATOM_MAP: 1 atom_name:  ZN1 O2 P1
+        TEMPLATE::   ATOM_MAP: 1 residue3:  LG1
+
+        TEMPLATE::   ATOM_MAP: 2 atom_type: S ,
+        TEMPLATE::   ATOM_MAP: 2 residue1:  M
+
+        CONSTRAINT:: distanceAB:  2.65  0.20  100.  1
+        CONSTRAINT::    angle_A:  0   25.0  10.0  180.
+        CONSTRAINT::    angle_B:  129.77   10.0  10.0  180.
+
+        CONSTRAINT::  torsion_A:   60.0    30.0  1.0  120.
+        CONSTRAINT:: torsion_AB: 0   10.0  10.00  360.
+        CONSTRAINT::  torsion_B:  65.97   10.0  10.00  360.
+
+        CST::END
+
+        # CU - HIS 100
+
+        CST::BEGIN
+        TEMPLATE::   ATOM_MAP: 1 atom_name:  ZN1 O2 P1
+        TEMPLATE::   ATOM_MAP: 1 residue3:  LG1
+
+        TEMPLATE::   ATOM_MAP: 2 atom_type: Ntrp ,
+        TEMPLATE::   ATOM_MAP: 2 residue1:  H
+
+        CONSTRAINT:: distanceAB:  1.98  0.20  100.  1
+        CONSTRAINT::    angle_A:  0   25.0  10.0  180.
+        CONSTRAINT::    angle_B:  117.37   10.0  10.0  180.
+
+        CONSTRAINT::  torsion_A:   60.0    30.0  1.0  120.
+        CONSTRAINT:: torsion_AB: 0   10.0  10.00  360.
+        CONSTRAINT::  torsion_B:  189.13   10.0  10.00  360.
+
+        CST::END
+
+        # CU - HIS 135
+
+        CST::BEGIN
+        TEMPLATE::   ATOM_MAP: 1 atom_name:  ZN1 O2 P1
+        TEMPLATE::   ATOM_MAP: 1 residue3:  LG1
+
+        TEMPLATE::   ATOM_MAP: 2 atom_type: Ntrp ,
+        TEMPLATE::   ATOM_MAP: 2 residue1:  H
+
+        CONSTRAINT:: distanceAB:  2.10  0.20  100.  1
+        CONSTRAINT::    angle_A:  0   25.0  10.0  180.
+        CONSTRAINT::    angle_B:  121.89   10.0  10.0  180.
+
+        CONSTRAINT::  torsion_A:   60.0    30.0  1.0  120.
+        CONSTRAINT:: torsion_AB: 0   10.0  10.00  360.
+        CONSTRAINT::  torsion_B:  171.75   10.0  10.00  360.
+
+        CST::END
