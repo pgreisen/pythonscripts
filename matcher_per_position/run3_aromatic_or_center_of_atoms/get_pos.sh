@@ -1,0 +1,1 @@
+python ../getligandpositionmatchermain.py -f $1 -p newpos.pos -n aro-N1-N2 --ncst 3
