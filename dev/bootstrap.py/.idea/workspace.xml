@@ -22,17 +22,49 @@
     <favorites_list name="bootstrap.py" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="355" column="13" selection-start="12287" selection-end="12287" vertical-scroll-proportion="0.3322091" vertical-offset="5083" max-vertical-offset="7350">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="16" selection-start="110" selection-end="110" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="7395">
+                  <folding>
+                    <element signature="e#18#51#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="generate_helix_dimer_sym.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="148" column="0" selection-start="4786" selection-end="4786" vertical-scroll-proportion="0.75409836" vertical-offset="1898" max-vertical-offset="4560">
+                  <folding>
+                    <element signature="e#22#49#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="generate_helix_dimer_sym.py" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="131" column="55" selection-start="4155" selection-end="4155" vertical-scroll-proportion="0.58056873" vertical-offset="1720" max-vertical-offset="4560">
+                  <folding>
+                    <element signature="e#22#49#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -44,10 +76,10 @@
       <list>
         <option value="$PROJECT_DIR$/bootstrap.py" />
         <option value="$PROJECT_DIR$/../generate_cst_file/generate_cst.py" />
-        <option value="$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py" />
         <option value="$PROJECT_DIR$/../align_atoms/main.py" />
         <option value="$PROJECT_DIR$/../align_atoms/pdbfile.py" />
         <option value="$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py" />
+        <option value="$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py" />
       </list>
     </option>
   </component>
@@ -99,7 +131,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="preferences.keymap" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
@@ -265,7 +297,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917964" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -344,8 +376,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="355" column="13" selection-start="12287" selection-end="12287" vertical-scroll-proportion="0.3322091" vertical-offset="5083" max-vertical-offset="7350">
-          <folding />
+        <state line="4" column="16" selection-start="110" selection-end="110" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="7395">
+          <folding>
+            <element signature="e#18#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="0" selection-start="4786" selection-end="4786" vertical-scroll-proportion="0.75409836" vertical-offset="1898" max-vertical-offset="4560">
+          <folding>
+            <element signature="e#22#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
