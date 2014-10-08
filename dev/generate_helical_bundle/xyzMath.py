@@ -557,20 +557,38 @@ class Xform(object):
 	#    cen = -(X.R-Imat).transposed()*X.t
 	#    return axis,ang,cen
 	def from_four_points(s,cen,a,b,c):
-		from numpy import linalg as LA
+
+		print "############################"
+		print "## Input from_four_points: " ,a,b,c 
+		print "############################"
+
+		##tmp_a = Vec( float(a[0]), float(a[1]), float(a[2]) )
+		##tmp_b = Vec( float(b[0]), float(b[1]), float(b[2]) )
+		##tmp_c = Vec( float(c[0]), float(c[1]) ,float(c[2]) )
+
+		##print "############################"
+		##print "## Input from_four_points: " ,tmp_a,tmp_b,tmp_c 
+		##print "############################"
+
+
+
+		##import pdb;pdb.set_trace()
 		s.t = cen
-		##e1 = (a-b).normalized()
-		e1 = LA.norm(a-b)		
-		e3 = LA.norm(e1.cross(c-b))
-		e2 = LA.norm(e1.cross(e3) )
-		##e3 = e1.cross(c-b).normalized()
-		##e2 = e1.cross(e3).normalized()
+		print "a,b: ", a, b
+		print "(a-b).normalized(): ",(a-b),(a-b).normalized()
+		e1 = (a-b).normalized()
+		print "e1.cross(c-b): ", e1.cross(c-b), e1
+		e3 = e1.cross(c-b).normalized()
+		e2 = e1.cross(e3).normalized()
 		# print "from_four_points"
 		# print e1
 		# print e2
 		# print e3
 		s.R = Mat(e1.x,e2.x,e3.x,e1.y,e2.y,e3.y,e1.z,e2.z,e3.z)
 		return s
+
+
+
 	def from_two_vecs(s,a,b):
 		e1 = a.normalized()
 		e2 = projperp(a,b).normalized()
@@ -657,10 +675,11 @@ def read_xforms(fname,N=9e9):
 def stub(cen=None, a=None, b=None, c=None):
 	if cen is None: cen = a
 	if c   is None: cen,a,b,c = cen,cen,a,b
-	# print cen
-	# print a
-	# print b
-	# print c
+	
+	print cen
+	print a
+	print b
+	print c
 	return Xform().from_four_points(cen,a,b,c)
 
 def randxform(n=None):
