@@ -203,7 +203,7 @@ class MetalSiteGeometry:
                                 residue[atom] = vec
             return residue,atoms
         except:
-            return "HOH", ""
+            return "HOH", "O"
 
     # Requires list with pdb lines, metal coordinates ( set in the constructor )
     # Returns dictionary with ligands < DISTANCE from metal ion
@@ -425,13 +425,13 @@ class MetalSiteGeometry:
 
                     remark.append(self.set_remarks_pdb(resn,resid,dummy, self.chain))
                     dummy = dummy +1
+
                 else:
                     dis = self.get_geometry(atoms,ligand, metal_site)
 
-
-
                     self.metal_coordination[metal_site][ligand] = []
-                    self.metal_coordination[metal_site][ligand].append(a)
+
+                    self.metal_coordination[metal_site][ligand].append(dis)
 
 
         return remark

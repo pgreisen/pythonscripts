@@ -22,28 +22,45 @@
     <favorites_list name="bootstrap.py" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="16" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="7395">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generate_helix_dimer_sym.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="12" selection-start="4646" selection-end="4646" vertical-scroll-proportion="0.284492" vertical-offset="2029" max-vertical-offset="5445">
-              <folding>
-                <element signature="e#22#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="428" column="21" selection-start="14979" selection-end="14979" vertical-scroll-proportion="0.2974239" vertical-offset="6248" max-vertical-offset="7350">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="generate_helix_dimer_sym.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="153" column="0" selection-start="4634" selection-end="4634" vertical-scroll-proportion="0.0" vertical-offset="1639" max-vertical-offset="5445">
+                  <folding>
+                    <element signature="e#22#49#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="205" column="28" selection-start="6877" selection-end="6877" vertical-scroll-proportion="0.83668905" vertical-offset="2656" max-vertical-offset="7350">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -57,10 +74,10 @@
         <option value="$PROJECT_DIR$/../generate_cst_file/generate_cst.py" />
         <option value="$PROJECT_DIR$/../align_atoms/main.py" />
         <option value="$PROJECT_DIR$/../align_atoms/pdbfile.py" />
-        <option value="$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py" />
         <option value="$PROJECT_DIR$/../get_pdb_id_from_tmalign/get_pdb_from_tmalign.py" />
         <option value="$PROJECT_DIR$/../generate_helical_bundle/xyzMath.py" />
         <option value="$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py" />
+        <option value="$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py" />
       </list>
     </option>
   </component>
@@ -363,13 +380,6 @@
         <state line="57" column="41" selection-start="1291" selection-end="1291" vertical-scroll-proportion="-13.0" vertical-offset="530" max-vertical-offset="2055" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="16" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="7395">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/xyzMath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="200" column="0" selection-start="6198" selection-end="6198" vertical-scroll-proportion="-0.78571427" vertical-offset="2907" max-vertical-offset="20085">
@@ -379,10 +389,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="12" selection-start="4646" selection-end="4646" vertical-scroll-proportion="0.284492" vertical-offset="2029" max-vertical-offset="5445">
+        <state line="153" column="0" selection-start="4634" selection-end="4634" vertical-scroll-proportion="0.0" vertical-offset="1639" max-vertical-offset="5445">
           <folding>
             <element signature="e#22#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="428" column="21" selection-start="14979" selection-end="14979" vertical-scroll-proportion="0.2974239" vertical-offset="6248" max-vertical-offset="7350">
+          <folding />
         </state>
       </provider>
     </entry>

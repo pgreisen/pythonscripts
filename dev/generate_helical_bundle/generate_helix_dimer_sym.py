@@ -151,7 +151,7 @@ class ParametricHelicalBundle:
         for line in stub_file:
             atom.append( (array([float(line[6]),float(line[7]),float(line[8] ) ])))
             tmp_atom.append( Vec( float(line[6]), float(line[7]) , float(line[8]) ) )
-            
+
         # rotation and translational vectors
         t_v, r_m = self.get_translation_and_rotation( atom[6], atom[1], atom[11]  )
 
