@@ -49,6 +49,21 @@ class MetalSiteGeometry:
 
         self.chain = ""
 
+        self.metal_coordination = {}
+
+
+    def write_stats_file(self):
+        with open("stats.dat", "w") as f:
+            f.write("Metal site,residue,distance,angle,torsion\n")
+            for key in self.metal_coordination:
+                for key2 in self.metal_coordination[key]:
+                    if(len(self.metal_coordination[key][key2]) == 3):
+                        f.write(str(key)+","+str(key2)+","+self.metal_coordination[key][key2][0]+","+self.metal_coordination[key][key2][1]+","+self.metal_coordination[key][key2][2]+"\n")
+
+                    else:
+                        f.write(str(key)+","+str(key2)+","+self.metal_coordination[key][key2][0]+"\n")
+
+
 
     # Requires PDB files
     # Returns list with lines in file
@@ -66,6 +81,9 @@ class MetalSiteGeometry:
                         # key is the residue name with the chain and residue number information
                         self.metal_coor[line[18:26]] = array([float(line[31:39]),float(line[39:47]),float(line[47:55])])
                         self.coordination_sites_protein[line[18:26]] = {}
+                        self.metal_coordination[line[18:26]] = {}
+
+
                     pdb.append(line)
         return pdb
 
@@ -185,8 +203,7 @@ class MetalSiteGeometry:
                                 residue[atom] = vec
             return residue,atoms
         except:
-            print "No protein atom ligating the metal ion"
-            return "HOH", ""
+            return "HOH", "O"
 
     # Requires list with pdb lines, metal coordinates ( set in the constructor )
     # Returns dictionary with ligands < DISTANCE from metal ion
@@ -337,7 +354,6 @@ class MetalSiteGeometry:
             torB  = '%.2f' %(self.get_dihedral_angle( self.metal_coor[ metal_site ] ,aminos[l_a],aminos[l_s],aminos[l_t]))
             return dis,angA,angB,torAB,torB
         else:
-            print atoms, aminos
             dis =  '%.2f' %(linalg.norm( self.metal_coor[metal_site] - self.coordination_sites_protein[metal_site][aminos]  ))
             return dis
 
@@ -377,7 +393,7 @@ class MetalSiteGeometry:
         for metal_site in self.coordination_sites_protein:
             for ligand in self.coordination_sites_protein[metal_site]:
 
-                print self.coordination_sites_protein[metal_site][ligand], ligand
+                # print "Here we go",self.coordination_sites_protein[metal_site][ligand], ligand
 
                 tm = ligand.split()
                 resn =tm[0].rstrip()
@@ -388,9 +404,16 @@ class MetalSiteGeometry:
                 # Define what the different values mean
                 # Fix torsion
                 if( len(atoms) == 3):
-                    print "output value ",self.metal_coor[ metal_site ]
-
                     a,b,c,d,e = self.get_geometry(atoms,aminos, metal_site )
+
+                    tmp_key = ligand+"_"+atoms[0]+"_"+atoms[1]+"_"+atoms[2]
+
+                    self.metal_coordination[metal_site][tmp_key] = []
+                    self.metal_coordination[metal_site][tmp_key].append(a)
+                    self.metal_coordination[metal_site][tmp_key].append(c)
+                    self.metal_coordination[metal_site][tmp_key].append(e)
+
+
                     # Adding modification
                     tmp_constraint = self.write_constraint_file(resn,resid,atoms[0],METAL,a,b,c,d,e,LIGANDNAMES,LIGANDRESNAME)
                     rosetta_cst.write(tmp_constraint)
@@ -402,8 +425,14 @@ class MetalSiteGeometry:
 
                     remark.append(self.set_remarks_pdb(resn,resid,dummy, self.chain))
                     dummy = dummy +1
+
                 else:
                     dis = self.get_geometry(atoms,ligand, metal_site)
+
+                    self.metal_coordination[metal_site][ligand] = []
+
+                    self.metal_coordination[metal_site][ligand].append(dis)
+
 
         return remark
                                 
@@ -449,6 +478,9 @@ class MetalSiteGeometry:
        
         for line in pdb_file:
             remark_pdb.write(line)
+
+        self.write_stats_file()
+        # print "Coordination site: ", self.metal_coordination # self.coordination_sites_protein
 
 if __name__ == "__main__":
     run = MetalSiteGeometry()
