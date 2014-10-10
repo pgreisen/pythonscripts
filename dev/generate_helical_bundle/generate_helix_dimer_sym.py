@@ -2,15 +2,16 @@
 from os import system,popen
 import string
 from sys import argv
+from translate_rotate import *
 import sys
 import math
 from math import sin,cos
 from numpy import *
+import numpy as np
+from numpy import linalg as LA
+
 import argparse
-#sys.path.append('/work/javierbq/scripts')
-#sys.path.append('/work/baker/will_python/pymol')
-#sys.path.append('/work/javierbq/local/lib/python2.7/site-packages/pyrosetta-3.4.20130712225713.git_98e2652-py2.7.egg/')
-#from xyzMath import *
+from xyzMath import *
 
 
 class ParametricHelicalBundle:
@@ -23,8 +24,45 @@ class ParametricHelicalBundle:
         self.atom_num=1
         self.res_num=1
 
+        # parameter from the parameter file:
+        self.Nres = 0
+        self.num_chain = 0
+        self.num_to_output = 0
+        self.orientation = 0
+        self.R0 = 0
+        self.w0 = 0
+        self.ph = 0
+        self.z = 0
+        self.output_file_prefix = 0
+        self.chain_name = 0
+        self.chain_order = 0
 
-    def enumerate_combinations(list):
+        self.chain_set=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+        self.debug = True
+
+
+    def get_translation_and_rotation(self,a=None,b=None,c=None):
+
+        translation = a
+        e1 = (a-b) / LA.norm(a-b)
+
+        tmp_e3 = np.cross(e1,c-b)
+        e3 = tmp_e3 / LA.norm( tmp_e3 )
+
+        tmp_e2 = np.cross(e1,e3)
+        e2 = tmp_e2 / LA.norm( tmp_e2 )
+        print e1, e2, e3
+
+        assert LA.norm(e1) == LA.norm(e2) == LA.norm(e3) == 1
+
+        rotation_matrix = ([e1[0],e1[1],e1[2]],[e2[0],e2[1],e2[2]],[e3[0],e3[1],e3[2]])
+
+        return translation, rotation_matrix
+
+
+
+    def enumerate_combinations(self, list):
 
         num = len(list)
         ncomb=1
@@ -36,8 +74,8 @@ class ParametricHelicalBundle:
 
         combs=[]
         for j in range(ncomb):
-        
-        combs.append(string.join(map(lambda x: str(counter[x]), range(num))))
+            combs.append(string.join(map(lambda x: str(counter[x]), range(num))))
+
         for i in range(num):
             counter[i]=counter[i]+add
             if counter[i]==list[i]:
@@ -46,21 +84,17 @@ class ParametricHelicalBundle:
                 break
         return(combs)
 
-    def Generate_Pdbs(Nres,num_chain,num_to_output,w,R,orientation,helix_phase,delta_z,output_file_name,chain_name, chain_order):
+    def Generate_Pdbs(self, Nres,num_chain,num_to_output,w0,R,orientation,helix_phase,delta_z,output_file_name,chain_name, chain_order):
 
         # chain parameters
         ph = 360/num_chain
         phase=[]
         for i in range(num_chain):
             phase.append(i*ph)
-            chain_set=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
-        chain_num=chain_set[0:num_chain]
-        # R1 is set
-        # R1=2.26
-        # w1 = 720./7.  # 102.85  for a 2-layer heptad repeat
-        # w1=1080./11.
-        # w1=100.
+        # assign a chain id to each chain
+        chain_num=self.chain_set[0:num_chain]
+
         #rise per residue d  fixed. this constrains pitch (alpha)
         d=1.51
         z1=0.
@@ -70,47 +104,74 @@ class ParametricHelicalBundle:
 
         Res_id=[]
         CA_list=[]
-        alpha=math.asin(R*w*deg_to_rad/d)
+        alpha=math.asin(R*w0*self.deg_to_rad/d)
         for iter in range(num_to_output):
             CA_list.append([])
             Res_id.append([])
             chain = chain_name[iter]
             orient = orientation[iter]
 
-        if orient == 1:
-            res_num=0
-        else:
-            res_num=Nres+1
-
-        supercoil_phase=phase[iter]+delta_z[iter]*math.tan(alpha)/(R*self.deg_to_rad)
-        for t in range(Nres+2):      ## need two extra residues to guide placement of 1st and last residue
-            a0=(w*t+supercoil_phase)*deg_to_rad
-            a1=(w1*t+helix_phase[iter]+phase[iter])*deg_to_rad   # set ref point for phase to be along supercoil radius
-
-            x=R*math.cos(a0) + R1*math.cos(a0) * cos(a1) - R1*cos(alpha)*sin(a0)*sin(a1)
-            y=R*math.sin(a0) + R1*sin(a0)*cos(a1) + R1*cos(alpha)*cos(a0)*sin(a1)
-            z= R*w*t*deg_to_rad/math.tan(alpha +.00000001)-R1*sin(alpha)*sin(a1)+delta_z[iter]
-
-            CA_list[iter].append( (res_num,Vec(x,y,z)) )
-            Res_id[iter].append(res_num)
-            atom_num=atom_num+1
-    
-            if orient  == 1:
-                res_num=res_num+1
+            if orient == 1:
+                res_num=0
             else:
-                res_num=res_num-1
+                res_num=Nres+1
+
+            supercoil_phase=phase[iter]+delta_z[iter]*math.tan(alpha)/(R*self.deg_to_rad)
+            # Loop over all the residue specified in the input file
+            for t in range(Nres+2):      ## need two extra residues to guide placement of 1st and last residue
+
+                a0=(w0*t+supercoil_phase)*self.deg_to_rad
+                # PG note if we need to subsample the value of w1+w0 = CONSTANT Here we need a
+                # modification
+
+                # w1, t
+                a1=(self.w1*t+helix_phase[iter]+phase[iter])*self.deg_to_rad   # set ref point for phase to be along supercoil radius
+
+                x=R*math.cos(a0) + self.R1*math.cos(a0) * cos(a1) - self.R1*cos(alpha)*sin(a0)*sin(a1)
+                y=R*math.sin(a0) + self.R1*sin(a0)*cos(a1) + self.R1*cos(alpha)*cos(a0)*sin(a1)
+                z= R*w0*t*self.deg_to_rad/math.tan(alpha +.00000001)-self.R1*sin(alpha)*sin(a1)+delta_z[iter]
+
+                CA_list[iter].append( (res_num,array([x,y,z])) )
+
+                Res_id[iter].append(res_num)
+                self.atom_num=self.atom_num+1
+    
+                if orient  == 1:
+                    res_num=res_num+1
+                else:
+                    res_num=res_num-1
+
         # convert CA trace to full backbone model by superimposing on ideal template
         # by matching 3 consecutive CA atoms
         # set up ideal template
         stub_file=map(string.split,open('ideal.pdb','r').readlines())
         atom=[]
-        for line in stub_file:
-            atom.append( (Vec(float(line[6]),float(line[7]),float(line[8]))))
 
-        ideal_stub=stub(atom[6],atom[1],atom[11])
+        tmp_atom = []
+        for line in stub_file:
+            atom.append( (array([float(line[6]),float(line[7]),float(line[8] ) ])))
+            tmp_atom.append( Vec( float(line[6]), float(line[7]) , float(line[8]) ) )
+
+        # rotation and translational vectors
+        t_v, r_m = self.get_translation_and_rotation( atom[6], atom[1], atom[11]  )
+
+        if(self.debug == True):
+
+            print "Vec1",tmp_atom[6]
+            print "Vec2",tmp_atom[1]
+            print "Vec3",tmp_atom[11]
+
+        ideal_stub=stub( tmp_atom[6], tmp_atom[1], tmp_atom[11] )
+
+        if(self.debug == True):
+
+            print "The ideal stub is: ", ideal_stub
 
         full_pdb=open(output_file_name,'w')
-        atom_num=1
+        # this value is now set in the constructor
+        # atom_num=1
+
+        print "Length of CA_list", len(CA_list)
 
         res_num=0
         for counter in range(num_to_output):
@@ -120,41 +181,62 @@ class ParametricHelicalBundle:
             CA_chain = sorted(CA_chain_u, key = lambda res: res[0])
             for res in range(1,Nres+1):
                 res_num=res_num+1
+
                 # STUB INSERT ROTATION/TRANSLATION
-                actual_stub=stub(CA_chain[res][1],CA_chain[res-1][1],CA_chain[res+1][1])
-                transform=actual_stub * ~ideal_stub
+                ##actual_stub=stub(CA_chain[res][1],CA_chain[res-1][1],CA_chain[res+1][1])
+
+                tmp_vec_a = Vec( float(CA_chain[res][1][0]),float(CA_chain[res][1][1]),float(CA_chain[res][1][2]) )
+                tmp_vec_b = Vec( float(CA_chain[res-1][1][0]),float(CA_chain[res-1][1][1]),float(CA_chain[res-1][1][2]) )
+                tmp_vec_c = Vec( float(CA_chain[res+1][1][0]),float(CA_chain[res+1][1][1]),float(CA_chain[res+1][1][2]) )
+
+                print "tmp_vec_a", tmp_vec_a
+                print "tmp_vec_b", tmp_vec_b
+                print "tmp_vec_c", tmp_vec_c
+
+
+                old_actual_stub = stub(tmp_vec_a,tmp_vec_b, tmp_vec_c)
+
+                ##actual_stub=stub(CA_chain[res][1],CA_chain[res-1][1],CA_chain[res+1][1])
+
+
+                #transform=actual_stub * ~ideal_stub
+                transform=old_actual_stub * ~ideal_stub
+
+                print "The transform is equal to ", transform
+
+
 
                 coords=transform*atom[5]
                 full_pdb.write('ATOM %6d  N   GLY %s %3d    %8.3f%8.3f%8.3f%s\n'%(atom_num,chain,res_num,coords.x,coords.y,coords.z,last))
-                atom_num=atom_num+1
+                self.atom_num=self.atom_num+1
 
                 # CA   (use actual CA from trace rather than superimposed one)
                 coords=CA_chain[res][1]
                 tcoords=transform*atom[6]
 
                 full_pdb.write('ATOM %6d  CA  GLY %s %3d    %8.3f%8.3f%8.3f%s\n'%(atom_num,chain,res_num,coords.x,coords.y,coords.z,last))
-                atom_num=atom_num+1
+                self.atom_num=self.atom_num+1
 
                 #  NH
                 coords=transform*atom[7]
                 full_pdb.write('ATOM %6d  H   GLY %s %3d    %8.3f%8.3f%8.3f%s\n'%(atom_num,chain,res_num,coords.x,coords.y,coords.z,last))
-                atom_num=atom_num+1
+                self.atom_num=self.atom_num+1
 
                 #  C
                 coords=transform*atom[8]
                 full_pdb.write('ATOM %6d  C   GLY %s %3d    %8.3f%8.3f%8.3f%s\n'%(atom_num,chain,res_num,coords.x,coords.y,coords.z,last))
-                atom_num=atom_num+1
+                self.atom_num=self.atom_num+1
 
                 # O
                 coords=transform*atom[9]
                 full_pdb.write('ATOM %6d  O   GLY %s %3d    %8.3f%8.3f%8.3f%s\n'%(atom_num,chain,res_num,coords.x,coords.y,coords.z,last))
-                atom_num=atom_num+1
+                self.atom_num=self.atom_num+1
 
                 start_d=Vec.distance(atom[8],atom[6])
                 end_d = Vec.distance(transform*atom[8],transform*atom[6])
 
 
-    def input_params(input):
+    def input_params(self,input):
 
         output_file_prefix=input[0][0]
         Nres = int(input[1][0])
@@ -238,19 +320,20 @@ class ParametricHelicalBundle:
         input_file=argv[1]
         tag = argv[2]
 
-
         input =map(string.split,open(input_file,'r').readlines())
-        Nres,num_chain,num_to_output,orientation,R0,w0,ph,z,output_file_prefix,chain_name,chain_order = input_params(input)
-        print w0,ph,z,chain_order
+        Nres,num_chain,num_to_output,orientation,R0,w0,ph,z,output_file_prefix,chain_name,chain_order = self.input_params(input)
+        ##print w0,ph,z,chain_order
+
         items=[]
         items.append(len(w0))
         items.append(len(R0))
+
         for p in ph:
             items.append(len(p))
         for zz in z:
             items.append(len(zz))
 
-        combos=enumerate_combinations(items)
+        combos=self.enumerate_combinations(items)
 
         for combo in combos:
             id=map(int,string.split(combo))
@@ -267,4 +350,9 @@ class ParametricHelicalBundle:
             for i in range(num_to_output):
                 out_file_name=out_file_name+'_'+'%.2f'%delta_z[i]
             out_file_name=out_file_name+'.pdb'
-            Generate_Pdbs(Nres,num_chain,num_to_output,w0[id[0]],R0[id[1]],orientation,helix_phase,delta_z,out_file_name,chain_name,chain_order)
+            self.Generate_Pdbs(Nres,num_chain,num_to_output,w0[id[0]],R0[id[1]],orientation,helix_phase,delta_z,out_file_name,chain_name,chain_order)
+
+
+if __name__ == "__main__":
+    run = ParametricHelicalBundle()
+    run.main()

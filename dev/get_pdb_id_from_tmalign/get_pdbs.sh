@@ -1,0 +1,1 @@
+perl /work/krypton/scripts/pdb_find.pl /lab/databases/hhsuite/hhm/pdb70_06Sep14.hhm.list 3ESG.pdb

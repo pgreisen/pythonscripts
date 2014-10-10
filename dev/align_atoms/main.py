@@ -50,30 +50,31 @@ def main():
 
     # Query
     # Atom names
-    query_atoms = ['P1','F1','O1'] #,'O1']
+    query_atoms = ['OAF','PAN','CAE', 'OAJ'] #,'O1']
     # Residue name
-    query_residuename = 'VTA'
+    query_residuename = 'DRG'
+
     # Input: listinstance, atoms_to_get, residue_of_these_atoms, residuename
 
     # Do the alignment per atom names
-    #    query_atoms_coordinates = pdbfile_instance.get_atoms(pose,query_atoms,query_residuename)
+    query_atoms_coordinates = pdbfile_instance.get_atoms(pose,query_atoms,query_residuename)
 
     # Do the alignment per atom ID ( index of the pdb file )
-    query_atoms = ['28','21','10'] #,'O1']
-    query_atoms_coordinates = pdbfile_instance.get_atoms_per_index(pose,query_atoms,query_residuename)
+    ##query_atoms = ['28','21','10'] #,'O1']
+    ##query_atoms_coordinates = pdbfile_instance.get_atoms_per_index(pose,query_atoms,query_residuename)
 
     
     fl2 = sys.argv[2]
     target_pose = pdbfile_instance.read_file(fl2)
     # Target
     # Atom names
-    target_atoms = ['28','21','10'] #,'O1']
+    target_atoms = ['O2','P1','C9','O1'] #,'O1']
     # Residue name
-    target_residuename = 'VTA'
+    target_residuename = 'VXM'
     # Input: listinstance, atoms_to_get, residue_of_these_atoms, residuename
     # Return: dictionary
-    #    target_atoms_coordinates = pdbfile_instance.get_atoms(target_pose,target_atoms,target_residuename)
-    target_atoms_coordinates = pdbfile_instance.get_atoms_per_index(target_pose,target_atoms,target_residuename)
+    target_atoms_coordinates = pdbfile_instance.get_atoms(target_pose,target_atoms,target_residuename)
+    ##target_atoms_coordinates = pdbfile_instance.get_atoms_per_index(target_pose,target_atoms,target_residuename)
 
     # Data transformation
     # Order matters hence list is given as argument 
