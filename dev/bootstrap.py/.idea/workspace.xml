@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" afterPath="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" />
     </list>
     <ignored path="bootstrap.py.iws" />
@@ -57,7 +55,7 @@
       <file leaf-file-name="write_cvs_file_docking_results.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="10" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.2912088" vertical-offset="1055" max-vertical-offset="1995">
+            <state line="85" column="51" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.6923077" vertical-offset="645" max-vertical-offset="2055">
               <folding />
             </state>
           </provider>
@@ -416,7 +414,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="10" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.2912088" vertical-offset="1055" max-vertical-offset="1995">
+        <state line="85" column="51" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.6923077" vertical-offset="645" max-vertical-offset="2055">
           <folding />
         </state>
       </provider>
