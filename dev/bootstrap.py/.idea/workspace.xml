@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="" />
+    <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" afterPath="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" />
+    </list>
     <ignored path="bootstrap.py.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +30,7 @@
       <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="428" column="21" selection-start="14979" selection-end="14979" vertical-scroll-proportion="-5.08" vertical-offset="6248" max-vertical-offset="7350">
+            <state line="1" column="33" selection-start="18" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7395">
               <folding />
             </state>
           </provider>
@@ -35,10 +39,8 @@
       <file leaf-file-name="generate_helix_dimer_sym.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="-19.2" vertical-offset="225" max-vertical-offset="5445">
-              <folding>
-                <element signature="e#22#49#0" expanded="true" />
-              </folding>
+            <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="5445">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -52,13 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generate_position_file.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
+      <file leaf-file-name="write_cvs_file_docking_results.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="31" selection-start="2926" selection-end="2938" vertical-scroll-proportion="0.67582417" vertical-offset="735" max-vertical-offset="2235">
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state line="88" column="10" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.2912088" vertical-offset="1055" max-vertical-offset="1995">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,6 +69,14 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -82,16 +90,17 @@
         <option value="$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py" />
         <option value="$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py" />
         <option value="$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py" />
+        <option value="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
+    <option name="x" value="41" />
     <option name="y" value="22" />
-    <option name="width" value="1884" />
+    <option name="width" value="1879" />
     <option name="height" value="1058" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -121,9 +130,9 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py" />
-    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -281,7 +290,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="22" width="1884" height="1058" extended-state="0" />
+    <frame x="41" y="22" width="1879" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -316,19 +325,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="16" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7395">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="21" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="4995">
-          <folding>
-            <element signature="e#22#49#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -374,40 +374,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/xyzMath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="0" selection-start="6198" selection-end="6198" vertical-scroll-proportion="-0.78571427" vertical-offset="2907" max-vertical-offset="20085">
+        <state line="200" column="0" selection-start="6198" selection-end="6198" vertical-scroll-proportion="-0.78571427" vertical-offset="2907" max-vertical-offset="20085" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="5445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../docking_analysis_logfile_scorefile/write_cvs_file_docking_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="8" selection-start="568" selection-end="568" vertical-scroll-proportion="-0.9411765" vertical-offset="1360" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="0" selection-start="3195" selection-end="3195" vertical-scroll-proportion="0.8663102" vertical-offset="735" max-vertical-offset="2235">
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/translate_rotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1560">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="428" column="21" selection-start="14979" selection-end="14979" vertical-scroll-proportion="-5.08" vertical-offset="6248" max-vertical-offset="7350">
+        <state line="1" column="33" selection-start="18" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7395">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/translate_rotate.py">
+    <entry file="file://$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+        <state line="88" column="10" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.2912088" vertical-offset="1055" max-vertical-offset="1995">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="-19.2" vertical-offset="225" max-vertical-offset="5445">
-          <folding>
-            <element signature="e#22#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="31" selection-start="2926" selection-end="2938" vertical-scroll-proportion="0.67582417" vertical-offset="735" max-vertical-offset="2235">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
