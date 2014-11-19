@@ -88,9 +88,9 @@ class GeneratePositionFile:
         self.get_cbeta_position()
         self. get_positions()
 
-        with open("position.pos", 'w') as f:
+        with open("new_position.pos", 'w') as f:
             for line in self.positions:
-                f.write(line+'+')
+                f.write(line+' ')
 
 
         # print "The number of residues in the position file is: ", len(self.positions)
