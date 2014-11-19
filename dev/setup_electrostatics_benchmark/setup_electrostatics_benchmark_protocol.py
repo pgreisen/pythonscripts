@@ -94,14 +94,15 @@ class SetupElectrostaticsBenchmarkProtocol():
         tmpfile = open("tmp.mol2", 'w')
         with open("ligand_am1_bcc.mol2",'r') as f:
             atoms = False
+
             for line in f:
 
                 print "ATOM", line.find("@<TRIPOS>ATOM"),line
                 print "BOND", line.find("@<TRIPOS>BOND"),line
 
-                
                 if ( len(line) > 13 and line.find("@<TRIPOS>ATOM") >-1.0):
                     atoms = True
+
                 elif ( len(line) > 13 and line.find("@<TRIPOS>BOND") >-1.0):
                     atoms = False
 

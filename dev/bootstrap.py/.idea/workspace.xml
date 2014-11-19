@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" afterPath="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../pythonscripts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../setup_electrostatics_benchmark/setup_electrostatics_benchmark_protocol.py" afterPath="$PROJECT_DIR$/../setup_electrostatics_benchmark/setup_electrostatics_benchmark_protocol.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../split_nmr_into_multiple_pdbs.py" afterPath="$PROJECT_DIR$/../../split_nmr_into_multiple_pdbs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bootstrap.py.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +31,36 @@
       <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="33" selection-start="18" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7395">
+            <state line="8" column="39" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="7395">
+              <folding>
+                <element signature="e#18#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rotamer_analysis_from_md_simulation.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="14" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convert_am1bcc_to_rosetta.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Convert_AM1BCC_into_Rosetta/convert_am1bcc_to_rosetta.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="20" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.9780776" vertical-offset="5" max-vertical-offset="930">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="amber_analysis_format.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/amber_analysis_format.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2070">
               <folding />
             </state>
           </provider>
@@ -37,7 +69,7 @@
       <file leaf-file-name="generate_helix_dimer_sym.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="5445">
+            <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="5265">
               <folding />
             </state>
           </provider>
@@ -47,15 +79,6 @@
         <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/translate_rotate.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1560">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="write_cvs_file_docking_results.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="51" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.6923077" vertical-offset="645" max-vertical-offset="2055">
               <folding />
             </state>
           </provider>
@@ -89,6 +112,8 @@
         <option value="$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py" />
         <option value="$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py" />
         <option value="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" />
+        <option value="$PROJECT_DIR$/../combine_cstfiles/combinations_per_position.py" />
+        <option value="$PROJECT_DIR$/../Convert_AM1BCC_into_Rosetta/convert_am1bcc_to_rosetta.py" />
       </list>
     </option>
   </component>
@@ -128,9 +153,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Convert_AM1BCC_into_Rosetta/convert_am1bcc_to_rosetta.py" />
+    <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -289,7 +315,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="22" width="1879" height="1058" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -300,7 +326,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.67082036" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="136" y="122" width="1684" height="858" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -323,38 +349,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="21" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="4995">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_cst_file/generate_cst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="0" selection-start="8037" selection-end="8037" vertical-scroll-proportion="0.0" vertical-offset="4035" max-vertical-offset="4395" />
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="17" selection-start="9858" selection-end="9859" vertical-scroll-proportion="-9.94276" vertical-offset="12654" max-vertical-offset="13545" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../align_atoms/pdbfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="255" selection-end="255" vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="2535" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../align_atoms/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="29" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.24598931" vertical-offset="610" max-vertical-offset="1830" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_cst_file/generate_cst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="0" selection-start="8037" selection-end="8037" vertical-scroll-proportion="1.4171124" vertical-offset="2665" max-vertical-offset="4395" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../matcher_per_position/matcherposformat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="63" selection-start="291" selection-end="306" vertical-scroll-proportion="0.16042781" vertical-offset="0" max-vertical-offset="935" />
@@ -375,26 +369,27 @@
         <state line="200" column="0" selection-start="6198" selection-end="6198" vertical-scroll-proportion="-0.78571427" vertical-offset="2907" max-vertical-offset="20085" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="5445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../docking_analysis_logfile_scorefile/write_cvs_file_docking_results.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="568" selection-end="568" vertical-scroll-proportion="-0.9411765" vertical-offset="1360" max-vertical-offset="2295">
-          <folding />
-        </state>
+        <state line="32" column="8" selection-start="568" selection-end="568" vertical-scroll-proportion="-0.9411765" vertical-offset="1360" max-vertical-offset="2295" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="3195" selection-end="3195" vertical-scroll-proportion="0.8663102" vertical-offset="735" max-vertical-offset="2235">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state line="103" column="0" selection-start="3195" selection-end="3195" vertical-scroll-proportion="0.8663102" vertical-offset="735" max-vertical-offset="2235" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="51" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../combine_cstfiles/combinations_per_position.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -405,16 +400,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
+    <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="33" selection-start="18" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7395">
+        <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="5445">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py">
+    <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="51" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.6923077" vertical-offset="645" max-vertical-offset="2055">
+        <state line="8" column="39" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="7395">
+          <folding>
+            <element signature="e#18#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/amber_analysis_format.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2070">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/matcherposformat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/amber_ptraj_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="215" column="30" selection-start="5645" selection-end="5645" vertical-scroll-proportion="3.4171124" vertical-offset="0" max-vertical-offset="12090">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="14" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Convert_AM1BCC_into_Rosetta/convert_am1bcc_to_rosetta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="20" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.9780776" vertical-offset="5" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
