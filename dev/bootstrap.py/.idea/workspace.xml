@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../pythonscripts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../setup_electrostatics_benchmark/setup_electrostatics_benchmark_protocol.py" afterPath="$PROJECT_DIR$/../setup_electrostatics_benchmark/setup_electrostatics_benchmark_protocol.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../split_nmr_into_multiple_pdbs.py" afterPath="$PROJECT_DIR$/../../split_nmr_into_multiple_pdbs.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bootstrap.py.iws" />
@@ -92,6 +89,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Per Jr. Greisen" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="GitLogSettings">
@@ -311,12 +313,18 @@
       <created>1411437092171</created>
       <updated>1411437092171</updated>
     </task>
+    <task id="LOCAL-00001" summary="Script is add to convert AM1-BCC mol2 format into Rosetta mol2 format. The problem is mainly connected with the types e.g. c3 (AM1-BCC) is c.3 ( Rosetta).">
+      <created>1416421629436</created>
+      <updated>1416421629436</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="22" width="1879" height="1058" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -344,6 +352,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Script is add to convert AM1-BCC mol2 format into Rosetta mol2 format. The problem is mainly connected with the types e.g. c3 (AM1-BCC) is c.3 ( Rosetta)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Script is add to convert AM1-BCC mol2 format into Rosetta mol2 format. The problem is mainly connected with the types e.g. c3 (AM1-BCC) is c.3 ( Rosetta)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
