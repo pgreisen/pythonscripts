@@ -9,7 +9,7 @@ model = -1
 for i in input:
     line = i.split()
     if len(line) >= 1:
-        if line[0] == "MODEL":
+        if line[0] == "MODEL" or line[0] == "TER":
             model = model + 1 # int(line[1])
             output = open(sys.argv[1]+".model."+str(model)+".pdb", 'w')
 
