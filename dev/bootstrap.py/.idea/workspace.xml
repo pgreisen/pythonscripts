@@ -317,7 +317,11 @@
       <created>1416421629436</created>
       <updated>1416421629436</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Script is add to convert AM1-BCC mol2 format into Rosetta mol2 format. The problem is mainly connected with the types e.g. c3 (AM1-BCC) is c.3 ( Rosetta).">
+      <created>1416422130293</created>
+      <updated>1416422130293</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">

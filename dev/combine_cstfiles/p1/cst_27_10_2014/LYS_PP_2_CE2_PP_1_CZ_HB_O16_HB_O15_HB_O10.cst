@@ -1,0 +1,107 @@
+CST::BEGIN
+  NATIVE
+  TEMPLATE:: ATOM_MAP: 1 atom_name: C47 C46 O14
+  TEMPLATE:: ATOM_MAP: 1 residue3: VAN
+
+  TEMPLATE:: ATOM_MAP: 2 atom_name: NZ CE CD ,
+  TEMPLATE:: ATOM_MAP: 2 residue1: K
+
+  CONSTRAINT:: distanceAB: 3.8  0.3   100  1 1
+  CONSTRAINT::    angle_A: 170.0 10   100  360 1
+  CONSTRAINT::    angle_B: 100.0 20   50   360 1
+  CONSTRAINT::  torsion_A: 0  180   50   360 18
+  CONSTRAINT::  torsion_B: 0  180   50   360 18
+  CONSTRAINT:: torsion_AB: 0  180   50   360 18
+
+CST::END    CST::BEGIN
+
+    TEMPLATE::   ATOM_MAP: 1 atom_name: X3 C32 C33
+    TEMPLATE::   ATOM_MAP: 1 residue3:  VAN
+    
+    TEMPLATE::   ATOM_MAP: 2 atom_name: CE2 X1 CD2 
+    TEMPLATE::   ATOM_MAP: 2 residue1: YF
+    	
+    CONSTRAINT:: distanceAB:  3.9  0.50  100.  0    2   # including offset parallel stacking
+    CONSTRAINT::    angle_A:  90.0 5.0  10.0  360. 1  
+    CONSTRAINT::    angle_B:  90.0 5.0  10.0  360. 1 
+    # This angle control front/back orientation
+    CONSTRAINT::  torsion_A:  90 5.0 100.0  180.0  1  
+    # Free - rotation around the two planes
+    # CONSTRAINT:: torsion_AB:  0 0.0 10.0  360.   
+    # 90 is pi/pi and 0 is t-stack?
+    CONSTRAINT::  torsion_B:  90 5.0 100.0  180.   1 
+
+    ALGORITHM_INFO:: match
+    IGNORE_UPSTREAM_PROTON_CHI
+    SECONDARY_MATCH: DOWNSTREAM    
+    MAX_DUNBRACK_ENERGY 2.5
+
+    ALGORITHM_INFO::END
+
+    CST::END
+    CST::BEGIN
+
+    TEMPLATE::   ATOM_MAP: 1 atom_name: X1 C49 C51
+    TEMPLATE::   ATOM_MAP: 1 residue3:  VAN
+    
+    TEMPLATE::   ATOM_MAP: 2 atom_name: CZ X1 CE1 
+    TEMPLATE::   ATOM_MAP: 2 residue1: YF
+    	
+    CONSTRAINT:: distanceAB:  3.9  0.50  100.  0    2   # including offset parallel stacking
+    CONSTRAINT::    angle_A:  90.0 5.0  10.0  360. 1  
+    CONSTRAINT::    angle_B:  90.0 5.0  10.0  360. 1 
+    # This angle control front/back orientation
+    CONSTRAINT::  torsion_A:  90 5.0 100.0  180.0  1  
+    # Free - rotation around the two planes
+    # CONSTRAINT:: torsion_AB:  0 0.0 10.0  360.   
+    # 90 is pi/pi and 0 is t-stack?
+    CONSTRAINT::  torsion_B:  90 5.0 100.0  180.   1 
+
+    ALGORITHM_INFO:: match
+    IGNORE_UPSTREAM_PROTON_CHI
+    SECONDARY_MATCH: DOWNSTREAM    
+    MAX_DUNBRACK_ENERGY 2.5
+
+    ALGORITHM_INFO::END
+
+    CST::END
+CST::BEGIN
+  TEMPLATE::   ATOM_MAP: 1 atom_name: O16 C52 C50
+  TEMPLATE::   ATOM_MAP: 1 residue3: VAN
+
+  TEMPLATE::   ATOM_MAP: 2 atom_type: OH ,
+  TEMPLATE::   ATOM_MAP: 2 residue1: STY
+
+  CONSTRAINT:: distanceAB:    3.00   0.20 100.00  1        1
+  CONSTRAINT::    angle_A:  109.50   5.00 100.00  360.00   1
+  CONSTRAINT::    angle_B:  109.50   5.00  50.00  360.00   1
+
+# add secondary matcher info
+
+CST::ENDCST::BEGIN
+  TEMPLATE::   ATOM_MAP: 1 atom_name: O15 C51 C53
+  TEMPLATE::   ATOM_MAP: 1 residue3: VAN
+
+  TEMPLATE::   ATOM_MAP: 2 atom_type: OH ,
+  TEMPLATE::   ATOM_MAP: 2 residue1: STY
+
+  CONSTRAINT:: distanceAB:    3.00   0.20 100.00  1        1
+  CONSTRAINT::    angle_A:  109.50   5.00 100.00  360.00   1
+  CONSTRAINT::    angle_B:  109.50   5.00  50.00  360.00   1
+
+# add secondary matcher info
+
+CST::ENDCST::BEGIN
+  TEMPLATE::   ATOM_MAP: 1 atom_name: O10 C34 C35
+  TEMPLATE::   ATOM_MAP: 1 residue3: VAN
+
+  TEMPLATE::   ATOM_MAP: 2 atom_type: OH ,
+  TEMPLATE::   ATOM_MAP: 2 residue1: STY
+
+  CONSTRAINT:: distanceAB:    3.00   0.20 100.00  1        1
+  CONSTRAINT::    angle_A:  109.50   5.00 100.00  360.00   1
+  CONSTRAINT::    angle_B:  109.50   5.00  50.00  360.00   1
+
+# add secondary matcher info
+
+CST::END
