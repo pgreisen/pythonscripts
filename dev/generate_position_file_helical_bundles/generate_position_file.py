@@ -41,13 +41,13 @@ class GeneratePositionFile:
         backbone = [ "N", "CA", "C" ]
         with open(pdbfile, 'r') as f:
             for line in f:
-                tmp = line.split()
-                key = tmp[3]+"_"+tmp[4]+"_"+tmp[5]
-                if( self.backbone_coordinates.has_key( key ) == False):
-                    self.backbone_coordinates[key] = {}
-                if( tmp[2] in backbone ):
-                    self.backbone_coordinates[key][tmp[2]] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
-
+                if( len(line) > 4 and line[0:4] == "ATOM"  ):
+                    tmp = line.split()
+                    key = tmp[3]+"_"+tmp[4]+"_"+tmp[5]
+                    if( self.backbone_coordinates.has_key( key ) == False):
+                        self.backbone_coordinates[key] = {}
+                    if( tmp[2] in backbone ):
+                        self.backbone_coordinates[key][tmp[2]] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
 
     def get_cbeta_position(self):
 
