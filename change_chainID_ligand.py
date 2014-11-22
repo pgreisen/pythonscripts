@@ -1,5 +1,10 @@
 import os,shutil,sys,subprocess
 
+'''
+change the chain id for protein chain
+
+'''
+
 def main():
     
     pdbfile = sys.argv[1]

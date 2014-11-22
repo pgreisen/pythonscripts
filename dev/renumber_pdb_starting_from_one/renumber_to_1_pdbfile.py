@@ -16,56 +16,48 @@ def read_file(pdbfile,cfactor):
     patchdock and matching.
 
     '''
-
     sequence_number = []
-
     outname = 'tmp.pdb'
-
     tmp = open(outname,'w')
-
     # Initialize from 0
     previuos_number = 0
 
     for line in pdbfile:
-
         tm = str(line)
         tot = tm
-
-        if tm[0:4] == 'ATOM':
-
-            cf= str(int(tm[23:26]) - cfactor)
+        if tm[0:4] == 'ATOM' and tm[13:15] == 'N ':
 
             previuos_number = previuos_number + 1
-
-            print "Cfactor is printed",cf, cfactor, previuos_number, cf == str(previuos_number)
-
-            assert cf == str(previuos_number)
-
+            cf = str( previuos_number )
             if len(cf) == 1:
                 cf = '   '+cf
-
             if len(cf) == 2:
                 cf = '  '+cf
-
             if len(cf) == 3:
                 cf = ' '+cf
 
             first = tm[0:22]
-
             second = tm[27:]
-
             tot = first+cf+' '+second
-
             tmp.write(tot)
-            
+        elif tm[0:4] == "ATOM" :
+            cf = str( previuos_number )
+            if len(cf) == 1:
+                cf = '   '+cf
+            if len(cf) == 2:
+                cf = '  '+cf
+            if len(cf) == 3:
+                cf = ' '+cf
 
+            first = tm[0:22]
+            second = tm[27:]
+            tot = first+cf+' '+second
+            tmp.write(tot)
 
         elif( tm[0:4] == 'HETA' ):
             tmp.write(line)
 
-
     tmp.close()
-
     return outname
 
 def get_number_to_substract(pdbfile):
@@ -95,14 +87,15 @@ def main():
 
     if(number == 0):
         print "PDB starts from residue 1"
+        src  = read_file(fl,number)
+        #pathname = os.path.abspath('')
+        #shutil.move(pathname+'/'+str(src),pathname+'/'+str(filename))
 
     else:
         print "The pdb chain starts at ", number
         src  = read_file(fl,number)
         pathname = os.path.abspath('')
         shutil.move(pathname+'/'+str(src),pathname+'/'+str(filename))
-
-    
- 
+     
 if __name__ == "__main__":
     main()
