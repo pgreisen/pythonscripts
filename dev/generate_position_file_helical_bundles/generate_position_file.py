@@ -1,5 +1,4 @@
 import os,sys
-
 from numpy import *
 from numpy import linalg as LA
 
@@ -8,6 +7,7 @@ class GeneratePositionFile:
 
 
     def __init__(self):
+        self.one_chain_only = True
         self.angle  = 0.0
         self.dis = 2.0
         self.maximum_distance = 7
@@ -50,7 +50,6 @@ class GeneratePositionFile:
                         self.backbone_coordinates[key][tmp[2]] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
 
     def get_cbeta_position(self):
-
         for key in self.backbone_coordinates:
             self.cbeta_dummy[key] = self.get_cbeta_dummy_vector( self.backbone_coordinates[key]["N"], self.backbone_coordinates[key]["CA"], self.backbone_coordinates[key]["C"]  )
 
@@ -58,15 +57,14 @@ class GeneratePositionFile:
     def get_positions(self):
 
         for key in self.cbeta_dummy:
-
             for key_two in self.cbeta_dummy:
+
                 # remove identical keys
                 if( key == key_two):
+
                     continue
                 # remove residue in the same chain
-
-                elif (key.split('_')[1] == key_two.split('_')[1]):
-                    # print key.split('_')[1], key_two.split('_')[1]
+                elif (key.split('_')[1] == key_two.split('_')[1] and self.one_chain_only):
                     continue
                 else:
                     dis = LA.norm(self.cbeta_dummy[key] - self.cbeta_dummy[key_two])
@@ -75,25 +73,20 @@ class GeneratePositionFile:
                         break
 
 
-
-
-
     def main(self):
-
         pdbfile = sys.argv[1]
-
         self.get_backbone_coordinates(pdbfile)
-
-        #
         self.get_cbeta_position()
-        self. get_positions()
+        self.get_positions()
+
+        #print self.backbone_coordinates
+        #print "cbeta positions",self.cbeta_dummy
+        print "positions",self.positions
+
 
         with open("new_position.pos", 'w') as f:
             for line in self.positions:
                 f.write(line+' ')
-
-
-        # print "The number of residues in the position file is: ", len(self.positions)
 
 
 if __name__ == "__main__":
