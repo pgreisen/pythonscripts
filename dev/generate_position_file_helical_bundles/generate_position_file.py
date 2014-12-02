@@ -79,8 +79,8 @@ class GeneratePositionFile:
         self.get_cbeta_position()
         self.get_positions()
 
-        #print self.backbone_coordinates
-        #print "cbeta positions",self.cbeta_dummy
+        print self.backbone_coordinates
+        print "cbeta positions",self.cbeta_dummy
         print "positions",self.positions
 
 
