@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py" afterPath="$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bootstrap.py.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +46,7 @@
       <file leaf-file-name="generate_position_file.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="33" selection-start="239" selection-end="239" vertical-scroll-proportion="0.26086956" vertical-offset="0" max-vertical-offset="2550">
+            <state line="112" column="10" selection-start="4119" selection-end="4119" vertical-scroll-proportion="0.3321739" vertical-offset="1459" max-vertical-offset="2550">
               <folding />
             </state>
           </provider>
@@ -423,7 +422,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="33" selection-start="239" selection-end="239" vertical-scroll-proportion="0.26086956" vertical-offset="0" max-vertical-offset="2550">
+        <state line="112" column="10" selection-start="4119" selection-end="4119" vertical-scroll-proportion="0.3321739" vertical-offset="1459" max-vertical-offset="2550">
           <folding />
         </state>
       </provider>

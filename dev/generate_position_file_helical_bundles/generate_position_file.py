@@ -79,7 +79,7 @@ class GeneratePositionFile:
         for key in self.backbone_coordinates:
             if( str( key[0:3] ) == "GLY"):
                 self.cbeta_dummy[key] = self.get_cbeta_dummy_vector( self.backbone_coordinates[key]["N"], self.backbone_coordinates[key]["CA"], self.backbone_coordinates[key]["C"]  )
-                print self.cbeta_dummy[key]
+                ##print self.cbeta_dummy[key]
 
 
 
@@ -108,9 +108,9 @@ class GeneratePositionFile:
         self.get_cbeta_position()
         self.get_positions()
 
-        print self.backbone_coordinates
-        print "cbeta positions",self.cbeta_dummy
-        print "positions",self.positions
+        #print self.backbone_coordinates
+        #print "cbeta positions",self.cbeta_dummy
+        ##print "positions",self.positions
 
 
         with open("new_position.pos", 'w') as f:
