@@ -7,10 +7,10 @@ class GeneratePositionFile:
 
 
     def __init__(self):
-        self.one_chain_only = True
+        self.one_chain_only = False
         self.angle  = 0.0
         self.dis = 2.0
-        self.maximum_distance = 7
+        self.maximum_distance = 5
         self.backbone_coordinates = {}
         self.cbeta_dummy = {}
         self.positions = []
@@ -41,17 +41,46 @@ class GeneratePositionFile:
         backbone = [ "N", "CA", "C" ]
         with open(pdbfile, 'r') as f:
             for line in f:
-                if( len(line) > 4 and line[0:4] == "ATOM"  ):
+                if( len(line) > 4 and line[0:4] == "ATOM" ):
+
                     tmp = line.split()
                     key = tmp[3]+"_"+tmp[4]+"_"+tmp[5]
+
+                    # debug
+                    # print key # output (residue name, chain, residue number ): ALA_A_200
+
+                    # initialize key if it not already present in the dictionary
                     if( self.backbone_coordinates.has_key( key ) == False):
                         self.backbone_coordinates[key] = {}
-                    if( tmp[2] in backbone ):
+
+                    # If not a glycine use the already assigned c-beta atom coordinates
+                    if( line[17:20] != "GLY" and tmp[2] == "CB" ):
+                        self.cbeta_dummy[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                        # debug
+                        # print array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+
+
+                    elif( line[17:20] == "GLY" ):
                         self.backbone_coordinates[key][tmp[2]] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
 
+                    # we do not care about the rest of the atoms in the file
+                    else:
+                        continue
+                        #print line
+                        #sys.exit("Strange behavior for generating position file")
+
+
+
     def get_cbeta_position(self):
+        '''
+        Method to generate a pseudo atom for the c-beta atom. Only used for glycine residues
+        '''
+
         for key in self.backbone_coordinates:
-            self.cbeta_dummy[key] = self.get_cbeta_dummy_vector( self.backbone_coordinates[key]["N"], self.backbone_coordinates[key]["CA"], self.backbone_coordinates[key]["C"]  )
+            if( str( key[0:3] ) == "GLY"):
+                self.cbeta_dummy[key] = self.get_cbeta_dummy_vector( self.backbone_coordinates[key]["N"], self.backbone_coordinates[key]["CA"], self.backbone_coordinates[key]["C"]  )
+                print self.cbeta_dummy[key]
+
 
 
     def get_positions(self):
