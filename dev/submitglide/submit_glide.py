@@ -172,9 +172,6 @@ class SubmitGlide:
         print "PDB ID is: ", pdbfile.splti('_')[split_string_number]
         return  pdbfile.split('_')[split_string_number]
 
-
-
-
     def main(self):
 
         parser = argparse.ArgumentParser(description="Submit files for Glide - you need to specify xml-file, parameter-file ( default for flags and executable )")
@@ -219,7 +216,7 @@ class SubmitGlide:
                     wrapper_template = self.write_wrapper_revert_to_native(pdbfile)
 
                     # need to implement
-                    pdbname = self.get_pdbname( pdb, input_variables.split_string_number)
+                    pdbname = self.get_pdbname( pdbfile, input_variables.split_string_number)
 
                     self.copy_native_pdb( pdbname )
 
