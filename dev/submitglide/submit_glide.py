@@ -26,8 +26,8 @@ class SubmitGlide:
         self.revert_to_native = False
         self.rosetta_exe = "/work/greisen/files/glide_examples/rosetta_exe_master_03_12_2014/rosetta_scripts.static.linuxgccrelease"
         self.parameter_path = "/work/greisen/files/glide_examples/parameters/"
-        self.database = "database_w_dummy_atoms"
-        self.database_tgz = "/work/greisen/files/glide_examples/newer_database/database_w_dummy_atoms.tgz"
+        self.database = "database"
+        self.database_tgz = "/work/greisen/files/glide_examples/newer_database/database.tgz"
         self.directory_w_files = "/work/greisen/files/glide_examples/files/"
         self.confs = None
 
