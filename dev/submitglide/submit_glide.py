@@ -194,7 +194,7 @@ class SubmitGlide:
         self.params = input_variables.parameterfile
         self.revert_to_native = input_variables.revert_to_native
         self.confs = input_variables.confs
-        
+
 
         PTH = os.path.abspath('./')
         # Get the files in the directory
