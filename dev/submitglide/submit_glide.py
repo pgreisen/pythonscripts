@@ -25,7 +25,6 @@ class SubmitGlide:
         self.flags = "flags"
         self.revert_to_native = False
         self.rosetta_exe = "/work/greisen/rosetta_exe_13_09_2014_vip/rosetta_scripts.static.linuxgccrelease"
-
         self.parameter_path = "/work/greisen/files/parameters/"
         self.database = "database_w_dummy_atoms"
         self.database_tgz = "/work/greisen/files/glide_examples/newer_database/database_w_dummy_atoms.tgz"
@@ -104,7 +103,9 @@ class SubmitGlide:
         should_transfer_files = YES
         when_to_transfer_output = ON_EXIT
         on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
-    
+
+        import pdb; pdb.set_trace()
+
         transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, '''+self.rosetta_exe+'''
 
         Executable = run_wrapper.sh
