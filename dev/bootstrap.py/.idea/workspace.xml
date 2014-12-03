@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../submitglide/submit_glide.py" afterPath="$PROJECT_DIR$/../submitglide/submit_glide.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bootstrap.py.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +60,7 @@
       <file leaf-file-name="submit_glide.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="0" selection-start="4455" selection-end="4455" vertical-scroll-proportion="0.8274021" vertical-offset="1620" max-vertical-offset="3630">
+            <state line="29" column="87" selection-start="836" selection-end="844" vertical-scroll-proportion="-0.31156716" vertical-offset="602" max-vertical-offset="3630">
               <folding />
             </state>
           </provider>
@@ -464,7 +463,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="0" selection-start="4455" selection-end="4455" vertical-scroll-proportion="0.8274021" vertical-offset="1620" max-vertical-offset="3630">
+        <state line="29" column="87" selection-start="836" selection-end="844" vertical-scroll-proportion="-0.31156716" vertical-offset="602" max-vertical-offset="3630">
           <folding />
         </state>
       </provider>
