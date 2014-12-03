@@ -182,10 +182,8 @@ class SubmitGlide:
 
         parser.add_argument("--revert_to_native", action="store_true", dest="revert_to_native", help="For revert to native using the native sequence this flag is necessary", default=False)
 
-
-
         # split pdb string to get native pdb
-        parser.add_argument("-s", "--split_string_number", dest="split_string_number", help="The name of the pdb file is split by '_' and this number is used as the name for the pdb", default=False)
+        parser.add_argument("-s", "--split_string_number", dest="split_string_number", help="The name of the pdb file is split by '_' and this number is used as the name for the pdb", default=3, type=int )
 
         input_variables = parser.parse_args()
 
