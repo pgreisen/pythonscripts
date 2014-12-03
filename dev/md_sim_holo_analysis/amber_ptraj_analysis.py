@@ -197,7 +197,7 @@ quit
         return template
 
 
-    def generate_vmd_input_file(self,residues,ligand_number,number_of_md_simulation=25):
+    def generate_vmd_input_file(self,residues,ligand_number,number_of_md_simulation=50):
         
         template = '''set start 0
 # file name is apo_solv.prmtop
