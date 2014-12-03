@@ -110,7 +110,7 @@ class GeneratePositionFile:
 
         #print self.backbone_coordinates
         #print "cbeta positions",self.cbeta_dummy
-        ##print "positions",self.positions
+        ##  print "positions",self.positions
 
 
         with open("new_position.pos", 'w') as f:
