@@ -58,7 +58,7 @@
       <file leaf-file-name="submit_glide.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="44" selection-start="7045" selection-end="7045" vertical-scroll-proportion="0.62633455" vertical-offset="2828" max-vertical-offset="3615">
+            <state line="172" column="55" selection-start="5320" selection-end="5320" vertical-scroll-proportion="0.5871886" vertical-offset="2250" max-vertical-offset="3615">
               <folding />
             </state>
           </provider>
@@ -451,7 +451,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="44" selection-start="7045" selection-end="7045" vertical-scroll-proportion="0.62633455" vertical-offset="2828" max-vertical-offset="3615">
+        <state line="172" column="55" selection-start="5320" selection-end="5320" vertical-scroll-proportion="0.5871886" vertical-offset="2250" max-vertical-offset="3615">
           <folding />
         </state>
       </provider>

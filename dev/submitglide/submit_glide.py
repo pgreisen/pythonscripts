@@ -169,7 +169,7 @@ class SubmitGlide:
 
     def get_pdbname( self, pdbfile, split_string_number):
         #debug
-        print "PDB ID is: ", pdbfile.splti('_')[split_string_number]
+        print "PDB ID is: ", pdbfile.split('_')[split_string_number]
         return  pdbfile.split('_')[split_string_number]
 
     def main(self):
