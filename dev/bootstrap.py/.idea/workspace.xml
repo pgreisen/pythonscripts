@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="" />
+    <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../submitglide/submit_glide.py" afterPath="$PROJECT_DIR$/../submitglide/submit_glide.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="bootstrap.py.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotamer_analysis_from_md_simulation.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="rotamer_analysis_from_md_simulation.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="23" selection-start="3084" selection-end="3086" vertical-scroll-proportion="0.3321739" vertical-offset="1204" max-vertical-offset="1830">
+            <state line="96" column="0" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0" vertical-offset="1179" max-vertical-offset="1830">
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -55,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="submit_glide.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="submit_glide.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="185" column="204" selection-start="6265" selection-end="6265" vertical-scroll-proportion="-9.6" vertical-offset="2535" max-vertical-offset="3585">
+            <state line="196" column="8" selection-start="6754" selection-end="6754" vertical-scroll-proportion="0.83985764" vertical-offset="2468" max-vertical-offset="3630">
               <folding />
             </state>
           </provider>
@@ -317,7 +320,11 @@
       <created>1417642762509</created>
       <updated>1417642762509</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Debug">
+      <created>1417647207715</created>
+      <updated>1417647207715</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -325,14 +332,14 @@
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.67082036" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="136" y="122" width="1684" height="858" />
@@ -442,19 +449,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="204" selection-start="6265" selection-end="6265" vertical-scroll-proportion="-9.6" vertical-offset="2535" max-vertical-offset="3585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="23" selection-start="3084" selection-end="3086" vertical-scroll-proportion="0.3321739" vertical-offset="1204" max-vertical-offset="1830">
+        <state line="96" column="0" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0" vertical-offset="1179" max-vertical-offset="1830">
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="8" selection-start="6754" selection-end="6754" vertical-scroll-proportion="0.83985764" vertical-offset="2468" max-vertical-offset="3630">
+          <folding />
         </state>
       </provider>
     </entry>

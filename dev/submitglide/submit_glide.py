@@ -25,10 +25,11 @@ class SubmitGlide:
         self.flags = "flags"
         self.revert_to_native = False
         self.rosetta_exe = "/work/greisen/files/glide_examples/rosetta_exe_master_03_12_2014/rosetta_scripts.static.linuxgccrelease"
-        self.parameter_path = "/work/greisen/files/parameters/"
+        self.parameter_path = "/work/greisen/files/glide_examples/parameters/"
         self.database = "database_w_dummy_atoms"
         self.database_tgz = "/work/greisen/files/glide_examples/newer_database/database_w_dummy_atoms.tgz"
         self.directory_w_files = "/work/greisen/files/glide_examples/files/"
+        self.confs = None
 
 
     def write_wrapper(self,pdbname):
@@ -106,7 +107,7 @@ class SubmitGlide:
 
         import pdb; pdb.set_trace()
 
-        transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, '''+self.rosetta_exe+'''
+        transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, '''+self.rosetta_exe+''', '''+self.parameter_path+self.confs+'''
 
         Executable = run_wrapper.sh
         universe = vanilla
@@ -185,13 +186,15 @@ class SubmitGlide:
         # split pdb string to get native pdb
         parser.add_argument("-s", "--split_string_number", dest="split_string_number", help="The name of the pdb file is split by '_' and this number is used as the name for the pdb", default=3, type=int )
 
+        parser.add_argument("-c", "--confs", dest="confs", help="The name of the ligand conformers", default=None, type=str )
+
         input_variables = parser.parse_args()
 
         self.xml = input_variables.xml
         self.params = input_variables.parameterfile
         self.revert_to_native = input_variables.revert_to_native
-
-
+        self.confs = input_variables.confs
+        
 
         PTH = os.path.abspath('./')
         # Get the files in the directory
