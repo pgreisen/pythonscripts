@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../submitglide/submit_glide.py" afterPath="$PROJECT_DIR$/../submitglide/submit_glide.py" />
-    </list>
+    <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="" />
     <ignored path="bootstrap.py.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +32,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotamer_analysis_from_md_simulation.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="rotamer_analysis_from_md_simulation.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="15" selection-start="201" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
-              <folding />
+            <state line="93" column="23" selection-start="3084" selection-end="3086" vertical-scroll-proportion="0.3321739" vertical-offset="1204" max-vertical-offset="1830">
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="submit_glide.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="submit_glide.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="185" column="204" selection-start="6265" selection-end="6265" vertical-scroll-proportion="0.42704627" vertical-offset="2535" max-vertical-offset="3585">
+            <state line="185" column="204" selection-start="6265" selection-end="6265" vertical-scroll-proportion="-9.6" vertical-offset="2535" max-vertical-offset="3585">
               <folding />
             </state>
           </provider>
@@ -435,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="15" selection-start="201" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="441" column="31" selection-start="15283" selection-end="15307" vertical-scroll-proportion="0.0" vertical-offset="6615" max-vertical-offset="7395">
@@ -451,8 +444,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="204" selection-start="6265" selection-end="6265" vertical-scroll-proportion="0.42704627" vertical-offset="2535" max-vertical-offset="3585">
+        <state line="185" column="204" selection-start="6265" selection-end="6265" vertical-scroll-proportion="-9.6" vertical-offset="2535" max-vertical-offset="3585">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="23" selection-start="3084" selection-end="3086" vertical-scroll-proportion="0.3321739" vertical-offset="1204" max-vertical-offset="1830">
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
