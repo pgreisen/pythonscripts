@@ -24,7 +24,7 @@ class SubmitGlide:
         self.params = None
         self.flags = "flags"
         self.revert_to_native = False
-        self.rosetta_exe =
+        self.rosetta_exe = "/work/greisen/rosetta_exe_13_09_2014_vip/rosetta_scripts.static.linuxgccrelease"
 
         self.parameter_path = "/work/greisen/files/parameters/"
         self.database = "database_w_dummy_atoms"
