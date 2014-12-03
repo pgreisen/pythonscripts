@@ -122,7 +122,7 @@ class SubmitGlide:
 
         return template
 
-   def update_condor_script_revert_to_native(self, pdbfile):
+    def update_condor_script_revert_to_native(self, pdbfile):
         PTH = os.path.abspath('./')
         template = '''
         notification=Never
