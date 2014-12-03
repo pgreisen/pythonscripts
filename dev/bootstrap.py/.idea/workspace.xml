@@ -48,7 +48,10 @@
         <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="123" column="0" selection-start="4277" selection-end="4352" vertical-scroll-proportion="-22.2" vertical-offset="1260" max-vertical-offset="2550">
-              <folding />
+              <folding>
+                <marker date="1417498180000" expanded="true" signature="1329:2729" placeholder="..." />
+                <marker date="1417498180000" expanded="true" signature="2766:3202" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,7 +59,7 @@
       <file leaf-file-name="submit_glide.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="35" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.91992885" vertical-offset="1073" max-vertical-offset="3540">
+            <state line="171" column="68" selection-start="5264" selection-end="5264" vertical-scroll-proportion="0.62633455" vertical-offset="2213" max-vertical-offset="3660">
               <folding />
             </state>
           </provider>
@@ -75,6 +78,7 @@
         <option value="Per Jr. Greisen" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="GitLogSettings">
@@ -310,12 +314,16 @@
       <created>1417642572515</created>
       <updated>1417642572515</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Debug">
+      <created>1417642762509</created>
+      <updated>1417642762509</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="22" width="1879" height="1057" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -347,7 +355,8 @@
     </option>
     <MESSAGE value="Script is add to convert AM1-BCC mol2 format into Rosetta mol2 format. The problem is mainly connected with the types e.g. c3 (AM1-BCC) is c.3 ( Rosetta)." />
     <MESSAGE value="Indentations are fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Indentations are fixed." />
+    <MESSAGE value="Debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -420,7 +429,10 @@
     <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="0" selection-start="4277" selection-end="4352" vertical-scroll-proportion="-22.2" vertical-offset="1260" max-vertical-offset="2550">
-          <folding />
+          <folding>
+            <marker date="1417498180000" expanded="true" signature="1329:2729" placeholder="..." />
+            <marker date="1417498180000" expanded="true" signature="2766:3202" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -440,7 +452,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="35" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.91992885" vertical-offset="1073" max-vertical-offset="3540">
+        <state line="171" column="68" selection-start="5264" selection-end="5264" vertical-scroll-proportion="0.62633455" vertical-offset="2213" max-vertical-offset="3660">
           <folding />
         </state>
       </provider>
