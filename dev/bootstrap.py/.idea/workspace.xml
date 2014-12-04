@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="" />
+    <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" afterPath="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" />
+    </list>
     <ignored path="bootstrap.py.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,7 +57,7 @@
       <file leaf-file-name="getligandpositionmatchermain.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="43" selection-start="1698" selection-end="1713" vertical-scroll-proportion="0.47826087" vertical-offset="625" max-vertical-offset="1725">
+            <state line="73" column="21" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.71304345" vertical-offset="685" max-vertical-offset="1785">
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -119,8 +121,8 @@
         <option value="$PROJECT_DIR$/../renumber_pdb_starting_from_one/renumber_to_1_pdbfile.py" />
         <option value="$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py" />
         <option value="$PROJECT_DIR$/../submitglide/submit_glide.py" />
-        <option value="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" />
         <option value="$PROJECT_DIR$/../matcher_per_position/matcherposformat.py" />
+        <option value="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" />
       </list>
     </option>
   </component>
@@ -481,7 +483,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="43" selection-start="1698" selection-end="1713" vertical-scroll-proportion="0.47826087" vertical-offset="625" max-vertical-offset="1725">
+        <state line="73" column="21" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.71304345" vertical-offset="685" max-vertical-offset="1785">
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

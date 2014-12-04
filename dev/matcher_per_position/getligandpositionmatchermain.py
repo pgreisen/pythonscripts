@@ -59,7 +59,6 @@ class getligandpositionmatchermain:
 
         parser.add_argument("--tmp_argument", dest="tmp_argument",help="The is a variable to insure you are not overridding the current file when you run multiple runs in the same directory", default="")
 
-
         input_var = parser.parse_args()
     
         gp = GetLigandPositions()
@@ -70,6 +69,9 @@ class getligandpositionmatchermain:
 
         # Get ligand coordinates
         new_positions = []
+
+
+        lig_coor = []
 
         if(input_var.ligandnames != None):
 
@@ -83,6 +85,7 @@ class getligandpositionmatchermain:
                     lig_coor = gp.get_ligandatom_aromatic_coordinates(p_pdbfile,tmplig)
                     # Need to append here to get the same type as for none aromatic systems
                     ##lig_coor.append(gp.get_ligandatom_aromatic_coordinates(p_pdbfile,tmplig))
+
                     # print "The new coordinates of the ligand are ",lig_coor
                     # Ok only one vector
                     new_positions.append(gp.get_protein_positions(p_pdbfile,lig_coor))
