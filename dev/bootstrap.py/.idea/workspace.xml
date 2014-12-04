@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cadc6e1f-e304-4032-9d01-af5b784d402a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../submitglide/submit_glide.py" afterPath="$PROJECT_DIR$/../submitglide/submit_glide.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" afterPath="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../matcher_per_position/matcherposformat.py" afterPath="$PROJECT_DIR$/../matcher_per_position/matcherposformat.py" />
     </list>
     <ignored path="bootstrap.py.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,18 +50,35 @@
         <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="123" column="0" selection-start="4277" selection-end="4352" vertical-scroll-proportion="-22.2" vertical-offset="1260" max-vertical-offset="2550">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getligandpositionmatchermain.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="43" selection-start="1698" selection-end="1713" vertical-scroll-proportion="0.47826087" vertical-offset="625" max-vertical-offset="1725">
               <folding>
-                <marker date="1417498180000" expanded="true" signature="1329:2729" placeholder="..." />
-                <marker date="1417498180000" expanded="true" signature="2766:3202" placeholder="..." />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="submit_glide.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="matcherposformat.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../matcher_per_position/matcherposformat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="submit_glide.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="87" selection-start="836" selection-end="844" vertical-scroll-proportion="-0.31156716" vertical-offset="602" max-vertical-offset="3630">
+            <state line="49" column="0" selection-start="1487" selection-end="1487" vertical-scroll-proportion="-2.6078432" vertical-offset="602" max-vertical-offset="3630">
               <folding />
             </state>
           </provider>
@@ -90,8 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bootstrap.py" />
-        <option value="$PROJECT_DIR$/../generate_cst_file/generate_cst.py" />
         <option value="$PROJECT_DIR$/../align_atoms/main.py" />
         <option value="$PROJECT_DIR$/../align_atoms/pdbfile.py" />
         <option value="$PROJECT_DIR$/../get_pdb_id_from_tmalign/get_pdb_from_tmalign.py" />
@@ -106,6 +122,8 @@
         <option value="$PROJECT_DIR$/../renumber_pdb_starting_from_one/renumber_to_1_pdbfile.py" />
         <option value="$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py" />
         <option value="$PROJECT_DIR$/../submitglide/submit_glide.py" />
+        <option value="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" />
+        <option value="$PROJECT_DIR$/../matcher_per_position/matcherposformat.py" />
       </list>
     </option>
   </component>
@@ -145,7 +163,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../submitglide/submit_glide.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -371,21 +389,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../docking_analysis_logfile_scorefile/write_cvs_file_docking_results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="568" selection-end="568" vertical-scroll-proportion="-0.9411765" vertical-offset="1360" max-vertical-offset="2295" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../plot_scatter_rosetta_score_file/write_cvs_file_docking_results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="51" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2055" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../combine_cstfiles/combinations_per_position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="33" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../generate_helical_bundle/generate_helix_dimer_sym.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="33" selection-start="1050" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="5445" />
@@ -435,16 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="0" selection-start="4277" selection-end="4352" vertical-scroll-proportion="-22.2" vertical-offset="1260" max-vertical-offset="2550">
-          <folding>
-            <marker date="1417498180000" expanded="true" signature="1329:2729" placeholder="..." />
-            <marker date="1417498180000" expanded="true" signature="2766:3202" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../generate_cst_metal_site/generate_metal_cstfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="441" column="31" selection-start="15283" selection-end="15307" vertical-scroll-proportion="0.0" vertical-offset="6615" max-vertical-offset="7395">
@@ -463,8 +456,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../submitglide/submit_glide.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="87" selection-start="836" selection-end="844" vertical-scroll-proportion="-0.31156716" vertical-offset="602" max-vertical-offset="3630">
+        <state line="49" column="0" selection-start="1487" selection-end="1487" vertical-scroll-proportion="-2.6078432" vertical-offset="602" max-vertical-offset="3630">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../generate_position_file_helical_bundles/generate_position_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="0" selection-start="4277" selection-end="4352" vertical-scroll-proportion="-22.2" vertical-offset="1260" max-vertical-offset="2550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../matcher_per_position/getligandposition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.25" vertical-offset="1350" max-vertical-offset="3375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../matcher_per_position/matcherposformat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../matcher_per_position/getligandpositionmatchermain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="43" selection-start="1698" selection-end="1713" vertical-scroll-proportion="0.47826087" vertical-offset="625" max-vertical-offset="1725">
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

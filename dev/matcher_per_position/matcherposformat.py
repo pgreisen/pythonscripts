@@ -8,7 +8,10 @@ class matcherposformat:
     # @requires integer how many geometrical constraints are necessary, name for position file
     # @return string with number of constraints, geometrical constraint, positions on scaffold
     
-    def set_ncst_string(self,positions,posfile='new_posfile.pos'):
+    def set_ncst_string(self,positions,tmp_argument):
+
+        posfile = "new_posfile"+str( tmp_argument )+".pos"
+
         numberofgeometrical = len(positions)
         str1 = 'N_CST '+str(numberofgeometrical)+'\n'
         posfile = open(posfile,'w')

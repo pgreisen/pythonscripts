@@ -57,6 +57,10 @@ class getligandpositionmatchermain:
         parser.add_argument("-c", "--cons",
                         dest="cst_file",help="Constraint file")
 
+
+        parser.add_argument("--tmp_argument", dest="tmp_argument",help="The is a variable to insure you are not overridding the current file when you run multiple runs in the same directory", default="")
+
+
         input_var = parser.parse_args()
     
         gp = GetLigandPositions()
@@ -97,7 +101,8 @@ class getligandpositionmatchermain:
                 new_positions.append(gp.get_protein_positions(p_pdbfile,lig_coor,positions))
 
 
-        mp.set_ncst_string(new_positions)
+
+        mp.set_ncst_string(new_positions,input_var.tmp_argument)
 
 
 if __name__ == "__main__":
