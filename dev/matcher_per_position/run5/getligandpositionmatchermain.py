@@ -57,6 +57,7 @@ class getligandpositionmatchermain:
         parser.add_argument("-c", "--cons",
                         dest="cst_file",help="Constraint file")
 
+
         parser.add_argument("--tmp_argument", dest="tmp_argument",help="The is a variable to insure you are not overridding the current file when you run multiple runs in the same directory", default="")
 
 
@@ -80,9 +81,9 @@ class getligandpositionmatchermain:
                 if tmplig[0] == 'aro' and len(tmplig) > 2:
                     tmplig.pop(0)
                     # assert 0 == 1
-                    lig_coor = gp.get_ligandatom_aromatic_coordinates(p_pdbfile,tmplig)
+                    # lig_coor = gp.get_ligandatom_aromatic_coordinates(p_pdbfile,tmplig)
                     # Need to append here to get the same type as for none aromatic systems
-                    ##lig_coor.append(gp.get_ligandatom_aromatic_coordinates(p_pdbfile,tmplig))
+                    lig_coor.append(gp.get_ligandatom_aromatic_coordinates(p_pdbfile,tmplig))
                     # print "The new coordinates of the ligand are ",lig_coor
                     # Ok only one vector
                     new_positions.append(gp.get_protein_positions(p_pdbfile,lig_coor))
