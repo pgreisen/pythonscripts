@@ -1,6 +1,7 @@
-import os,sys
+import os,sys, argparse
 from numpy import *
 from numpy import linalg as LA
+
 
 
 class GeneratePositionFile:
@@ -86,24 +87,50 @@ class GeneratePositionFile:
     def get_positions(self):
 
         for key in self.cbeta_dummy:
-            for key_two in self.cbeta_dummy:
 
+            for key_two in self.cbeta_dummy:
                 # remove identical keys
                 if( key == key_two):
-
                     continue
                 # remove residue in the same chain
                 elif (key.split('_')[1] == key_two.split('_')[1] and self.one_chain_only):
                     continue
+
                 else:
                     dis = LA.norm(self.cbeta_dummy[key] - self.cbeta_dummy[key_two])
                     if( dis <= self.maximum_distance):
                         self.positions.append( key.split('_')[2])
+
+
+                        print key.split('_')[1] == key_two.split('_')[1], self.one_chain_only, key.split('_')[1],key_two.split('_')[1], key, key_two, dis, self.maximum_distance
+
                         break
 
 
     def main(self):
-        pdbfile = sys.argv[1]
+
+
+        parser = argparse.ArgumentParser(description="Generate a position file to be used in connection with matching")
+        # get the initial rosetta design as input
+        parser.add_argument("-d","--distance", dest="distance", help="Maximum distance to be included in the search for Cbeta-Cbeta distance (Default 5 AA)", type=float)
+
+        parser.add_argument("-b", "--bundles", dest="helical_bundle", help="Four chains helical bundle with four chains is set to true", action="store_true", default=False )
+
+        parser.add_argument("-f", "--pdbfile", dest="pdbfile", help="The name of the pdb file", default=None, type=str )
+
+        input_variables = parser.parse_args()
+
+        # old version
+        # changed 04-12-2014
+        # pdbfile = sys.argv[1]
+
+        pdbfile = input_variables.pdbfile
+        if( input_variables.distance):
+            self.maximum_distance = input_variables.distance
+
+        if( input_variables.helical_bundle):
+            self.one_chain_only = input_variables.helical_bundle
+
         self.get_backbone_coordinates(pdbfile)
         self.get_cbeta_position()
         self.get_positions()
