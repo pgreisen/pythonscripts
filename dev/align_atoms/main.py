@@ -50,9 +50,9 @@ def main():
 
     # Query
     # Atom names
-    query_atoms = ['OAF','PAN','CAE', 'OAJ'] #,'O1']
+    query_atoms = ['ZN1','ZN1','ZN1'] #,'O1']
     # Residue name
-    query_residuename = 'DRG'
+    query_residuename = 'ZNA'
 
     # Input: listinstance, atoms_to_get, residue_of_these_atoms, residuename
 
@@ -68,9 +68,9 @@ def main():
     target_pose = pdbfile_instance.read_file(fl2)
     # Target
     # Atom names
-    target_atoms = ['O2','P1','C9','O1'] #,'O1']
+    target_atoms = ['ZN1','ZN1','ZN1'] #,'O1']
     # Residue name
-    target_residuename = 'VXM'
+    target_residuename = 'ZNA'
     # Input: listinstance, atoms_to_get, residue_of_these_atoms, residuename
     # Return: dictionary
     target_atoms_coordinates = pdbfile_instance.get_atoms(target_pose,target_atoms,target_residuename)
