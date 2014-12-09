@@ -30,6 +30,9 @@ class SubmitGlide:
         self.database_tgz = "/work/greisen/files/glide_examples/newer_database/database.tgz"
         self.directory_w_files = "/work/greisen/files/glide_examples/files/"
         self.confs = None
+        self.scaffold_pdb_path = ""
+
+
 
 
     def write_wrapper(self,pdbname):
@@ -168,6 +171,23 @@ class SubmitGlide:
         return native_pdb
 
 
+    def copy_native_pdb_scaffolds(self,pdbname):
+        # here the pdbname is a directory
+        pdbname = pdbname.upper()
+
+        native_pdb = self.scaffold_pdb_path+pdbname+'/*_0001.pdb'
+
+        # pdb_path = '/lab/shared/scaffolds/'+pdbname[1:3]+'/'+pdbname+'/'+native_pdb
+        move_files = 'cp '+native_pdb+' .'
+        subprocess.Popen(move_files,shell=True).wait()
+
+        move_file2 = 'cp '+native_pdb+' ./native.pdb'
+        subprocess.Popen(move_file2,shell=True).wait()
+
+        return native_pdb
+
+
+
     def get_pdbname( self, pdbfile, split_string_number):
         #debug
         print "PDB ID is: ", pdbfile.split('_')[split_string_number]
@@ -188,12 +208,19 @@ class SubmitGlide:
 
         parser.add_argument("-c", "--confs", dest="confs", help="The name of the ligand conformers", default=None, type=str )
 
+
+        parser.add_argument("--scaffold_database", dest="scaffold_pdb_path", help="User defined scaffold set", default=None, type=str )
+
+
+
         input_variables = parser.parse_args()
 
         self.xml = input_variables.xml
         self.params = input_variables.parameterfile
         self.revert_to_native = input_variables.revert_to_native
         self.confs = input_variables.confs
+
+        self.scaffold_pdb_path = input_variables.scaffold_pdb_path
 
 
         PTH = os.path.abspath('./')
@@ -216,12 +243,20 @@ class SubmitGlide:
                     condor_template = self.update_condor_script_revert_to_native(pdbfile)
                     wrapper_template = self.write_wrapper_revert_to_native(pdbfile)
 
-                    # need to implement
+
                     pdbname = self.get_pdbname( pdbfile, input_variables.split_string_number)
 
-                    self.copy_native_pdb( pdbname )
+                    if(self.scaffold_pdb_path == None):
 
-                    # also need a list of pdbs not present in the location.
+                        self.copy_native_pdb( pdbname )
+
+
+                    else:
+                        self.copy_native_pdb_scaffolds( pdbname )
+
+
+
+                        # also need a list of pdbs not present in the location.
 
 
                 self.write_template_to_file(condor_template,name='condor.submit')
