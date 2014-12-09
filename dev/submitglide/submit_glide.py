@@ -201,8 +201,8 @@ class SubmitGlide:
         pdbfiles = os.listdir(PTH)
         i = 1
         for pdbfile in pdbfiles:
-            if(os.path.isfile(pdbfile) and str(pdbfile[-3:]) == 'pdb'):
 
+            if(os.path.isfile(pdbfile) and str(pdbfile[-3:]) == 'pdb'):
                 shutil.os.mkdir(str(i))
                 shutil.move(pdbfile,str(i))
                 os.chdir(str(i))
@@ -212,7 +212,6 @@ class SubmitGlide:
                 wrapper_template = self.write_wrapper(pdbfile)
 
                 if( self.revert_to_native ):
-
                     condor_template = self.update_condor_script_revert_to_native(pdbfile)
                     wrapper_template = self.write_wrapper_revert_to_native(pdbfile)
 
@@ -220,7 +219,6 @@ class SubmitGlide:
                     pdbname = self.get_pdbname( pdbfile, input_variables.split_string_number)
 
                     self.copy_native_pdb( pdbname )
-
                     # also need a list of pdbs not present in the location.
 
 
