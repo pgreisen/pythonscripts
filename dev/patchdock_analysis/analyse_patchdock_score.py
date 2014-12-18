@@ -38,17 +38,15 @@ class analyse_patchdock:
         j =  0
         for line in pfile:
             tmp_line = line.split()
-            
-
 
             if(len(tmp_line) > 0 and  str(tmp_line[0]) == 'Best'):
                 break
 
-
             if(start == True):
                 j = j + 1
                 key = pdbname+'_'+str(j)
-                self.scores[key] = tmp_line[2]
+                # default type is string we have to type cast it
+                self.scores[key] = int(tmp_line[2])
 
             if(len(tmp_line) > 0 and  str(tmp_line[0]) == '#'):
                 start = True
