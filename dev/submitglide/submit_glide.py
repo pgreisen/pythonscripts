@@ -108,8 +108,6 @@ class SubmitGlide:
         when_to_transfer_output = ON_EXIT
         on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
 
-        import pdb; pdb.set_trace()
-
         transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, '''+self.rosetta_exe+''', '''+self.parameter_path+self.confs+'''
 
         Executable = run_wrapper.sh
