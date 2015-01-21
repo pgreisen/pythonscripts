@@ -210,7 +210,6 @@ class pdbfile:
 
             tmp_key = residuename+'_'+residuenumber+'_'+atomname
             if tmp_key in coordinates:
-                print "key found", tmp_key
                 x = '%.3f' % coordinates[tmp_key][0]
                 y = '%.3f' % coordinates[tmp_key][1]
                 z = '%.3f' % coordinates[tmp_key][2]

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/permutation/combinations.py" afterPath="$PROJECT_DIR$/dev/permutation/combinations.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pythonscripts.iml" afterPath="$PROJECT_DIR$/.idea/pythonscripts.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" afterPath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/.idea/workspace.xml" afterPath="$PROJECT_DIR$/dev/align_residues/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
