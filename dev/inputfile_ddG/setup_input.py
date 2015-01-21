@@ -18,7 +18,8 @@ class InputFileFoldX:
         self.min = 0
         self.max = 0
         self.chain = 'A'
-        self.fixed_residues = ["55","57","169","201","230","301"]
+        self.fixed_residues = [""]
+        # self.fixed_residues = ["55","57","169","201","230","301"]
 
 
 
@@ -80,13 +81,7 @@ class InputFileFoldX:
 
         template = '''NATRO
 start
-        '''+mutations_string+'''
-        55 A NATRO
-        57 A NATRO
-        169 A NATRO
-        201 A NATRO
-        230 A NATRO
-        301 A NATRO'''
+        '''+mutations_string
         return template
 
 
@@ -122,30 +117,29 @@ start
         split_into = self.protein_length / int(input_variables.processors)
 
         print "Length of protein is: ",self.protein_length
-
+        last = False
+        last_mutations_string = ""
         for i in range(1, self.protein_length+5, split_into):
 
-            if( (len( self.protein_index )/split_into) > 0.0 ):
-
+            if( (len( self.protein_index )/split_into) > 0.0 and len(self.protein_index)> 4.9 ):
                 mutations_string = self.protein_index.pop(0)+" "+self.chain+" ALLAA\n\t"+self.protein_index.pop(0)+" "+self.chain+" ALLAA\n\t"+self.protein_index.pop(0)+" "+self.chain+" ALLAA\n\t"+self.protein_index.pop(0)+" "+self.chain+" ALLAA\n\t"+self.protein_index.pop(0)+" "+self.chain+" ALLAA"
-                print mutations_string
+                # print mutations_string
                 dummy = dummy + 1
 
                 template = self.get_template(mutations_string)
 
                 self.write_to_file( template, dummy )
 
-            else:
+            elif( len(self.protein_index) > 0.0):
 
-                print self.protein_index, self.protein_length
+                last_mutations_string = last_mutations_string + self.protein_index.pop(0)+" "+self.chain+" ALLAA\n\t"
+                last = True
 
-                mutations_string = ""
 
-                for i in self.protein_index:
-
-                    mutations_string = mutations_string+","+str(i)+"a,"
-
-                mutations_string[1:]
+        if(last == True):        
+            dummy = dummy + 1
+            template = self.get_template(last_mutations_string)
+            self.write_to_file( template, dummy )
 
 
 

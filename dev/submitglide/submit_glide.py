@@ -5,8 +5,7 @@ import sys, shutil, os, subprocess, argparse
 Requires a directory with pdb files. Loops over all the pdbs and makes a directory
 and submit the job.
 
-Requires: User needs to set the path to the different parameters such as parameters, flags,
-xml, database, and executables. 
+Requires: User needs to set the path to the different parameters such as parameters, flags, xml, database, and executables. 
 
 and is simply executed like this:
 
