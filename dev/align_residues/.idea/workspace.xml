@@ -49,8 +49,8 @@
       <file leaf-file-name="pdbfile.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdbfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8682766" vertical-offset="2584" max-vertical-offset="3540">
-              <caret line="226" column="39" selection-start-line="226" selection-start-column="39" selection-end-line="226" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.6377607" vertical-offset="2569" max-vertical-offset="3525">
+              <caret line="211" column="38" selection-start-line="211" selection-start-column="38" selection-end-line="211" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -203,8 +203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pdbfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8682766" vertical-offset="2584" max-vertical-offset="3540">
-          <caret line="226" column="39" selection-start-line="226" selection-start-column="39" selection-end-line="226" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.6377607" vertical-offset="2569" max-vertical-offset="3525">
+          <caret line="211" column="38" selection-start-line="211" selection-start-column="38" selection-end-line="211" selection-end-column="38" />
           <folding />
         </state>
       </provider>
