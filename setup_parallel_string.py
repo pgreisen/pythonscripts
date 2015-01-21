@@ -12,12 +12,14 @@ number_of_processors = sys.argv[2]
 path = './'
 dirs = os.listdir( path )
 
-run_file = open( "run_file.txt", 'w' )
+outfile = "run_file_sty_1_2.txt"
+
+run_file = open( outfile, 'w' )
 
 for dir in dirs:
     if ( os.path.isdir ( dir ) ):
         run_file.write( "cd "+dir+"/; "+str(run_string)+";   cd ..;\n"  )
 
-exe = "cat run_file.txt | parallel -j "+str( number_of_processors )
+exe = "cat "+str(outfile)+" | parallel -j "+str( number_of_processors )
 print exe
 subprocess.Popen(exe, shell=True).wait()
