@@ -11,7 +11,6 @@ and is simply executed like this:
 
 python submit_glide.py
 
-
 '''
 
 
@@ -30,7 +29,7 @@ class SubmitGlide:
         self.directory_w_files = "/work/greisen/files/glide_examples/files/"
         self.confs = None
         self.scaffold_pdb_path = ""
-
+        self.cstfile = ""
 
 
 
@@ -99,6 +98,40 @@ class SubmitGlide:
         return wrapper
 
 
+
+    def write_wrapper_cstfiles(self,pdbname):
+        wrapper = '''
+        #!/bin/bash
+
+        tar zxf '''+self.database+'''.tgz
+
+        ./rosetta_scripts.static.linuxgccrelease -overwrite @'''+str(self.flags)+''' -parser:protocol '''+str(self.xml)+''' -out:prefix ${1} -extra_res_fa '''+self.params+''' -database '''+self.database+''' -s '''+str(pdbname)+''' -parser:script_vars cstfile='''+self.cstfile+''' > run_${1}.txt
+
+        RETVAL=$?
+
+        echo rosetta retval is $RETVAL
+        if [ "$RETVAL" != "0" ]; then
+        echo exiting with $RETVAL
+        exit $RETVAL
+        fi
+
+        echo checking log file for "jobs considered"
+        grep -q \'jobs considered\' run_${1}.txt
+
+        RETVAL=$?
+        echo grep retval is $RETVAL
+    
+        if [ "$RETVAL" != "0" ]; then
+        echo NOT found, exiting with 1
+        exit 1
+        fi
+    
+        echo string found, exiting with 0
+        exit 0
+        '''
+        return wrapper
+
+
     def update_condor_script(self, pdbfile):
         PTH = os.path.abspath('./')
         template = '''
@@ -108,6 +141,32 @@ class SubmitGlide:
         on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
 
         transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, '''+self.rosetta_exe+''', '''+self.parameter_path+self.confs+'''
+
+        Executable = run_wrapper.sh
+        universe = vanilla
+        copy_to_spool = false
+
+        Error = err.$(Process)
+        Output = out.$(Process)
+        Log = condor_log.txt
+
+        Arguments = $(Process)
+        queue 1
+    
+        '''
+
+        return template
+
+
+    def update_condor_script_cst(self, pdbfile):
+        PTH = os.path.abspath('./')
+        template = '''
+        notification=Never
+        should_transfer_files = YES
+        when_to_transfer_output = ON_EXIT
+        on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
+
+        transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, '''+self.rosetta_exe+''', '''+self.parameter_path+self.confs+''', /work/greisen/files/glide_examples/cstfiles/'''+self.cstfile+'''
 
         Executable = run_wrapper.sh
         universe = vanilla
@@ -150,7 +209,6 @@ class SubmitGlide:
         return template
 
 
-
     def write_template_to_file(self,template,name='condor.submit'):
         cndr = open(name,'w')
         for line in template:
@@ -186,7 +244,6 @@ class SubmitGlide:
 
 
     def get_pdbname( self, pdbfile, split_string_number):
-        #debug
         print "PDB ID is: ", pdbfile.split('_')[split_string_number]
         return  pdbfile.split('_')[split_string_number]
 
@@ -208,7 +265,7 @@ class SubmitGlide:
 
         parser.add_argument("--scaffold_database", dest="scaffold_pdb_path", help="User defined scaffold set", default=None, type=str )
 
-
+        parser.add_argument("--cstfile", dest="cstfile", help="cstfile", default=None, type=str )
 
         input_variables = parser.parse_args()
 
@@ -216,8 +273,8 @@ class SubmitGlide:
         self.params = input_variables.parameterfile
         self.revert_to_native = input_variables.revert_to_native
         self.confs = input_variables.confs
-
         self.scaffold_pdb_path = input_variables.scaffold_pdb_path
+        self.cstfile = input_variables.cstfile
 
 
         PTH = os.path.abspath('./')
@@ -253,6 +310,10 @@ class SubmitGlide:
                         self.copy_native_pdb_scaffolds( pdbname )
 
                         # also need a list of pdbs not present in the location.
+
+                if( self.cstfile  ):
+                    condor_template = self.update_condor_script_cst(pdbfile)
+                    wrapper_template = self.write_wrapper_cstfiles(pdbfile)
 
 
                 self.write_template_to_file(condor_template,name='condor.submit')

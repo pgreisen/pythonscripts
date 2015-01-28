@@ -66,8 +66,12 @@ class InputFileFoldX:
 
         self.protein_length = len(self.protein_index)
 
+
+        print "Length of protein is", self.protein_length
         #self.min = min(self.protein_index)
         #self.max = max(self.protein_index)
+        print "First residue: ", self.min
+        print "Last residue: ", self.max
 
     def get_template(self,mutations_string):
 
@@ -128,7 +132,7 @@ class InputFileFoldX:
 
             if( (len( self.protein_index )/split_into) > 0.0 ):
 
-                mutations_string = self.protein_index.pop(0)+"a,"+self.protein_index.pop(0)+"a,"+self.protein_index.pop(0)+"a,"+self.protein_index.pop(0)+"a,"+self.protein_index.pop(0)+";"
+                mutations_string = self.protein_index.pop(0)+"a,"+self.protein_index.pop(0)+"a,"+self.protein_index.pop(0)+"a,"+self.protein_index.pop(0)+"a,"+self.protein_index.pop(0)+"a;"
                 dummy = dummy + 1
 
                 template = self.get_template(mutations_string)
