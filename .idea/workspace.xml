@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" afterPath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/.idea/workspace.xml" afterPath="$PROJECT_DIR$/dev/align_residues/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="" />
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
