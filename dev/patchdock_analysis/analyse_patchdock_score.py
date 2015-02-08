@@ -1,24 +1,25 @@
 #from numpy import *
-import os,shutil,sys
+import os,shutil,sys,argparse
 import operator
 from collections import OrderedDict
+from plot_data import *
+
 
 class analyse_patchdock:
 
     
     def __init__(self):
-        print "Analysing results from patchdock"
         self.scores = {}
+        self.debug = 0
+        self.path = "./"
 
     #    def __str__(self):
     #        print self.scores
 
     def print_values(self):
-
         for k, v in self.scores.items():                                                                                    
             print "%s: %s" % (k, v)        
         
-
 
     # Requires scorefile 
     # Returns list with lines
@@ -29,23 +30,41 @@ class analyse_patchdock:
         return pfile
 
 
-
     # Requires list, maximum_number
     # Returns list with scores in that interval
-    def get_scores(self,pfile,pdbname):
-        print "Getting score"
+    def get_scores(self,pfile,pdbname="1ABC"):
         start = False
         j =  0
+
+        prt = ""
+        lig = ""
+
         for line in pfile:
+
             tmp_line = line.split()
+
+            length_tmp_line = len( tmp_line )
 
             if(len(tmp_line) > 0 and  str(tmp_line[0]) == 'Best'):
                 break
 
+            # get key for ligand and protein
+            if( length_tmp_line == 3 and tmp_line[0] == "ligandPdb" ):
+                lig = tmp_line[2][0:3]
+
+                if(self.debug == 1 ):
+                    print "The following ligand name is used for the key: ", lig
+
+            # get key for ligand and protein
+            if( length_tmp_line == 3 and tmp_line[0] == "receptorPdb" ):
+                prt = tmp_line[2][0:4]
+                if(self.debug == 1):
+                    print "The following ligand name is used for the key: ", prt
+
             if(start == True):
                 j = j + 1
-                key = pdbname+'_'+str(j)
-                # default type is string we have to type cast it
+                key = prt+"_"+lig+'_'+str(j)
+                # default type is string we have to type cast int
                 self.scores[key] = int(tmp_line[2])
 
             if(len(tmp_line) > 0 and  str(tmp_line[0]) == '#'):
@@ -57,6 +76,45 @@ class analyse_patchdock:
 
     def print_number_scores(self):
         print 'The number of scores are ',len(self.scores)
+
+
+    def main(self):
+        parser = argparse.ArgumentParser(description="Script to analyse patchdock results")
+        parser.add_argument('-f',dest='patchdockscorefiles',nargs='*', help='Specify a number of files to analyse their score')
+        parser.add_argument('--path',dest='path', default="./", help='Path to directory where the analysis is performed')
+        parser.add_argument('--debug',dest='debug', type=int, help='Run program in debug mode')
+
+        args_dict = vars( parser.parse_args() )
+        for item in args_dict:
+            setattr(self, item, args_dict[item])
+
+        files = os.listdir( self.path )
+
+        for fl in files:
+            # assumes that the pachdock file ends with .out
+            if( os.path.isfile(fl) and fl.endswith(".out") ):
+                tmp_file = self.get_file( fl )
+                # we passed the 9 first character as a string to the hash table
+                self.get_scores( tmp_file )
+
+        plt = plot_data()
+        # get table
+        plt.write_table_to_file( self.get_sorted_results() )
+        # get mean and standard deviation
+        values = plt.get_values( self.get_sorted_results() )
+
+        mn, sd = plt.get_mean( values )
+
+        print "### Mean of data set is: ", round(mn, 4)
+        print "### Standard deviation of data set is: ", round(sd, 4)
+        plt.plot_histogram_w_mean( values, mn,sd )
+
+
+
+if __name__ == "__main__":
+   ana = analyse_patchdock()
+   ana.main()
+
 
 
 #def main():
