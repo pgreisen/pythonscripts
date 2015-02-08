@@ -79,8 +79,6 @@ def main():
     plt.write_data_to_file(values)
 
     cutoff_value =  plt.get_cutoff_value(values)
-    print cutoff_value
-    cutoff_value = 3431
     plt.write_values_above_cutoff(test,cutoff_value)
 
     plt.plot_histogram(values)
