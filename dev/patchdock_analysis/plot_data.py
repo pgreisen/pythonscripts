@@ -28,13 +28,17 @@ class plot_data:
         show()
 
 
-    def plot_histogram_w_mean(self,values,mn,sd):
+    def plot_histogram_w_mean(self,values,mn,sd,cutoff=2):
         hist(values)
         xmin,xmax = xlim()
         ymin,ymax = ylim()
-        axvline(mn,c='r', linewidth=4, linestyle='--')
-        axvline(mn+sd,c='k', linewidth=4, linestyle='--')
+
+        cut = sd*cutoff
+
+        axvline(mn,c='r', linewidth=4, linestyle='--',label="mean")
+        axvline(mn+cut,c='k', linewidth=4, linestyle='--')
         text( xmin + (xmax-xmin)*0.02,  (ymax-ymin)/2,"Mean = "+str(round(mn,1))+"\n SD= "+str(round(sd,1)),size='x-large')
+        legend()
         savefig('histogram.png')
         show()
 

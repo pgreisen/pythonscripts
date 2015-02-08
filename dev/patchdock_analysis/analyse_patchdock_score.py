@@ -12,6 +12,7 @@ class analyse_patchdock:
         self.scores = {}
         self.debug = 0
         self.path = "./"
+        self.cutoff = 2.0
 
     #    def __str__(self):
     #        print self.scores
@@ -83,6 +84,7 @@ class analyse_patchdock:
         parser.add_argument('-f',dest='patchdockscorefiles',nargs='*', help='Specify a number of files to analyse their score')
         parser.add_argument('--path',dest='path', default="./", help='Path to directory where the analysis is performed')
         parser.add_argument('--debug',dest='debug', type=int, help='Run program in debug mode')
+        parser.add_argument('--cutoff',dest='cutoff', default=2.0,type=float, help='Display where significant cutoff is')
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
@@ -107,7 +109,11 @@ class analyse_patchdock:
 
         print "### Mean of data set is: ", round(mn, 4)
         print "### Standard deviation of data set is: ", round(sd, 4)
-        plt.plot_histogram_w_mean( values, mn,sd )
+
+        if(self.debug == 1):
+            print self.cutoff
+
+        plt.plot_histogram_w_mean( values, mn,sd, self.cutoff )
 
 
 
