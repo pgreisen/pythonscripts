@@ -13,6 +13,7 @@ class analyse_patchdock:
         self.debug = 0
         self.path = "./"
         self.cutoff = 2.0
+        self.score = 2
 
     #    def __str__(self):
     #        print self.scores
@@ -66,7 +67,7 @@ class analyse_patchdock:
                 j = j + 1
                 key = prt+"_"+lig+'_'+str(j)
                 # default type is string we have to type cast int
-                self.scores[key] = int(tmp_line[2])
+                self.scores[key] = int(tmp_line[ self.score ])
 
             if(len(tmp_line) > 0 and  str(tmp_line[0]) == '#'):
                 start = True
@@ -85,6 +86,8 @@ class analyse_patchdock:
         parser.add_argument('--path',dest='path', default="./", help='Path to directory where the analysis is performed')
         parser.add_argument('--debug',dest='debug', type=int, help='Run program in debug mode')
         parser.add_argument('--cutoff',dest='cutoff', default=2.0,type=float, help='Display where significant cutoff is')
+
+        parser.add_argument('--score',dest='score', default=2, type=int, help='Score term to analyse - default is 2 which is the total pathdock score')
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
