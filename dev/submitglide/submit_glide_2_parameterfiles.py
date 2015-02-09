@@ -39,7 +39,7 @@ class SubmitGlide:
 
         tar zxf '''+self.database+'''.tgz
 
-        ./rosetta_scripts.static.linuxgccrelease -overwrite @'''+str(self.flags)+''' -parser:protocol '''+str(self.xml)+''' -out:prefix ${1} -extra_res_fa '''+self.params+''' -database '''+self.database+''' -s '''+str(pdbname)+''' > run_${1}.txt
+        ./rosetta_scripts.static.linuxgccrelease -overwrite @'''+str(self.flags)+''' -parser:protocol '''+str(self.xml)+''' -out:prefix ${1} -extra_res_fa homocysteine.params -extra_res_fa '''+self.params+''' -database '''+self.database+''' -s '''+str(pdbname)+''' > run_${1}.txt
 
         RETVAL=$?
 
@@ -105,7 +105,7 @@ class SubmitGlide:
 
         tar zxf '''+self.database+'''.tgz
 
-        ./rosetta_scripts.static.linuxgccrelease -overwrite @'''+str(self.flags)+''' -parser:protocol '''+str(self.xml)+''' -out:prefix ${1} -extra_res_fa '''+self.params+''' -database '''+self.database+''' -s '''+str(pdbname)+''' -parser:script_vars cstfile='''+self.cstfile+''' > run_${1}.txt
+        ./rosetta_scripts.static.linuxgccrelease -overwrite @'''+str(self.flags)+''' -parser:protocol '''+str(self.xml)+''' -out:prefix ${1} -extra_res_fa homocysteine.params -extra_res_fa '''+self.params+''' -database '''+self.database+''' -s '''+str(pdbname)+''' -parser:script_vars cstfile='''+self.cstfile+''' > run_${1}.txt
 
         RETVAL=$?
 
@@ -140,7 +140,7 @@ class SubmitGlide:
         when_to_transfer_output = ON_EXIT
         on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
 
-        transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, '''+self.rosetta_exe+''', '''+self.parameter_path+self.confs+'''
+        transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, /work/greisen/files/glide_examples/parameters/homocysteine.params, '''+self.rosetta_exe+''', '''+self.parameter_path+self.confs+'''
 
         Executable = run_wrapper.sh
         universe = vanilla
@@ -166,7 +166,7 @@ class SubmitGlide:
         when_to_transfer_output = ON_EXIT
         on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
 
-        transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, '''+self.rosetta_exe+''', '''+self.parameter_path+self.confs+''', /work/greisen/files/glide_examples/cstfiles/'''+self.cstfile+'''
+        transfer_input_files = '''+self.database_tgz+''', '''+self.directory_w_files+self.xml+''', '''+self.directory_w_files+self.flags+''', '''+self.parameter_path+self.params+''', '''+str(PTH)+'''/'''+str(pdbfile)+''', '''+str(PTH)+'''/run_wrapper.sh, /work/greisen/files/glide_examples/parameters/homocysteine.params, '''+self.rosetta_exe+''', '''+self.parameter_path+self.confs+''', /work/greisen/files/glide_examples/cstfiles/'''+self.cstfile+'''
 
         Executable = run_wrapper.sh
         universe = vanilla

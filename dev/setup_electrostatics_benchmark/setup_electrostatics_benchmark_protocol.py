@@ -49,6 +49,7 @@ class SetupElectrostaticsBenchmarkProtocol():
         try:
             shutil.copy(self.rosetta_charge+"/ligand.mol2", dst)
         except:
+            print "#########################################"
             print "The ligand.mol2 is not generated"
             sys.exit()
 
@@ -139,11 +140,11 @@ class SetupElectrostaticsBenchmarkProtocol():
                 self.setup_am1_bcc_and_generate_rosetta_parameters()
 
                 # make sure the pdb file has the pdbid present in its name
-                if( subdirs[ self.gasteiger_charge] and subdirs[ self.rosetta_charge] ):
-                    continue
-                else:
-                    print "Directories are missing"
-                    # sys.exit()
+                ##if( subdirs[ self.gasteiger_charge] and subdirs[ self.rosetta_charge] ):
+                ##    continue
+                ##else:
+                ##    print "Directories are missing"
+                ##    # sys.exit()
 
                 os.chdir("../")
                 print "The path is now ",os.getcwd()
