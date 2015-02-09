@@ -34,4 +34,4 @@ for dir in dirs:
 
 exe = "cat run_file.txt | parallel -j "+str( number_of_processors )
 print exe
-subprocess.Popen(exe, shell=True).wait()
+#subprocess.Popen(exe, shell=True).wait()
