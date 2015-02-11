@@ -140,9 +140,9 @@ class GeneratePositionFile:
         ##  print "positions",self.positions
 
 
-        with open("position.pos", 'w') as f:
+        with open("new_position.pos", 'w') as f:
             for line in self.positions:
-                f.write(line+'+')
+                f.write(line+' ')
 
 
 if __name__ == "__main__":
