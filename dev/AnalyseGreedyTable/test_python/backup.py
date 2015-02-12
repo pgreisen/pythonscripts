@@ -3,7 +3,7 @@ import os,shutil,sys,argparse
 import operator
 from collections import OrderedDict
 from collections import defaultdict
-from operator import itemgetter
+
 '''
 
 Take an output file from greedy optimization and sorts the data
@@ -17,7 +17,6 @@ class AnalyseGreedyTable:
         self.threshold = 1
         self.greedytable = defaultdict(list)
         self.average_energy = []
-        self.total_mutations = []
 
 
     def get_file(self):
@@ -25,14 +24,16 @@ class AnalyseGreedyTable:
         lowest_mutations = []
         with open(self.file,'r') as f:
             tmp_native_residue = ""
-
             for line in f:
-                key = ""
                 # get residue number
                 residue_nr = str(line.split()[1:2]).lstrip('\[\"\[\'\(\'')
                 tmp_line = line.split()[3:]
+                tmp_energy = []
+                native_residue = 0.0
+                lowest_energy_residue = 0.0
+                tmp_lowest_mutations = ""
+                native = False
                 native_score = 0.0
-                substitutions = []
                 # loop over data file
                 for i in tmp_line:
                     tmp_line2 = i.split(':')
@@ -43,16 +44,25 @@ class AnalyseGreedyTable:
                         # key for table
                         key = str(tmp_native_residue[0])+str(residue_nr).rstrip('\'\]')
                         # print "key for dictionary: ", key.replace('*',"")
+                        native = True
                         native_score = float( tmp_line2[1] )
 
-                    else:
-                        residue = str(tmp_line2[0])+str(residue_nr).rstrip('\'\]')
-                        substitutions.append( [ str(residue) , float(tmp_line2[1])] )
-                if( len(line) > 1):
-                    for i in substitutions:
-                        i[1] = round( native_score - i[1], 3)
-                    self.greedytable[ key.replace('*',"") ] =  substitutions
-        return 0
+                        #self.greedytable[key].append((str()))
+
+                    if( float(tmp_line2[1]) < lowest_energy_residue ):
+                        lowest_energy_residue = float(tmp_line2[1])
+                        tmp_lowest_mutations = tmp_line2
+                        self.average_energy.append(float(tmp_line2[1]))
+                        print native_residue, lowest_energy_residue
+                        diff = native_residue - lowest_energy_residue
+
+                        print diff
+
+                        if(diff > self.threshold and native == False):
+                            lowest_mutations.append(str(residue_nr)+' '+str(tmp_lowest_mutations)+' Energy difference: '+str(diff))
+                            native = False
+
+        return lowest_mutations
 
     def main(self):
         parser = argparse.ArgumentParser(description="Script to analyse GreedyOptimization")
@@ -64,21 +74,7 @@ class AnalyseGreedyTable:
         for item in args_dict:
             setattr(self, item, args_dict[item])
 
-        self.get_file()
-
-        total_mutations = []
-        for key in self.greedytable:
-            for value in self.greedytable[key]:
-                total_mutations.append(value)
-
-        #print self.greedytable
-
-        #
-        total_mutations.sort(key=lambda x: x[1])
-        # sorted(total_mutations, key=itemgetter(0) )
-        #for i in total_mutations:
-        #    print i
-        print total_mutations
+        lowest_mutations = self.get_file()
 
 
 
