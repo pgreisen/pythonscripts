@@ -10,6 +10,7 @@ class AnalyseGreedyTable:
         matrix = open("data.csv",'w')
         matrix.write("Position,")
         for i in self.aa:
+            # to add a new line
             if( i != "VAL" ):
                 matrix.write(i+',')
             else:
@@ -19,10 +20,6 @@ class AnalyseGreedyTable:
                 continue
             matrix.write(key+',')
             for aa in self.aa:
-                # for kkey, vvalue in value.iteritems():
-                #        if( kkey in self.aa ):
-                #            print kkey
-                #            matrix.write(vvalue+',')
                 if( value.has_key( aa ) ):
                     matrix.write(value[aa]+',')
                 else:
