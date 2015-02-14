@@ -67,7 +67,7 @@ class analyse_patchdock:
                 j = j + 1
                 key = prt+"_"+lig+'_'+str(j)
                 # default type is string we have to type cast int
-                self.scores[key] = int(tmp_line[ self.score ])
+                self.scores[key] = float(tmp_line[ self.score ])
 
             if(len(tmp_line) > 0 and  str(tmp_line[0]) == '#'):
                 start = True
