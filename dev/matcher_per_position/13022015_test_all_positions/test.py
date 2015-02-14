@@ -107,10 +107,10 @@ class getligandpositionmatchermain:
                 new_positions.append(gp.get_protein_positions(p_pdbfile,lig_coor,positions))
 
 
-        if(input_var.allpositions == 0):
+        if(input_var.allpositions == 0)
             mp.set_ncst_string(new_positions,input_var.tmp_argument)
         else:
-            mp.write_all_position_file(new_positions)
+            mp.write_all_position_file(positions)
 
 
 if __name__ == "__main__":

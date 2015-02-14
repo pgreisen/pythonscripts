@@ -54,6 +54,13 @@ class AnalyseGreedyTable:
                     self.greedytable[ key.replace('*',"") ] =  substitutions
         return 0
 
+    def write_to_file(self,total_mutations):
+        with open("mutations.txt",'w') as f:
+            f.write("Residue,ddREU")
+            for line in total_mutations:
+                f.write(str(line[0])+","+str(line[1])+"\n")
+
+
     def main(self):
         parser = argparse.ArgumentParser(description="Script to analyse GreedyOptimization")
         parser.add_argument('-f',dest='file', help='Data file')
@@ -69,17 +76,22 @@ class AnalyseGreedyTable:
         total_mutations = []
         for key in self.greedytable:
             for value in self.greedytable[key]:
-                total_mutations.append(value)
+                # contains new amino acid and it rosetta score
+                print key,value
+
+                new_value = key+value[0][0:3]
+
+                total_mutations.append( (new_value, value[1]) )
 
         #print self.greedytable
 
         #
-        total_mutations.sort(key=lambda x: x[1])
+        total_mutations.sort(key=lambda x: x[1], reverse=True)
         # sorted(total_mutations, key=itemgetter(0) )
         #for i in total_mutations:
         #    print i
-        print total_mutations
-
+        # print total_mutations
+        self.write_to_file( total_mutations)
 
 
 if __name__ == "__main__":
