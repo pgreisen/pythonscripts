@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/renumber_pdb_starting_from_one/renumber_to_1_pdbfile.py" afterPath="$PROJECT_DIR$/dev/renumber_pdb_starting_from_one/renumber_to_1_pdbfile.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/matcher_per_position/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/AnalyseGreedyTable/test_python/analyse_greedytable.py" afterPath="$PROJECT_DIR$/dev/AnalyseGreedyTable/test_python/analyse_greedytable.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/matcher_per_position/getligandpositionmatchermain.py" afterPath="$PROJECT_DIR$/dev/matcher_per_position/getligandpositionmatchermain.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/matcher_per_position/matcherposformat.py" afterPath="$PROJECT_DIR$/dev/matcher_per_position/matcherposformat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,46 +30,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/main.py">
+      <file leaf-file-name="matcherposformat.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev/matcher_per_position/matcherposformat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
-              <caret line="77" column="33" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="33" />
-              <folding>
-                <element signature="e#22#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plot_data.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/plot_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83623695" vertical-offset="90" max-vertical-offset="1305">
-              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.8239095" vertical-offset="0" max-vertical-offset="645">
+              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_mean_sd_cutoff.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/get_mean_sd_cutoff.py">
+      <file leaf-file-name="getligandpositionmatchermain.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/matcher_per_position/getligandpositionmatchermain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.777778" vertical-offset="1206" max-vertical-offset="1785">
+              <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="analyse_patchdock_score.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/analyse_patchdock_score.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="2220">
-              <caret line="86" column="66" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
-              <folding>
-                <element signature="e#21#50#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -91,6 +71,9 @@
         <option value="$PROJECT_DIR$/dev/patchdock_analysis/main.py" />
         <option value="$PROJECT_DIR$/dev/patchdock_analysis/analyse_patchdock_score.py" />
         <option value="$PROJECT_DIR$/dev/patchdock_analysis/plot_data.py" />
+        <option value="$PROJECT_DIR$/dev/AnalyseGreedyTable/test_python/analyse_greedytable.py" />
+        <option value="$PROJECT_DIR$/dev/matcher_per_position/getligandpositionmatchermain.py" />
+        <option value="$PROJECT_DIR$/dev/matcher_per_position/matcherposformat.py" />
       </list>
     </option>
   </component>
@@ -201,7 +184,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/align_residues" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/matcher_per_position/getligandpositionmatchermain.py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dev/matcher_per_position" />
+    </key>
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -491,10 +479,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/analyse_patchdock_score.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="2265">
+          <caret line="89" column="66" selection-start-line="89" selection-start-column="66" selection-end-line="89" selection-end-column="66" />
+          <folding>
+            <element signature="e#21#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/get_mean_sd_cutoff.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/plot_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667" vertical-offset="90" max-vertical-offset="1305">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -509,20 +515,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/analyse_patchdock_score.py">
+    <entry file="file://$PROJECT_DIR$/dev/AnalyseGreedyTable/test_python/analyse_greedytable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="2220">
-          <caret line="86" column="66" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
-          <folding>
-            <element signature="e#21#50#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1515">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/patchdock_analysis/plot_data.py">
+    <entry file="file://$PROJECT_DIR$/dev/matcher_per_position/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83623695" vertical-offset="90" max-vertical-offset="1305">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/matcher_per_position/getligandpositionmatchermain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.777778" vertical-offset="1206" max-vertical-offset="1785">
+          <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/matcher_per_position/matcherposformat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8239095" vertical-offset="0" max-vertical-offset="645">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding />
         </state>
       </provider>
