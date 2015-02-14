@@ -10,7 +10,6 @@ def get_file(filename):
 
 def read_file(pdbfile,cfactor):
     '''
-
     Making sure the pdb chain is number from 1 - N 
     without any missing residues. This is important for 
     patchdock and matching.
@@ -84,7 +83,7 @@ def main():
     number = get_number_to_substract(fl)
 
     print "number",number
-
+    
     if(number == 0):
         print "PDB starts from residue 1"
         src  = read_file(fl,number)
