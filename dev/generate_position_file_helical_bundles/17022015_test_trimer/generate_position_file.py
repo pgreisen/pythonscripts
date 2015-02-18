@@ -15,7 +15,7 @@ class GeneratePositionFile:
         self.backbone_coordinates = {}
         self.cbeta_dummy = {}
         self.positions = []
-
+        
         self.chainA = {}
         self.chainB = {}
         self.offset = 0
