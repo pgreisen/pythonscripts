@@ -63,7 +63,8 @@ class getligandpositionmatchermain:
         parser.add_argument("--tmp_argument", dest="tmp_argument",help="The is a variable to insure you are not overridding the current file when you run multiple runs in the same directory", default="")
 
         input_var = parser.parse_args()
-    
+
+
         gp = GetLigandPositions()
         mp = matcherposformat()
 
