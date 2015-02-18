@@ -43,6 +43,8 @@ def read_inputfile(inputfile):
     tmp_file = open(inputfile,'r')
     datafile = []
     for line in tmp_file:
+        if( line[0] == '@' or line[0] == '&'):
+            continue
         datafile.append( float( line.split()[1]) )
     tmp_file.close()
     return datafile
