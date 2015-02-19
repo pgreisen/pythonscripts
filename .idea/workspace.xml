@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/matcher_per_position/getligandpositionmatchermain.py" afterPath="$PROJECT_DIR$/dev/matcher_per_position/getligandpositionmatchermain.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plot_histogram_single_file_split_line.py" afterPath="$PROJECT_DIR$/plot_histogram_single_file_split_line.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +29,7 @@
       <file leaf-file-name="generate_position_file.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/17022015_test_trimer/generate_position_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4671164" vertical-offset="1125" max-vertical-offset="3330">
+            <state vertical-scroll-proportion="0.43001688" vertical-offset="0" max-vertical-offset="3330">
               <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -553,7 +552,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/17022015_test_trimer/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4671164" vertical-offset="1125" max-vertical-offset="3330">
+        <state vertical-scroll-proportion="0.43001688" vertical-offset="0" max-vertical-offset="3330">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
