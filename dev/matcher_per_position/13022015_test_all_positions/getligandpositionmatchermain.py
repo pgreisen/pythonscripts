@@ -106,7 +106,6 @@ class getligandpositionmatchermain:
                 lig_coor = gp.get_ligandatom_coordinates(p_pdbfile,lig)
                 new_positions.append(gp.get_protein_positions(p_pdbfile,lig_coor,positions))
 
-
         if(input_var.allpositions == 0):
             mp.set_ncst_string(new_positions,input_var.tmp_argument)
         else:
