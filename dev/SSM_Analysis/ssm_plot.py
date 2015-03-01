@@ -10,7 +10,6 @@ class SSMAnalysis:
             self.offset = 0
             self.matrix = defaultdict(list)
             self.datafile = ""
-            self.matrix_for_plotting = None
             self.matrix_for_plotting = []
             self.shape_aa = 21
             self.shape_protein = 0
@@ -32,25 +31,29 @@ class SSMAnalysis:
                     tmp_line = line.split()
                     if( tmp_line[0] == "SeqID"):
                         continue
+
+                    Asort = float( tmp_line[3] )
+                    Bsort = float( tmp_line[4] )
+
                     # The frequency ration is computed
-                    freq = round( log( float(tmp_line[3]) / float(tmp_line[4]) ),3 )
+                    freq = round( log( Asort / Bsort ) ,3 )
                     # freq = round( float(tmp_line[3]) / float(tmp_line[4]) ,3 )
-                    self.matrix [tmp_line[0] ].append( ( tmp_line[3], tmp_line[4], freq ) )
+                    self.matrix[ tmp_line[0] ] = [ Bsort, Asort , freq ]
+
 
                     # store the frequency ratio
                     self.matrix_for_plotting.append( freq )
 
                     # store the counts from sort
-                    self.count_sort.append( float(tmp_line[3]) )
+                    self.count_sort.append( Asort )
 
                     # store the counts from sort
-                    self.count_naive.append( float(tmp_line[4]) )
+                    self.count_naive.append( Bsort )
 
             # numpy.asarray
             t = asarray(self.matrix_for_plotting)
             self.shape_protein = len( t ) / self.shape_aa
             self.matrix_for_plotting =  t.reshape( self.shape_protein, self.shape_aa  ).transpose()
-
 
             print "ROW IS EQUAL TO :", len(self.matrix_for_plotting[:,1])
             print "Column is equal to: ", len(self.matrix_for_plotting[1,:])
@@ -60,8 +63,8 @@ class SSMAnalysis:
         def plot_matrix(self):
             "Heat map of the matrix"
 
-            fig = figure(figsize=(self.x,self.y),facecolor='w')
-            ax = fig.add_subplot(111)
+            #fig = figure(figsize=(self.x,self.y),facecolor='w')
+            #ax = fig.add_subplot(111)
             # imshow( self.matrix_for_plotting , interpolation='nearest',cmap='RdYlGn',aspect="equal")
             i = imshow( self.matrix_for_plotting , interpolation='nearest',cmap='RdYlGn', aspect="equal")
             # does not work
@@ -93,6 +96,11 @@ class SSMAnalysis:
                         f.write(str(r_sort[j][i])+"/"+str(naive_sort[j][i])+"," )
                     f.write("\n")
 
+        def get_sorted_frequencies(self):
+            """ Return a sorted dictionary based in the set value in this case the frequency
+            """
+            return sorted( self.matrix.iteritems(),key=lambda (k,v): v[2],reverse=True)
+
 
 
 
@@ -107,6 +115,13 @@ class SSMAnalysis:
             self.set_data( )
             self.plot_matrix()
             self.write_matrix_to_csv_file()
+
+            sorted_matrix = self.get_sorted_frequencies()
+            with open("frequencies_sorted.txt",'w') as f :
+                for key in sorted_matrix:
+                    f.write(" "+str(key) +"\n"  )
+
+
 
 if __name__ == '__main__':
     run = SSMAnalysis()
