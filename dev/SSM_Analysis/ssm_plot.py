@@ -73,7 +73,8 @@ class SSMAnalysis:
 
             # fig.colorbar(i )
             # colorbar()
-            show()
+            savefig("heatmap.eps")
+            # show()
 
         def get_data(self):
             """returns the matrix """
@@ -119,7 +120,8 @@ class SSMAnalysis:
             sorted_matrix = self.get_sorted_frequencies()
             with open("frequencies_sorted.txt",'w') as f :
                 for key in sorted_matrix:
-                    f.write(" "+str(key) +"\n"  )
+                    f.write(str(key[0])+","+str(key[1][0])+","+str(key[1][1])+","+str(key[1][2])+"\n" )
+                    # f.write(" "+str(key) +"\n"  )
 
 
 

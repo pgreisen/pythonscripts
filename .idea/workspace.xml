@@ -2,6 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB04_S9_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB06_S11_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB07_S12_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB08_S13_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB12_S17_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB14_S19_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB15_S20_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB16_S21_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB17_S22_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB19_S24_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB20_S25_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB21_S26_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB22_S27_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB24_S29_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB25_S30_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB26_S31_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/frequencies_sorted.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py" />
     </list>
     <ignored path="pythonscripts.iws" />
@@ -26,14 +43,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ssm_plot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ssm_plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6046128" vertical-offset="1328" max-vertical-offset="1995">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1418" max-vertical-offset="2025">
+              <caret line="113" column="52" selection-start-line="111" selection-start-column="12" selection-end-line="113" selection-end-column="52" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_union.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/get_union.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1995">
+              <caret line="35" column="32" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convert_positionfile.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43548387" vertical-offset="0" max-vertical-offset="620">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,6 +106,8 @@
         <option value="$PROJECT_DIR$/dev/ParetoAnalysis/get_union.py" />
         <option value="$PROJECT_DIR$/dev/ParetoAnalysis/get_paretofront.py" />
         <option value="$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py" />
+        <option value="$PROJECT_DIR$/dev/SSM_Analysis/get_union.py" />
+        <option value="$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py" />
       </list>
     </option>
   </component>
@@ -148,25 +189,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="patchdock_analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pythonscripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pythonscripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="md_sim_holo_analysis" />
+              <option name="myItemId" value="SSM_Analysis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -177,7 +200,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/submitglide/submit_glide.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -670,11 +693,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6046128" vertical-offset="1328" max-vertical-offset="1995">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1418" max-vertical-offset="2025">
+          <caret line="113" column="52" selection-start-line="111" selection-start-column="12" selection-end-line="113" selection-end-column="52" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/get_union.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1995">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43548387" vertical-offset="0" max-vertical-offset="620">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
