@@ -2,24 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB04_S9_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB06_S11_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB07_S12_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB08_S13_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB12_S17_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB14_S19_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB15_S20_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB16_S21_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB17_S22_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB19_S24_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB20_S25_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB21_S26_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB02_S7_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB22_S27_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB24_S29_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB25_S30_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/fc_mapAllCounts_myprettydesign_MB26_S31_L001_R1_001.fastq_B_qc1strict_PRO_qc2_mapAllCounts_myprettydesign_MB10_S15_L001_R1_001.fastq_B_qc1strict_PRO_qc2_reorder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/frequencies_sorted.txt" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_resfile_around_residues.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/3p_APN_FEN_APNenriched.eps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/3p_APN_FEN_APNenriched.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/3p_APN_FEN_FENenriched.eps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/3p_APN_FEN_FENenriched.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/3p_APN_FEN_both_enriched.eps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/3p_APN_FEN_both_enriched.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/5p_APN_FEN_APNenriched.eps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/5p_APN_FEN_APNenriched.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/5p_APN_FEN_FENenriched.eps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/5p_APN_FEN_FENenriched.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/5p_APN_FEN_both_enriched.eps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/5p_APN_FEN_both_enriched.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/APN_3p_sort4_frequencies_sorted.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/FEN_3p_sort4_frequencies_sorted.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/APN_5p_sort4_frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/APN_5p_sort4_frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/FEN_5p_sort4_frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/union/5p_analysis/FEN_5p_sort4_frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort1/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort1/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort2/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort2/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort3/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort3/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort4/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort4/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort1/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort1/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort2/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort2/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort3/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort3/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort4/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort4/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort1/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort1/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort2/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort2/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort3/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort3/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort4/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort4/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort1/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort1/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort2/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort2/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort3/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort3/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort4/frequencies_sorted.txt" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort4/frequencies_sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/get_union.py" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/get_union.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort1/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort1/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort2/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort2/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort3/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort3/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort4/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_3p_sort4/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort1/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort1/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort2/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort2/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort3/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort3/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort4/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/APN_5p_sort4/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort1/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort1/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort2/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort2/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort3/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort3/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort4/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_3p_sort4/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort1/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort1/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort2/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort2/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort3/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort3/heatmap.eps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort4/heatmap.eps" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/data/FEN_5p_sort4/heatmap.eps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py" afterPath="$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +80,8 @@
       <file leaf-file-name="ssm_plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1418" max-vertical-offset="2025">
-              <caret line="113" column="52" selection-start-line="111" selection-start-column="12" selection-end-line="113" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1718" max-vertical-offset="2340">
+              <caret line="133" column="52" selection-start-line="127" selection-start-column="11" selection-end-line="133" selection-end-column="52" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -55,24 +89,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_union.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/get_union.py">
+      <file leaf-file-name="generate_resfile_around_residues.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_resfile_around_residues.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1995">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.9507389" vertical-offset="1836" max-vertical-offset="2505">
+              <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert_positionfile.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py">
+      <file leaf-file-name="get_union.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/get_union.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43548387" vertical-offset="0" max-vertical-offset="620">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2655">
+              <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,9 +139,12 @@
         <option value="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/17022015_test_trimer/generate_position_file.py" />
         <option value="$PROJECT_DIR$/dev/ParetoAnalysis/get_union.py" />
         <option value="$PROJECT_DIR$/dev/ParetoAnalysis/get_paretofront.py" />
+        <option value="$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py" />
+        <option value="$PROJECT_DIR$/dev/generate_position_file_LRR/add_residues_to_matcher_positionfile.py" />
         <option value="$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py" />
         <option value="$PROJECT_DIR$/dev/SSM_Analysis/get_union.py" />
-        <option value="$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py" />
+        <option value="$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_nataanatro_resfile_around_residue.py" />
+        <option value="$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_resfile_around_residues.py" />
       </list>
     </option>
   </component>
@@ -143,6 +180,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,12 +233,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_nataanatro_resfile_around_residue.py" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -209,6 +246,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dev/GenerateResfileAroundResidues" />
       <recent name="$PROJECT_DIR$/dev/matcher_per_position" />
     </key>
   </component>
@@ -361,15 +399,13 @@
     <frame x="39" y="22" width="1881" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3285124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33022773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24892473" sideWeight="0.6695096" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -377,10 +413,12 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -406,11 +444,57 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2340">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/get_union.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2655">
+          <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1418" max-vertical-offset="2025">
+          <caret line="113" column="52" selection-start-line="111" selection-start-column="12" selection-end-line="113" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/get_union.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1995">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/17022015_test_trimer/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3330">
           <caret line="0" column="23" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -418,7 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3225">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3706754" vertical-offset="1913" max-vertical-offset="3225">
           <caret line="185" column="27" selection-start-line="185" selection-start-column="27" selection-end-line="185" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.830645" vertical-offset="1755" max-vertical-offset="3330">
           <caret line="0" column="23" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,34 +768,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7907743" vertical-offset="3675" max-vertical-offset="5010">
           <caret line="277" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py">
+    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1418" max-vertical-offset="2025">
-          <caret line="113" column="52" selection-start-line="111" selection-start-column="12" selection-end-line="113" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.4340836" vertical-offset="0" max-vertical-offset="622">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_LRR/add_residues_to_matcher_positionfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/get_union.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1995">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2655">
+          <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_LRR/convert_positionfile.py">
+    <entry file="file://$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_nataanatro_resfile_around_residue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43548387" vertical-offset="0" max-vertical-offset="620">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2550">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SSM_Analysis/ssm_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2340">
+          <caret line="133" column="52" selection-start-line="127" selection-start-column="11" selection-end-line="133" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_resfile_around_residues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9507389" vertical-offset="1836" max-vertical-offset="2505">
+          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
           <folding />
         </state>
       </provider>

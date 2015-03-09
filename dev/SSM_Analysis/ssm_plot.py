@@ -19,6 +19,9 @@ class SSMAnalysis:
             # dimensions of figure
             self.x = 12
             self.y = 12
+            self.cutoff_count = 10
+            self.native_entity = {}
+
 
 
         def set_data(self ):
@@ -38,8 +41,14 @@ class SSMAnalysis:
                     # The frequency ration is computed
                     freq = round( log( Asort / Bsort ) ,3 )
                     # freq = round( float(tmp_line[3]) / float(tmp_line[4]) ,3 )
-                    self.matrix[ tmp_line[0] ] = [ Bsort, Asort , freq ]
 
+                    # generate a key that contains the native entity as well
+                    tmp_resid, resname = tmp_line[0].split('-')
+                    key = self.native_entity[tmp_resid]+str(int(tmp_resid)+self.offset)+resname
+
+
+                    if( Bsort > self.cutoff_count ):
+                        self.matrix[ key ] = [ Bsort, Asort , freq ]
 
                     # store the frequency ratio
                     self.matrix_for_plotting.append( freq )
@@ -55,10 +64,22 @@ class SSMAnalysis:
             self.shape_protein = len( t ) / self.shape_aa
             self.matrix_for_plotting =  t.reshape( self.shape_protein, self.shape_aa  ).transpose()
 
-            print "ROW IS EQUAL TO :", len(self.matrix_for_plotting[:,1])
-            print "Column is equal to: ", len(self.matrix_for_plotting[1,:])
+            print "Number of residues( Row )  is equal to :", len(self.matrix_for_plotting[:,1])
+            print "Amino acids ( column ) is equal to: ", len(self.matrix_for_plotting[1,:])
 
 
+        def get_native_entity_and_position(self):
+            with open( self.datafile,'r') as f:
+                for line in f:
+                    # 0: is key of residue
+                    # 3: A is the sort
+                    # 4: B is the naive sort
+                    tmp_line = line.split()
+                    if( tmp_line[0] == "SeqID"):
+                        continue
+                    elif( tmp_line[8] == "WT"):
+                        key,value = tmp_line[0].split("-")
+                        self.native_entity[key] = value
 
         def plot_matrix(self):
             "Heat map of the matrix"
@@ -103,16 +124,17 @@ class SSMAnalysis:
             return sorted( self.matrix.iteritems(),key=lambda (k,v): v[2],reverse=True)
 
 
-
-
         def main(self):
             parser = argparse.ArgumentParser(description="Analyse SSM data")
             parser.add_argument('-f',dest='datafile', help='File with data from the analysis' )
             parser.add_argument('--offset',dest='offset', default=0,type=int, help="If your sequence is offset by a number one can add or subtract this number")
+            parser.add_argument('--cutoff_count',dest='cutoff_count', default=10,type=int, help="Remove enrichments values which have a count less than this in the naive population")
             args_dict = vars( parser.parse_args() )
             for item in args_dict:
                 setattr(self, item, args_dict[item])
 
+
+            self.get_native_entity_and_position()
             self.set_data( )
             self.plot_matrix()
             self.write_matrix_to_csv_file()
@@ -122,7 +144,6 @@ class SSMAnalysis:
                 for key in sorted_matrix:
                     f.write(str(key[0])+","+str(key[1][0])+","+str(key[1][1])+","+str(key[1][2])+"\n" )
                     # f.write(" "+str(key) +"\n"  )
-
 
 
 if __name__ == '__main__':
