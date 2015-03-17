@@ -67,12 +67,24 @@ class plot_data:
             if float(v) >= cutoff and dummy <= maxpdbs:
                 pdbname,N = k.split('_')
 
-                # perl /work/greisen/ExternalProgram/patchdock/PatchDock/transOutput.pl $1 $2 $3;
-
                 template = 'perl /work/greisen/ExternalProgram/patchdock/PatchDock/transOutput.pl '+str(pdbname)+'_nohet_1_patchdock.out '+str(N)+' '+str(N)+' #  '+str(v)+'\n'
 
                 datafile.write(template)
                 dummy = dummy + 1
+
+
+    def write_all_values_above_cutoff(self,dictionary,cutoff):
+        datafile = open('get_patchdock_results.sh','w')
+        dummy = 0
+        for k, v in dictionary.items():
+            if float(v) >= cutoff:
+                filename, N = k.split('___')
+                template = 'perl /work/greisen/ExternalProgram/patchdock/PatchDock/transOutput.pl '+str(filename)+'_'+str(N)+' '+str(N)+' #  '+str(v)+'\n'
+
+                datafile.write(template)
+                dummy = dummy + 1
+
+
 
     def write_table_to_file(self, hashtable):
         """ write the content of hash table to file"""

@@ -6,23 +6,6 @@ from analyse_patchdock_score import *
 from plot_data import *
 
 """
-Makes an alignment to a zinc site in a protein. Atom names of
-ligand has to be set in main in the list SUBSTRATEATOMS
-
-@param -f: pdbfile with zincprotein
-@type f  : string
-@param -a: atom name to be analysed e.g., NE1 in TRP
-@type a  : string
-@param -t: atomtype which will be the target of the analysis e.g., carbon-atom 
-@type a  : string
-@param -r: residue which will be analysed 3-letter e.g., TRP 
-@type r  : string
-@param -m: minimum distance 
-@type r  : float
-@param -c: maximum distance
-@type r  : float
-
-@return
 
 """
 

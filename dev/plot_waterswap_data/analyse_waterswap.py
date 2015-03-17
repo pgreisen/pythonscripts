@@ -171,11 +171,8 @@ class AnalyseWaterSwap:
         self.get_aa_binding_data()
         self.get_boxplot()
 
-        self.get_boxplot()
-
-
-        #self.get_binding_data()
-        #self.plot_histogram()
+        self.get_binding_data()
+        self.plot_histogram()
 
 
 if __name__ == "__main__":
