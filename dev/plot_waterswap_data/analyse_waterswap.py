@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+'''
+You would need to run two bash-commands to get the data for the analysis. 
+
+see below for the scripts
+
+'''
 import sys
 from pylab import *
 import pylab as plt
@@ -46,8 +52,9 @@ class AnalyseWaterSwap:
         ymin,ymax = ylim()
         text( xmin + (xmax-xmin)*0.02,  (ymax-ymin)/2,"Mean = "+str(mn)+"\n SD= "+str(sd),size='x-large')
         ## title( filename)
+        savefig("binding_constant.png")
         show()
-
+        
     def get_boxplot(self):
         dummy = 0
         data = []
@@ -171,13 +178,30 @@ class AnalyseWaterSwap:
         self.get_aa_binding_data()
         self.get_boxplot()
 
-        self.get_boxplot()
-
-
-        #self.get_binding_data()
-        #self.plot_histogram()
+        self.get_binding_data()
+        self.plot_histogram()
 
 
 if __name__ == "__main__":
     run = AnalyseWaterSwap()
     run.main()
+
+
+'''
+kd="^Binding";
+datapath=/work/greisen/Projects/LigandBinding/Apixaban/WaterSwap_Fentanyl_Apixaban/09032015_Results/binding_costant.dat;
+for i in *[0-9]*;
+do
+    if [ -d "$i" ]; then
+        cd $i;
+        echo $i;
+        # go to the output directory
+        cd output;
+        for j in results*log;
+        do
+            grep $kd $j >> $datapath;
+        done
+        cd ../..;
+    fi
+done
+'''

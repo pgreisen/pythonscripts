@@ -45,7 +45,7 @@ def read_inputfile(inputfile):
     for line in tmp_file:
         if( line[0] == '@' or line[0] == '&'):
             continue
-        datafile.append( float( line.split()[1]) )
+        datafile.append( float( line.split()[7]) )
     tmp_file.close()
     return datafile
 
