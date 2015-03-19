@@ -10,13 +10,13 @@ class analyse_patchdock:
     
     def __init__(self):
         self.scores = {}
+        self.score_for_output = {}
         self.debug = 0
         self.path = "./"
         self.cutoff = 2.0
         self.score = 2
-
-    #    def __str__(self):
-    #        print self.scores
+        self.mn = 0
+        self.sd = 0
 
     def print_values(self):
         for k, v in self.scores.items():                                                                                    
@@ -34,7 +34,7 @@ class analyse_patchdock:
 
     # Requires list, maximum_number
     # Returns list with scores in that interval
-    def get_scores(self,pfile,pdbname="1ABC"):
+    def get_scores(self,pfile,filename):
         start = False
         j =  0
 
@@ -69,15 +69,31 @@ class analyse_patchdock:
                 # default type is string we have to type cast int
                 self.scores[key] = float(tmp_line[ self.score ])
 
+                # get the score out from this - this is temporary fix
+                tmp_key = str(filename)+"___"+str(tmp_line[0])
+                self.score_for_output [ tmp_key ] = float(tmp_line[ self.score ])
+
+
             if(len(tmp_line) > 0 and  str(tmp_line[0]) == '#'):
                 start = True
 
     def get_sorted_results(self): #,maxvalue=10):
         return OrderedDict(sorted(self.scores.items(), key=lambda x: x[1],reverse=True)) #[0:maxvalue])
 
+    def get_sorted_hashtable(self, hashtable): #,maxvalue=10):
+        return OrderedDict(sorted(hashtable.items(), key=lambda x: x[1],reverse=True)) #[0:maxvalue])
+
 
     def print_number_scores(self):
         print 'The number of scores are ',len(self.scores)
+
+    def get_mean_scores(self):
+        return self.mean
+
+    def get_standard_deviation(self):
+        return self.sd
+
+
 
 
     def main(self):
@@ -100,7 +116,7 @@ class analyse_patchdock:
             if( os.path.isfile(fl) and fl.endswith(".out") ):
                 tmp_file = self.get_file( fl )
                 # we passed the 9 first character as a string to the hash table
-                self.get_scores( tmp_file )
+                self.get_scores( tmp_file, fl )
 
         plt = plot_data()
         # get table
@@ -118,6 +134,10 @@ class analyse_patchdock:
 
         plt.plot_histogram_w_mean( values, mn,sd, self.cutoff )
 
+        # get files from dictionary
+        cutoff_value = mn+self.cutoff*sd
+        print "### The cutoff value for the data set is: ", round(cutoff_value,4)
+        plt.write_all_values_above_cutoff( self.get_sorted_hashtable( self.score_for_output ), cutoff_value )
 
 
 if __name__ == "__main__":
