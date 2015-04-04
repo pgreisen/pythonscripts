@@ -185,7 +185,7 @@ class pdbfile:
         dict_of_coordinates = {}
         for line in pdblist:
 
-            if( line[0:4] == "ATOM"):
+            if( line[0:4] == "ATOM" or line[0:4] == "HETA"):
 
                 residuename = line[17:20].strip()
                 residuenumber = str(line[22:26]).strip()
@@ -209,6 +209,8 @@ class pdbfile:
             atomname = str(line[12:16]).strip()
 
             tmp_key = residuename+'_'+residuenumber+'_'+atomname
+
+
             if tmp_key in coordinates:
                 x = '%.3f' % coordinates[tmp_key][0]
                 y = '%.3f' % coordinates[tmp_key][1]
@@ -221,7 +223,7 @@ class pdbfile:
                 line = str(line[0:30]) + x + y + z + str(line[55:])
                 t_coordinates.append(line)
                 # Fix 18-03-2013
-                t_coordinates.append("END\n")
+                #t_coordinates.append("END\n")
 
         assert( len(t_coordinates) > 0)
 

@@ -22,7 +22,6 @@ class AlignResidues:
     def set_array_from_dictionary(self):
 
         for key in self.targetresidues:
-
             if key in self.queryresidues :
                 self.targetresiduescoordinates.append( self.targetresidues[ key ] )
                 self.queryresiduescoordinates.append( self.queryresidues[ key ])
@@ -30,9 +29,6 @@ class AlignResidues:
     def main(self):
 
         pdbfile_instance = pdbfile()
-
-
-
 
         parser = argparse.ArgumentParser(description="Solving a SVD for a number of residues")
         # get the initial rosetta design as input
@@ -63,7 +59,6 @@ class AlignResidues:
         targetresidues = input_variables.targetresidues.split(',')
         queryresidues = input_variables.queryresidues.split(',')
 
-
         # def get_all_residueatoms(self, pdblist, residuename, residuenumber):
 
 
@@ -72,21 +67,24 @@ class AlignResidues:
             pdbfile_instance.get_all_residueatoms( targetfile, tmp[0], tmp[1], self.targetresidues )
 
 
-
         for j in queryresidues:
             tmp = j.split()
             pdbfile_instance.get_all_residueatoms( queryfile, tmp[0], tmp[1], self.queryresidues )
 
 
         # debug
-        #print self.queryresidues
-        #print self.targetresidues
-        #print self.queryresidues
-        #assert 1 == 2
+        ##print self.queryresidues
+        ##print self.targetresidues
+        ##assert 1 == 2
 
         # Data transformation
         # Order matters hence list is given as argument
         self.set_array_from_dictionary()
+
+        ##print self.targetresiduescoordinates
+        ##print self.queryresiduescoordinates
+        ##assert 1 == 9
+
 
         # Make translation / rotation
         tr_instance = translate_rotate()
@@ -96,16 +94,20 @@ class AlignResidues:
 
         # debug 1
         ## print tr_matrix, rot_matrix
-
+        ## assert 1 == 0
 
 
         # Apply translation / rotation
         query_all_atoms = pdbfile_instance.get_pdbcoordinates( queryfile )
 
-
-
         query_coor = tr_instance.transform_ligand_coordinates( query_all_atoms ,tr_matrix,rot_matrix)
-        # print query_coor
+
+
+        ##print query_all_atoms
+        ##print query_coor
+        ## print queryfile
+
+        ##assert 1 == 0
 
         t_coordinates = pdbfile_instance.get_transformed_coordinates_pdbfile( query_coor, queryfile )
 
@@ -116,6 +118,9 @@ class AlignResidues:
 
 
         filename = 'realign'+input_variables.queryfile
+
+        ##print t_coordinates
+        ##assert 1 == 9
         pdbfile_instance.write_file( t_coordinates, filename )
 
 
