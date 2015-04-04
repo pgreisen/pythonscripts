@@ -57,7 +57,7 @@
       <file leaf-file-name="generate_position_file.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="177" column="26" selection-start="6767" selection-end="6767" vertical-scroll-proportion="0.7004992" vertical-offset="2234" max-vertical-offset="3570">
+            <state line="138" column="55" selection-start="5063" selection-end="5063" vertical-scroll-proportion="0.30116472" vertical-offset="1889" max-vertical-offset="3540">
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -483,7 +483,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="26" selection-start="6767" selection-end="6767" vertical-scroll-proportion="0.7004992" vertical-offset="2234" max-vertical-offset="3570">
+        <state line="138" column="55" selection-start="5063" selection-end="5063" vertical-scroll-proportion="0.30116472" vertical-offset="1889" max-vertical-offset="3540">
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
