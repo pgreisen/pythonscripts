@@ -179,7 +179,7 @@ class GeneratePositionFile:
             self.write_position_file(self.posB, self.posA, "BA.pos")
 
         else:
-            self.write_position_file(self.posA, self.posB, "pos.pos")
+            self.write_general_position_file(self.posA, self.posB, "pos.pos")
 
 
 if __name__ == "__main__":
