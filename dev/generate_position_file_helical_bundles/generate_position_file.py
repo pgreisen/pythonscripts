@@ -15,7 +15,7 @@ class GeneratePositionFile:
         self.backbone_coordinates = {}
         self.cbeta_dummy = {}
         self.positions = []
-
+        self.general_format = 0
         self.chainA = {}
         self.chainB = {}
         self.offset = 0
@@ -132,6 +132,15 @@ class GeneratePositionFile:
                 f.write(str( int(j) + self.offset)+' ')
 
 
+    def write_general_position_file(self,posA,posB,name="pos.pos"):
+
+        with open( name ,'w') as f:
+            for i in set( posA ):
+                f.write(str( int(i) + self.offset)+' ')
+            f.write("\n 2 : ")
+            for j in set( posB ):
+                f.write(str( int(j) + self.offset)+' ')
+
 
     def main(self):
 
@@ -144,6 +153,8 @@ class GeneratePositionFile:
         parser.add_argument("-f", "--pdbfile", dest="pdbfile", help="The name of the pdb file", default=None, type=str )
 
         parser.add_argument("--offset", dest="offset", help="Offset to be added to the position", default=0, type=int )
+
+        parser.add_argument("--format", dest="general_format", help="Matcher format is default but none zero value you will get the general format", default=0, type=int )
 
         input_variables = parser.parse_args()
 
@@ -164,8 +175,12 @@ class GeneratePositionFile:
         self.get_backbone_coordinates_between_chain_A_B( pdbfile )
         self.get_positions()
 
-        self.write_position_file(self.posA, self.posB, "AB.pos")
-        self.write_position_file(self.posB, self.posA, "BA.pos")
+        if(self.general_format == 0):
+
+            self.write_position_file(self.posA, self.posB, "AB.pos")
+            self.write_position_file(self.posB, self.posA, "BA.pos")
+        else:
+            self.write_position_file(self.posA, self.posB, "pos.pos")
 
 
 if __name__ == "__main__":
