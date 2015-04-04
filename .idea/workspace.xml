@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/analyse_greedy_output_to_matrix/lowest_mutations" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/analyse_greedy_output_to_matrix/analyse_greedytable.py" afterPath="$PROJECT_DIR$/dev/analyse_greedy_output_to_matrix/analyse_greedytable.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/analyse_greedy_output_to_matrix/data.csv" afterPath="$PROJECT_DIR$/dev/analyse_greedy_output_to_matrix/data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" afterPath="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/main.py" afterPath="$PROJECT_DIR$/dev/align_residues/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" afterPath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pythonscripts.iml" afterPath="$PROJECT_DIR$/.idea/pythonscripts.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +57,7 @@
       <file leaf-file-name="generate_position_file.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="0" selection-start="6930" selection-end="6930" vertical-scroll-proportion="0.87520796" vertical-offset="2234" max-vertical-offset="3555">
+            <state line="176" column="54" selection-start="6721" selection-end="6721" vertical-scroll-proportion="0.67554075" vertical-offset="2234" max-vertical-offset="3570">
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -490,7 +483,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="0" selection-start="6930" selection-end="6930" vertical-scroll-proportion="0.87520796" vertical-offset="2234" max-vertical-offset="3555">
+        <state line="176" column="54" selection-start="6721" selection-end="6721" vertical-scroll-proportion="0.67554075" vertical-offset="2234" max-vertical-offset="3570">
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
