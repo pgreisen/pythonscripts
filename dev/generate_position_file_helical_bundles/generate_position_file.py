@@ -137,7 +137,6 @@ class GeneratePositionFile:
         with open( name ,'w') as f:
             for i in set( posA ):
                 f.write(str( int(i) + self.offset)+' ')
-            f.write("\n 2 : ")
             for j in set( posB ):
                 f.write(str( int(j) + self.offset)+' ')
 
@@ -174,7 +173,6 @@ class GeneratePositionFile:
 
         self.get_backbone_coordinates_between_chain_A_B( pdbfile )
         self.get_positions()
-        print "#####################################",self.general_format
         if(input_variables.general_format == 0):
 
             self.write_position_file(self.posA, self.posB, "AB.pos")
