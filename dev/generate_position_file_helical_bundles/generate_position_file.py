@@ -174,11 +174,12 @@ class GeneratePositionFile:
 
         self.get_backbone_coordinates_between_chain_A_B( pdbfile )
         self.get_positions()
-
+        print "#####################################",self.general_format
         if(self.general_format == 0):
 
             self.write_position_file(self.posA, self.posB, "AB.pos")
             self.write_position_file(self.posB, self.posA, "BA.pos")
+
         else:
             self.write_position_file(self.posA, self.posB, "pos.pos")
 
