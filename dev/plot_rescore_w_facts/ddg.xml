@@ -1,0 +1,32 @@
+<ROSETTASCRIPTS>
+
+<TASKOPERATIONS>
+</TASKOPERATIONS>
+
+
+<SCOREFXNS>
+
+  <myscore weights=scorefacts/>
+
+</SCOREFXNS>
+
+<FILTERS>
+
+  <LigInterfaceEnergy name="ife" energy_cutoff=1000 scorefxn=myscore/>
+
+</FILTERS>
+
+<MOVERS>
+
+  <ddG name=ddG scorefxn=myscore chain_name=X/>
+
+</MOVERS>
+
+<PROTOCOLS>
+
+  <Add mover=ddG/>
+  Add filter=ife
+
+</PROTOCOLS>
+
+</ROSETTASCRIPTS>
