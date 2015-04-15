@@ -231,7 +231,7 @@ class SubmitGlide:
         pdbname = pdbname.upper()
 
         native_pdb = self.scaffold_pdb_path+pdbname+'/*_0001.pdb'
-
+        # 1db1_nohet_1_relax.pdb
         # pdb_path = '/lab/shared/scaffolds/'+pdbname[1:3]+'/'+pdbname+'/'+native_pdb
         move_files = 'cp '+native_pdb+' .'
         subprocess.Popen(move_files,shell=True).wait()
