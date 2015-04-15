@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="Type casting of string to integer when sorting list. Bug in the analyse_patchdock_score.py 18-12-2014. I am just typecasting it to an integer.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" afterPath="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pythonscripts.iml" afterPath="$PROJECT_DIR$/.idea/pythonscripts.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/analyse_2D_matrix/analyse_2D_matrix.py" afterPath="$PROJECT_DIR$/dev/analyse_2D_matrix/analyse_2D_matrix.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/insert_coordinates_from_pdb_to_new_pdb/main.py" afterPath="$PROJECT_DIR$/dev/insert_coordinates_from_pdb_to_new_pdb/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,14 +52,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analyse_2D_matrix.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="analyse_2D_matrix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/analyse_2D_matrix/analyse_2D_matrix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32178217" vertical-offset="795" max-vertical-offset="1905">
-              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1299" max-vertical-offset="1905">
+              <caret line="111" column="63" selection-start-line="111" selection-start-column="63" selection-end-line="111" selection-end-column="63" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev/insert_coordinates_from_pdb_to_new_pdb/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6542811" vertical-offset="0" max-vertical-offset="619">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,6 +95,7 @@
       <list>
         <option value="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" />
         <option value="$PROJECT_DIR$/dev/analyse_2D_matrix/analyse_2D_matrix.py" />
+        <option value="$PROJECT_DIR$/dev/insert_coordinates_from_pdb_to_new_pdb/main.py" />
       </list>
     </option>
   </component>
@@ -195,7 +207,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/analyse_greedy_output_to_matrix/analyse_greedytable.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/insert_coordinates_from_pdb_to_new_pdb/main.py" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -563,11 +575,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/analyse_2D_matrix/analyse_2D_matrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32178217" vertical-offset="795" max-vertical-offset="1905">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1299" max-vertical-offset="1905">
+          <caret line="111" column="63" selection-start-line="111" selection-start-column="63" selection-end-line="111" selection-end-column="63" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/insert_coordinates_from_pdb_to_new_pdb/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6542811" vertical-offset="0" max-vertical-offset="619">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
