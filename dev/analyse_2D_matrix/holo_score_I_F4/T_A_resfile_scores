@@ -1,0 +1,3 @@
+SEQUENCE: 
+SCORE: total_score dslf_fa13    fa_atr    fa_dun   fa_elec fa_intra_rep       fa_rep       fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb       omega     p_aa_pp pro_close      rama       ref description 
+SCORE:    -532.764     0.000 -1350.099   264.859  -104.902        5.029      151.302      733.469     -46.473     -48.568     -30.430     -93.510      27.048     -43.294     0.714   -26.147    28.239 1HZY_chainA_0001_0001_0001
