@@ -64,13 +64,28 @@ class GeneratePositionFile:
 
                     # If not a glycine use the already assigned c-beta atom coordinates
                     if( line[17:20] != "GLY" and tmp[2] == "CB" ):
-                        self.cbeta_dummy[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                        x = str(line[30:38]).rstrip()
+                        y = str(line[38:46]).rstrip()
+                        z = str(line[46:54]).rstrip()
+                        ## 07-04-2015
+                        self.cbeta_dummy[key] = array([ float(x), float(y), float(z)])
+
+                        # self.cbeta_dummy[key] = array([ float(x), float(y), float(z)])
+
+
+                        ##self.cbeta_dummy[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
                         # debug
                         # print array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
 
 
                     elif( line[17:20] == "GLY" ):
-                        self.backbone_coordinates[key][tmp[2]] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                        x = str(line[30:38]).rstrip()
+                        y = str(line[38:46]).rstrip()
+                        z = str(line[46:54]).rstrip()
+
+                        self.backbone_coordinates[key][tmp[2]] = array([ float(x), float(y), float(z)])
+
+                        # self.backbone_coordinates[key][tmp[2]] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
 
                     # we do not care about the rest of the atoms in the file
                     else:
@@ -93,7 +108,12 @@ class GeneratePositionFile:
                     if( self.chainA.has_key( key ) == False):
                         self.chainA[key] = {}
 
-                    self.chainA[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                    x = str(line[30:38]).rstrip()
+                    y = str(line[38:46]).rstrip()
+                    z = str(line[46:54]).rstrip()
+                    # 07-04-2015
+                    ## self.chainA[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                    self.chainA[key] = array([ float(x), float(y), float(z)])
 
                 elif( len(line) > 4 and line[13:15] == "CA" and str(line[21:22]) == 'B' ):
                     tmp = line.split()
@@ -103,7 +123,12 @@ class GeneratePositionFile:
                     if( self.chainB.has_key( key ) == False):
                         self.chainB[key] = {}
 
-                    self.chainB[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                    x = str(line[30:38]).rstrip()
+                    y = str(line[38:46]).rstrip()
+                    z = str(line[46:54]).rstrip()
+                    # 07-04-2015
+                    # self.chainB[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                    self.chainB[key] = array([ float(x), float(y), float(z)])
 
 
 

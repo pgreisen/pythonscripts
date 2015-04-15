@@ -1,3 +1,4 @@
+
 #from numpy import *
 import os,shutil,sys,argparse
 import operator
@@ -17,6 +18,8 @@ class analyse_patchdock:
         self.score = 2
         self.mn = 0
         self.sd = 0
+        self.big = 0
+        self.cutoff_score = 3500.0
 
     def print_values(self):
         for k, v in self.scores.items():                                                                                    
@@ -66,12 +69,14 @@ class analyse_patchdock:
             if(start == True):
                 j = j + 1
                 key = prt+"_"+lig+'_'+str(j)
+                
                 # default type is string we have to type cast int
                 self.scores[key] = float(tmp_line[ self.score ])
-
+                
                 # get the score out from this - this is temporary fix
                 tmp_key = str(filename)+"___"+str(tmp_line[0])
-                self.score_for_output [ tmp_key ] = float(tmp_line[ self.score ])
+                if( float(tmp_line[ self.score ] > self.cutoff_score) ) :
+                    self.score_for_output[ tmp_key ] = float(tmp_line[ self.score ])
 
 
             if(len(tmp_line) > 0 and  str(tmp_line[0]) == '#'):
@@ -129,12 +134,13 @@ class analyse_patchdock:
         print "### Mean of data set is: ", round(mn, 4)
         print "### Standard deviation of data set is: ", round(sd, 4)
 
-        if(self.debug == 1):
-            print self.cutoff
-
+        
+        print self.cutoff
         plt.plot_histogram_w_mean( values, mn,sd, self.cutoff )
+        # clear value
+        self.scores.clear()
 
-        # get files from dictionary
+
         cutoff_value = mn+self.cutoff*sd
         print "### The cutoff value for the data set is: ", round(cutoff_value,4)
         plt.write_all_values_above_cutoff( self.get_sorted_hashtable( self.score_for_output ), cutoff_value )

@@ -79,7 +79,7 @@ class plot_data:
         for k, v in dictionary.items():
             if float(v) >= cutoff:
                 filename, N = k.split('___')
-                template = 'perl /work/greisen/ExternalProgram/patchdock/PatchDock/transOutput.pl '+str(filename)+'_'+str(N)+' '+str(N)+' #  '+str(v)+'\n'
+                template = 'perl /work/greisen/ExternalProgram/patchdock/PatchDock/transOutput.pl '+str(filename)+' '+str(N)+' '+str(N)+' #  '+str(v)+'\n'
 
                 datafile.write(template)
                 dummy = dummy + 1
