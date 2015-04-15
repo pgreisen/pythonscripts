@@ -11,7 +11,7 @@ class GeneratePositionFile:
         self.one_chain_only = False
         self.angle  = 0.0
         self.dis = 2.0
-        self.maximum_distance = 9
+        self.maximum_distance = 9.0
         self.backbone_coordinates = {}
         self.cbeta_dummy = {}
         self.positions = []
