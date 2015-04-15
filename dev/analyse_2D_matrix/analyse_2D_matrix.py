@@ -22,7 +22,7 @@ class Analyse2D:
         self.score_term = "total_score"
         self.score_term_position = 0
         # A_D_resfile_scores
-        self.baseline_value = -537.691
+        self.baseline_value = -534.188
 
 
     def get_sorted_hashtable(self, hashtable):
