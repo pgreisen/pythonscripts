@@ -52,6 +52,10 @@ class get_union:
         self.mutations_positions = defaultdict(list)
         self.maxX = True
         self.maxY = True
+        self.pdbs_on_front = []
+        self.iterations = 3
+        self.px = []
+        self.py = []
 
     '''
     def pareto_frontier_multi(myArray):
@@ -103,6 +107,19 @@ class get_union:
                     dt.append( float(tmp[1]) )
         return data, dt
 
+    def get_pdbs(self):
+        with open("get_pareto_pdbs.sh","w") as f:
+            f.write("mkdir pareto_pdbs;\n")
+            f.write("for i in ")
+            for i in self.pdbs_on_front:
+                f.write(i+" ")
+            f.write(";\n")
+            f.write("do\n cp $i pareto_pdbs/;\ndone;" )
+
+
+
+
+
     def main(self):
 
         parser = argparse.ArgumentParser(description="Compute the Pareto front between the list of data - default is maximum for both X and Y ( multiple dimensions are under construction")
@@ -111,17 +128,18 @@ class get_union:
 
         parser.add_argument("--data2", dest="data2", help="Data set 2" )
 
-
         parser.add_argument("--xlabel", dest="xlabel", help="xlabel", default="SC" )
 
         parser.add_argument("--ylabel", dest="ylabel", help="ylabel", default="IFE" )
 
-
-
+        # number of rounds to take pareto front
+        parser.add_argument("--iterations", dest="iterations", help="Number of iterations that we will remove the pareto front and recompute a new one", type=int, default=3 )
 
         input_variables = parser.parse_args()
 
-
+        args_dict = vars( parser.parse_args() )
+        for item in args_dict:
+            setattr(self, item, args_dict[item])
 
         datafile_1 = input_variables.data1
         datafile_2 = input_variables.data2
@@ -129,74 +147,27 @@ class get_union:
         x,x_array = self.get_data( datafile_1 )
         y,y_array = self.get_data( datafile_2 )
 
+        for iteration in range(self.iterations):
+            # tmp variables
+            px,py = self.pareto_frontier(x_array, y_array, True, False )
 
-        px,py = self.pareto_frontier(x_array, y_array, True, False )
+            for i,j in zip(px, py):
+                self.pdbs_on_front.append( x[str(i)] )
+                x.pop( str(i) )
+                x_array.remove( i )
+                y_array.remove( j )
 
-        print px
-        print py
-
-        for i,j in zip(px, py):
-            print x[str(i)]
-            x.pop( str(i) )
-            x_array.remove( i )
-            y_array.remove( j )
-
-
-        scatter(x_array,y_array)
-        plot(px,py,'^',color='red')
-        xlabel( input_variables.xlabel)
-        ylabel( input_variables.ylabel)
-
-        #for i, j in zip( px, py):
-        #    annotate( x[i], size=12, xy = (i, j), xytext = (-20, 20), textcoords = 'offset points', ha = 'right', va = 'bottom', bbox = dict(boxstyle = 'round,pad=0.5', fc = 'yellow', alpha = 0.25), arrowprops = dict(arrowstyle = '->', connectionstyle = 'arc3,rad=0'))
-
-        show()
-
-        print "###############################"
-        print "Second Round ##################"
-        # Remove first round
-        ppx,ppy = self.pareto_frontier(x_array, y_array, True, False )
-
-        print ppx
-        print ppy
-
-        for i,j in zip(ppx, ppy):
-            print x[str(i)]
-            x.pop( str(i) )
-            x_array.remove( i )
-            y_array.remove( j )
+            self.px = self.px + px
+            self.py = self.py + py
 
 
         scatter(x_array,y_array)
-        plot(ppx,ppy,'^',color='red')
+        plot(self.px,self.py,'^',color='red')
         xlabel( input_variables.xlabel)
         ylabel( input_variables.ylabel)
-
         show()
 
-        print "###############################"
-        print "Third Round ##################"
-        # Remove first round
-        pppx,pppy = self.pareto_frontier(x_array, y_array, True, False )
-
-        print pppx
-        print pppy
-
-        for i,j in zip(pppx, pppy):
-            print x[str(i)]
-            x.pop( str(i) )
-            x_array.remove( i )
-            y_array.remove( j )
-
-
-        scatter(x_array,y_array)
-        plot(ppx,ppy,'^',color='red')
-        xlabel( input_variables.xlabel)
-        ylabel( input_variables.ylabel)
-
-        show()
-
-
+        self.get_pdbs()
 
 
 
