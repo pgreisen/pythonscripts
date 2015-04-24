@@ -17,6 +17,9 @@ class FastaManipulation:
 
         self.mutations = {}
 
+        self.md = []
+
+
 
     def set_sequences(self, file):
         dummy = 1
@@ -27,8 +30,6 @@ class FastaManipulation:
                 elif( dummy == 2 ):
                     self.native = line
                 dummy += 1
-        #print self.native
-        #print self.design
 
     def amino_acids(self, residue):
         atms = {
@@ -57,12 +58,27 @@ class FastaManipulation:
         return atms[residue]
 
 
-    def get_offset(self):
+    def set_missing_density(self):
         """
         Get off set between sequences
 
         """
-        return 0
+        dummy = True
+        missing_density = []
+
+        amino_acid_length = 0
+
+        for i in range( len(self.design)):
+            if( self.design[i] == '-' and dummy == True ):
+                continue
+            elif ( self.design[i] == '-' and dummy == False ):
+                missing_density.append( i+1 )
+
+            elif( self.design[i] != '-'  ):
+                amino_acid_length += 1
+                dummy = False
+
+        self.md = [i for i in missing_density if i < amino_acid_length ]
 
 
 
@@ -76,7 +92,11 @@ class FastaManipulation:
         for i in range( len(self.native) ):
             if (self.native[i] != self.design[i]) :
                 if(self.amino_acids(self.design[i]) == '-'):
-                    continue
+                    if( i in self.md ):
+                        dummy += 1
+                        continue
+                    else:
+                        continue
                 a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i)+"A new_res="+self.amino_acids(self.design[i] )+"/>"
 
                 print "Mutations between sequences: ", str(i), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
@@ -168,6 +188,8 @@ class FastaManipulation:
         input_variables = parser.parse_args()
 
         self.set_sequences( input_variables.fastafile )
+
+        self.set_missing_density()
 
         a,b,c = self.get_diff_seq()
 
