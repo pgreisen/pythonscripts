@@ -92,19 +92,25 @@ class FastaManipulation:
         design_around_task = ""
         protocol = ""
         dummy = 0
+        hyphen = 0
         assert len( self.native ) == len( self.design )
         for i in range( len(self.native) ):
             if (self.native[i] != self.design[i]) :
                 if(self.amino_acids(self.design[i]) == '-'):
-                    if( i in self.md ):
-                        dummy += 1
+                    tmp_dummy = i+1
+                    if( tmp_dummy in self.md ):
+
+                        hyphen += 1
                         continue
                     else:
                         continue
                 elif( self.amino_acids(self.design[i]) != '-'  ):
-                    a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i)+"A new_res="+self.amino_acids(self.design[i] )+"/>"
 
-                    print "Mutations between sequences: ", str(i), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
+
+
+                    a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i-hyphen)+"A new_res="+self.amino_acids(self.design[i] )+"/>"
+
+                    print "Mutations between sequences: ", str(i-hyphen), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
 
                     substitution_string.append(a)
                     design_around_task = design_around_task+str(i)+self.chain+","
