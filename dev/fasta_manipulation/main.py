@@ -107,8 +107,8 @@ class FastaManipulation:
                 elif( self.amino_acids(self.design[i]) != '-'  ):
 
 
-
-                    a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i-hyphen)+"A new_res="+self.amino_acids(self.design[i] )+"/>"
+                    # hack it is late
+                    a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i-hyphen)+"A new_res="+self.amino_acids(self.native[i] )+"/>"
 
                     print "Mutations between sequences: ", str(i-hyphen), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
 
