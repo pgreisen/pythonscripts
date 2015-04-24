@@ -1,0 +1,100 @@
+
+        <ROSETTASCRIPTS>
+
+  <TASKOPERATIONS>
+
+    <InitializeFromCommandline name=init/>
+    <LimitAromaChi2 name=limchi2/>
+    <RestrictToRepacking name=repack_only/>
+    <DesignAround name=da design_shell=8.0 resnums=18A,46A,48A,74A,76A,78A,80A,85A,87A,89A,119A,121A,124A,127A,128A,131A,133A,134A,135A,137A,170A,172A,174A,176A,197A repack_shell=6.0 allow_design=0/>
+
+  </TASKOPERATIONS>
+
+  <SCOREFXNS>
+
+    <enzdes weights=talaris2013.wts/>
+
+  </SCOREFXNS>
+
+  <MOVERS>
+
+    <MutateResidue name=mr0 target=18A new_res=THR/>
+<MutateResidue name=mr1 target=46A new_res=SER/>
+<MutateResidue name=mr2 target=48A new_res=SER/>
+<MutateResidue name=mr3 target=74A new_res=TRP/>
+<MutateResidue name=mr4 target=76A new_res=ALA/>
+<MutateResidue name=mr5 target=78A new_res=THR/>
+<MutateResidue name=mr6 target=80A new_res=THR/>
+<MutateResidue name=mr7 target=85A new_res=ASP/>
+<MutateResidue name=mr8 target=87A new_res=THR/>
+<MutateResidue name=mr9 target=89A new_res=TRP/>
+<MutateResidue name=mr10 target=119A new_res=TYR/>
+<MutateResidue name=mr11 target=121A new_res=PHE/>
+<MutateResidue name=mr12 target=124A new_res=VAL/>
+<MutateResidue name=mr13 target=127A new_res=SER/>
+<MutateResidue name=mr14 target=128A new_res=ASN/>
+<MutateResidue name=mr15 target=131A new_res=SER/>
+<MutateResidue name=mr16 target=133A new_res=HIS/>
+<MutateResidue name=mr17 target=134A new_res=PRO/>
+<MutateResidue name=mr18 target=135A new_res=GLY/>
+<MutateResidue name=mr19 target=137A new_res=ALA/>
+<MutateResidue name=mr20 target=170A new_res=TRP/>
+<MutateResidue name=mr21 target=172A new_res=THR/>
+<MutateResidue name=mr22 target=174A new_res=THR/>
+<MutateResidue name=mr23 target=176A new_res=TRP/>
+<MutateResidue name=mr24 target=197A new_res=LYS/>
+
+
+    # Minimization of complex - no design allowed
+    <TaskAwareMinMover name=min bb=0 chi=1 jump=1 scorefxn=enzdes task_operations=init/>
+    # Packing of rotamers making sure no aromatic with chi2 of 90 degrees
+    <PackRotamersMover name=repack task_operations=init,limchi2,repack_only,da/>
+
+    <ParsedProtocol name=min_repack_min>
+      <Add mover=min/>
+      <Add mover=repack/>
+      <Add mover=min/>
+    </ParsedProtocol>
+
+
+  </MOVERS>
+
+
+
+  <PROTOCOLS>
+
+    # Insert mutations
+    <Add mover_name=mr0/>
+<Add mover_name=mr1/>
+<Add mover_name=mr2/>
+<Add mover_name=mr3/>
+<Add mover_name=mr4/>
+<Add mover_name=mr5/>
+<Add mover_name=mr6/>
+<Add mover_name=mr7/>
+<Add mover_name=mr8/>
+<Add mover_name=mr9/>
+<Add mover_name=mr10/>
+<Add mover_name=mr11/>
+<Add mover_name=mr12/>
+<Add mover_name=mr13/>
+<Add mover_name=mr14/>
+<Add mover_name=mr15/>
+<Add mover_name=mr16/>
+<Add mover_name=mr17/>
+<Add mover_name=mr18/>
+<Add mover_name=mr19/>
+<Add mover_name=mr20/>
+<Add mover_name=mr21/>
+<Add mover_name=mr22/>
+<Add mover_name=mr23/>
+<Add mover_name=mr24/>
+
+
+    <Add mover_name=min_repack_min/>
+
+  </PROTOCOLS>
+
+</ROSETTASCRIPTS>
+
+        

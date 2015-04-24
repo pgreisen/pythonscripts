@@ -1,0 +1,15 @@
+Mutations between sequences:  15 PHE Native:  L
+Mutations between sequences:  16 ILE Native:  A
+Mutations between sequences:  19 VAL Native:  T
+Mutations between sequences:  24 ILE Native:  M
+Mutations between sequences:  39 ASN Native:  S
+Mutations between sequences:  55 PHE Native:  Y
+Mutations between sequences:  64 ALA Native:  V
+Mutations between sequences:  84 VAL Native:  A
+Mutations between sequences:  86 MET Native:  F
+Mutations between sequences:  88 TRP Native:  L
+Mutations between sequences:  93 CYS Native:  M
+Mutations between sequences:  99 ASP Native:  A
+Mutations between sequences:  112 MET Native:  A
+Mutations between sequences:  114 ALA Native:  M
+Mutations between sequences:  116 TRP Native:  Y
