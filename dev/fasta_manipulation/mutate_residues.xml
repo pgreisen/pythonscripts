@@ -1,0 +1,76 @@
+
+        <ROSETTASCRIPTS>
+
+  <TASKOPERATIONS>
+
+    <InitializeFromCommandline name=init/>
+    <LimitAromaChi2 name=limchi2/>
+    <RestrictToRepacking name=repack_only/>
+    <DesignAround name=da design_shell=8.0 resnums=41A,64A,73A,75A,92A,95A,97A,126A,165A,167A,172A,211A,232A repack_shell=6.0 allow_design=0/>
+
+  </TASKOPERATIONS>
+
+  <SCOREFXNS>
+
+    <enzdes weights=talaris2013.wts/>
+
+  </SCOREFXNS>
+
+  <MOVERS>
+
+    <MutateResidue name=mr0 target=41A new_res=CYS/>
+<MutateResidue name=mr1 target=64A new_res=GLN/>
+<MutateResidue name=mr2 target=73A new_res=ALA/>
+<MutateResidue name=mr3 target=75A new_res=THR/>
+<MutateResidue name=mr4 target=92A new_res=ILE/>
+<MutateResidue name=mr5 target=95A new_res=HIS/>
+<MutateResidue name=mr6 target=97A new_res=GLU/>
+<MutateResidue name=mr7 target=126A new_res=CYS/>
+<MutateResidue name=mr8 target=165A new_res=ALA/>
+<MutateResidue name=mr9 target=167A new_res=GLU/>
+<MutateResidue name=mr10 target=172A new_res=ILE/>
+<MutateResidue name=mr11 target=211A new_res=GLY/>
+<MutateResidue name=mr12 target=232A new_res=LEU/>
+
+
+    # Minimization of complex - no design allowed
+    <TaskAwareMinMover name=min bb=0 chi=1 jump=1 scorefxn=enzdes task_operations=init/>
+    # Packing of rotamers making sure no aromatic with chi2 of 90 degrees
+    <PackRotamersMover name=repack task_operations=init,limchi2,repack_only,da/>
+
+    <ParsedProtocol name=min_repack_min>
+      <Add mover=min/>
+      <Add mover=repack/>
+      <Add mover=min/>
+    </ParsedProtocol>
+
+
+  </MOVERS>
+
+
+
+  <PROTOCOLS>
+
+    # Insert mutations
+    <Add mover_name=mr0/>
+<Add mover_name=mr1/>
+<Add mover_name=mr2/>
+<Add mover_name=mr3/>
+<Add mover_name=mr4/>
+<Add mover_name=mr5/>
+<Add mover_name=mr6/>
+<Add mover_name=mr7/>
+<Add mover_name=mr8/>
+<Add mover_name=mr9/>
+<Add mover_name=mr10/>
+<Add mover_name=mr11/>
+<Add mover_name=mr12/>
+
+
+    <Add mover_name=min_repack_min/>
+
+  </PROTOCOLS>
+
+</ROSETTASCRIPTS>
+
+        

@@ -12,6 +12,7 @@ class GeneratePositionFile:
         self.angle  = 0.0
         self.dis = 2.0
         self.maximum_distance = 9.0
+        self.minimum_distance = 0.0
         self.backbone_coordinates = {}
         self.cbeta_dummy = {}
         self.positions = []
@@ -137,14 +138,31 @@ class GeneratePositionFile:
         self.posA = []
         self.posB = []
         '''
+
+        # local set here
+
+        setA = []
+        setB = []
+
         for key in self.chainA:
             for key_two in self.chainB:
                 # print  self.chainA[key], self.chainB[key_two]
                 dis = LA.norm( self.chainA[key] - self.chainB[key_two])
-                if( dis <= self.maximum_distance):
+
+                if( dis <= self.maximum_distance ):
 
                     self.posA.append( key.split('_')[2])
                     self.posB.append( key_two.split('_')[2])
+
+                #if( self.maximum_distance != 0.0 and dis <= self.minimum_distance ):
+                #    self.setA.append( key.split('_')[2])
+                #    self.setB.append( key_two.split('_')[2])
+
+
+        # list(set(temp1) - set(temp2))
+        #print self.posA
+        #print self.posB
+
 
 
     def write_position_file(self,posA, posB,name="AB.pos"):
@@ -180,6 +198,8 @@ class GeneratePositionFile:
 
         parser.add_argument("--format", dest="general_format", help="Matcher format is default but none zero value you will get the general format", default=0, type=int )
 
+        parser.add_argument("--minimum_distance", dest="minimum_distance", help="Minimum distance between chains", type=float )
+
         input_variables = parser.parse_args()
 
         # old version
@@ -193,6 +213,7 @@ class GeneratePositionFile:
         if( input_variables.helical_bundle):
             self.one_chain_only = input_variables.helical_bundle
 
+        self.minimum_distance = input_variables.minimum_distance
 
         self.offset = input_variables.offset
 
