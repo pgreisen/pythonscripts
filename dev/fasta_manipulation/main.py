@@ -50,7 +50,7 @@ class FastaManipulation:
             'V' :'VAL',
             'L' :'LEU',
             'I' :'ILE',
-            'F' :'TYR',
+            'F' :'PHE',
             'W' :'TRP',
             'G' :'GLY',
             '-' : '-'
