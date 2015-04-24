@@ -17,6 +17,8 @@ class FastaManipulation:
 
         self.mutations = {}
 
+        self.burnin = 0
+
         self.md = []
 
 
@@ -71,17 +73,21 @@ class FastaManipulation:
         for i in range( len(self.design)):
 
             if( self.design[i] == '-' and dummy == True ):
+                self.burnin += 1
                 continue
+
             elif ( self.design[i] == '-' and dummy == False ):
                 missing_density.append( i+1 )
+
 
             elif( self.design[i] != '-'  ):
                 amino_acid_length += 1
                 dummy = False
+
             else:
                 print amino_acid_length
+
         self.md = [i for i in missing_density if i < amino_acid_length ]
-        # print self.md, amino_acid_length
 
 
 
@@ -94,8 +100,11 @@ class FastaManipulation:
         dummy = 0
         hyphen = 0
         assert len( self.native ) == len( self.design )
+        # MAKE COMMENTS HERE
         for i in range( len(self.native) ):
+
             if (self.native[i] != self.design[i]) :
+
                 if(self.amino_acids(self.design[i]) == '-'):
                     tmp_dummy = i+1
                     if( tmp_dummy in self.md ):
@@ -106,14 +115,15 @@ class FastaManipulation:
                         continue
                 elif( self.amino_acids(self.design[i]) != '-'  ):
 
-
+                    residuenumber = str(1+i- hyphen - self.burnin)
+                    print residuenumber, i, hyphen, self.burnin
                     # hack it is late
-                    a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i-hyphen)+"A new_res="+self.amino_acids(self.native[i] )+"/>"
+                    a = "<MutateResidue name=mr"+str(dummy)+" target="+residuenumber+"A new_res="+self.amino_acids(self.native[i] )+"/>"
 
-                    print "Mutations between sequences: ", str(i-hyphen), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
+                    print "Mutations between sequences: ", residuenumber, self.amino_acids(self.design[i] ), "Native: ",self.native[i]
 
                     substitution_string.append(a)
-                    design_around_task = design_around_task+str(i)+self.chain+","
+                    design_around_task = design_around_task+residuenumber+self.chain+","
                     protocol += "<Add mover_name=mr"+str(dummy)+"/>\n"
                     dummy +=1
                 #   print "Mutations between sequences: ", str(i), self.amino_acids(self.design[i] ), "Native: ",self.native[i]

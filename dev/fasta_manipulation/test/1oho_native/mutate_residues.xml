@@ -1,0 +1,80 @@
+
+        <ROSETTASCRIPTS>
+
+  <TASKOPERATIONS>
+
+    <InitializeFromCommandline name=init/>
+    <LimitAromaChi2 name=limchi2/>
+    <RestrictToRepacking name=repack_only/>
+    <DesignAround name=da design_shell=8.0 resnums=15A,16A,19A,24A,39A,55A,64A,84A,86A,88A,93A,99A,112A,114A,116A repack_shell=6.0 allow_design=0/>
+
+  </TASKOPERATIONS>
+
+  <SCOREFXNS>
+
+    <enzdes weights=talaris2013.wts/>
+
+  </SCOREFXNS>
+
+  <MOVERS>
+
+    <MutateResidue name=mr0 target=15A new_res=LEU/>
+<MutateResidue name=mr1 target=16A new_res=ALA/>
+<MutateResidue name=mr2 target=19A new_res=THR/>
+<MutateResidue name=mr3 target=24A new_res=MET/>
+<MutateResidue name=mr4 target=39A new_res=SER/>
+<MutateResidue name=mr5 target=55A new_res=TYR/>
+<MutateResidue name=mr6 target=64A new_res=VAL/>
+<MutateResidue name=mr7 target=84A new_res=ALA/>
+<MutateResidue name=mr8 target=86A new_res=PHE/>
+<MutateResidue name=mr9 target=88A new_res=LEU/>
+<MutateResidue name=mr10 target=93A new_res=MET/>
+<MutateResidue name=mr11 target=99A new_res=ALA/>
+<MutateResidue name=mr12 target=112A new_res=ALA/>
+<MutateResidue name=mr13 target=114A new_res=MET/>
+<MutateResidue name=mr14 target=116A new_res=TYR/>
+
+
+    # Minimization of complex - no design allowed
+    <TaskAwareMinMover name=min bb=0 chi=1 jump=1 scorefxn=enzdes task_operations=init/>
+    # Packing of rotamers making sure no aromatic with chi2 of 90 degrees
+    <PackRotamersMover name=repack task_operations=init,limchi2,repack_only,da/>
+
+    <ParsedProtocol name=min_repack_min>
+      <Add mover=min/>
+      <Add mover=repack/>
+      <Add mover=min/>
+    </ParsedProtocol>
+
+
+  </MOVERS>
+
+
+
+  <PROTOCOLS>
+
+    # Insert mutations
+    <Add mover_name=mr0/>
+<Add mover_name=mr1/>
+<Add mover_name=mr2/>
+<Add mover_name=mr3/>
+<Add mover_name=mr4/>
+<Add mover_name=mr5/>
+<Add mover_name=mr6/>
+<Add mover_name=mr7/>
+<Add mover_name=mr8/>
+<Add mover_name=mr9/>
+<Add mover_name=mr10/>
+<Add mover_name=mr11/>
+<Add mover_name=mr12/>
+<Add mover_name=mr13/>
+<Add mover_name=mr14/>
+
+
+    <Add mover_name=min_repack_min/>
+
+  </PROTOCOLS>
+
+</ROSETTASCRIPTS>
+
+        
