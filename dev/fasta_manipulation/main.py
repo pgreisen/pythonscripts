@@ -27,8 +27,8 @@ class FastaManipulation:
                 elif( dummy == 2 ):
                     self.native = line
                 dummy += 1
-        print self.native
-        print self.design
+        #print self.native
+        #print self.design
 
     def amino_acids(self, residue):
         atms = {
@@ -78,6 +78,9 @@ class FastaManipulation:
                 if(self.amino_acids(self.design[i]) == '-'):
                     continue
                 a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i)+"A new_res="+self.amino_acids(self.design[i] )+"/>"
+
+                print "Mutations between sequences: ", str(i), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
+
                 substitution_string.append(a)
                 design_around_task = design_around_task+str(i)+self.chain+","
                 protocol += "<Add mover_name=mr"+str(dummy)+"/>\n"
