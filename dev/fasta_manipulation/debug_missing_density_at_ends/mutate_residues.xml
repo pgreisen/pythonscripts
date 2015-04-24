@@ -18,21 +18,21 @@
 
   <MOVERS>
 
-    <MutateResidue name=mr0 target=15A new_res=TYR/>
+    <MutateResidue name=mr0 target=15A new_res=PHE/>
 <MutateResidue name=mr1 target=16A new_res=ILE/>
 <MutateResidue name=mr2 target=19A new_res=VAL/>
 <MutateResidue name=mr3 target=24A new_res=ILE/>
 <MutateResidue name=mr4 target=39A new_res=ASN/>
-<MutateResidue name=mr5 target=55A new_res=TYR/>
-<MutateResidue name=mr8 target=67A new_res=ALA/>
-<MutateResidue name=mr9 target=87A new_res=VAL/>
-<MutateResidue name=mr10 target=89A new_res=MET/>
-<MutateResidue name=mr11 target=91A new_res=TRP/>
-<MutateResidue name=mr12 target=96A new_res=CYS/>
-<MutateResidue name=mr13 target=102A new_res=ASP/>
-<MutateResidue name=mr14 target=115A new_res=MET/>
-<MutateResidue name=mr15 target=117A new_res=ALA/>
-<MutateResidue name=mr16 target=119A new_res=TRP/>
+<MutateResidue name=mr5 target=55A new_res=PHE/>
+<MutateResidue name=mr6 target=64A new_res=ALA/>
+<MutateResidue name=mr7 target=84A new_res=VAL/>
+<MutateResidue name=mr8 target=86A new_res=MET/>
+<MutateResidue name=mr9 target=88A new_res=TRP/>
+<MutateResidue name=mr10 target=93A new_res=CYS/>
+<MutateResidue name=mr11 target=99A new_res=ASP/>
+<MutateResidue name=mr12 target=112A new_res=MET/>
+<MutateResidue name=mr13 target=114A new_res=ALA/>
+<MutateResidue name=mr14 target=116A new_res=TRP/>
 
 
     # Minimization of complex - no design allowed
@@ -60,6 +60,8 @@
 <Add mover_name=mr3/>
 <Add mover_name=mr4/>
 <Add mover_name=mr5/>
+<Add mover_name=mr6/>
+<Add mover_name=mr7/>
 <Add mover_name=mr8/>
 <Add mover_name=mr9/>
 <Add mover_name=mr10/>
@@ -67,8 +69,6 @@
 <Add mover_name=mr12/>
 <Add mover_name=mr13/>
 <Add mover_name=mr14/>
-<Add mover_name=mr15/>
-<Add mover_name=mr16/>
 
 
     <Add mover_name=min_repack_min/>
