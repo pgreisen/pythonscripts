@@ -50,7 +50,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/fasta_manipulation/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="20" selection-start="3058" selection-end="3058" vertical-scroll-proportion="0.8135593" vertical-offset="915" max-vertical-offset="3165">
+            <state line="52" column="21" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.55932206" vertical-offset="240" max-vertical-offset="3165">
               <folding />
             </state>
           </provider>
@@ -509,7 +509,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/fasta_manipulation/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="20" selection-start="3058" selection-end="3058" vertical-scroll-proportion="0.8135593" vertical-offset="915" max-vertical-offset="3165">
+        <state line="52" column="21" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.55932206" vertical-offset="240" max-vertical-offset="3165">
           <folding />
         </state>
       </provider>
