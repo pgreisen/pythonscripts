@@ -69,6 +69,7 @@ class FastaManipulation:
         amino_acid_length = 0
 
         for i in range( len(self.design)):
+
             if( self.design[i] == '-' and dummy == True ):
                 continue
             elif ( self.design[i] == '-' and dummy == False ):
@@ -77,8 +78,11 @@ class FastaManipulation:
             elif( self.design[i] != '-'  ):
                 amino_acid_length += 1
                 dummy = False
-
+            else:
+                print amino_acid_length
         self.md = [i for i in missing_density if i < amino_acid_length ]
+        # print self.md, amino_acid_length
+
 
 
 
@@ -97,14 +101,16 @@ class FastaManipulation:
                         continue
                     else:
                         continue
-                a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i)+"A new_res="+self.amino_acids(self.design[i] )+"/>"
+                elif( self.amino_acids(self.design[i]) != '-'  ):
+                    a = "<MutateResidue name=mr"+str(dummy)+" target="+str(i)+"A new_res="+self.amino_acids(self.design[i] )+"/>"
 
-                print "Mutations between sequences: ", str(i), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
+                    print "Mutations between sequences: ", str(i), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
 
-                substitution_string.append(a)
-                design_around_task = design_around_task+str(i)+self.chain+","
-                protocol += "<Add mover_name=mr"+str(dummy)+"/>\n"
-                dummy +=1
+                    substitution_string.append(a)
+                    design_around_task = design_around_task+str(i)+self.chain+","
+                    protocol += "<Add mover_name=mr"+str(dummy)+"/>\n"
+                    dummy +=1
+                #   print "Mutations between sequences: ", str(i), self.amino_acids(self.design[i] ), "Native: ",self.native[i]
 
 
         design_around_task = design_around_task[0:-1]
