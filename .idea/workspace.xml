@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/fasta_manipulation/main.py" afterPath="$PROJECT_DIR$/dev/fasta_manipulation/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/fasta_manipulation/debug_missing_density_at_ends/mutate_residues.xml" afterPath="$PROJECT_DIR$/dev/fasta_manipulation/debug_missing_density_at_ends/mutate_residues.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +50,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/fasta_manipulation/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="83" selection-start="2696" selection-end="2696" vertical-scroll-proportion="0.84745765" vertical-offset="855" max-vertical-offset="3255">
+            <state line="110" column="129" selection-start="2779" selection-end="2779" vertical-scroll-proportion="0.66101694" vertical-offset="1020" max-vertical-offset="3255">
               <folding />
             </state>
           </provider>
@@ -511,7 +509,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/fasta_manipulation/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="83" selection-start="2696" selection-end="2696" vertical-scroll-proportion="0.84745765" vertical-offset="855" max-vertical-offset="3255">
+        <state line="110" column="129" selection-start="2779" selection-end="2779" vertical-scroll-proportion="0.66101694" vertical-offset="1020" max-vertical-offset="3255">
           <folding />
         </state>
       </provider>
