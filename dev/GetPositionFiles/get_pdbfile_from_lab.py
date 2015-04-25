@@ -38,7 +38,7 @@ class GetPositionFiles:
                 for fl in files:
                     tmpfile = fl.split('.')
                     import pdb; pdb.set_trace()
-                    if( tmpfile[0][-1] < self.cutoff_positionfile ):
+                    if( int( tmpfile[0][-1] ) < self.cutoff_positionfile ):
 
                         print fl
 
