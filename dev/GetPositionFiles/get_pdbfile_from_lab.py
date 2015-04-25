@@ -41,7 +41,7 @@ class GetPositionFiles:
         except:
             print "The "
 
-        subprocess.Popen(move_files,shell=True).wait()
+        # subprocess.Popen(move_files,shell=True).wait()
 
 if __name__ == "__main__":
     run = GetPositionFiles()
