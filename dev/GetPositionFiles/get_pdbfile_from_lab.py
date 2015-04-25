@@ -57,7 +57,7 @@ class GetPositionFiles:
                 print fl
                 tmpfile = fl.split('.')
                 #import pdb; pdb.set_trace()
-                if( int( tmpfile[0][-1] ) < self.cutoff_positionfile and fl.endswith(".pos")):
+                if(  fl.endswith(".pos") and int( tmpfile[0][-1] ) < self.cutoff_positionfile ):
                     print fl
                     self.set_positions( fl )
 
