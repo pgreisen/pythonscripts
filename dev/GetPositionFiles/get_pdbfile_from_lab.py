@@ -15,8 +15,6 @@ class GetPositionFiles:
         self.path = ""
 
 
-
-
     def set_path_to_files(self):
         self.path = '/lab/shared/scaffolds/'+self.pdbname[1:3]+'/'+self.pdbname+'/'
 
@@ -30,7 +28,8 @@ class GetPositionFiles:
 
         self.pdbname = input_variables.pdbinput
 
-
+        self.set_path_to_files()
+        
         try:
             if( os.path.exists( self.path ) ):
                 # list files

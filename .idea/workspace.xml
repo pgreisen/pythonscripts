@@ -50,7 +50,7 @@
       <file leaf-file-name="get_pdbfile_from_lab.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/GetPositionFiles/get_pdbfile_from_lab.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="10" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.7087912" vertical-offset="0" max-vertical-offset="910">
+            <state line="31" column="8" selection-start="787" selection-end="787" vertical-scroll-proportion="0.510989" vertical-offset="0" max-vertical-offset="910">
               <folding>
                 <element signature="e#22#56#0" expanded="true" />
               </folding>
@@ -516,7 +516,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/GetPositionFiles/get_pdbfile_from_lab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="10" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.7087912" vertical-offset="0" max-vertical-offset="910">
+        <state line="31" column="8" selection-start="787" selection-end="787" vertical-scroll-proportion="0.510989" vertical-offset="0" max-vertical-offset="910">
           <folding>
             <element signature="e#22#56#0" expanded="true" />
           </folding>
