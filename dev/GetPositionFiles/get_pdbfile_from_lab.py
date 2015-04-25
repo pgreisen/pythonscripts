@@ -13,6 +13,7 @@ class GetPositionFiles:
     def __init__(self):
         self.pdbname = ""
         self.path = ""
+        self.cutoff_positionfile = 2
 
 
     def set_path_to_files(self):
@@ -29,13 +30,16 @@ class GetPositionFiles:
         self.pdbname = input_variables.pdbinput
 
         self.set_path_to_files()
-        
+
         try:
             if( os.path.exists( self.path ) ):
                 # list files
                 files = os.listdir( self.path )
                 for fl in files:
-                    print fl
+                    tmpfile = fl.split('.')
+                    if( tmpfile[0][-1] < self.cutoff_positionfile ):
+
+                        print fl
 
         except:
             print "The "
