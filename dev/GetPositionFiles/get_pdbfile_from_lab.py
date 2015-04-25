@@ -15,9 +15,27 @@ class GetPositionFiles:
         self.path = ""
         self.cutoff_positionfile = 2
 
+        self.positions = []
+
+
 
     def set_path_to_files(self):
         self.path = '/lab/shared/scaffolds/'+self.pdbname[1:3]+'/'+self.pdbname+'/'
+
+
+    def set_positions(self,positionfile):
+
+        with open(positionfile,'r') as f:
+            for line in f:
+                tmp = line.split()
+                for pos in tmp:
+                    self.positions.append(pos)
+
+
+
+
+
+
 
     def main(self):
 
@@ -39,12 +57,13 @@ class GetPositionFiles:
                     tmpfile = fl.split('.')
                     # import pdb; pdb.set_trace()
                     if( int( tmpfile[0][-1] ) < self.cutoff_positionfile and fl.endswith(".pos")):
+                        self.set_positions( fl )
 
-                        print fl
+
 
         except:
-            print "The "
-
+            print "The file didnt exists"
+        print set(self.positions)
         # subprocess.Popen(move_files,shell=True).wait()
 
 if __name__ == "__main__":
