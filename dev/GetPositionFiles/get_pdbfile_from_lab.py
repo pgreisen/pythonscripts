@@ -24,7 +24,7 @@ class GetPositionFiles:
 
 
     def set_positions(self,positionfile):
-
+        print positionfile
         with open(positionfile,'r') as f:
             for line in f:
                 tmp = line.split()
