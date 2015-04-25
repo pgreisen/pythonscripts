@@ -55,7 +55,7 @@ class GetPositionFiles:
                 files = os.listdir( self.path )
                 for fl in files:
                     tmpfile = fl.split('.')
-                    # import pdb; pdb.set_trace()
+                    import pdb; pdb.set_trace()
                     if( int( tmpfile[0][-1] ) < self.cutoff_positionfile and fl.endswith(".pos")):
                         print fl
                         self.set_positions( fl )
