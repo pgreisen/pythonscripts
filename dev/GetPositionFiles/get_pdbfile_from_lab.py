@@ -49,22 +49,22 @@ class GetPositionFiles:
 
         self.set_path_to_files()
 
-        try:
-            if( os.path.exists( self.path ) ):
-                # list files
-                files = os.listdir( self.path )
-                for fl in files:
+        #try:
+        if( os.path.exists( self.path ) ):
+            # list files
+            files = os.listdir( self.path )
+            for fl in files:
+                print fl
+                tmpfile = fl.split('.')
+                #import pdb; pdb.set_trace()
+                if( int( tmpfile[0][-1] ) < self.cutoff_positionfile and fl.endswith(".pos")):
                     print fl
-                    tmpfile = fl.split('.')
-                    import pdb; pdb.set_trace()
-                    if( int( tmpfile[0][-1] ) < self.cutoff_positionfile and fl.endswith(".pos")):
-                        print fl
-                        self.set_positions( fl )
+                    self.set_positions( fl )
 
 
 
-        except:
-            print "The file didnt exists"
+        #except:
+        #    print "The file didnt exists"
         print set(self.positions)
         # subprocess.Popen(move_files,shell=True).wait()
 
