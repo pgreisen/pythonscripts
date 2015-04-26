@@ -24,7 +24,7 @@ class GetPositionFiles:
 
 
     def set_positions(self,positionfile):
-        print positionfile
+        # print positionfile
         with open(self.path+positionfile,'r') as f:
             for line in f:
                 tmp = line.split()
@@ -36,7 +36,7 @@ class GetPositionFiles:
         with open("pos.pos",'w') as f:
             for pos in postions_in_set:
                 f.write(pos+" ")
-        
+
 
 
 
@@ -57,7 +57,7 @@ class GetPositionFiles:
             # list files
             files = os.listdir( self.path )
             for fl in files:
-                print fl
+                # print fl
                 tmpfile = fl.split('.')
                 #import pdb; pdb.set_trace()
                 if(  fl.endswith(".pos") and int( tmpfile[0][-1] ) < self.cutoff_positionfile ):
