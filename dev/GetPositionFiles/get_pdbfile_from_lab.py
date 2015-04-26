@@ -32,8 +32,11 @@ class GetPositionFiles:
                     self.positions.append(pos)
 
 
-
-
+    def write_positionfile(self, postions_in_set):
+        with open("pos.pos",'w') as f:
+            for pos in postions_in_set:
+                f.write(pos+" ")
+        
 
 
 
@@ -58,14 +61,14 @@ class GetPositionFiles:
                 tmpfile = fl.split('.')
                 #import pdb; pdb.set_trace()
                 if(  fl.endswith(".pos") and int( tmpfile[0][-1] ) < self.cutoff_positionfile ):
-                    print fl
+                    # print fl
                     self.set_positions( fl )
 
 
 
         #except:
         #    print "The file didnt exists"
-        print set(self.positions)
+        self.write_positionfile( set(self.positions) )
         # subprocess.Popen(move_files,shell=True).wait()
 
 if __name__ == "__main__":
