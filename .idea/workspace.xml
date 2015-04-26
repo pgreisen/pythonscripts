@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py" afterPath="$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/GetPositionFiles/get_pdbfile_from_lab.py" afterPath="$PROJECT_DIR$/dev/GetPositionFiles/get_pdbfile_from_lab.py" />
     </list>
     <ignored path="pythonscripts.iws" />
@@ -40,7 +39,7 @@
       <file leaf-file-name="get_pdbfile_from_lab.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/GetPositionFiles/get_pdbfile_from_lab.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="8" selection-start="893" selection-end="893" vertical-scroll-proportion="0.6440678" vertical-offset="0" max-vertical-offset="1230">
+            <state line="59" column="23" selection-start="1454" selection-end="1459" vertical-scroll-proportion="0.6101695" vertical-offset="345" max-vertical-offset="1230">
               <folding>
                 <element signature="e#22#56#0" expanded="true" />
               </folding>
@@ -511,7 +510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/GetPositionFiles/get_pdbfile_from_lab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="8" selection-start="893" selection-end="893" vertical-scroll-proportion="0.6440678" vertical-offset="0" max-vertical-offset="1230">
+        <state line="59" column="23" selection-start="1454" selection-end="1459" vertical-scroll-proportion="0.6101695" vertical-offset="345" max-vertical-offset="1230">
           <folding>
             <element signature="e#22#56#0" expanded="true" />
           </folding>
