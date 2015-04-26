@@ -41,9 +41,9 @@ class MetalSiteGeometry:
 
         self.METAL = "ZN"
 
-        self.coor_residues = ['THR','SER','LYS','ARG','ASN','HIS','GLN','TYR','ASP','GLU','CYS','MET']
-        self.coor_atms = ['NE','NH2','NH1','NZ','OG','OG1','ND1','ND2', 'NE2','OE1', 'OE2','OD1','OD2','OH','SD','SG']
-        self.protein_ligating_atoms = ['NE','NH2','NH1','NZ','OG','OG1','ND1','ND2', 'NE2','OE1', 'OE2','OD1','OD2','OH','SD','SG', 'O']
+        self.coor_residues = ['THR','SER','LYS','ARG','ASN','HIS','GLN','TYR','ASP','GLU','CYS','MET','KCX']
+        self.coor_atms = ['NE','NH2','NH1','NZ','OG','OG1','ND1','ND2', 'NE2','OE1', 'OE2','OD1','OD2','OH','SD','SG','O1','O2']
+        self.protein_ligating_atoms = ['NE','NH2','NH1','NZ','OG','OG1','ND1','ND2', 'NE2','OE1', 'OE2','OD1','OD2','OH','SD','SG','O','O1','O2']
 
         self.coordination_sites_protein = {}
 
@@ -169,6 +169,7 @@ class MetalSiteGeometry:
             'ASP2' : ['OD2', 'CG', 'CB'],
             'CYS' : ['SG','CB','CA'],
             'LYS' : ['NZ','CE','CD'],
+            'KCX' : ['O1', 'C', 'NZ'],
             'THR' : ['OG1','CB','CA'],
             'SER' : ['OG','CB','CA'],
             'ARG' : ['NH1','CZ','NE'],
@@ -180,6 +181,37 @@ class MetalSiteGeometry:
             'MET' : ['SD','CG','CB']
         }
         return atms[resn]
+
+
+    # Requires residue name of protein ligand
+    # Returns names of residue required to determine
+    # geometry (angle, torsion etc.)
+    def get_list_of_atom_names(self,resn):
+        atms = {
+            'NE2' : 'NE2 CE1 ND1',
+            'ND1' : 'ND1 CE1 NE2',
+            'OE1' : 'OE1 CG CD',
+            'OE2' : 'OE2 CG CD',
+            'OD1' : 'OD1 CG CB',
+            'OD2' : 'OD2 CG CB',
+            'SG' :  'SG CB CA',
+            'NZ' :  'NZ CE CD',
+            'OG1' : 'OG1 CB CA',
+            'OG' :  'OG CB CA',
+            'NH1' : 'NH1 CZ NE',
+            'NH2':  'NH2 CZ NE',
+            'NE':  'NE CZ CD',
+            'O1': 'O1 C NZ',
+            'O2': 'O2 C NZ',
+            #'GLN' : ['OE1','CD','CG'],
+            #'ASN' : ['OD1','CG','CB'],
+            'OH' : 'OH CZ CE2',
+            'SD' : 'SD CG CB'
+        }
+        return atms[resn]
+
+
+
 
 
     # Get residue from pdb
@@ -274,6 +306,7 @@ class MetalSiteGeometry:
             'GLU' : 'E',
             'GLU2' : 'E',
             'LYS' : 'K',
+            'KCX' : 'K',
             'SER' : 'S',
             'ARG' : 'R',
             'ARG2' : 'R',
@@ -315,8 +348,9 @@ class MetalSiteGeometry:
     # Requires atom names, residue names, distance etc, ligand names
     # Returns string with parameters in Rosetta format
     def write_constraint_file(self,resn,resi,atom,phosphate_atom,disAB,angA,angB,torAB,torB,LIGANDNAMES,LIGANDRESNAME):
-        atm_type     = self.get_single_atom(atom)
+        atm_type     = self.get_list_of_atom_names( atom  )
         residue_type = self.get_single_residue(resn)
+
         const = '''
 
         # '''+str(self.METAL)+''' - '''+str(resn)+' '+str(resi)+'\n'+'''
@@ -324,15 +358,13 @@ class MetalSiteGeometry:
         TEMPLATE::   ATOM_MAP: 1 atom_name:  '''+LIGANDNAMES+'''
         TEMPLATE::   ATOM_MAP: 1 residue3:  '''+LIGANDRESNAME+'''
 
-        TEMPLATE::   ATOM_MAP: 2 atom_type: '''+str(atm_type)+''' ,
-        TEMPLATE::   ATOM_MAP: 2 residue1:  '''+str(residue_type)+'''
+        TEMPLATE::   ATOM_MAP: 2 atom_name: '''+str(atm_type)+''' ,
+        TEMPLATE::   ATOM_MAP: 2 residue3:  '''+str(resn[0:3])+'''
 
         CONSTRAINT:: distanceAB:  '''+str(disAB)+'''  0.20  100.  1
-        CONSTRAINT::    angle_A:  '''+str(angA)+'''   25.0  10.0  180.
-        CONSTRAINT::    angle_B:  '''+str(angB)+'''   10.0  10.0  180.
 
-        CONSTRAINT::  torsion_A:   60.0    30.0  1.0  120.
-        CONSTRAINT:: torsion_AB: '''+str(torAB)+'''   10.0  10.00  360.
+        CONSTRAINT::    angle_B:  '''+str(angB)+'''   10.0  10.0  360.
+
         CONSTRAINT::  torsion_B:  '''+str(torB)+'''   10.0  10.00  360.
 
         CST::END'''
@@ -374,7 +406,7 @@ class MetalSiteGeometry:
     # Requires residue name, type, number and chain
     # Returns string with constraint remarks
     def set_remarks_pdb(self,resn,resid,number,chain):
-        strng = 'REMARK   0 BONE TEMPLATE X LG1    0 MATCH MOTIF '+chain+' '+str(resn)+'    '+str(resid)+'   '+str(number)+'\n'
+        strng = 'REMARK   0 BONE TEMPLATE X ZN     0 MATCH MOTIF '+chain+' '+str(resn)+'    '+str(resid)+'   '+str(number)+'\n'
         return strng
 
     # Get geometrical constraint, write to file with them
@@ -446,10 +478,10 @@ class MetalSiteGeometry:
                       help='Metal ion to get constraints for')
         parser.add_option('-n',dest='PDBNAME',default='cst.pdb',
                       help='Name for output pdb file as input for Rosetta')
-        parser.add_option('-l',dest='LIGANDNAMES',default='ZN1 O2 P1',
-                      help='Names from ligands involved in constraints e.g. ZN1 O2 C2')
-        parser.add_option('-t',dest='LIGANDRESNAMES',default='LG1',
-                      help='Residue name of ligand default=LG1')
+        parser.add_option('-l',dest='LIGANDNAMES',default='ZN V1 V2',
+                      help='Names from ligands involved in constraints e.g. ZN V1 V2')
+        parser.add_option('-t',dest='LIGANDRESNAMES',default='ZN',
+                      help='Residue name of ligand default=ZN')
         parser.add_option('-a',dest='LIGANDCOOR',default=False,
                       help='PDB coordinates of ligand appending it to rosetta pdb input')
 
