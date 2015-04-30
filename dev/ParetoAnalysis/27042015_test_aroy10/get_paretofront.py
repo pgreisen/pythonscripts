@@ -102,9 +102,10 @@ class get_union:
                 tmp = line.split()
 
                 if( len(tmp) == 2 ):
+                    key = format( float(tmp[1]),'.3f' )
+                    data[ key ] = tmp[0].split(':')[0]
+                    dt.append( key )        
 
-                    data[ tmp[1] ] = tmp[0].split(':')[0]
-                    dt.append( float(tmp[1]) )
         return data, dt
 
     def get_pdbs(self):
@@ -152,7 +153,7 @@ class get_union:
             px,py = self.pareto_frontier(x_array, y_array, True, False )
 
             for i,j in zip(px, py):
-
+                # print i,j
                 self.pdbs_on_front.append( x[str(i)] )
                 x.pop( str(i) )
                 x_array.remove( i )
