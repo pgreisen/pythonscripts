@@ -17,14 +17,14 @@ class GeneratePSSM:
         #self.padding_new = "    "
         self.padding_new = "  "
         self.number_of_amino_acids = 20
-        self.beneficial_score  = 4
-        self.g1_g10_score = 2
-        self.neutral_score = 2
-        self.deleterious_score = -2
+        self.beneficial_score  = 5
+        self.g1_g10_score = 5
+        self.neutral_score = 5
+        self.deleterious_score = -9
         # add a bonus to the native residue as well
-        self.native_score = 2;
+        self.native_score = 5;
         # Initialize all the values to this value
-        self.init_score = 0
+        self.init_score = -9
 
         # insert the input sequence into a table for scoring
         self.native_sequence = defaultdict(list)
@@ -36,6 +36,10 @@ class GeneratePSSM:
         self.beneficial = {
             'A_203' : ['L'],
             'G_272' : ['E'],
+            # Inserted to prevent them being changed too often
+            # as they seem very important for catalysis
+            'W_131' : ['W'],
+            'E_132' : ['E'],
             'Y_309' : ['W']
             }
 
@@ -48,9 +52,9 @@ class GeneratePSSM:
             'I_106' : ['A','V','C'],
             'S_111' : ['R'],
             'L_113' : ['M'],
-    'L_130' : ['M'],
-    'W_131' : ['H','F'],
-    'E_132' : ['A','D','E'],
+            'L_130' : ['M'],
+            'W_131' : ['H','F'],
+            'E_132' : ['A','D','E'],
     'L_136' : ['E','P'],
     'M_138' : ['F'],
     'T_147' : ['Y'],
@@ -156,28 +160,53 @@ class GeneratePSSM:
                 # loop over list and insert values
                 for value in self.beneficial[key]:
                     dummy_array[ self.aa.index(  value )  ] = self.beneficial_score
-        for key in self.g1_g10:
-            aa,pos = key.split('_')
-            if( pos == str( position + self.offset) ):
-                for value in self.g1_g10[key]:
-                    dummy_array[ self.aa.index(  value )  ] = self.g1_g10_score
-        # self.deleterious
-        for key in self.deleterious:
-            aa,pos = key.split('_')
-            if( pos == str( position + self.offset) ):
-                for value in self.deleterious[key]:
-                    dummy_array[ self.aa.index(  value )  ] = self.deleterious_score
-        for key in self.neutral:
-            aa,pos = key.split('_')
-            if( pos == str( position + self.offset) ):
-                for value in self.neutral[key]:
-                    dummy_array[ self.aa.index(  value )  ] = self.neutral_score
+
 
         for key in self.native_sequence:
             aa,pos = key.split('_')
             if( pos == str( position + self.offset) ):
                 for value in self.native_sequence[key]:
                     dummy_array[ self.aa.index(  value )  ] = self.native_score
+
+
+        for key in self.neutral:
+            aa,pos = key.split('_')
+            if( pos == str( position + self.offset) ):
+                for value in self.neutral[key]:
+                    dummy_array[ self.aa.index(  value )  ] = self.neutral_score
+
+
+        for key in self.g1_g10:
+            aa,pos = key.split('_')
+            if( pos == str( position + self.offset) ):
+
+
+                # debug
+                if (key == 'E_132'):
+                    print self.g1_g10[key]
+
+                for value in self.g1_g10[key]:
+                    # print key,aa,pos
+
+                    if (key == 'E_132'):
+                        print self.g1_g10[key],value
+
+                    dummy_array[ self.aa.index(  value )  ] = self.g1_g10_score
+
+
+        # self.deleterious
+        for key in self.deleterious:
+            aa,pos = key.split('_')
+            if( pos == str( position + self.offset) ):
+                for value in self.deleterious[key]:
+                    dummy_array[ self.aa.index(  value )  ] = self.deleterious_score
+
+
+        for key in self.beneficial:
+            aa,pos = key.split('_')
+            if( pos == str( position + self.offset) ):
+                for value in self.beneficial[key]:
+                    dummy_array[ self.aa.index(  value )  ] = self.beneficial_score
 
 
 
