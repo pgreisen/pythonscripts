@@ -163,7 +163,7 @@ class get_union:
 
 
         scatter(x_array,y_array)
-        plot(self.px,self.py,'^',color='red')
+        plot(self.px,self.py,'^',color='red',markersize=10)
         xlabel( input_variables.xlabel)
         ylabel( input_variables.ylabel)
         show()
