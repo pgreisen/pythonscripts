@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="" />
+    <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pythonscripts.iml" afterPath="$PROJECT_DIR$/.idea/pythonscripts.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,35 +27,62 @@
     <favorites_list name="pythonscripts" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="16" selection-start="5719" selection-end="5719" vertical-scroll-proportion="0.0" vertical-offset="1729" max-vertical-offset="7830">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getligandpositionmatchermain.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dev/GeneratePositionFileAroundLigand/getligandpositionmatchermain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="29" selection-start="730" selection-end="731" vertical-scroll-proportion="0.3559322" vertical-offset="0" max-vertical-offset="1095">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getligandposition.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/GeneratePositionFileAroundLigand/getligandposition.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="36" selection-start="3302" selection-end="3302" vertical-scroll-proportion="0.0" vertical-offset="905" max-vertical-offset="1995">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="generate_metal_cstfile.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="6725" max-vertical-offset="7830">
+                  <caret line="205" column="16" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="search_pdb_with_smiles.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/search_pdb_with_smiles.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3030">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#14#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.87055016" vertical-offset="2073" max-vertical-offset="3060">
+                  <caret line="192" column="50" selection-start-line="192" selection-start-column="50" selection-end-line="192" selection-end-column="50" />
+                  <folding>
+                    <element signature="e#0#14#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.4854369" vertical-offset="0" max-vertical-offset="3060">
+                  <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#0#14#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -67,24 +99,10 @@
     </option>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" />
-        <option value="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/21042015_tetramer_interface/generate_position_file.py" />
-        <option value="$PROJECT_DIR$/dev/fasta_manipulation/main.py" />
         <option value="$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py" />
-        <option value="$PROJECT_DIR$/dev/GetPositionFiles/get_pdbfile_from_lab.py" />
-        <option value="$PROJECT_DIR$/dev/ParetoAnalysis/get_paretofront.py" />
-        <option value="$USER_HOME$/Projects/Weizmann/25042015_Library11/28042015_PSSM_matrix/clean_matrix.py" />
-        <option value="$PROJECT_DIR$/dev/generate_pssm_for_designs/clean_matrix.py" />
-        <option value="$PROJECT_DIR$/dev/generate_pssm_for_designs/generate_pssm_matrix_05052015.py" />
-        <option value="$PROJECT_DIR$/dev/generate_pssm_for_designs/generate_pssm_matrix_incl_literature_mutations.py" />
-        <option value="$PROJECT_DIR$/dev/residues_with_metal_site/residue_outside_metal_site.py" />
-        <option value="$PROJECT_DIR$/dev/replace_amino_acids_at_position/replace_aa_at_position.py" />
-        <option value="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/11052015_test_trimer_interface/generate_position_trimer.py" />
-        <option value="$PROJECT_DIR$/dev/generate_position_file_for_matching_individual_matches/generate_position_file.py" />
-        <option value="$PROJECT_DIR$/dev/GeneratePositionFileAroundLigand/getligandposition.py" />
-        <option value="$PROJECT_DIR$/dev/GeneratePositionFileAroundLigand/getligandpositionmatchermain.py" />
+        <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
       </list>
     </option>
   </component>
@@ -108,7 +126,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -166,7 +184,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="replace_amino_acids_at_position" />
+              <option name="myItemId" value="chemicalsimilaritysearch" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -206,6 +224,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dev/chemicalsimilaritysearch" />
       <recent name="$PROJECT_DIR$/dev/generate_pssm_for_designs" />
       <recent name="$PROJECT_DIR$/dev/GenerateResfileAroundResidues" />
       <recent name="$PROJECT_DIR$/dev/matcher_per_position" />
@@ -271,6 +290,7 @@
       <module name="pythonscripts" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -343,14 +363,19 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="" />
       <created>1418855346818</created>
+      <option name="number" value="Default" />
       <updated>1418855346818</updated>
     </task>
     <task id="LOCAL-00001" summary="Type casting of string to integer when sorting list. Bug in the analyse_patchdock_score.py 18-12-2014. I am just typecasting it to an integer.">
       <created>1418929092352</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1418929092352</updated>
     </task>
     <task id="LOCAL-00002" summary="Type casting of string to integer when sorting list. Bug in the analyse_patchdock_score.py 18-12-2014. I am just typecasting it to an integer.">
       <created>1429110185813</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1429110185813</updated>
     </task>
     <option name="localTasksCounter" value="3" />
@@ -384,11 +409,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33022773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24784483" sideWeight="0.6695096" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1227126" sideWeight="0.6695096" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -396,8 +423,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -422,114 +447,72 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dev/fasta_manipulation/main.py">
+    <entry file="file://$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="45" selection-start="4921" selection-end="5179" vertical-scroll-proportion="2.220339" vertical-offset="1170" max-vertical-offset="3450" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7350">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/combine_cstfiles/combinations_sub.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="37" selection-start="1214" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1455" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1455">
+          <caret line="48" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="0" selection-start="8695" selection-end="8770" vertical-scroll-proportion="0.0" vertical-offset="3320" max-vertical-offset="4230" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/residues_with_metal_site/residue_outside_metal_site.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="57" selection-start="4457" selection-end="4457" vertical-scroll-proportion="0.0" vertical-offset="2445" max-vertical-offset="2985">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3320" max-vertical-offset="4230">
+          <caret line="233" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/ParetoAnalysis/get_paretofront.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="48" selection-start="4912" selection-end="5038" vertical-scroll-proportion="0.0" vertical-offset="1669" max-vertical-offset="2805">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/11052015_test_trimer_interface/generate_position_trimer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="22" selection-start="5824" selection-end="5824" vertical-scroll-proportion="0.0" vertical-offset="2340" max-vertical-offset="4200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_pssm_for_designs/generate_pssm_matrix_05052015.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="318" column="0" selection-start="9540" selection-end="9540" vertical-scroll-proportion="0.0" vertical-offset="4770" max-vertical-offset="7050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_for_matching_individual_matches/generate_position_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="84" selection-start="2702" selection-end="2702" vertical-scroll-proportion="0.90642613" vertical-offset="321" max-vertical-offset="1290">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/replace_amino_acids_at_position/replace_aa_at_position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.4735062" vertical-offset="330" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_pssm_for_designs/generate_pssm_matrix_incl_literature_mutations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="10" selection-start="3723" selection-end="3726" vertical-scroll-proportion="2.1923077" vertical-offset="0" max-vertical-offset="5325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_pssm_for_designs/clean_matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="10" selection-start="2369" selection-end="2372" vertical-scroll-proportion="-2.7593408" vertical-offset="3681" max-vertical-offset="5880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/GetPositionFiles/get_pdbfile_from_lab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="23" selection-start="1454" selection-end="1459" vertical-scroll-proportion="0.6208791" vertical-offset="260" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="16" selection-start="5719" selection-end="5719" vertical-scroll-proportion="0.0" vertical-offset="1729" max-vertical-offset="7830">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1669" max-vertical-offset="2805">
+          <caret line="141" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1839" column="4" selection-start="56942" selection-end="56942" vertical-scroll-proportion="-1.4725275" vertical-offset="28805" max-vertical-offset="29715">
+        <state vertical-scroll-proportion="-1.4725275" vertical-offset="28805" max-vertical-offset="29715">
+          <caret line="1839" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/search_pdb_with_smiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3030">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3030" max-vertical-offset="7830">
+          <caret line="205" column="16" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/GeneratePositionFileAroundLigand/getligandposition.py">
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="36" selection-start="3302" selection-end="3302" vertical-scroll-proportion="0.0" vertical-offset="905" max-vertical-offset="1995">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/GeneratePositionFileAroundLigand/getligandpositionmatchermain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="29" selection-start="730" selection-end="731" vertical-scroll-proportion="0.3559322" vertical-offset="0" max-vertical-offset="1095">
-          <folding />
+        <state vertical-scroll-proportion="0.4854369" vertical-offset="0" max-vertical-offset="3060">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
