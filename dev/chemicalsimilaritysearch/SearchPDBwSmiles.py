@@ -1,7 +1,7 @@
 import urllib2
 import urllib 
 import gzip
-import os,sys, argparse
+import os,sys, argparse, subprocess
 '''
 
 This script will search the PDB for a chemical fragment and return a match based on the similarity between them. It assumes
@@ -22,6 +22,7 @@ class SearchPDBwSmiles:
         self.babelbin = "/work/greisen/ExternalProgram/openbabel-2.3.2/bin/"
         self.babel = "babel"
         self.obfit = "obfit"
+        self.format = "pdb"
 
 
     def writes_to_pdb_format(self,filename,pdbname):
@@ -175,7 +176,9 @@ class SearchPDBwSmiles:
             self.get_gz_pdbfile(i)
 
     def convert_pdb_smi(self):
-        pass
+        # ~greisen/ExternalProgram/openbabel_selfcompiled/bin/babel -ipdb hcy.pdb -osmi query.smi
+        exe = self.babelbin+self.babel+" -i"+self.format+" "+  +" -osmi query.smi"
+        subprocess.Popen(exe,shell=True).wait()
 
     def main(self):
 
@@ -186,11 +189,15 @@ class SearchPDBwSmiles:
         parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str )
         parser.add_argument("--similarity", dest="similarity", help="The chemical similarity between the fragment searched (Default=1.0)", type=str )
         parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
+        parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)" )
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
             setattr(self, item, args_dict[item])
 
+        # converts the query pdb to smile format
+        self.convert_pdb_smi()
+        assert 1 ==0 
         self.get_pdbs_from_PDB()
 
 
