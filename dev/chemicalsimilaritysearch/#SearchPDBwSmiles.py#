@@ -153,6 +153,7 @@ class SearchPDBwSmiles:
 </orgPdbCompositeQuery>
 
 """
+
         print "querying PDB...\n"
         req = urllib2.Request(url, data=queryText)
 
@@ -176,20 +177,8 @@ class SearchPDBwSmiles:
 
     def convert_pdb_smi(self):
         # ~greisen/ExternalProgram/openbabel_selfcompiled/bin/babel -ipdb hcy.pdb -osmi query.smi
-        ###import pdb; pdb.set_trace()
-        exe = self.babelbin+self.babel+" -i"+self.format+" "+self.fragment_file+" -osmi query.smi"
-        print exe
-
+        exe = self.babelbin+self.babel+" -i"+self.format+" "+" -osmi query.smi"
         subprocess.Popen(exe,shell=True).wait()
-
-    def set_smiles(self):
-        with open("query.smi") as f:
-            for line in f:
-                self.smiles = line.split()[0]
-                self.smiles.strip()
-
-        print "The PDB will be searched with this chemical fragment: "+self.smiles+"\n"
-
 
     def main(self):
 
@@ -199,18 +188,16 @@ class SearchPDBwSmiles:
         parser.add_argument("--maxlength", dest="maxlength", help="The max length of the protein (Default=200 aa)", type=str )
         parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str )
         parser.add_argument("--similarity", dest="similarity", help="The chemical similarity between the fragment searched (Default=1.0)", type=str )
-        #parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
+        parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
         parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)",default="pdb" )
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
             setattr(self, item, args_dict[item])
-
+        
         # converts the query pdb to smile format
         self.convert_pdb_smi()
-
-        self.set_smiles()
-
+        assert 1 ==0
         self.get_pdbs_from_PDB()
 
 if __name__ == "__main__":
