@@ -79,10 +79,9 @@ class SearchPDBwSmiles:
 
         pdb_by_chain = cleanpdb.get_chains(pdbfile)
         for key in pdb_by_chain:
-            for line in pdb_by_chain[key]:
-                print line
-
-            assert 1 == 0
+            with open(pdbname+"_chain"+key,'w') as f:
+                for line in pdb_by_chain[key]:
+                    f.write(line)
 
 
     def get_pdbs_from_PDB(self):
