@@ -75,6 +75,8 @@ class SearchPDBwSmiles:
         # 22-05-2015
         cleanpdb = CleanPDB()
 
+        pdbfile = pdbname+".pdb"
+
         pdb_by_chain = CleanPDB.get_chains(pdbfile)
         for key in pdb_by_chain:
             for line in pdb_by_chain[key]:
