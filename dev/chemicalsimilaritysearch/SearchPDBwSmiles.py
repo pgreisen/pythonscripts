@@ -177,7 +177,7 @@ class SearchPDBwSmiles:
 
     def convert_pdb_smi(self):
         # ~greisen/ExternalProgram/openbabel_selfcompiled/bin/babel -ipdb hcy.pdb -osmi query.smi
-        exe = self.babelbin+self.babel+" -i"+self.format+" "+  +" -osmi query.smi"
+        exe = self.babelbin+self.babel+" -i"+self.format+" "+" -osmi query.smi"
         subprocess.Popen(exe,shell=True).wait()
 
     def main(self):
