@@ -16,4 +16,4 @@ class CleanPDB:
                 if(line[0:4] == "ATOM" or line[0:4] == "HETA"):
                     self.pdbfile_chains[21:22].append(line)
 
-        returb self.pdbfile_chains
+        return self.pdbfile_chains
