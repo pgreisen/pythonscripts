@@ -174,11 +174,12 @@ class SearchPDBwSmiles:
             print "Downloading PDB structure '%s'..." % i
             self.get_gz_pdbfile(i)
 
-
         def convert_pdb_smi(self):
             pass
 
+    def main(self):
 
+<<<<<<< HEAD
         def main(self):
             parser = argparse.ArgumentParser(description="Takes a pdb with a chemical fragment and seraches the PDB for the occurance of this fragment.")
             # get the initial rosetta design as input
@@ -191,6 +192,19 @@ class SearchPDBwSmiles:
             args_dict = vars( parser.parse_args() )
             for item in args_dict:
                 setattr(self, item, args_dict[item])
+=======
+        parser = argparse.ArgumentParser(description="Takes a pdb with a chemical fragment and seraches the PDB for the occurance of this fragment.")
+        # get the initial rosetta design as input
+        parser.add_argument("-s", dest="fragment_file", help="This file contains the coordinates of the chemical fragment" )
+        parser.add_argument("--maxlength", dest="maxlength", help="The max length of the protein (Default=200 aa)", type=str )
+        parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str )
+        parser.add_argument("--similarity", dest="similarity", help="The chemical similarity between the fragment searched (Default=1.0)", type=str )
+        parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
+
+        args_dict = vars( parser.parse_args() )
+        for item in args_dict:
+            setattr(self, item, args_dict[item])
+>>>>>>> 0ef466c54ce1686f40928eb0bacbdf18c2c8f612
 
 
 
