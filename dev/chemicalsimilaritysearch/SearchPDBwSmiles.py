@@ -79,7 +79,7 @@ class SearchPDBwSmiles:
 
         pdb_by_chain = cleanpdb.get_chains(pdbfile)
         for key in pdb_by_chain:
-            with open(pdbname+"_chain"+key,'w') as f:
+            with open(pdbname+"_chain"+key+".pdb",'w') as f:
                 for line in pdb_by_chain[key]:
                     f.write(line)
 
