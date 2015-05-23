@@ -23,7 +23,6 @@ class SearchPDBwSmiles:
         self.babel = "babel"
         self.obfit = "obfit"
         self.format = "pdb"
-        self.fragment_file = ""
 
 
     def writes_to_pdb_format(self,filename,pdbname):
@@ -184,6 +183,14 @@ class SearchPDBwSmiles:
 
         subprocess.Popen(exe,shell=True).wait()
 
+    def set_smiles(self):
+        with open(self.fragment_file) as f:
+            for line in f:
+                self.smiles.append(line)
+
+        print "The PDB will be searched with this chemical fragment: "+self.smiles+"\n"
+
+
     def main(self):
 
         parser = argparse.ArgumentParser(description="Takes a pdb with a chemical fragment and seraches the PDB for the occurance of this fragment.")
@@ -201,6 +208,9 @@ class SearchPDBwSmiles:
 
         # converts the query pdb to smile format
         self.convert_pdb_smi()
+
+        self.set_smiles()
+
         self.get_pdbs_from_PDB()
 
 
