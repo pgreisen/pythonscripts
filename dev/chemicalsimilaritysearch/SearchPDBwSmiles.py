@@ -184,7 +184,7 @@ class SearchPDBwSmiles:
         subprocess.Popen(exe,shell=True).wait()
 
     def set_smiles(self):
-        with open(self.fragment_file) as f:
+        with open("query.smi") as f:
             for line in f:
                 self.smiles = line.split()[0]
                 self.smiles.strip()
