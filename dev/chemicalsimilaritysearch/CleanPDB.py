@@ -17,6 +17,6 @@ class CleanPDB:
 
                     import pdb; pdb.set_trace()
 
-                    self.pdbfile_chains[21:22].append(line)
+                    self.pdbfile_chains[line[21:22]].append(line)
 
         return self.pdbfile_chains
