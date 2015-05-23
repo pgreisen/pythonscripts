@@ -59,13 +59,13 @@ class SearchPDBwSmiles:
         @return:
         '''
 
-        gz_name = convert_to_pdb_gz(pdbname)
+        gz_name = self.convert_to_pdb_gz(pdbname)
 
         url = 'ftp://ftp.wwpdb.org/pub/pdb/data/structures/divided/pdb/'+gz_name[4:6]+'/'+gz_name
 
         urllib.urlretrieve(url, gz_name)
     
-        writes_to_pdb_format(gz_name,pdbname)
+        self.writes_to_pdb_format(gz_name,pdbname)
 
 
 
@@ -170,12 +170,12 @@ class SearchPDBwSmiles:
 
 
         for i in result:
-            tmp = convert_to_pdb_gz(i)
+            tmp = self.convert_to_pdb_gz(i)
             print "Downloading PDB structure '%s'..." % i
             self.get_gz_pdbfile(i)
 
-        def convert_pdb_smi(self):
-            pass
+    def convert_pdb_smi(self):
+        pass
 
     def main(self):
 
@@ -191,6 +191,7 @@ class SearchPDBwSmiles:
         for item in args_dict:
             setattr(self, item, args_dict[item])
 
+        self.get_pdbs_from_PDB()
 
 if __name__ == "__main__":
     run = SearchPDBwSmiles()
