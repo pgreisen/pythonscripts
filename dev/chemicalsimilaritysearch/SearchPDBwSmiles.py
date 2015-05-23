@@ -196,8 +196,8 @@ class SearchPDBwSmiles:
         parser = argparse.ArgumentParser(description="Takes a pdb with a chemical fragment and seraches the PDB for the occurance of this fragment.")
         # get the initial rosetta design as input
         parser.add_argument("-s", dest="fragment_file", help="This file contains the coordinates of the chemical fragment" )
-        parser.add_argument("--maxlength", dest="maxlength", help="The max length of the protein (Default=200 aa)", type=str )
-        parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str )
+        parser.add_argument("--maxlength", dest="maxlength", help="The max length of the protein (Default=200 aa)", default="200", type=str )
+        parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str, default="2.0" )
         parser.add_argument("--similarity", dest="similarity", help="The chemical similarity between the fragment searched (Default=1.0)", type=str )
         #parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
         parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)",default="pdb" )
