@@ -69,8 +69,8 @@
           <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.87055016" vertical-offset="2058" max-vertical-offset="3165">
-                  <caret line="191" column="112" selection-start-line="191" selection-start-column="112" selection-end-line="191" selection-end-column="112" />
+                <state vertical-scroll-proportion="0.6763754" vertical-offset="2058" max-vertical-offset="3165">
+                  <caret line="179" column="61" selection-start-line="179" selection-start-column="61" selection-end-line="179" selection-end-column="61" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -504,8 +504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87055016" vertical-offset="2058" max-vertical-offset="3165">
-          <caret line="191" column="112" selection-start-line="191" selection-start-column="112" selection-end-line="191" selection-end-column="112" />
+        <state vertical-scroll-proportion="0.6763754" vertical-offset="2058" max-vertical-offset="3165">
+          <caret line="179" column="61" selection-start-line="179" selection-start-column="61" selection-end-line="179" selection-end-column="61" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
