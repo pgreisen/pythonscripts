@@ -198,7 +198,6 @@ class SearchPDBwSmiles:
 
         # converts the query pdb to smile format
         self.convert_pdb_smi()
-        assert 1 ==0
         self.get_pdbs_from_PDB()
 
 if __name__ == "__main__":
