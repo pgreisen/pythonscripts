@@ -2,6 +2,8 @@ import urllib2
 import urllib 
 import gzip
 import os,sys, argparse, subprocess
+import CleanPDB
+from collections import OrderedDict
 '''
 
 This script will search the PDB for a chemical fragment and return a match based on the similarity between them. It assumes
@@ -23,6 +25,7 @@ class SearchPDBwSmiles:
         self.babel = "babel"
         self.obfit = "obfit"
         self.format = "pdb"
+        self.results = []
 
 
     def writes_to_pdb_format(self,filename,pdbname):
@@ -68,6 +71,16 @@ class SearchPDBwSmiles:
     
         self.writes_to_pdb_format(gz_name,pdbname)
 
+        # clean the pdb
+        # 22-05-2015
+        cleanpdb = CleanPDB()
+
+        pdb_by_chain = CleanPDB.get_chains(pdbfile)
+        for key in pdb_by_chain:
+            for line in pdb_by_chain[key]:
+                print line
+
+            assert 1 == 0
 
 
     def get_pdbs_from_PDB(self):
