@@ -189,7 +189,7 @@ class SearchPDBwSmiles:
         parser.add_argument("--maxlength", dest="maxlength", help="The max length of the protein (Default=200 aa)", type=str )
         parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str )
         parser.add_argument("--similarity", dest="similarity", help="The chemical similarity between the fragment searched (Default=1.0)", type=str )
-        parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
+        #parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
         parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)",default="pdb" )
 
         args_dict = vars( parser.parse_args() )
