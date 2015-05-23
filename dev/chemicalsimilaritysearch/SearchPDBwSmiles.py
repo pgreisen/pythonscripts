@@ -23,7 +23,7 @@ class SearchPDBwSmiles:
         self.similarity = "1.0"
         self.babelbin = "/work/greisen/ExternalProgram/openbabel-2.3.2/bin/"
         self.babel = "babel"
-        self.obfit = "obfit"
+        self.obfit = "/work/greisen/ExternalProgram/bin/obfit"
         self.format = "pdb"
         self.results = []
 
@@ -37,7 +37,6 @@ class SearchPDBwSmiles:
         outfile.writelines(f_content)
         outfile.close()
         os.remove(filename)
-
 
 
     def convert_to_pdb_gz(self,pdbid):
@@ -82,6 +81,10 @@ class SearchPDBwSmiles:
             with open(pdbname+"_chain"+key+".pdb",'w') as f:
                 for line in pdb_by_chain[key]:
                     f.write(line)
+
+
+        # remove all the old files
+        os.remove(pdbname+".pdb")
 
 
     def get_pdbs_from_PDB(self):
@@ -205,6 +208,19 @@ class SearchPDBwSmiles:
 
         print "The PDB will be searched with this chemical fragment: "+self.smiles+"\n"
 
+    def align_pdb_obfit(self):
+        init_pdb = ""
+        align_to_this = 0
+        pdbs = os.listdir("./")
+        for pdb in pdbs:
+            if(pdb.endswith(".pdb") and align_to_this == 0):
+                init_pdb = pdb
+            elif(pdb.endswith(".pdb")):
+                exe = self.obfit+" "+self.smiles+" "+init_pdb+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
+                subprocess.Popen(exe,shell=True).wait()
+
+
+
 
     def main(self):
 
@@ -227,6 +243,8 @@ class SearchPDBwSmiles:
         self.set_smiles()
 
         self.get_pdbs_from_PDB()
+
+        self.align_pdb_obfit()
 
 
 if __name__ == "__main__":
