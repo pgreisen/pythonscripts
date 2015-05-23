@@ -189,7 +189,7 @@ class SearchPDBwSmiles:
         parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str )
         parser.add_argument("--similarity", dest="similarity", help="The chemical similarity between the fragment searched (Default=1.0)", type=str )
         parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
-        parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)" )
+        parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)",default="pdb" )
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
@@ -197,7 +197,7 @@ class SearchPDBwSmiles:
 
         # converts the query pdb to smile format
         self.convert_pdb_smi()
-        assert 1 ==0 
+        assert 1 ==0
         self.get_pdbs_from_PDB()
 
 
