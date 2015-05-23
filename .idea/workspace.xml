@@ -53,8 +53,8 @@
           <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.82200646" vertical-offset="2163" max-vertical-offset="3090">
-                  <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.80582523" vertical-offset="2118" max-vertical-offset="3045">
+                  <caret line="191" column="12" selection-start-line="191" selection-start-column="12" selection-end-line="191" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -69,7 +69,7 @@
           <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.46925566" vertical-offset="0" max-vertical-offset="3090">
+                <state vertical-scroll-proportion="0.46925566" vertical-offset="0" max-vertical-offset="3045">
                   <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
@@ -504,8 +504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82200646" vertical-offset="2163" max-vertical-offset="3090">
-          <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.80582523" vertical-offset="2118" max-vertical-offset="3045">
+          <caret line="191" column="12" selection-start-line="191" selection-start-column="12" selection-end-line="191" selection-end-column="12" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
