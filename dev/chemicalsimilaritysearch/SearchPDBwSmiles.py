@@ -179,9 +179,7 @@ class SearchPDBwSmiles:
             pass
 
 
-
         def main(self):
-
             parser = argparse.ArgumentParser(description="Takes a pdb with a chemical fragment and seraches the PDB for the occurance of this fragment.")
             # get the initial rosetta design as input
             parser.add_argument("-s", dest="fragment_file", help="This file contains the coordinates of the chemical fragment" )
