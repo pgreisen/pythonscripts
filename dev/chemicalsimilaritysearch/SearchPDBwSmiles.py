@@ -186,7 +186,7 @@ class SearchPDBwSmiles:
     def set_smiles(self):
         with open(self.fragment_file) as f:
             for line in f:
-                self.smiles = line.split()
+                self.smiles = line.split()[0]
                 self.smiles.strip()
 
         print "The PDB will be searched with this chemical fragment: "+self.smiles+"\n"
