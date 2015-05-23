@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" afterPath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" afterPath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81009877" vertical-offset="447" max-vertical-offset="3600">
-              <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+            <state vertical-scroll-proportion="-25.11111" vertical-offset="447" max-vertical-offset="3600">
+              <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CleanPDB.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CleanPDB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.271855" vertical-offset="0" max-vertical-offset="938">
+              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -80,8 +80,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py" />
-        <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
         <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
+        <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
       </list>
     </option>
   </component>
@@ -483,21 +483,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="938">
-          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81009877" vertical-offset="447" max-vertical-offset="3600">
-          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+        <state vertical-scroll-proportion="-25.11111" vertical-offset="447" max-vertical-offset="3600">
+          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.271855" vertical-offset="0" max-vertical-offset="938">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
