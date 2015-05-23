@@ -23,6 +23,7 @@ class SearchPDBwSmiles:
         self.babel = "babel"
         self.obfit = "obfit"
         self.format = "pdb"
+        self.fragment_file = ""
 
 
     def writes_to_pdb_format(self,filename,pdbname):
@@ -178,9 +179,9 @@ class SearchPDBwSmiles:
     def convert_pdb_smi(self):
         # ~greisen/ExternalProgram/openbabel_selfcompiled/bin/babel -ipdb hcy.pdb -osmi query.smi
         ###import pdb; pdb.set_trace()
-        exe = self.babelbin+self.babel+" -i"+self.format+" "+" -osmi query.smi"
+        exe = self.babelbin+self.babel+" -i"+self.format+" "+self.fragment_file+" -osmi query.smi"
         print exe
-        
+
         subprocess.Popen(exe,shell=True).wait()
 
     def main(self):
