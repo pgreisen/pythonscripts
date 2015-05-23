@@ -2,7 +2,7 @@ import urllib2
 import urllib 
 import gzip
 import os,sys, argparse, subprocess
-import CleanPDB
+from CleanPDB import *
 from collections import OrderedDict
 '''
 
