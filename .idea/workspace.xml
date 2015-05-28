@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" afterPath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
-    </list>
+    <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="" />
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,62 +23,54 @@
     <favorites_list name="pythonscripts" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="search_pdb_with_smiles.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/search_pdb_with_smiles.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3030">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3986637" vertical-offset="2927" max-vertical-offset="3915">
-                  <caret line="219" column="54" selection-start-line="219" selection-start-column="54" selection-end-line="219" selection-end-column="54" />
-                  <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CleanPDB.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="3915">
-                  <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-                  <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="search_pdb_with_smiles.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/search_pdb_with_smiles.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3030">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.259259" vertical-offset="2927" max-vertical-offset="3915">
+              <caret line="219" column="54" selection-start-line="219" selection-start-column="54" selection-end-line="219" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RBAnalysis.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.74413645" vertical-offset="397" max-vertical-offset="1560">
+              <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CleanPDB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -102,6 +92,7 @@
         <option value="$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py" />
         <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
         <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
+        <option value="$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py" />
       </list>
     </option>
   </component>
@@ -204,7 +195,7 @@
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="262" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1056" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1055" />
@@ -513,10 +504,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3986637" vertical-offset="2927" max-vertical-offset="3915">
+        <state vertical-scroll-proportion="-13.259259" vertical-offset="2927" max-vertical-offset="3915">
           <caret line="219" column="54" selection-start-line="219" selection-start-column="54" selection-end-line="219" selection-end-column="54" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74413645" vertical-offset="397" max-vertical-offset="1560">
+          <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>

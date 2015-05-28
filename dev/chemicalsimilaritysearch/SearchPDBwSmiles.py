@@ -19,7 +19,7 @@ class SearchPDBwSmiles:
         ##smiles='COC1=CC=CC=C1'
         self.smiles = ""
         self.maxlength = "200"
-        self.maxresolution = "2.0"
+        self.resolution = "2.0"
         self.similarity = "1.0"
         self.babelbin = "/work/greisen/ExternalProgram/openbabel-2.3.2/bin/"
         self.babel = "babel"
@@ -107,13 +107,13 @@ class SearchPDBwSmiles:
 
 <queryType>org.pdb.query.simple.ResolutionQuery</queryType>
 
-<description>ResolutionQuery: refine.ls_d_res_high.comparator=between refine.ls_d_res_high.min=0.0 refine.ls_d_res_high.max="""+str(self.maxlength)+""" </description>
+<description>ResolutionQuery: refine.ls_d_res_high.comparator=between refine.ls_d_res_high.min=0.0 refine.ls_d_res_high.max="""+str(self.resolution)+""" </description>
 
 <refine.ls_d_res_high.comparator>between</refine.ls_d_res_high.comparator>
 
 <refine.ls_d_res_high.min>0.0</refine.ls_d_res_high.min>
 
-<refine.ls_d_res_high.max>"""+str(self.maxlength)+"""</refine.ls_d_res_high.max>
+<refine.ls_d_res_high.max>"""+str(self.resolution)+"""</refine.ls_d_res_high.max>
 
 </orgPdbQuery> 
 

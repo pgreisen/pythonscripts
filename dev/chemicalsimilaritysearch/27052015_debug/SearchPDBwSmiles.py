@@ -2,6 +2,8 @@ import urllib2
 import urllib 
 import gzip
 import os,sys, argparse, subprocess
+from CleanPDB import *
+from collections import OrderedDict
 '''
 
 This script will search the PDB for a chemical fragment and return a match based on the similarity between them. It assumes
@@ -21,8 +23,9 @@ class SearchPDBwSmiles:
         self.similarity = "1.0"
         self.babelbin = "/work/greisen/ExternalProgram/openbabel-2.3.2/bin/"
         self.babel = "babel"
-        self.obfit = "obfit"
+        self.obfit = "/work/greisen/ExternalProgram/bin/obfit"
         self.format = "pdb"
+        self.results = []
 
 
     def writes_to_pdb_format(self,filename,pdbname):
@@ -34,7 +37,6 @@ class SearchPDBwSmiles:
         outfile.writelines(f_content)
         outfile.close()
         os.remove(filename)
-
 
 
     def convert_to_pdb_gz(self,pdbid):
@@ -68,6 +70,21 @@ class SearchPDBwSmiles:
     
         self.writes_to_pdb_format(gz_name,pdbname)
 
+        # clean the pdb
+        # 22-05-2015
+        cleanpdb = CleanPDB()
+
+        pdbfile = pdbname+".pdb"
+
+        pdb_by_chain = cleanpdb.get_chains(pdbfile)
+        for key in pdb_by_chain:
+            with open(pdbname+"_chain"+key+".pdb",'w') as f:
+                for line in pdb_by_chain[key]:
+                    f.write(line)
+
+
+        # remove all the old files
+        os.remove(pdbname+".pdb")
 
 
     def get_pdbs_from_PDB(self):
@@ -153,7 +170,6 @@ class SearchPDBwSmiles:
 </orgPdbCompositeQuery>
 
 """
-
         print "querying PDB...\n"
         req = urllib2.Request(url, data=queryText)
 
@@ -177,28 +193,62 @@ class SearchPDBwSmiles:
 
     def convert_pdb_smi(self):
         # ~greisen/ExternalProgram/openbabel_selfcompiled/bin/babel -ipdb hcy.pdb -osmi query.smi
-        exe = self.babelbin+self.babel+" -i"+self.format+" "+" -osmi query.smi"
+        ###import pdb; pdb.set_trace()
+        exe = self.babelbin+self.babel+" -i"+self.format+" "+self.fragment_file+" -osmi query.smi"
+        print exe
+
         subprocess.Popen(exe,shell=True).wait()
+
+    def set_smiles(self):
+        with open("query.smi") as f:
+            for line in f:
+                self.smiles = line.split()[0]
+                self.smiles.strip()
+
+        print "The PDB will be searched with this chemical fragment: "+self.smiles+"\n"
+
+    def align_pdb_obfit(self):
+        init_pdb = ""
+        align_to_this = 0
+        pdbs = os.listdir("./")
+        for pdb in pdbs:
+            if(pdb.endswith(".pdb") and align_to_this == 0):
+                init_pdb = pdb
+                align_to_this = 1
+            elif(pdb.endswith(".pdb")):
+                exe = self.obfit+" \""+self.smiles+"\" "+init_pdb+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
+                print exe
+                subprocess.Popen(exe,shell=True).wait()
+            else:
+                continue
+
+
+
 
     def main(self):
 
         parser = argparse.ArgumentParser(description="Takes a pdb with a chemical fragment and seraches the PDB for the occurance of this fragment.")
         # get the initial rosetta design as input
         parser.add_argument("-s", dest="fragment_file", help="This file contains the coordinates of the chemical fragment" )
-        parser.add_argument("--maxlength", dest="maxlength", help="The max length of the protein (Default=200 aa)", type=str )
-        parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str )
+        parser.add_argument("--maxlength", dest="maxlength", help="The max length of the protein (Default=200 aa)", default="200", type=str )
+        parser.add_argument("--resolution", dest="resolution", help="Resolution of crystal structure (Default=2.0)", type=str, default="2.0" )
         parser.add_argument("--similarity", dest="similarity", help="The chemical similarity between the fragment searched (Default=1.0)", type=str )
-        parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
+        #parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
         parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)",default="pdb" )
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
             setattr(self, item, args_dict[item])
-        
+
         # converts the query pdb to smile format
         self.convert_pdb_smi()
-        assert 1 ==0
+
+        self.set_smiles()
+
         self.get_pdbs_from_PDB()
+
+        self.align_pdb_obfit()
+
 
 if __name__ == "__main__":
     run = SearchPDBwSmiles()
