@@ -217,7 +217,9 @@ class SearchPDBwSmiles:
                 init_pdb = pdb
                 align_to_this = 1
             elif(pdb.endswith(".pdb")):
-                exe = self.obfit+" \""+self.smiles+"\" "+init_pdb+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
+                # test 28-05-2015
+                # exe = self.obfit+" \""+self.smiles+"\" "+init_pdb+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
+                exe = self.obfit+" \""+self.smiles+"\" "+self.fragment_file+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
                 print exe
                 subprocess.Popen(exe,shell=True).wait()
             else:
