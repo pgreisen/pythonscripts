@@ -26,22 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="search_pdb_with_smiles.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/search_pdb_with_smiles.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3030">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.11111" vertical-offset="1440" max-vertical-offset="3945">
+            <state vertical-scroll-proportion="-55.962963" vertical-offset="499" max-vertical-offset="3945">
               <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -53,8 +41,8 @@
       <file leaf-file-name="RBAnalysis.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6321962" vertical-offset="667" max-vertical-offset="1605">
-              <caret line="84" column="79" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.6421515" vertical-offset="405" max-vertical-offset="1590">
+              <caret line="66" column="71" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="71" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -491,7 +479,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3030">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -506,7 +494,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.11111" vertical-offset="1440" max-vertical-offset="3945">
+        <state vertical-scroll-proportion="-55.962963" vertical-offset="499" max-vertical-offset="3945">
           <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -516,8 +504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6321962" vertical-offset="667" max-vertical-offset="1605">
-          <caret line="84" column="79" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.6421515" vertical-offset="405" max-vertical-offset="1590">
+          <caret line="66" column="71" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="71" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
