@@ -82,7 +82,7 @@ class RBAnalysis:
         parser = argparse.ArgumentParser(description="Script to analyse output from Rotamer Boltzmann Analysis")
         parser.add_argument('-f',dest='file', help='Data file')
         parser.add_argument('--cutoff',dest='threshold', help='Energy differences below this threshold are considered noise ( default 1 REU )')
-        parser.add_argument('--rb_prob',dest='rb_cutoff_probability', help='The rotamer probability cutoff - default is 0.05 ',type=float)
+        parser.add_argument('--rb_prob',dest='', help='The rotamer probability cutrb_cutoff_probabilityoff - default is 0.05 ',type=float)
 
 
         args_dict = vars( parser.parse_args() )
