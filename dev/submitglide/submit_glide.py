@@ -30,6 +30,7 @@ class SubmitGlide:
         self.confs = None
         self.scaffold_pdb_path = ""
         self.cstfile = ""
+        self.nstruct = 1
 
 
 
@@ -39,7 +40,7 @@ class SubmitGlide:
 
         tar zxf '''+self.database+'''.tgz
 
-        ./rosetta_scripts.static.linuxgccrelease -overwrite @'''+str(self.flags)+''' -parser:protocol '''+str(self.xml)+''' -out:prefix ${1} -extra_res_fa '''+self.params+''' -database '''+self.database+''' -s '''+str(pdbname)+''' > run_${1}.txt
+        ./rosetta_scripts.static.linuxgccrelease -overwrite @'''+str(self.flags)+''' -parser:protocol '''+str(self.xml)+''' -out:prefix ${1} -extra_res_fa '''+self.params+''' -database '''+self.database+''' -s '''+str(pdbname)+'''  -nstruct '''+str( self.nstruct )+''' > run_${1}.txt
 
         RETVAL=$?
 
@@ -264,6 +265,10 @@ class SubmitGlide:
 
 
         parser.add_argument("--scaffold_database", dest="scaffold_pdb_path", help="User defined scaffold set", default=None, type=str )
+
+
+        parser.add_argument("--nstruct", dest="nstruct", help="Number of design runs (Default=1)", default=1, type=int )
+
 
         parser.add_argument("--cstfile", dest="cstfile", help="cstfile", default=None, type=str )
 
