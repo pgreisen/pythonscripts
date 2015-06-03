@@ -2,7 +2,512 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log0cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log100cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log101cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log102cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log103cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log104cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log105cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log106cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log107cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log108cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log109cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log10cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log110cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log111cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log112cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log113cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log114cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log115cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log116cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log117cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log118cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log119cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log11cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log120cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log121cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log122cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log123cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log124cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log125cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log126cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log127cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log128cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log129cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log12cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log130cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log131cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log132cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log133cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log134cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log135cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log136cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log137cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log138cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log139cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log13cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log140cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log141cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log142cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log143cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log144cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log145cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log146cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log147cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log148cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log149cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log14cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log150cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log151cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log152cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log153cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log154cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log155cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log156cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log157cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log158cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log159cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log15cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log160cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log161cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log162cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log163cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log164cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log165cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log166cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log167cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log168cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log169cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log16cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log170cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log171cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log172cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log173cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log174cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log175cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log176cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log177cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log178cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log179cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log17cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log180cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log181cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log182cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log183cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log184cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log185cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log186cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log187cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log188cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log189cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log18cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log190cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log191cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log192cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log193cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log194cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log195cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log196cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log197cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log198cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log199cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log19cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log1cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log200cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log201cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log202cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log203cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log204cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log205cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log206cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log207cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log208cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log209cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log20cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log210cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log211cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log212cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log213cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log214cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log215cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log216cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log217cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log218cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log219cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log21cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log220cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log221cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log222cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log223cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log224cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log225cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log226cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log227cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log228cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log229cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log22cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log230cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log231cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log232cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log233cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log234cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log235cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log236cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log237cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log238cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log239cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log23cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log240cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log241cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log242cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log243cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log244cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log245cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log246cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log247cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log248cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log249cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log24cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log250cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log251cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log252cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log253cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log254cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log255cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log256cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log257cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log258cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log259cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log25cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log260cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log261cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log262cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log263cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log264cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log265cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log266cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log267cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log268cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log269cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log26cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log270cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log271cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log272cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log273cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log274cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log275cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log276cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log277cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log278cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log279cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log27cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log280cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log281cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log282cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log283cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log284cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log285cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log286cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log287cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log288cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log289cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log28cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log290cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log291cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log292cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log293cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log294cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log295cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log296cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log297cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log298cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log299cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log29cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log2cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log300cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log301cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log302cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log303cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log304cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log305cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log306cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log307cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log308cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log309cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log30cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log310cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log311cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log312cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log313cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log314cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log315cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log316cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log317cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log318cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log319cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log31cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log320cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log321cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log322cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log323cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log324cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log325cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log326cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log327cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log328cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log329cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log32cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log330cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log331cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log332cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log333cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log334cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log335cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log336cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log337cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log338cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log339cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log33cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log340cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log341cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log342cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log343cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log344cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log345cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log346cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log347cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log348cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log349cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log34cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log350cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log351cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log352cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log353cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log354cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log355cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log356cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log357cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log358cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log359cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log35cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log360cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log361cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log362cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log363cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log364cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log365cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log366cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log367cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log368cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log369cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log36cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log370cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log371cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log372cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log373cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log374cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log375cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log376cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log377cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log378cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log379cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log37cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log380cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log381cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log382cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log383cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log384cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log385cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log386cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log387cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log388cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log389cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log38cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log390cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log391cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log392cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log393cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log394cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log395cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log396cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log397cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log398cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log399cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log39cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log3cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log400cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log401cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log402cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log403cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log404cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log405cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log406cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log407cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log408cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log409cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log40cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log410cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log411cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log412cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log413cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log414cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log415cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log416cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log417cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log418cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log419cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log41cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log420cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log421cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log422cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log423cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log424cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log425cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log426cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log427cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log428cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log429cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log42cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log430cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log431cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log432cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log433cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log434cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log435cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log436cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log437cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log438cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log439cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log43cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log440cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log441cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log442cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log443cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log444cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log445cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log446cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log447cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log448cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log449cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log44cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log450cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log451cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log452cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log453cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log454cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log455cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log456cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log457cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log458cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log459cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log45cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log460cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log461cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log462cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log463cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log464cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log465cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log466cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log467cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log468cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log469cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log46cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log470cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log471cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log472cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log473cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log474cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log475cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log476cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log477cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log478cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log479cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log47cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log480cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log481cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log482cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log483cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log484cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log485cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log486cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log487cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log488cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log489cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log48cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log490cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log491cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log492cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log493cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log494cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log495cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log496cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log497cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log498cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log499cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log49cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log4cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log500cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log501cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log50cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log51cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log52cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log53cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log54cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log55cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log56cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log57cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log58cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log59cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log5cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log60cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log61cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log62cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log63cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log64cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log65cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log66cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log67cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log68cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log69cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log6cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log70cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log71cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log72cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log73cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log74cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log75cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log76cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log77cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log78cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log79cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log7cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log80cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log81cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log82cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log83cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log84cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log85cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log86cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log87cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log88cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log89cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log8cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log90cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log91cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log92cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log93cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log94cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log95cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log96cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log97cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log98cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log99cstfile_empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/RBAnalysis/30052015_test_failed_statement/log9cstfile_empty" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" afterPath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py" afterPath="$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/GeneratePositionFileUsingPymol/exposed_residues.pos" afterPath="$PROJECT_DIR$/dev/GeneratePositionFileUsingPymol/exposed_residues.pos" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,22 +531,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="search_pdb_with_smiles.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/search_pdb_with_smiles.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3030">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.11111" vertical-offset="1440" max-vertical-offset="3945">
+            <state vertical-scroll-proportion="0.0" vertical-offset="499" max-vertical-offset="3945">
               <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -50,11 +543,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RBAnalysis.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RBAnalysis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6321962" vertical-offset="667" max-vertical-offset="1605">
-              <caret line="84" column="79" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1590">
+              <caret line="84" column="38" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="38" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -62,11 +555,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CleanPDB.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CleanPDB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2712766" vertical-offset="0" max-vertical-offset="940">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -92,9 +585,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py" />
-        <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
         <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
         <option value="$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py" />
+        <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
       </list>
     </option>
   </component>
@@ -197,7 +690,7 @@
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="262" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1056" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1055" />
@@ -403,20 +896,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1227126" sideWeight="0.6695096" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -442,11 +935,38 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="499" max-vertical-offset="3945">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="375">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dev/generate_cst_metal_site/generate_metal_cstfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7350">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -482,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.8134327" vertical-offset="0" max-vertical-offset="7830">
           <caret line="304" column="25" selection-start-line="304" selection-start-column="25" selection-end-line="304" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -490,6 +1009,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3030">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1590">
+          <caret line="84" column="38" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="499" max-vertical-offset="3945">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -498,29 +1034,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2712766" vertical-offset="0" max-vertical-offset="940">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.11111" vertical-offset="1440" max-vertical-offset="3945">
-          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/RBAnalysis/RBAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6321962" vertical-offset="667" max-vertical-offset="1605">
-          <caret line="84" column="79" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
