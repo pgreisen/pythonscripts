@@ -84,7 +84,6 @@ class RBAnalysis:
         parser.add_argument('--cutoff',dest='threshold', help='Energy differences below this threshold are considered noise ( default 1 REU )')
         parser.add_argument('--rb_prob',dest='rb_cutoff_probability', help='The rotamer probability cutoff - default is 0.05 ',type=float)
 
-
         args_dict = vars( parser.parse_args() )
 
         for item in args_dict:
