@@ -76,12 +76,24 @@ class SearchPDBwSmiles:
 
         pdbfile = pdbname+".pdb"
 
-        pdb_by_chain = cleanpdb.get_chains(pdbfile)
-        for key in pdb_by_chain:
-            with open(pdbname+"_chain"+key+".pdb",'w') as f:
-                for line in pdb_by_chain[key]:
-                    f.write(line)
+        pdb_by_chain, hetatoms = cleanpdb.get_chains(pdbfile)
 
+        dummy = 1
+        for key in pdb_by_chain:
+            for key2 in  hetatoms:
+
+                key2_split = key2.split('_')
+
+                if(key == key2_split[1] ):
+                    ## import pdb; pdb.set_trace()
+                    # print "2########################################2",key,key2[0], key2
+                    # with open(pdbname+"_chain"+key+".pdb",'w') as f:
+                    ##import pdb; pdb.set_trace()
+                    with open(pdbname+"_chain"+key+"_"+str(dummy)+"_"+key2+".pdb",'w') as f:
+                        for line in pdb_by_chain[key]:
+                            f.write(line)
+                        for line in hetatoms[key2]:
+                            f.write(line)
 
         # remove all the old files
         os.remove(pdbname+".pdb")
@@ -217,11 +229,25 @@ class SearchPDBwSmiles:
                 init_pdb = pdb
                 align_to_this = 1
             elif(pdb.endswith(".pdb")):
+                exe = self.obfit+" \""+self.smiles+"\" "+self.fragment_file+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
+                p = subprocess.Popen(exe,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                out,output = p.communicate()
+                if( len(output) == 0 and pdb != self.fragment_file):
+                    exe_rm_1 = "rm -f "+pdb
+                    exe_rm_2 = "rm -f "+pdb.split()[0]+"_aligned.pdb"
+
+                    subprocess.Popen(exe_rm_1,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                    subprocess.Popen(exe_rm_2,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+
+                '''
                 # test 28-05-2015
                 # exe = self.obfit+" \""+self.smiles+"\" "+init_pdb+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
                 exe = self.obfit+" \""+self.smiles+"\" "+self.fragment_file+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
-                print exe
+                ## print exe
                 subprocess.Popen(exe,shell=True).wait()
+                '''
+
+
             else:
                 continue
 
