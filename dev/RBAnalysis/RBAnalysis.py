@@ -65,6 +65,7 @@ class RBAnalysis:
             prbs.append(float(self.rbtable[key]))
             # f.write(key+"\t"+self.rbtable[key]+"\n")
             if(float(self.rbtable[key]) < self.rb_cutoff_probability ):
+
                 dummy_name = dummy_name+"FAILED"
         geom = round(stats.mstats.gmean(prbs),3)
 
@@ -81,15 +82,13 @@ class RBAnalysis:
         parser = argparse.ArgumentParser(description="Script to analyse output from Rotamer Boltzmann Analysis")
         parser.add_argument('-f',dest='file', help='Data file')
         parser.add_argument('--cutoff',dest='threshold', help='Energy differences below this threshold are considered noise ( default 1 REU )')
-
-         parser.add_argument('--rb_prob',dest='rb_cutoff_probability ', help='The rotamer probability cutoff - default is 0.05 ')
+        parser.add_argument('--rb_prob',dest='rb_cutoff_probability', help='The rotamer probability cutoff - default is 0.05 ',type=float)
 
 
         args_dict = vars( parser.parse_args() )
 
         for item in args_dict:
             setattr(self, item, args_dict[item])
-
         self.set_rb_table()
         self.write_table()
 

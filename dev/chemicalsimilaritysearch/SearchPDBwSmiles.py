@@ -219,8 +219,31 @@ class SearchPDBwSmiles:
                 # test 28-05-2015
                 # exe = self.obfit+" \""+self.smiles+"\" "+init_pdb+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
                 exe = self.obfit+" \""+self.smiles+"\" "+self.fragment_file+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
-                print exe
-                subprocess.Popen(exe,shell=True).wait()
+                ## print exe
+                p = subprocess.Popen(exe,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                
+                out,output = p.communicate()
+
+                #print "Output: ",out
+                
+
+                if( len(output) == 0 and pdb != self.fragment_file):
+                    exe_rm_1 = "rm -f "+pdb
+                    exe_rm_2 = "rm -f "+pdb.split()[0]+"_aligned.pdb"
+
+                    subprocess.Popen(exe_rm_1,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                    subprocess.Popen(exe_rm_2,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+
+                else:
+                    print output
+
+                #print "Here is the error and output ",format(stdout )
+                #assert 1 ==0 
+                #print stdout
+                #print stdout
+                #print "Done"
+
+
             else:
                 continue
 
@@ -241,7 +264,7 @@ class SearchPDBwSmiles:
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
             setattr(self, item, args_dict[item])
-
+        
         # converts the query pdb to smile format
         self.convert_pdb_smi()
 
