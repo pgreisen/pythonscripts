@@ -17,8 +17,9 @@ class CleanPDB:
     def get_chains(self,pdbfile):
         with open(pdbfile,'r') as f:
             for line in f:
-
+                
                 if(line[0:4] == "HET "):
+<<<<<<< HEAD
                     tmp = line.split()
 
                     a = tmp[1]+"_"+tmp[2]
@@ -27,6 +28,12 @@ class CleanPDB:
 
                 if(line[0:4] == "ATOM" ):
 
+=======
+                    print line
+                    
+                if(line[0:4] == "ATOM" or line[0:4] == "HETA"):
+                        
+>>>>>>> ef98e870eff0ee5652a5cf40df129a1cb0c83dd6
                     self.pdbfile_chains[line[21:22]].append(line)
 
                 elif( line[0:4] == "HETA" ):
@@ -57,6 +64,7 @@ Downloading PDB structure '1QDQ'...
 '''
 
 
+<<<<<<< HEAD
 '''
     def get_chains(self,pdbfile):
         with open(pdbfile,'r') as f:
@@ -75,3 +83,6 @@ Downloading PDB structure '1QDQ'...
 
         return self.pdbfile_chains, self.hetatoms_in_chain
 '''
+=======
+##    def get_number_hets(self,pdbfile):
+>>>>>>> ef98e870eff0ee5652a5cf40df129a1cb0c83dd6
