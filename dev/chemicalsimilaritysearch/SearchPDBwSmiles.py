@@ -19,7 +19,7 @@ class SearchPDBwSmiles:
         ##smiles='COC1=CC=CC=C1'
         self.smiles = ""
         self.maxlength = "200"
-        self.maxresolution = "2.0"
+        self.resolution = "2.0"
         self.similarity = "1.0"
         self.babelbin = "/work/greisen/ExternalProgram/openbabel-2.3.2/bin/"
         self.babel = "babel"
@@ -119,13 +119,13 @@ class SearchPDBwSmiles:
 
 <queryType>org.pdb.query.simple.ResolutionQuery</queryType>
 
-<description>ResolutionQuery: refine.ls_d_res_high.comparator=between refine.ls_d_res_high.min=0.0 refine.ls_d_res_high.max="""+str(self.maxlength)+""" </description>
+<description>ResolutionQuery: refine.ls_d_res_high.comparator=between refine.ls_d_res_high.min=0.0 refine.ls_d_res_high.max="""+str(self.resolution)+""" </description>
 
 <refine.ls_d_res_high.comparator>between</refine.ls_d_res_high.comparator>
 
 <refine.ls_d_res_high.min>0.0</refine.ls_d_res_high.min>
 
-<refine.ls_d_res_high.max>"""+str(self.maxlength)+"""</refine.ls_d_res_high.max>
+<refine.ls_d_res_high.max>"""+str(self.resolution)+"""</refine.ls_d_res_high.max>
 
 </orgPdbQuery> 
 
@@ -182,7 +182,6 @@ class SearchPDBwSmiles:
 </orgPdbCompositeQuery>
 
 """
-
         print "querying PDB...\n"
         req = urllib2.Request(url, data=queryText)
 
@@ -244,8 +243,32 @@ class SearchPDBwSmiles:
                 # exe = self.obfit+" \""+self.smiles+"\" "+init_pdb+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
                 exe = self.obfit+" \""+self.smiles+"\" "+self.fragment_file+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
                 ## print exe
+<<<<<<< HEAD
                 subprocess.Popen(exe,shell=True).wait()
                 '''
+=======
+                p = subprocess.Popen(exe,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                
+                out,output = p.communicate()
+
+                #print "Output: ",out
+                
+
+                if( len(output) == 0 and pdb != self.fragment_file):
+                    exe_rm_1 = "rm -f "+pdb
+                    exe_rm_2 = "rm -f "+pdb.split()[0]+"_aligned.pdb"
+
+                    subprocess.Popen(exe_rm_1,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                    subprocess.Popen(exe_rm_2,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+
+                else:
+                    print output
+
+                    # print "Here is the error and output ",format(stdout )
+                    # assert 1 ==0 
+                    # print stdout
+                    # print stdout
+                    # print "Done"
 
 
             else:
@@ -268,7 +291,7 @@ class SearchPDBwSmiles:
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
             setattr(self, item, args_dict[item])
-
+        
         # converts the query pdb to smile format
         self.convert_pdb_smi()
 

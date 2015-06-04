@@ -71,7 +71,11 @@ class Combinations:
             key = []
             for i in lst:
                 tmp = i.split('_')
-                key.append(int (tmp[1][0]) )
+                # print tmp, tmp[-2][0]
+                # 20042015
+                # key.append(int (tmp[1][0]) )
+                print tmp, tmp[-1][0], tmp[-1]
+                key.append(int (tmp[-1][0]) )
 
             if(len( set(key) ) == self.combi):
                 cstfiles.append(lst)
