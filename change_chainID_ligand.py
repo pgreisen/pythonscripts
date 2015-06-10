@@ -9,7 +9,7 @@ def main():
     
     pdbfile = sys.argv[1]
     
-    newchainid = "X" #sys.argv[2]
+    newchainid = "A" #sys.argv[2]
 
     filename = open(pdbfile,'r')
 
@@ -18,7 +18,7 @@ def main():
     for line in filename:
 
         #        if line[0:4] == 'HETA':
-        if line[0:4] == "HETA":
+        if line[0:4] == "ATOM":
             newline = str(line[0:20])+' '+str(newchainid)+str(line[22:])
             tmpfile.write(newline)
         else:
