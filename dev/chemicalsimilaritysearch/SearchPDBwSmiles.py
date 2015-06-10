@@ -26,6 +26,7 @@ class SearchPDBwSmiles:
         self.obfit = "/work/greisen/ExternalProgram/bin/obfit"
         self.format = "pdb"
         self.results = []
+        self.smi_directly = 0
 
 
     def writes_to_pdb_format(self,filename,pdbname):
@@ -264,15 +265,21 @@ class SearchPDBwSmiles:
         parser.add_argument("--similarity", dest="similarity", help="The chemical similarity between the fragment searched (Default=1.0)", type=str )
         #parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
         parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)",default="pdb" )
+        parser.add_argument("--smi_directly", dest="smi_directly",default=0, help="The input file has to be query.smi to pass SMILE directly" )
+
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
             setattr(self, item, args_dict[item])
         
         # converts the query pdb to smile format
-        self.convert_pdb_smi()
+        # self.smi_directly
+        if( self.smi_directly == 0 ):
+            self.convert_pdb_smi()
+
 
         self.set_smiles()
+
 
         self.get_pdbs_from_PDB()
 
