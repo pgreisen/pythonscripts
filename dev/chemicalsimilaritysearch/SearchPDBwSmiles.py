@@ -27,6 +27,7 @@ class SearchPDBwSmiles:
         self.format = "pdb"
         self.results = []
         self.smi_directly = 0
+        self.smiles = ""
 
 
     def writes_to_pdb_format(self,filename,pdbname):
@@ -234,7 +235,9 @@ class SearchPDBwSmiles:
                 init_pdb = pdb
                 align_to_this = 1
             elif(pdb.endswith(".pdb")):
+
                 exe = self.obfit+" \""+self.smiles+"\" "+self.fragment_file+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
+
                 print exe
                 p = subprocess.Popen(exe,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
                 out,output = p.communicate()
@@ -266,7 +269,7 @@ class SearchPDBwSmiles:
         #parser.add_argument("--babel", dest="babel", help="The path to the executable for openbabel (Default - the dig system in the Bakerlab" )
         parser.add_argument("--format", dest="format", help="Format to convert from (Default=pdb)",default="pdb" )
         parser.add_argument("--smi_directly", dest="smi_directly",default=0, help="The input file has to be query.smi to pass SMILE directly" )
-
+        parser.add_argument("--smiles", dest="smiles",default=0, help="The input file has to be query.smi to pass SMILE directly" )
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
