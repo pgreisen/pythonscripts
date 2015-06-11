@@ -19,7 +19,7 @@ class SearchPDBwSmiles:
         ##smiles='COC1=CC=CC=C1'
         self.smiles = ""
         self.maxlength = "200"
-        self.maxresolution = "2.0"
+        self.resolution = "2.0"
         self.similarity = "1.0"
         self.babelbin = "/work/greisen/ExternalProgram/openbabel-2.3.2/bin/"
         self.babel = "babel"
@@ -66,37 +66,42 @@ class SearchPDBwSmiles:
 
         url = 'ftp://ftp.wwpdb.org/pub/pdb/data/structures/divided/pdb/'+gz_name[4:6]+'/'+gz_name
 
-        urllib.urlretrieve(url, gz_name)
+        try:
+            urllib.urlretrieve(url, gz_name)
+
     
-        self.writes_to_pdb_format(gz_name,pdbname)
+            self.writes_to_pdb_format(gz_name,pdbname)
 
-        # clean the pdb
-        # 22-05-2015
-        cleanpdb = CleanPDB()
+            # clean the pdb
+            # 22-05-2015
+            cleanpdb = CleanPDB()
 
-        pdbfile = pdbname+".pdb"
+            pdbfile = pdbname+".pdb"
 
-        pdb_by_chain, hetatoms = cleanpdb.get_chains(pdbfile)
+            pdb_by_chain, hetatoms = cleanpdb.get_chains(pdbfile)
 
-        dummy = 1
-        for key in pdb_by_chain:
-            for key2 in  hetatoms:
+            dummy = 0
+            # protein coordinates and chain
+            for key in pdb_by_chain:
+                # hetero atoms and chain info
+                for key2 in  hetatoms:
 
-                key2_split = key2.split('_')
+                    key2_split = key2.split('_')
+                    ## print key2, key2_split, "################"
+                    # if same chain write to file
+                    if(key == key2_split[1] ):
+                        dummy = dummy + 1
+                        ## import pdb;pdb.set_trace()
+                        with open(pdbname+"_chain"+key+"_"+str(dummy)+"_"+key2+".pdb",'w') as f:
+                            for line in pdb_by_chain[key]:
+                                f.write(line)
+                            for line in hetatoms[key2]:
+                                f.write(line)
 
-                if(key == key2_split[1] ):
-                    ## import pdb; pdb.set_trace()
-                    # print "2########################################2",key,key2[0], key2
-                    # with open(pdbname+"_chain"+key+".pdb",'w') as f:
-                    ##import pdb; pdb.set_trace()
-                    with open(pdbname+"_chain"+key+"_"+str(dummy)+"_"+key2+".pdb",'w') as f:
-                        for line in pdb_by_chain[key]:
-                            f.write(line)
-                        for line in hetatoms[key2]:
-                            f.write(line)
+            os.remove(pdbname+".pdb")
 
-        # remove all the old files
-        os.remove(pdbname+".pdb")
+        except:
+            print "Not possible to retrieve the following address: ",url
 
 
     def get_pdbs_from_PDB(self):
@@ -119,13 +124,13 @@ class SearchPDBwSmiles:
 
 <queryType>org.pdb.query.simple.ResolutionQuery</queryType>
 
-<description>ResolutionQuery: refine.ls_d_res_high.comparator=between refine.ls_d_res_high.min=0.0 refine.ls_d_res_high.max="""+str(self.maxlength)+""" </description>
+<description>ResolutionQuery: refine.ls_d_res_high.comparator=between refine.ls_d_res_high.min=0.0 refine.ls_d_res_high.max="""+str(self.resolution)+""" </description>
 
 <refine.ls_d_res_high.comparator>between</refine.ls_d_res_high.comparator>
 
 <refine.ls_d_res_high.min>0.0</refine.ls_d_res_high.min>
 
-<refine.ls_d_res_high.max>"""+str(self.maxlength)+"""</refine.ls_d_res_high.max>
+<refine.ls_d_res_high.max>"""+str(self.resolution)+"""</refine.ls_d_res_high.max>
 
 </orgPdbQuery> 
 
@@ -182,7 +187,6 @@ class SearchPDBwSmiles:
 </orgPdbCompositeQuery>
 
 """
-
         print "querying PDB...\n"
         req = urllib2.Request(url, data=queryText)
 
@@ -190,7 +194,7 @@ class SearchPDBwSmiles:
 
         # Contains pdb ids
         result = f.read().rstrip().split('\n')
-        if result:
+        if len(result) > 1:
 
             print "Found number of PDB entries:", result.count('\n')
 
@@ -208,7 +212,7 @@ class SearchPDBwSmiles:
         # ~greisen/ExternalProgram/openbabel_selfcompiled/bin/babel -ipdb hcy.pdb -osmi query.smi
         ###import pdb; pdb.set_trace()
         exe = self.babelbin+self.babel+" -i"+self.format+" "+self.fragment_file+" -osmi query.smi"
-        print exe
+        # print exe
 
         subprocess.Popen(exe,shell=True).wait()
 
@@ -230,6 +234,7 @@ class SearchPDBwSmiles:
                 align_to_this = 1
             elif(pdb.endswith(".pdb")):
                 exe = self.obfit+" \""+self.smiles+"\" "+self.fragment_file+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
+                print exe
                 p = subprocess.Popen(exe,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
                 out,output = p.communicate()
                 if( len(output) == 0 and pdb != self.fragment_file):
@@ -239,13 +244,8 @@ class SearchPDBwSmiles:
                     subprocess.Popen(exe_rm_1,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
                     subprocess.Popen(exe_rm_2,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 
-                '''
-                # test 28-05-2015
-                # exe = self.obfit+" \""+self.smiles+"\" "+init_pdb+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
-                exe = self.obfit+" \""+self.smiles+"\" "+self.fragment_file+" "+pdb+"> "+pdb.split()[0]+"_aligned.pdb"
-                ## print exe
-                subprocess.Popen(exe,shell=True).wait()
-                '''
+                else:
+                    print output
 
 
             else:
@@ -268,7 +268,7 @@ class SearchPDBwSmiles:
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
             setattr(self, item, args_dict[item])
-
+        
         # converts the query pdb to smile format
         self.convert_pdb_smi()
 

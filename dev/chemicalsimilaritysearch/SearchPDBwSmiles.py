@@ -277,7 +277,7 @@ class SearchPDBwSmiles:
         if( self.smi_directly == 0 ):
             self.convert_pdb_smi()
 
-
+        import pdb;pdb.set_trace()
         self.set_smiles()
 
 
