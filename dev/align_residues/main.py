@@ -69,7 +69,7 @@ class AlignResidues:
 
         for j in queryresidues:
             tmp = j.split()
-            pdbfile_instance.get_all_residueatoms( queryfile, tmp[0], tmp[1], print  )
+            pdbfile_instance.get_all_residueatoms( queryfile, tmp[0], tmp[1], self.queryresidues )
 
 
         # debug
