@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/main.py" afterPath="$PROJECT_DIR$/dev/align_residues/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" afterPath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,7 +55,7 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/align_residues/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="42" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2025">
+            <state line="86" column="10" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2025">
               <folding />
             </state>
           </provider>
@@ -66,7 +64,7 @@
       <file leaf-file-name="pdbfile.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/align_residues/pdbfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="22" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.38267544" vertical-offset="1016" max-vertical-offset="3570">
+            <state line="92" column="13" selection-start="2899" selection-end="2900" vertical-scroll-proportion="0.4002255" vertical-offset="1010" max-vertical-offset="3570">
               <folding />
             </state>
           </provider>
@@ -94,8 +92,8 @@
         <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
         <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
         <option value="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" />
-        <option value="$PROJECT_DIR$/dev/align_residues/main.py" />
         <option value="$PROJECT_DIR$/dev/align_residues/pdbfile.py" />
+        <option value="$PROJECT_DIR$/dev/align_residues/main.py" />
       </list>
     </option>
   </component>
@@ -470,14 +468,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/align_residues/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="42" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2025">
+        <state line="86" column="10" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2025">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/align_residues/pdbfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="22" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.38267544" vertical-offset="1016" max-vertical-offset="3570">
+        <state line="92" column="13" selection-start="2899" selection-end="2900" vertical-scroll-proportion="0.4002255" vertical-offset="1010" max-vertical-offset="3570">
           <folding />
         </state>
       </provider>
