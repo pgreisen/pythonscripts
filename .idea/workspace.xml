@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/main.py" afterPath="$PROJECT_DIR$/dev/align_residues/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" afterPath="$PROJECT_DIR$/dev/align_residues/pdbfile.py" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +55,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/align_residues/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="34" selection-start="419" selection-end="419" vertical-scroll-proportion="0.32130778" vertical-offset="0" max-vertical-offset="2040">
+            <state line="22" column="9" selection-start="394" selection-end="394" vertical-scroll-proportion="0.32130778" vertical-offset="0" max-vertical-offset="2040">
               <folding />
             </state>
           </provider>
@@ -476,7 +475,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/align_residues/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="419" selection-end="419" vertical-scroll-proportion="0.32130778" vertical-offset="0" max-vertical-offset="2040">
+        <state line="22" column="9" selection-start="394" selection-end="394" vertical-scroll-proportion="0.32130778" vertical-offset="0" max-vertical-offset="2040">
           <folding />
         </state>
       </provider>
