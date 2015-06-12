@@ -90,6 +90,7 @@ class pdbfile:
     def get_all_residueatoms(self, pdblist, residuename, residuenumber, dict_of_coordinates ):
 
         for line in pdblist:
+            print line
 
             if str(line[17:20]).strip() == residuename and str(line[22:26]).strip() == residuenumber :
 

@@ -69,7 +69,7 @@ class AlignResidues:
 
         for j in queryresidues:
             tmp = j.split()
-            pdbfile_instance.get_all_residueatoms( queryfile, tmp[0], tmp[1], self.queryresidues )
+            pdbfile_instance.get_all_residueatoms( queryfile, tmp[0], tmp[1], print  )
 
 
         # debug
@@ -81,10 +81,10 @@ class AlignResidues:
         # Order matters hence list is given as argument
         self.set_array_from_dictionary()
 
-        print self.targetresiduescoordinates
-        print self.queryresiduescoordinates
+        ##print self.targetresiduescoordinates
+        ##print self.queryresiduescoordinates
 
-        import pdb;pdb.set_trace()
+        ##import pdb;pdb.set_trace()
         ##assert 1 == 9
 
 
