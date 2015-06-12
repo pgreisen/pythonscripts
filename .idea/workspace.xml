@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" afterPath="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" afterPath="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonscripts.iws" />
@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="238" column="16" selection-start="7055" selection-end="7055" vertical-scroll-proportion="0.62711865" vertical-offset="3015" max-vertical-offset="4500">
+            <state line="238" column="16" selection-start="7055" selection-end="7055" vertical-scroll-proportion="0.0" vertical-offset="3015" max-vertical-offset="4500">
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -40,7 +40,16 @@
       <file leaf-file-name="CleanPDB.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="36" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+            <state line="41" column="36" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate_position_file.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="265" column="41" selection-start="10569" selection-end="10569" vertical-scroll-proportion="0.2897407" vertical-offset="3673" max-vertical-offset="6225">
               <folding />
             </state>
           </provider>
@@ -67,6 +76,7 @@
       <list>
         <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
         <option value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py" />
+        <option value="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" />
       </list>
     </option>
   </component>
@@ -115,17 +125,17 @@
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="262" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1055" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1056" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1055" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="261" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="257" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -355,6 +365,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="238" column="16" selection-start="7055" selection-end="7055" vertical-scroll-proportion="0.0" vertical-offset="3015" max-vertical-offset="4500">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="36" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4695">
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -395,11 +421,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev/ParetoAnalysis/get_paretofront.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -420,6 +441,15 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="238" column="16" selection-start="7055" selection-end="7055" vertical-scroll-proportion="0.0" vertical-offset="3015" max-vertical-offset="4500">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/CleanPDB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="36" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
@@ -427,12 +457,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
+    <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="238" column="16" selection-start="7055" selection-end="7055" vertical-scroll-proportion="0.62711865" vertical-offset="3015" max-vertical-offset="4500">
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state line="265" column="41" selection-start="10569" selection-end="10569" vertical-scroll-proportion="0.2897407" vertical-offset="3673" max-vertical-offset="6225">
+          <folding />
         </state>
       </provider>
     </entry>
