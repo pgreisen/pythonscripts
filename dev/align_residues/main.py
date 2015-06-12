@@ -20,7 +20,7 @@ class AlignResidues:
 
     # Returns coordinate array
     def set_array_from_dictionary(self):
-        import pdb;pdb.set_trac()
+        import pdb;pdb.set_trace()
 
         for key in self.targetresidues:
             if key in self.queryresidues :
