@@ -20,6 +20,7 @@ class AlignResidues:
 
     # Returns coordinate array
     def set_array_from_dictionary(self):
+        import pdb;pdb.set_trac()
 
         for key in self.targetresidues:
             if key in self.queryresidues :
@@ -81,10 +82,10 @@ class AlignResidues:
         # Order matters hence list is given as argument
         self.set_array_from_dictionary()
 
-        print self.targetresiduescoordinates
-        print self.queryresiduescoordinates
+        ##print self.targetresiduescoordinates
+        ##print self.queryresiduescoordinates
 
-        import pdb;pdb.set_trace()
+        ##import pdb;pdb.set_trace()
         ##assert 1 == 9
 
 
