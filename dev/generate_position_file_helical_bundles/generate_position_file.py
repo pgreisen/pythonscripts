@@ -19,9 +19,14 @@ class GeneratePositionFile:
         self.general_format = 0
         self.chainA = {}
         self.chainB = {}
+        self.chainC = {}
+        self.chainD = {}
         self.offset = 0
+        self.multichains = 0
         self.posA = []
         self.posB = []
+        self.posC = []
+        self.posD = []
 
 
 
@@ -132,6 +137,101 @@ class GeneratePositionFile:
                     self.chainB[key] = array([ float(x), float(y), float(z)])
 
 
+    # 12-06-2015
+    def get_backbone_coordinates_between_chains(self,pdbfile):
+
+        backbone = [ "N", "CA", "C" ]
+        with open(pdbfile, 'r') as f:
+            for line in f:
+
+                if( len(line) > 4 and line[13:15] == "CA" and str(line[21:22]) == 'A' ):
+                    tmp = line.split()
+                    key = tmp[3]+"_"+tmp[4]+"_"+tmp[5]
+                    # initialize key if it not already present in the dictionary
+                    if( self.chainA.has_key( key ) == False):
+                        self.chainA[key] = {}
+
+                    x = str(line[30:38]).rstrip()
+                    y = str(line[38:46]).rstrip()
+                    z = str(line[46:54]).rstrip()
+                    # 07-04-2015
+                    ## self.chainA[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                    self.chainA[key] = array([ float(x), float(y), float(z)])
+
+                elif( len(line) > 4 and line[13:15] == "CA" and str(line[21:22]) == 'B' ):
+                    tmp = line.split()
+                    key = tmp[3]+"_"+tmp[4]+"_"+tmp[5]
+
+                    # initialize key if it not already present in the dictionary
+                    if( self.chainB.has_key( key ) == False):
+                        self.chainB[key] = {}
+
+                    x = str(line[30:38]).rstrip()
+                    y = str(line[38:46]).rstrip()
+                    z = str(line[46:54]).rstrip()
+                    # 07-04-2015
+                    # self.chainB[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                    self.chainB[key] = array([ float(x), float(y), float(z)])
+
+
+
+                elif( len(line) > 4 and line[13:15] == "CA" and str(line[21:22]) == 'C' ):
+                    tmp = line.split()
+                    key = tmp[3]+"_"+tmp[4]+"_"+tmp[5]
+
+                    # initialize key if it not already present in the dictionary
+                    if( self.chainC.has_key( key ) == False):
+                        self.chainC[key] = {}
+
+                    x = str(line[30:38]).rstrip()
+                    y = str(line[38:46]).rstrip()
+                    z = str(line[46:54]).rstrip()
+                    # 07-04-2015
+                    # self.chainB[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                    self.chainC[key] = array([ float(x), float(y), float(z)])
+
+                elif( len(line) > 4 and line[13:15] == "CA" and str(line[21:22]) == 'D' ):
+                    tmp = line.split()
+                    key = tmp[3]+"_"+tmp[4]+"_"+tmp[5]
+
+                    # initialize key if it not already present in the dictionary
+                    if( self.chainD.has_key( key ) == False):
+                        self.chainD[key] = {}
+
+                    x = str(line[30:38]).rstrip()
+                    y = str(line[38:46]).rstrip()
+                    z = str(line[46:54]).rstrip()
+                    # 07-04-2015
+                    # self.chainB[key] = array([ float(tmp[6]), float(tmp[7]), float(tmp[8])])
+                    self.chainD[key] = array([ float(x), float(y), float(z)])
+
+
+    def get_positions_chains(self):
+        '''
+        self.posA = []
+        self.posB = []
+        '''
+        # chains to loop over here
+        chains = [self.chainA, self.chainB, self.chainC, self.chainD]
+        number_of_chains = len(chains)
+        chainsets = [self.posA, self.posB, self.posC, self.posD ]
+
+        for chain_one in range( number_of_chains ):
+            for key in chains[chain_one]:
+                # loop over the three other chains
+                for chain_other in range( number_of_chains ):
+
+                    if(chain_one == chain_other):
+                        continue
+
+                    for key_two in chains[chain_other]:
+                        # print chain_one,chain_other
+                        # print  self.chainA[key], self.chainB[key_two]
+                        dis = LA.norm( chains[chain_one][key] - chains[chain_other][key_two])
+                        print dis, chain_one, chain_other,self.maximum_distance
+                        if( dis <= self.maximum_distance ):
+                            chainsets[chain_one].append( key.split('_')[2])
+                            chainsets[chain_other].append( key_two.split('_')[2])
 
     def get_positions(self):
         '''
@@ -163,7 +263,16 @@ class GeneratePositionFile:
         #print self.posA
         #print self.posB
 
-
+    def write_position_file_chains(self):
+        with open("position.chains",'w') as f:
+            for i in set( self.posA ):
+                f.write( str(i) + ' ' )
+            for i in set( self.posB ):
+                f.write( str(i) + ' ' )
+            for i in set( self.posC ):
+                f.write( str(i) + ' ' )
+            for i in set( self.posD ):
+                f.write( str(i) + ' ' )
 
     def write_position_file(self,posA, posB,name="AB.pos"):
         with open( name ,'w') as f:
@@ -190,7 +299,11 @@ class GeneratePositionFile:
         # get the initial rosetta design as input
         parser.add_argument("-d","--distance", dest="distance", help="Maximum distance to be included in the search for Cbeta-Cbeta distance (Default 5 AA)", type=float)
 
-        parser.add_argument("-b", "--bundles", dest="helical_bundle", help="Four chains helical bundle with four chains is set to true", action="store_true", default=False )
+        # 12-06-2015
+        ##parser.add_argument("-b", "--bundles", dest="helical_bundle", help="Four chains helical bundle with four chains is set to true", action="store_true", default=False )
+
+
+        parser.add_argument("-b", "--bundles", dest="helical_bundle", help="Four chains helical bundle with four chains ( Default=0)", default=0 )
 
         parser.add_argument("-f", "--pdbfile", dest="pdbfile", help="The name of the pdb file", default=None, type=str )
 
@@ -199,6 +312,9 @@ class GeneratePositionFile:
         parser.add_argument("--format", dest="general_format", help="Matcher format is default but none zero value you will get the general format", default=0, type=int )
 
         parser.add_argument("--minimum_distance", dest="minimum_distance", help="Minimum distance between chains", type=float )
+
+        parser.add_argument("--multichains", dest="multichains", help="Compute between different chains", default=0 )
+
 
         input_variables = parser.parse_args()
 
@@ -213,16 +329,36 @@ class GeneratePositionFile:
         if( input_variables.helical_bundle):
             self.one_chain_only = input_variables.helical_bundle
 
+        if( input_variables.multichains):
+            self.multichains = input_variables.multichains
+
         self.minimum_distance = input_variables.minimum_distance
 
         self.offset = input_variables.offset
 
-        self.get_backbone_coordinates_between_chain_A_B( pdbfile )
-        self.get_positions()
-        if(input_variables.general_format == 0):
+        if( self.multichains == 0 ):
+
+            self.get_backbone_coordinates_between_chain_A_B( pdbfile )
+            self.get_positions()
+
+        if( self.multichains != 0):
+            self.get_backbone_coordinates_between_chains( pdbfile )
+            self.get_positions_chains()
+
+            ## print self.posC
+
+
+
+        import pdb;pdb.set_trace()
+        if(input_variables.general_format == 0 and self.multichains == 0):
 
             self.write_position_file(self.posA, self.posB, "AB.pos")
             self.write_position_file(self.posB, self.posA, "BA.pos")
+
+        elif( input_variables.general_format != 0 and self.multichains != 0):
+
+            self.write_position_file_chains()
+
 
         else:
             self.write_general_position_file(self.posA, self.posB, "pos.pos")
