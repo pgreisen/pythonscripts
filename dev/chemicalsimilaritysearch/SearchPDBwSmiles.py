@@ -275,12 +275,14 @@ class SearchPDBwSmiles:
         for item in args_dict:
             setattr(self, item, args_dict[item])
         
+        print self.similarity
+
         # converts the query pdb to smile format
         # self.smi_directly
         if( self.smi_directly == 0 ):
             self.convert_pdb_smi()
 
-        import pdb;pdb.set_trace()
+        ##import pdb;pdb.set_trace()
         self.set_smiles()
 
 

@@ -1,0 +1,22 @@
+This script will generate a position file, which can be used with the matcher algorithm in Rosetta. It was initially setup for helical bundles but will also do interactions between chain A and B. 
+
+python generate_position_file.py -h
+usage: generate_position_file.py [-h] [-d DISTANCE] [-b HELICAL_BUNDLE]
+                                 [-f PDBFILE] [--offset OFFSET]
+                                 [--format GENERAL_FORMAT]
+                                 [--minimum_distance MINIMUM_DISTANCE]
+                                 [--multichains MULTICHAINS]
+
+for a helical bundle with four chains the user should initially renumber the chains this will lead to a less troubled road further down. There is a script that the user can use for this:
+
+python ~/pythonscripts/dev/renumber_pdb_starting_from_one/renumber_to_1_pdbfile.py PDBFILE > NEW_PDBFILE
+
+To generate a resfile for matching 
+
+python ../generate_position_file.py -d 1 -f  new.pdb --multichains 1 -d 7 --format 1
+
+d: distance 7 AA ( this might have to be changed depending on the radius you are sampling )
+--format ( format for matching other option would be per cst ) 
+--mulitchains ( assumes you have the chains A,B,C,D must be different from 0 )
+
+this will generate an outfile, position.chains. 
