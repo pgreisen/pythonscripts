@@ -1,0 +1,1 @@
+qsub -q bf qsub_run_ligand.sh -v TEMP=300,JOBS=1,lib=/gscratch/baker/greisen/md_parameters/ohp.lib,parm=/gscratch/baker/greisen/md_parameters/ohp.frcmod,lig=OHP
