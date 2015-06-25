@@ -1,0 +1,3 @@
+how to submit script
+
+qsub ../qsub_md_simulation/qsub_run_apo_md_disulfides.sh -v TEMP="350",JOBS="2"

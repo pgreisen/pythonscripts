@@ -1,0 +1,8 @@
+
+Minimization of complex
+ &cntrl
+  imin   = 1,
+  maxcyc = 20000,
+  ncyc   = 10000,
+  cut    = 10.0
+ /

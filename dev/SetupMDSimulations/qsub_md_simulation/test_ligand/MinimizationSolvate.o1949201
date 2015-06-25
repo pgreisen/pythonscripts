@@ -1,0 +1,188 @@
+Variable is set: 300
+Variable is set: 1
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/prep to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/lib to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/parm to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB.
+-f: Source generate_apo_parameters.sh.
+
+Welcome to LEaP!
+Sourcing: /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB
+Log file: ./leap.log
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/frcmod.ff12SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff12SB protein backbone and sidechain parameters
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/amino12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/aminoct12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/aminont12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/nucleic12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/ions08.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/solvents.lib
+Sourcing: ./generate_apo_parameters.sh
+----- Source: /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.gaff
+----- Source of /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.5, January 2013)
+Loading parameters: /gscratch/baker/greisen/md_parameters/ohp.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+remark goes here
+Loading library: /gscratch/baker/greisen/md_parameters/ohp.lib
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 4 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	OHP	1
+  )
+ (no restraints)
+	Quit
+| New format PARM file being parsed.
+| Version =    1.000 Date = 04/08/14 Time = 15:20:32
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/prep to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/lib to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/parm to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB.
+-f: Source parameters_for_solvation_apo.sh.
+
+Welcome to LEaP!
+Sourcing: /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB
+Log file: ./leap.log
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/frcmod.ff12SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff12SB protein backbone and sidechain parameters
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/amino12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/aminoct12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/aminont12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/nucleic12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/ions08.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/solvents.lib
+Sourcing: ./parameters_for_solvation_apo.sh
+----- Source: /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.gaff
+----- Source of /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.5, January 2013)
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/ions08.lib
+Loading library: /gscratch/baker/greisen/md_parameters/ohp.lib
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /gscratch/baker/greisen/md_parameters/ohp.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+remark goes here
+Loading PDB file: ./minimized.pdb
+  total atoms in file: 54
+  Solute vdw bounding box:              15.338 8.661 7.653
+  Total bounding box for atom centers:  35.338 28.661 27.653
+  Solvent unit box:                     18.774 18.774 18.774
+  Total vdw box size:                   37.968 31.785 30.728 angstroms.
+  Volume: 37082.453 A^3 
+  Total mass 14364.914 amu,  Density 0.643 g/cc
+  Added 779 residues.
+addIons: 1st Ion & target are the same charge:
+     can't neutralize.
+ 0.000000 0 1 0
+0 Cl- ion required to neutralize.
+Adding 0 counter ions to "PRT" using 1A grid
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 4 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	OHP	1
+	WAT	779
+  )
+ (no restraints)
+	Quit
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+The maximum number of residues in pdb is  1
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+1949207.login1.hyak.local
+The following parameters have been set:
+Temperature=  300
+Number of trajectories=  1
+Number of processors=  12
+Wall time of run is=  1000000
+Queue is selected=  bf
+Parameter file is=  /gscratch/baker/greisen/md_parameters/ohp.frcmod
+Libfile is=  /gscratch/baker/greisen/md_parameters/ohp.lib
+Ligand name is=  OHP
+Setting AMBERHOME
+path is  /gscratch/baker/greisen/qsub_md_simulation/test_ligand
+DONE
