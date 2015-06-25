@@ -23,7 +23,7 @@ class GetLigandPositions:
 
 
     def __init__(self):
-        self.DISTANCE_AWAY_FROM_LIGAND = 8
+        self.DISTANCE_AWAY_FROM_LIGAND = 4
     
     # @require a position file
     # returns a list with potential positions
