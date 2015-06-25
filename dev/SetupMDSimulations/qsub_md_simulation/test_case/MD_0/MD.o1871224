@@ -1,0 +1,144 @@
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D2370  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002AB8812679C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D2287  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B97A9F4E9C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D22BF  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002ABCCFC589C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D29BD  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B3AA4A599C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D23A0  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B44DD83E9C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D2498  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B578CA3E9C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D23A0  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B681CDB59C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D24BC  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B54E252A9C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D235A  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002BAA9ACE79C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D22B2  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B92B9D739C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D232E  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B241DE3E9C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+pmemd.MPI          00000000004D24B7  Unknown               Unknown  Unknown
+pmemd.MPI          00000000004CDCE8  Unknown               Unknown  Unknown
+pmemd.MPI          000000000048C8F1  Unknown               Unknown  Unknown
+pmemd.MPI          000000000047821E  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000403324  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402A0C  Unknown               Unknown  Unknown
+libc.so.6          00002B52B7A9D9C4  Unknown               Unknown  Unknown
+pmemd.MPI          0000000000402919  Unknown               Unknown  Unknown
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc

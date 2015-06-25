@@ -1,0 +1,199 @@
+Variable is set: 350
+Variable is set: 1
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/prep to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/lib to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/parm to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB.
+-f: Source generate_input_parameters_disulfides.sh.
+
+Welcome to LEaP!
+Sourcing: /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB
+Log file: ./leap.log
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/frcmod.ff12SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff12SB protein backbone and sidechain parameters
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/amino12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/aminoct12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/aminont12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/nucleic12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/ions08.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/solvents.lib
+Sourcing: ./generate_input_parameters_disulfides.sh
+----- Source: /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.gaff
+----- Source of /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.5, January 2013)
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/ions08.lib
+Loading PDB file: ./design1.pdb
+  total atoms in file: 407
+  Leap added 369 missing atoms according to residue templates:
+       369 H / lone pairs
+Checking Unit.
+WARNING: The unperturbed charge of the unit: -2.000000 is not zero.
+
+ -- ignoring the warning.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 172 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CLYS	1
+	NILE	1
+  )
+ (no restraints)
+	Quit
+| New format PARM file being parsed.
+| Version =    1.000 Date = 02/18/14 Time = 21:56:36
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/prep to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/lib to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/parm to search path.
+-I: Adding /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB.
+-f: Source parameters_for_solvation_apo.sh.
+
+Welcome to LEaP!
+Sourcing: /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB
+Log file: ./leap.log
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/frcmod.ff12SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff12SB protein backbone and sidechain parameters
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/amino12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/aminoct12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/aminont12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/nucleic12.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/ions08.lib
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/solvents.lib
+Sourcing: ./parameters_for_solvation_apo.sh
+----- Source: /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.gaff
+----- Source of /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.5, January 2013)
+Loading library: /gscratch/baker/greisen/AT12/amber12/dat/leap/lib/ions08.lib
+Loading parameters: /gscratch/baker/greisen/AT12/amber12/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading PDB file: ./minimized.pdb
+  total atoms in file: 776
+  Solute vdw bounding box:              27.086 29.400 26.313
+  Total bounding box for atom centers:  47.086 49.400 46.313
+  Solvent unit box:                     18.774 18.774 18.774
+  Total vdw box size:                   50.172 52.317 49.050 angstroms.
+  Volume: 128748.138 A^3 
+  Total mass 57715.452 amu,  Density 0.744 g/cc
+  Added 2880 residues.
+2 Na+ ions required to neutralize.
+Adding 2 counter ions to "PRT" using 1A grid
+Grid extends from solute vdw + 1.37  to  7.37
+Resolution:      1.00 Angstrom.
+grid build: 0 sec
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+charges: 1 sec
+(No solvent overlap)
+Placed Na+ in PRT at (1.47, -11.35, -4.99).
+(Replacing solvent molecule)
+Placed Na+ in PRT at (0.44, 14.34, 4.95).
+
+Done adding ions.
+ 0.000000 0 1 0
+0 Cl- ion required to neutralize.
+Adding 0 counter ions to "PRT" using 1A grid
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 172 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CLYS	1
+	NILE	1
+	WAT	2879
+  )
+ (no restraints)
+	Quit
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+The maximum number of residues in pdb is  49
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+1871224.login1.hyak.local
+350
+1
+12
+1000000
+bf
+The pdbfile is  00001.pdb
+path is  /gscratch/baker/greisen/qsub_md_simulation/test_case
+Histidines are set according to Rosettta
+DONE

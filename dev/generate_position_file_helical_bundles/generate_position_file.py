@@ -349,7 +349,7 @@ class GeneratePositionFile:
 
 
 
-        import pdb;pdb.set_trace()
+        # import pdb;pdb.set_trace()
         if(input_variables.general_format == 0 and self.multichains == 0):
 
             self.write_position_file(self.posA, self.posB, "AB.pos")
