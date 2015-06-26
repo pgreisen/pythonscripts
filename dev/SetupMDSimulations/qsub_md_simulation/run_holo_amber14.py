@@ -24,6 +24,7 @@ A directory with one pdb file.
 
 
 '''
+
 sffa = SolvationFileForAmber()
 
 def setup_and_run_qsub(wt="3:59:00",np="12",queue="bf"):

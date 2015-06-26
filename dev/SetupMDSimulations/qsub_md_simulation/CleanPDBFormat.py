@@ -16,6 +16,31 @@ class CleanPDBFormat:
     def __init__(self):
         self.DISULFIDESDISTANCE = 2.5
 
+
+    def get_atom_numbers_for_cyclic_peptide_bond(self):
+        '''
+        
+
+
+        '''
+        pdbfile = open("design1.pdb", 'r')
+        first_atom = ""
+        last_atom = ""
+        for line in pdbfile:
+            residue_nr = str(line[22:26]).strip()
+            atom_name = str(line[13:15]).strip()
+
+            if( residue_nr == self.first_residue and atom_name == 'N' ):
+                first_atom = str(line[7:11]).strip()
+                # print "FIRST ATOM DEBUG",line
+
+            elif( residue_nr == self.last_residue and atom_name == 'C' ):
+                last_atom = str(line[7:11]).strip()
+                # print "SECOND ATOM DEBUG",line
+        return first_atom, last_atom
+
+
+
     def set_correct_histidines(self,tmplist, hie_numbers):
         '''
 
