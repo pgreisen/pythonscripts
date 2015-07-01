@@ -24,7 +24,10 @@ A directory with one pdb file.
 
 
 '''
+<<<<<<< HEAD
 
+=======
+>>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
 sffa = SolvationFileForAmber()
 
 def setup_and_run_qsub(wt="3:59:00",np="12",queue="bf"):

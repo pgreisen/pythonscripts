@@ -9,6 +9,14 @@
     <option name="myDocStringFormat" value="Epytext" />
   </component>
   <component name="TestRunnerService">
+<<<<<<< HEAD
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
 </module>
+=======
+    <option name="projectConfiguration" value="Unittests" />
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>
+
+>>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656

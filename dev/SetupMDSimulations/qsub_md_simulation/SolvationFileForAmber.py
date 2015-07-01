@@ -36,6 +36,7 @@ quit
 
         return template
 
+<<<<<<< HEAD
     def get_template_cp(self,disulfide_pairs):
         ds_string = ""
         for i in disulfide_pairs:
@@ -85,6 +86,8 @@ quit
 
 
 
+=======
+>>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
     def get_template_ligand(self,ligandname,parm,lib):
         template = '''
 source leaprc.gaff

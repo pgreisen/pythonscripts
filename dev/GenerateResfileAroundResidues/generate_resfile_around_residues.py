@@ -41,7 +41,11 @@ class GenerateResfileAroundResidues:
                 y = str(line[38:46]).rstrip()
                 z = str(line[46:54]).rstrip()
                 ligand_coor.append(array([float(x),float(y),float(z)]))
+<<<<<<< HEAD
         # print "Ligand Coordinates ", ligand_coor
+=======
+        print "Ligand Coordinates ", ligand_coor
+>>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
         return ligand_coor
 
     def get_length_protein(self):
