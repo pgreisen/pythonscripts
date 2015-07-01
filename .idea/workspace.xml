@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1939b-ebb2-40a5-9e8c-72dc7a47ac2d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/CleanPDBFormat.py" afterPath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/CleanPDBFormat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/run_holo_amber14.py" afterPath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/run_holo_amber14.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SolvationFileForAmber.py" afterPath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SolvationFileForAmber.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py" afterPath="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py" />
     </list>
     <ignored path="pythonscripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,130 +27,40 @@
     <favorites_list name="pythonscripts" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="SearchPDBwSmiles.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/chemicalsimilaritysearch/SearchPDBwSmiles.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="3517" max-vertical-offset="4455">
-                  <caret line="276" column="8" selection-start-line="273" selection-start-column="8" selection-end-line="276" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="generate_position_file.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="5040" max-vertical-offset="6225">
-                  <caret line="369" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
-                  <folding>
-                    <marker date="1435246663000" expanded="true" signature="14239:14332" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="generate_resfile_around_residues.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_resfile_around_residues.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="2505">
-                  <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="run_holo_amber14.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/run_holo_amber14.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="5025">
-                  <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="setup_and_run_MD.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.074074" vertical-offset="3196" max-vertical-offset="5460">
-                  <caret line="233" column="22" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CleanPDBFormat.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/CleanPDBFormat.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.31982943" vertical-offset="0" max-vertical-offset="3510">
-                  <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="run_holo.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/add_cyclic_peptides/run_holo.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-23.296297" vertical-offset="2896" max-vertical-offset="5460">
-                  <caret line="239" column="19" selection-start-line="239" selection-start-column="19" selection-end-line="239" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CleanPDBFormat.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/add_cyclic_peptides/CleanPDBFormat.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-15.111111" vertical-offset="2817" max-vertical-offset="4335">
-                  <caret line="216" column="36" selection-start-line="201" selection-start-column="1" selection-end-line="216" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SolvationFileForAmber.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SolvationFileForAmber.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-19.851852" vertical-offset="649" max-vertical-offset="1560">
-                  <caret line="79" column="59" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="59" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SetupSolventMinimization.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SetupSolventMinimization.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-                  <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="setup_and_run_MD.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8378378" vertical-offset="1925" max-vertical-offset="5400">
-                  <caret line="184" column="74" selection-start-line="184" selection-start-column="74" selection-end-line="184" selection-end-column="74" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="setup_and_run_MD.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="5235">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup_hyak_jobs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/SetupHyakJob/setup_hyak_jobs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2400">
+              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate_resfile_around_residues.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev/GeneratePolyGlycine/generate_resfile_around_residues.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47974414" vertical-offset="0" max-vertical-offset="938">
+              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -172,9 +81,12 @@
       <list>
         <option value="$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_resfile_around_residues.py" />
         <option value="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/run_holo_amber14.py" />
-        <option value="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py" />
         <option value="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/add_cyclic_peptides/CleanPDBFormat.py" />
+        <option value="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SolvationFileForAmber.py" />
         <option value="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/CleanPDBFormat.py" />
+        <option value="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py" />
+        <option value="$PROJECT_DIR$/dev/SetupHyakJob/setup_hyak_jobs.py" />
+        <option value="$PROJECT_DIR$/dev/GeneratePolyGlycine/generate_resfile_around_residues.py" />
       </list>
     </option>
   </component>
@@ -223,7 +135,7 @@
     <property name="options.lastSelected" value="settings.github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/add_cyclic_peptides/run_holo.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/GeneratePolyGlycine/generate_resfile_around_residues.py" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="262" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1055" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1056" />
@@ -490,7 +402,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5040" max-vertical-offset="6225">
           <caret line="369" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
           <folding>
-            <marker date="1435246663000" expanded="true" signature="14239:14332" placeholder="..." />
+            <marker date="1435246663000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -499,7 +411,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="2505">
           <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="e#22#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -566,7 +480,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="6135" max-vertical-offset="6225">
           <caret line="412" column="0" selection-start-line="412" selection-start-column="0" selection-end-line="412" selection-end-column="0" />
           <folding>
-            <marker date="1435246663000" expanded="true" signature="14239:14332" placeholder="..." />
+            <marker date="1435246663000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -616,7 +530,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="4095" max-vertical-offset="4185">
           <caret line="276" column="0" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
           <folding>
-            <marker date="1435246663000" expanded="true" signature="14239:14332" placeholder="..." />
+            <marker date="1435246663000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -751,19 +665,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_resfile_around_residues.py">
+    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SetupSolventMinimization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="2505">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/add_cyclic_peptides/CleanPDBFormat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-69.333336" vertical-offset="0" max-vertical-offset="4335">
+          <caret line="209" column="48" selection-start-line="209" selection-start-column="30" selection-end-line="209" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/add_cyclic_peptides/run_holo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3674833" vertical-offset="0" max-vertical-offset="5460">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SolvationFileForAmber.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5555556" vertical-offset="0" max-vertical-offset="2295">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/CleanPDBFormat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.25926" vertical-offset="3182" max-vertical-offset="4080">
+          <caret line="263" column="55" selection-start-line="263" selection-start-column="55" selection-end-line="263" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/run_holo_amber14.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5025">
+        <state vertical-scroll-proportion="-0.9594883" vertical-offset="1215" max-vertical-offset="5025">
           <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/GenerateResfileAroundResidues/generate_resfile_around_residues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="2535">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="27" />
+          <folding>
+            <element signature="e#22#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -777,60 +735,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/generate_position_file_helical_bundles/generate_position_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5040" max-vertical-offset="6225">
-          <caret line="369" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4185" max-vertical-offset="6225">
+          <caret line="319" column="0" selection-start-line="297" selection-start-column="8" selection-end-line="319" selection-end-column="0" />
           <folding>
-            <marker date="1435246663000" expanded="true" signature="14239:14332" placeholder="..." />
+            <marker date="1435246663000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SetupSolventMinimization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/SolvationFileForAmber.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.851852" vertical-offset="649" max-vertical-offset="1560">
-          <caret line="79" column="59" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/add_cyclic_peptides/run_holo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.296297" vertical-offset="2896" max-vertical-offset="5460">
-          <caret line="239" column="19" selection-start-line="239" selection-start-column="19" selection-end-line="239" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/add_cyclic_peptides/CleanPDBFormat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.111111" vertical-offset="2817" max-vertical-offset="4335">
-          <caret line="216" column="36" selection-start-line="201" selection-start-column="1" selection-end-line="216" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/setup_and_run_MD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.074074" vertical-offset="3196" max-vertical-offset="5460">
-          <caret line="233" column="22" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
+        <state vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="5235">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="15" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/SetupMDSimulations/qsub_md_simulation/CleanPDBFormat.py">
+    <entry file="file://$PROJECT_DIR$/dev/SetupHyakJob/setup_hyak_jobs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31982943" vertical-offset="0" max-vertical-offset="3510">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2400">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/GeneratePolyGlycine/generate_resfile_around_residues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47974414" vertical-offset="0" max-vertical-offset="938">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
           <folding />
         </state>
       </provider>

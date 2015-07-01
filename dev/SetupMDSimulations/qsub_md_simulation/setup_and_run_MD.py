@@ -1,8 +1,9 @@
 import os,subprocess, sys
 from SolvationFileForAmber import *
-from optparse import OptionParser
+#from optparse import OptionParser
 from CleanPDBFormat import *
 from SetupSolventMinimization import *
+import argparse
 
 '''
 
@@ -39,7 +40,7 @@ class SetupAndRunMD:
         '''
 
         self.temperature = 300
-        self.number_of_runs = 0
+        self.number_of_runs = 1
         self.number_of_processors = 12
         self.length_of_run = 10000000
         self.queue = "bf"
@@ -49,7 +50,7 @@ class SetupAndRunMD:
         self.output_freq = "5000"
         self.ff = "leaprc.ff14SB"
         self.cyclic_peptide = 0
-        sffa = SolvationFileForAmber()
+        self.sffa = SolvationFileForAmber()
 
 
 
@@ -116,9 +117,9 @@ ntpr = '''+self.output_freq+''', ntwx = '''+self.output_freq+''', ntwr = '''+sel
             subprocess.Popen(heat_rst_file,shell=True).wait()
             subprocess.Popen(heat_parm_file,shell=True).wait()
 
-            write_md_in(temperature,length_of_run)
+            self.write_md_in(temperature,length_of_run)
 
-            setup_and_run_qsub(wt,np,queue)
+            self.setup_and_run_qsub(wt,np,queue)
             # INSERT HERE
             os.chdir("../")
 
@@ -161,47 +162,45 @@ quit
         path = './'
         files = os.listdir(path)
 
-        parser = OptionParser()
-        parser.add_option('-t',dest='temperature', help='Temperature for the simulation',default="300")
+        parser = argparse.ArgumentParser(description="Setup MD simulation using Amber for protein, protein-ligand or cyclic peptides")
 
-        parser.add_option('-n',dest='number_of_runs', help='Numbers of runs',default='25')
+        parser.add_argument('-t',dest='temperature', help='Temperature for the simulation',default="300")
 
-        parser.add_option('--np',dest='number_of_processors', help='Numbers of processors used for the simulation',default='12')
+        parser.add_argument('-n',dest='number_of_runs', help='Numbers of runs',default='1')
 
-        parser.add_option('--lr',dest='length_of_run', help='Length of the simulation',default='1000000')
+        parser.add_argument('--np',dest='number_of_processors', help='Numbers of processors used for the simulation',default='12')
 
-        parser.add_option('-q',dest='queue', help='queue for the simulatio',default='bf')
+        parser.add_argument('--lr',dest='length_of_run', help='Length of the simulation',default='1000000')
 
-        parser.add_option('--wt',dest='wt', help='Wall time limit',default='3:59:00')
+        parser.add_argument('-q',dest='queue', help='queue for the simulatio',default='bf')
 
-        parser.add_option('--lib',dest='libfile', help='Name of library file',default=None)
+        parser.add_argument('--wt',dest='wt', help='Wall time limit',default='3:59:00')
 
-        parser.add_option('--parm',dest='parmfile', help='Name of parameter file',default=None)
+        parser.add_argument('--lib',dest='libfile', help='Name of library file',default=None)
 
-        parser.add_option('--lig',dest='ligname', help='Name of ligand',default=None)
+        parser.add_argument('--parm',dest='parmfile', help='Name of parameter file',default=None)
 
-        parser.add_option('--ff',dest='ff', help='Force field used to setup the computation',default="leaprc.ff14SB")
+        parser.add_argument('--lig',dest='ligname', help='Name of ligand',default=None)
 
-        parser.add_option('--cyclic_peptide',dest='cyclic_peptide', help='This will close the C-N terminal - also remember to change ff', default=0)
+        parser.add_argument('--ff',dest='ff', help='Force field used to setup the computation',default="leaprc.ff14SB")
 
+        parser.add_argument('--cyclic_peptide',dest='cyclic_peptide', help='This will close the C-N terminal - also remember to change ff', default=0)
 
         args_dict = vars( parser.parse_args() )
+
         for item in args_dict:
             setattr(self, item, args_dict[item])
 
-        libfile = options.libfile
-        parmfile = options.parmfile
-        ligname = options.ligname
-
         print "The following parameters have been set:"
-        print "Temperature= ",temperature
-        print "Number of trajectories= ",number_of_runs
-        print "Number of processors= ",number_of_processors
-        print "Wall time of run is= ",length_of_run
-        print "Queue is selected= ",queue
-        print "Parameter file is= ", parmfile
-        print "Libfile is= ",libfile
-        print "Ligand name is= ",ligname
+        print "Temperature= ",self.temperature
+        print "Number of trajectories= ",self.number_of_runs
+        print "Number of processors= ",self.number_of_processors
+        print "Wall time of run is= ",self.length_of_run
+        print "Queue is selected= ",self.queue
+        print "Parameter file is= ", self.parmfile
+        print "Libfile is= ",self.libfile
+        print "Ligand name is= ",self.ligname
+        print "The force field is set to ", self.ff
         print "Setting AMBERHOME"
 
         amberhome="export AMBERHOME=/gscratch/baker/greisen/AT14/amber14"
@@ -232,12 +231,12 @@ quit
 
         ##################################################
         cpf = CleanPDBFormat()
-        cpf.main(pdbfile, libfile, parmfile )
+        cpf.main(pdbfile, self.libfile, self.parmfile,self.cyclic_peptide )
         #################################################
         print "Histidines are set according to Rosettta"
 
         # Generate parameters for amber
-        generate_parms_for_amber = "/gscratch/baker/greisen/AT14/amber14/bin/tleap -s -f /gscratch/baker/greisen/AT14/amber14/dat/leap/cmd/leaprc.ff14SB -f generate_input_parameters_disulfides.sh"
+        generate_parms_for_amber = "/gscratch/baker/greisen/AT14/amber14/bin/tleap -s -f /gscratch/baker/greisen/AT14/amber14/dat/leap/cmd/"+self.ff+" -f generate_input_parameters_disulfides.sh"
         subprocess.Popen(generate_parms_for_amber,shell=True).wait()
 
         # The script is executed in Minimization
@@ -262,33 +261,19 @@ quit
         copy_ds_file = "cp ../Minimization/disulfide_pairs.txt ."
         subprocess.Popen(copy_ds_file,shell=True).wait()
 
-        disulfides = sffa.get_disulfide_pairs()
-        # Break line 256
-        '''
+        disulfides = self.sffa.get_disulfide_pairs()
 
-        # Break line 256
-    if( libfile != None  ):
-        sffa.get_template_protein_ligand_complex(ligname,parmfile,libfile, disulfides)
-
-    else:
-        sffa.get_template( disulfides )
-
-
-
-
-        '''
-
-        if( libfile != None  ):
-            sffa.get_template_protein_ligand_complex(ligname,parmfile,libfile, disulfides)
+        if( self.libfile != None  ):
+            self.sffa.get_template_protein_ligand_complex(ligname,parmfile,self.libfile, disulfides)
 
         elif( self.cyclic_peptide != 0 ):
-            sffa.get_template_cp( disulfides )
+            self.sffa.get_template_cp( disulfides )
 
         else:
-            sffa.get_template( disulfides )
+            self.sffa.get_template( disulfides )
 
 
-        generate_amber_exe_for_generate_parameters_for_solvation()
+        self.generate_amber_exe_for_generate_parameters_for_solvation()
 
         # Execute solvation script
         # Solvate the protein - here naming issues can araise
@@ -317,7 +302,7 @@ quit
 
         # dump parameter file for minimization of
         # whole system
-        generate_min_sys_input_file()
+        self.generate_min_sys_input_file()
 
         exe_minimization_whole_system="mpiexec.hydra -np 12 /gscratch/baker/greisen/AT12/amber12/bin/pmemd.MPI -O -i minimize_sys.in -p solv.prmtop -c solvent_minimized.rst -r minimization_whole_system.rst"
         subprocess.Popen(exe_minimization_whole_system,shell=True).wait()
@@ -339,7 +324,7 @@ quit
 
         # setup as a class instead and inherit from it
         # setup input parameter file
-        heat_parameter_file_setup="/gscratch/baker/buildbot/opt/bin/python2.7 /gscratch/baker/greisen/qsub_md_simulation/setup_heat_system.py minimized.pdb "+str(temperature)
+        heat_parameter_file_setup="/gscratch/baker/buildbot/opt/bin/python2.7 /gscratch/baker/greisen/qsub_md_simulation/setup_heat_system.py minimized.pdb "+str(self.temperature)
 
         subprocess.Popen(heat_parameter_file_setup,shell=True).wait()
 
@@ -348,8 +333,8 @@ quit
 
         os.chdir("../")
     
-        if( number_of_runs > 0 ):
-            setup_and_run_md(number_of_runs,wt,number_of_processors,queue)
+        if( self.number_of_runs > 0 ):
+            self.setup_and_run_md(self.number_of_runs,self.wt,self.number_of_processors,self.queue)
     
         print "DONE"
 
