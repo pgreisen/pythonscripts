@@ -391,7 +391,7 @@ mol addrep top
                 print "skipping lines", line
 
         filename = fl.split('_')
-        if( len(filename) == 2 ):
+        if( len(filename) != 2 ):
             filename = fl.split('.')
         import pdb;pdb.set_trace()
         return filename[0],filename[1],round(mean(data),2),round(sqrt(var(data)),2),round(min(data),2),round(max(data),2)
