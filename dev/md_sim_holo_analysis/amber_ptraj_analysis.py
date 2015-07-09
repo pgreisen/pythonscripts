@@ -389,11 +389,11 @@ mol addrep top
                     data.append(float(line.split()[1]) )
             except:
                 print "skipping lines", line
-        try:
-            filename = fl.split('_')
-        except:
+
+        filename = fl.split('_')
+        if( len(filename) == 2 ):
             filename = fl.split('.')
-        import pdb;pdb.set_trace()
+        # import pdb;pdb.set_trace()
         return filename[0],filename[1],round(mean(data),2),round(sqrt(var(data)),2),round(min(data),2),round(max(data),2)
 
 
