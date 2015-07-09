@@ -382,6 +382,7 @@ mol addrep top
         for line in tmp:
             # 09-07-2015
             # Line 1/2
+            import pdb;pdb.set_trace()
             try:
                 data.append(float(line.split()[1]) )
             except:
