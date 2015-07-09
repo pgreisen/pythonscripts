@@ -393,7 +393,7 @@ mol addrep top
         filename = fl.split('_')
         if( len(filename) != 2 ):
             filename = fl.split('.')
-        import pdb;pdb.set_trace()
+
         return filename[0],filename[1],round(mean(data),2),round(sqrt(var(data)),2),round(min(data),2),round(max(data),2)
 
 
@@ -659,6 +659,7 @@ mol addrep top
 
 
     def get_cross_correlation_network(self,residue_number):
+        import pdb;pdb.set_trace()
         line_number = int(residue_number) - 1
         dummy = 0
         cc_vector = []
@@ -738,7 +739,7 @@ mol addrep top
             for cc_rp_residue in rp.split('+'):
                 if( cc_rp_residue == ""):
                     continue
-                # import pdb; pdb.set_trace()
+
                 pymol_session.write("inFile = open(\"cc_vector_"+str( cc_rp_residue )+".dat\", 'r')\n")
                 pymol_session.write("stored.newB = []\n")
                 pymol_session.write("for line in inFile.readlines(): stored.newB.append( float(line) )\n")
