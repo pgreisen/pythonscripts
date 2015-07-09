@@ -382,9 +382,10 @@ mol addrep top
         for line in tmp:
             # 09-07-2015
             # Line 1/2
-            import pdb;pdb.set_trace()
+            #import pdb;pdb.set_trace()
             try:
-                data.append(float(line.split()[1]) )
+                if( len(line.split()) > 1 ):
+                    data.append(float(line.split()[1]) )
             except:
                 print "skipping lines", line
         filename = fl.split('_')
