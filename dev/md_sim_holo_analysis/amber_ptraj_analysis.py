@@ -101,6 +101,11 @@ center origin :1-'''+str(ln)+'''
 # now image the whole system about the centered origin
 image origin center
 
+# added rmsd computation
+rms first out rmsd_canc.dat @CA,C,N
+rms first out rmsd.dat
+
+
 ##average avg.pdb pdb
 
 reference avg.pdb
