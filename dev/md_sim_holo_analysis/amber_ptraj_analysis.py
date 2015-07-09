@@ -383,6 +383,7 @@ mol addrep top
             # 09-07-2015
             # Line 1/2
             #import pdb;pdb.set_trace()
+            print line
             try:
                 if( len(line.split()) > 1 ):
                     data.append(float(line.split()[1]) )
