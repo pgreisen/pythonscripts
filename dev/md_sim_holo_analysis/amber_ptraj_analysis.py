@@ -103,7 +103,7 @@ image origin center
 
 # added rmsd computation
 rms first out rmsd_canc.dat @CA,C,N
-rms first out rmsd.dat
+rms first out rmsd_whole.dat
 
 
 ##average avg.pdb pdb
@@ -388,8 +388,11 @@ mol addrep top
                     data.append(float(line.split()[1]) )
             except:
                 print "skipping lines", line
-        filename = fl.split('_')
-        import pdb;pdb.set_trace()
+        try:
+            filename = fl.split('_')
+        except:
+            filename = fl.split('.')
+
         return filename[0],filename[1],round(mean(data),2),round(sqrt(var(data)),2),round(min(data),2),round(max(data),2)
 
 
