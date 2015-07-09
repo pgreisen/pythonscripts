@@ -380,7 +380,10 @@ mol addrep top
         tmp = open(fl,'r')
         data = []
         for line in tmp:
-            data.append(float(line.split()[1]) )
+            # 09-07-2015
+            # Line 1/2
+            try:
+                data.append(float(line.split()[1]) )
         filename = fl.split('_')
 
         return filename[0],filename[1],round(mean(data),2),round(sqrt(var(data)),2),round(min(data),2),round(max(data),2)
