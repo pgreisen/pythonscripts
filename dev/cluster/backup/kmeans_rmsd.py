@@ -30,6 +30,7 @@ with open(tmpfile,'r') as f:
                tmp_pair = array( [ tmp_rmsd, tmp_rmsd  ] )
                data.append( tmp_pair )
 
+
                if( tmp_rmsd < 1.0 ):
                     a.append( tmp_rmsd )
                elif( tmp_rmsd < 2.0 ):
@@ -58,18 +59,19 @@ print b[len(b)/2]
 print c[len(c)/2]
 print d[len(d)/2]
 print e[len(e)/2]
+
+
 # computing K-Means with K = 2 (2 clusters)
 ##centroids,_ = kmeans(data,2)
 centroids,_ = kmeans(data,8)
 # assign each sample to a cluster
 ##idx,_ = vq(data,centroids)
-idx,_ = vq(data,centroids)
 
-help(kmeans)
-help(vq)
+idx,_ = vq(data,centroids)
 
 # some plotting using numpy's logical indexing
 #plot(data[idx==0,0],data[idx==0,1],'ob', data[idx==1,0],data[idx==1,1],'or')
+
 plot(data[idx==0,0],data[idx==0,1],'ob', data[idx==1,0],data[idx==1,1],'or')
 plot(centroids[:,0],centroids[:,1],'sg',markersize=8)
 ##print centroids[:,0],centroids[:,1]

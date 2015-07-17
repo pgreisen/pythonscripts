@@ -152,7 +152,6 @@ class get_union:
             px,py = self.pareto_frontier(x_array, y_array, True, False )
 
             for i,j in zip(px, py):
-
                 self.pdbs_on_front.append( x[str(i)] )
                 x.pop( str(i) )
                 x_array.remove( i )

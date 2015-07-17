@@ -1,0 +1,1 @@
+/work/buildbot/builds/release/weekly_releases/current/bin/match.default.linuxgccrelease -s 1na0.pdb @general_matching.flags  --match:lig_name LG1 -match:scaffold_active_site_residues 1na0.pos -match:geometric_constraint_file LG1.cst -extra_res_fa LG1.fa.params > log_1na0 & 

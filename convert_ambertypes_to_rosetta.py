@@ -19,8 +19,32 @@ def convert_amber_atomtype_to_rosetta_atomtype(amberfile):
                 atoms = False
                 
             elif( atoms == True and len(line) > 75 ):
-                tmp_characters = line[47]+"."+line[48]
-                line = line[0:47]+tmp_characters+line[50:]
+                atms =line[47:49].upper()
+
+                if(atms[0] == 'H' ):
+                    tmp_characters = line[46]+atms[0]+" "+line[49]
+                    line = line[0:46]+tmp_characters+line[50:]
+                    
+                elif(atms == 'SS' ):
+                    tmp_characters = line[46]+"S.3"
+                    line = line[0:46]+tmp_characters+line[50:]
+
+                elif(atms == 'OS' ):
+                    tmp_characters = line[46]+"O.2"
+                    line = line[0:46]+tmp_characters+line[50:]
+
+                elif(atms == 'O ' ):
+                    tmp_characters = line[46]+"O.3"
+                    line = line[0:46]+tmp_characters+line[50:]
+
+                elif(atms == 'p5' ):
+                    tmp_characters = line[46]+"P.3"
+                    line = line[0:46]+tmp_characters+line[50:]
+
+                else:
+                    tmp_characters = line[46]+atms[0]+"."+line[48]
+                    line = line[0:46]+tmp_characters+line[50:]
+
             tmpfile.write(line)
     tmpfile.close()
 
