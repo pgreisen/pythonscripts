@@ -1,0 +1,43 @@
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<tala weights="talaris2014.wts" />
+		<tala_cst weights="talaris2014.wts">
+			<Reweight scoretype="atom_pair_constraint" weight=1.0 />
+			<Reweight scoretype="angle_constraint" weight=1.0 />
+			<Reweight scoretype="dihedral_constraint" weight=1.0 />
+		</tala_cst>
+	</SCOREFXNS>
+	<TASKOPERATIONS>
+		<RestrictToRepacking name=repack_only />
+        <RestrictChainToRepacking name=only_repack_chain chain=1 />
+        <RestrictChainToRepacking name=only_repack_chain3 chain=3 />
+        <PreventResiduesFromRepacking name=preventphe residues=144,199/>
+        <PreventRepacking name=no_repack_stub resnum=372 />
+		<DisallowIfNonnative name=no_cys disallow_aas=C />
+	</TASKOPERATIONS>
+	<FILTERS>
+	    <ResidueCount name=gly_count max_residue_count=2 min_residue_count=0 residue_types="GLY" count_as_percentage=0 />
+        <ScoreType name=checkscore scorefxn=tala score_type=total_score threshold=0/>
+        
+	</FILTERS>
+	<MOVERS>
+		<MutateResidue name=mutate target=372 new_res=ALA preserve_atom_coords=1 />
+
+
+
+	</MOVERS>
+	<APPLY_TO_POSE>
+	</APPLY_TO_POSE>
+	<PROTOCOLS>
+        <Add mover=mutate />
+		Add mover=add_termini />
+        Add mover=foldtree1 />
+        Add mover=tors1 />
+		Add mover=pepbond />
+		Add mover=genkic1 filter=genkicfilter1 />
+	Add mover=frlx1 />
+       Add filter_name=gly_count/>
+       Add filter_name=checkscore/>
+	</PROTOCOLS>
+	<OUTPUT />
+</ROSETTASCRIPTS>
