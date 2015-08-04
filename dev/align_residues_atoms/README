@@ -1,0 +1,3 @@
+This script will only align residues based on N,CA,CB - so you cannot
+use glycines for this. 
+This is changed at line 95 in pdbfile.py

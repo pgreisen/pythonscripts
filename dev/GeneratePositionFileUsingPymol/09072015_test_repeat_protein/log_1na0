@@ -1,0 +1,147 @@
+core.init: Rosetta version 6f71fe8784f67f40ac7bffe5ff7af0499314d3ce 2014-11-13 20:15:32 -0600 from ssh://git@github.com/RosettaCommons/main.git
+core.init: command: /work/buildbot/builds/release/weekly_releases/current/bin/match.default.linuxgccrelease -s 1na0.pdb @general_matching.flags --match:lig_name LG1 -match:scaffold_active_site_residues 1na0.pos -match:geometric_constraint_file LG1.cst -extra_res_fa LG1.fa.params
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=-1287921553 seed_offset=0 real_seed=-1287921553
+core.init.random: RandomGenerator:init: Normal mode, seed=-1287921553 RG_type=mt19937
+core.init: Resolved executable path: /gpfs/DS3524-1/WORK/buildbot/builds/release/weekly_releases/2014_46_57428/6f71fe8784f67f40ac7bffe5ff7af0499314d3ce/bin/match
+core.init: Looking for database based on location of executable: /gpfs/DS3524-1/WORK/buildbot/builds/release/weekly_releases/2014_46_57428/6f71fe8784f67f40ac7bffe5ff7af0499314d3ce/bin/../database/
+core.chemical.ResidueTypeSet: Finished initializing fa_standard residue type set.  Created 738 residue types
+core.pack.task: Packer task: initialize from command line() 
+apps.public.match.match: Selecting orientation atoms:  S1   C3   X1 
+protocols.match.MatcherTask: WARNING WARNING WARNING: no grid file specified for option -grid_boundary. The bounding grid will be generated from the dimensions of the pose. This is experimental at the moment.
+protocols.match.MatcherTask: Bounding box lower corner set to (6.123,-17.798,-0.261), upper corner set to to (47.639,18.08,26.465).
+protocols.toolbox.match_enzdes_util.EnzConstraintIO: read enzyme constraints from LG1.cst ... done, 2 cst blocks were read.
+protocols.toolbox.match_enzdes_util.AllowedSeqposForGeomCst: Reading match::scaffold_active_stie_residues 1na0.pos: 1 2 4 5 6 8 9 13 14 15 16 18 20 21 24 25 27 28 31 32 33 34 35 38 40 47 49 52 53 54 55 58 61 62 65 66 67 68 69 72 74 82 83 84 86 87 88 89 92 93 95 96 99 100 101 102 103 105 106 108 109 113 115 116 117 118 119
+protocols.BumpGrid: Atom type CNH2 with ProbeRadius 5 = 1.65
+protocols.BumpGrid: Atom type COO with ProbeRadius 5 = 1.65
+protocols.BumpGrid: Atom type CH1 with ProbeRadius 6 = 1.75
+protocols.BumpGrid: Atom type CH2 with ProbeRadius 6 = 1.75
+protocols.BumpGrid: Atom type CH3 with ProbeRadius 6 = 1.75
+protocols.BumpGrid: Atom type aroC with ProbeRadius 6 = 1.75
+protocols.BumpGrid: Atom type Ntrp with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type Nhis with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type NH2O with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type Nlys with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type Narg with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type Npro with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type OH with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type ONH2 with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type OOC with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type Oaro with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type S with ProbeRadius 7 = 1.85
+protocols.BumpGrid: Atom type Nbb with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type CAbb with ProbeRadius 6 = 1.75
+protocols.BumpGrid: Atom type CObb with ProbeRadius 5 = 1.65
+protocols.BumpGrid: Atom type OCbb with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type Phos with ProbeRadius 7 = 1.85
+protocols.BumpGrid: Atom type Pbb with ProbeRadius 7 = 1.85
+protocols.BumpGrid: Atom type Hpol with ProbeRadius 1 = 1
+protocols.BumpGrid: Atom type Hapo with ProbeRadius 2 = 1.17
+protocols.BumpGrid: Atom type Haro with ProbeRadius 1 = 1
+protocols.BumpGrid: Atom type HNbb with ProbeRadius 1 = 1
+protocols.BumpGrid: Atom type HOH with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type Bsp2 with ProbeRadius 6 = 1.75
+protocols.BumpGrid: Atom type F with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type Cl with ProbeRadius 6 = 1.75
+protocols.BumpGrid: Atom type Br with ProbeRadius 7 = 1.85
+protocols.BumpGrid: Atom type I with ProbeRadius 7 = 1.85
+protocols.BumpGrid: Atom type Zn2p with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type Co2p with ProbeRadius 2 = 1.17
+protocols.BumpGrid: Atom type Cu2p with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type Fe2p with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type Fe3p with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type Mg2p with ProbeRadius 1 = 1
+protocols.BumpGrid: Atom type Ca2p with ProbeRadius 2 = 1.17
+protocols.BumpGrid: Atom type Pha with ProbeRadius 7 = 1.85
+protocols.BumpGrid: Atom type OPha with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type OHha with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type Hha with ProbeRadius 1 = 1
+protocols.BumpGrid: Atom type CO3 with ProbeRadius 6 = 1.75
+protocols.BumpGrid: Atom type OC3 with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type Si with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type OSi with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type Oice with ProbeRadius 3 = 1.4
+protocols.BumpGrid: Atom type Hice with ProbeRadius 1 = 1
+protocols.BumpGrid: Atom type Na1p with ProbeRadius 2 = 1.17
+protocols.BumpGrid: Atom type K1p with ProbeRadius 4 = 1.55
+protocols.BumpGrid: Atom type SUCK with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type REPL with ProbeRadius 2 = 1.17
+protocols.BumpGrid: Atom type REPLS with ProbeRadius 2 = 1.17
+protocols.BumpGrid: Atom type HREPS with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type VIRT with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type MPct with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type MPnm with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type MPdp with ProbeRadius 0 = 0
+protocols.BumpGrid: Atom type MPtk with ProbeRadius 0 = 0
+protocols.match.Matcher: Set occupied space bounding box: Lower (6.123, -17.798, -0.261) Upper (47.639, 18.08, 26.465)
+protocols.match.Matcher: Matcher::initialize_from_file: n geometric constraints: 2
+protocols.match.Matcher: Begin constraint1
+protocols.match.Matcher:  Upstream residue type CYS for geometric constraint #1
+protocols.match.Matcher:   Did not locate ALGORITHM_INFO:: match for constraint 1
+protocols.match.Matcher:    CYS LG1
+protocols.match.Matcher:     U3:  CA  U2:  CB  U1:  SG  D1:  X1  D2:  X2  D3:  X3 
+protocols.match.Matcher:      Adding Classical Match Algorithm with geometry samples: 
+protocols.match.Matcher:      tor_U3D1: 300 336 12 48 84 120 156 192 228 264
+protocols.match.Matcher:      ang_U2D1: 104.5 107 109.5 112 114.5 284.5 287 289.5 292 294.5
+protocols.match.Matcher:      dis_U1D1: 2.2 2.3 2.4
+protocols.match.Matcher:      tor_U2D2: 179.1 215.1 251.1 287.1 323.1 359.1 35.1 71.1 107.1 143.1 35.1 71.1 107.1 143.1 179.1
+protocols.match.Matcher:      ang_U1D2: 134.6 137.1 139.6 142.1 144.6 314.6 317.1 319.6 322.1 324.6
+protocols.match.Matcher:      tor_U1D3: 315.5 318 320.5 323 325.5
+core.pack.dunbrack: Dunbrack 2010 library took 0.13 seconds to load from binary
+protocols.match.Matcher:  Upstream residue type CYD for geometric constraint #1
+protocols.match.Matcher:   Did not locate ALGORITHM_INFO:: match for constraint 1
+protocols.match.Matcher:    CYD LG1
+protocols.match.Matcher:     U3:  CA  U2:  CB  U1:  SG  D1:  X1  D2:  X2  D3:  X3 
+protocols.match.Matcher:      Adding Classical Match Algorithm with geometry samples: 
+protocols.match.Matcher:      tor_U3D1: 300 336 12 48 84 120 156 192 228 264
+protocols.match.Matcher:      ang_U2D1: 104.5 107 109.5 112 114.5 284.5 287 289.5 292 294.5
+protocols.match.Matcher:      dis_U1D1: 2.2 2.3 2.4
+protocols.match.Matcher:      tor_U2D2: 179.1 215.1 251.1 287.1 323.1 359.1 35.1 71.1 107.1 143.1 35.1 71.1 107.1 143.1 179.1
+protocols.match.Matcher:      ang_U1D2: 134.6 137.1 139.6 142.1 144.6 314.6 317.1 319.6 322.1 324.6
+protocols.match.Matcher:      tor_U1D3: 315.5 318 320.5 323 325.5
+protocols.match.Matcher:  Upstream residue type CYZ for geometric constraint #1
+protocols.match.Matcher:   Did not locate ALGORITHM_INFO:: match for constraint 1
+protocols.match.Matcher:    CYZ LG1
+protocols.match.Matcher:     U3:  CA  U2:  CB  U1:  SG  D1:  X1  D2:  X2  D3:  X3 
+protocols.match.Matcher:      Adding Classical Match Algorithm with geometry samples: 
+protocols.match.Matcher:      tor_U3D1: 300 336 12 48 84 120 156 192 228 264
+protocols.match.Matcher:      ang_U2D1: 104.5 107 109.5 112 114.5 284.5 287 289.5 292 294.5
+protocols.match.Matcher:      dis_U1D1: 2.2 2.3 2.4
+protocols.match.Matcher:      tor_U2D2: 179.1 215.1 251.1 287.1 323.1 359.1 35.1 71.1 107.1 143.1 35.1 71.1 107.1 143.1 179.1
+protocols.match.Matcher:      ang_U1D2: 134.6 137.1 139.6 142.1 144.6 314.6 317.1 319.6 322.1 324.6
+protocols.match.Matcher:      tor_U1D3: 315.5 318 320.5 323 325.5
+protocols.match.Matcher: Begin constraint2
+protocols.match.Matcher:  Upstream residue type CYS for geometric constraint #2
+protocols.match.Matcher:   Did not locate ALGORITHM_INFO:: match for constraint 2
+protocols.match.Matcher:    CYS LG1
+protocols.match.Matcher:     U3:  CA  U2:  CB  U1:  SG  D1:  X1  D2:  X3  D3:  X2 
+protocols.match.Matcher:      Adding Classical Match Algorithm with geometry samples: 
+protocols.match.Matcher:      tor_U3D1: 301.5 337.5 13.5 49.5 85.5 121.5 157.5 193.5 229.5 265.5
+protocols.match.Matcher:      ang_U2D1: 104 106.5 109 111.5 114 284 286.5 289 291.5 294
+protocols.match.Matcher:      dis_U1D1: 2.2 2.3 2.4
+protocols.match.Matcher:      tor_U2D2: 167.7 203.7 239.7 275.7 311.7 347.7 23.7 59.7 95.7 131.7 167.7
+protocols.match.Matcher:      ang_U1D2: 131.6 134.1 136.6 139.1 141.6 311.6 314.1 316.6 319.1 321.6
+protocols.match.Matcher:      tor_U1D3: 315 317.5 320 322.5 325
+protocols.match.Matcher:  Upstream residue type CYD for geometric constraint #2
+protocols.match.Matcher:   Did not locate ALGORITHM_INFO:: match for constraint 2
+protocols.match.Matcher:    CYD LG1
+protocols.match.Matcher:     U3:  CA  U2:  CB  U1:  SG  D1:  X1  D2:  X3  D3:  X2 
+protocols.match.Matcher:      Adding Classical Match Algorithm with geometry samples: 
+protocols.match.Matcher:      tor_U3D1: 301.5 337.5 13.5 49.5 85.5 121.5 157.5 193.5 229.5 265.5
+protocols.match.Matcher:      ang_U2D1: 104 106.5 109 111.5 114 284 286.5 289 291.5 294
+protocols.match.Matcher:      dis_U1D1: 2.2 2.3 2.4
+protocols.match.Matcher:      tor_U2D2: 167.7 203.7 239.7 275.7 311.7 347.7 23.7 59.7 95.7 131.7 167.7
+protocols.match.Matcher:      ang_U1D2: 131.6 134.1 136.6 139.1 141.6 311.6 314.1 316.6 319.1 321.6
+protocols.match.Matcher:      tor_U1D3: 315 317.5 320 322.5 325
+protocols.match.Matcher:  Upstream residue type CYZ for geometric constraint #2
+protocols.match.Matcher:   Did not locate ALGORITHM_INFO:: match for constraint 2
+protocols.match.Matcher:    CYZ LG1
+protocols.match.Matcher:     U3:  CA  U2:  CB  U1:  SG  D1:  X1  D2:  X3  D3:  X2 
+protocols.match.Matcher:      Adding Classical Match Algorithm with geometry samples: 
+protocols.match.Matcher:      tor_U3D1: 301.5 337.5 13.5 49.5 85.5 121.5 157.5 193.5 229.5 265.5
+protocols.match.Matcher:      ang_U2D1: 104 106.5 109 111.5 114 284 286.5 289 291.5 294
+protocols.match.Matcher:      dis_U1D1: 2.2 2.3 2.4
+protocols.match.Matcher:      tor_U2D2: 167.7 203.7 239.7 275.7 311.7 347.7 23.7 59.7 95.7 131.7 167.7
+protocols.match.Matcher:      ang_U1D2: 131.6 134.1 136.6 139.1 141.6 311.6 314.1 316.6 319.1 321.6
+protocols.match.Matcher:      tor_U1D3: 315 317.5 320 322.5 325
+Created UpstreamCollisionFilter
+Created UpstreamDownstreamCollisionFilter

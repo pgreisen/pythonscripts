@@ -145,8 +145,8 @@ class GenerateResfileAroundResidues:
         rs_file = open('resfile','w')
         rs_file.write('start\n')
     
-        rs_1 = ' A NATAA\n'
-        rs_2 = ' A NATRO\n'
+        rs_1 = ' B NATAA\n'
+        rs_2 = ' B NATRO\n'
     
         while start <= end:
         

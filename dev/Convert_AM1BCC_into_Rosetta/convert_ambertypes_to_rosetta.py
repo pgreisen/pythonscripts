@@ -24,7 +24,19 @@ def convert_amber_atomtype_to_rosetta_atomtype(amberfile):
                 if(atms[0] == 'H' ):
                     tmp_characters = line[46]+atms[0]+" "+line[49]
                     line = line[0:46]+tmp_characters+line[50:]
-                    
+
+                elif(atms == 'CC' ):
+                    tmp_characters = line[46]+"C.2"
+                    line = line[0:46]+tmp_characters+line[50:]
+
+                elif(atms == 'CE' ):
+                    tmp_characters = line[46]+"C.2"
+                    line = line[0:46]+tmp_characters+line[50:]
+
+                elif(atms == 'CF' ):
+                    tmp_characters = line[46]+"C.2"
+                    line = line[0:46]+tmp_characters+line[50:]
+
                 elif(atms == 'SS' ):
                     tmp_characters = line[46]+"S.3"
                     line = line[0:46]+tmp_characters+line[50:]
@@ -34,6 +46,10 @@ def convert_amber_atomtype_to_rosetta_atomtype(amberfile):
                     line = line[0:46]+tmp_characters+line[50:]
 
                 elif(atms == 'O ' ):
+                    tmp_characters = line[46]+"O.3"
+                    line = line[0:46]+tmp_characters+line[50:]
+
+                elif(atms == 'OH' ):
                     tmp_characters = line[46]+"O.3"
                     line = line[0:46]+tmp_characters+line[50:]
 
