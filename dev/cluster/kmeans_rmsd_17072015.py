@@ -44,7 +44,20 @@ with open(tmpfile,'r') as f:
 ###############################################################
 ###############################################################
 data = vstack(data)
+<<<<<<< HEAD
+import pdb;pdb.set_trace()
 centroids,labels = kmeans2( data, size_of_clusters )
+<<<<<<< HEAD
+#print labels
+# print centroids
+#print "###################################"
+#print len(data), len(labels), len(centroids)
+
+=======
+>>>>>>> 1e4bf29a8bcc54ce5b6534d3b167be9b38596cd4
+=======
+centroids,labels = kmeans2( data, size_of_clusters )
+>>>>>>> f9b28dd6c3e7b734c74be14d38ab2178e029fcd2
 
 #print "Labels are: ", labels
 
