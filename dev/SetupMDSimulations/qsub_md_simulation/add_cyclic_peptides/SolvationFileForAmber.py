@@ -92,7 +92,8 @@ quit'''
         return cyclic_paris
 
 
-    def get_template_cp(self,disulfide_pairs):
+    # def get_template_cp(self,disulfide_pairs):
+    def get_template_cp(self, disulfides, ligname,parmfile,libfile ):
         ds_string = ""
         for i in disulfide_pairs:
             pair = i.split(',')
@@ -105,13 +106,14 @@ quit'''
 
         template = '''
 source leaprc.gaff
-
 #loadoff phosphoaa10.lib
 loadoff ions08.lib
-
 loadamberparams frcmod.ionsjc_tip3p
-
 PRT = loadpdb minimized.pdb
+loadoff ions08.lib
+loadoff '''+lib+'''
+loadamberparams frcmod.ionsjc_tip3p
+loadamberparams '''+parm+'''
 
 # Add cyclic bond
 '''+bond+'''

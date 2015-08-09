@@ -132,7 +132,7 @@ def generate_amber_exe_for_generate_parameters_for_solvation():
 
 
 def generate_amber_exe_for_generate_parameters_for_solvation_cp():
-    exe = '''$AMBERHOME/bin/tleap -s -f $AMBERHOME/dat/leap/cmd/leaprc.ff12SB_cyclic_peptide -f parameters_for_solvation.sh'''
+    exe = '''$AMBERHOME/bin/tleap -s -f $AMBERHOME/dat/leap/cmd/leaprc_cyclic.ff14SB -f parameters_for_solvation.sh'''
     tmp_file = open('solvate_complex.sh','w')
     tmp_file.write(exe)
     tmp_file.close()
@@ -209,7 +209,7 @@ def main():
         print "The simulation is performed on a cyclic peptide"
 
 
-    amberhome="export AMBERHOME=/gscratch/baker/greisen/AT12/amber12"
+    amberhome="export AMBERHOME=/gscratch/baker/greisen/AT14/amber14"
     subprocess.Popen(amberhome,shell=True).wait()
     
     pdbfile_present = False
@@ -231,45 +231,31 @@ def main():
     subprocess.Popen(exp1,shell=True).wait()
     exp2="export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/gscratch/baker/buildbot/opt/lib/"
     subprocess.Popen(exp2,shell=True).wait()
-
-
     subprocess.Popen("mv *.pdb Minimization/",shell=True).wait()
     os.chdir("Minimization")
-
     ##################################################
     cpf = CleanPDBFormat()
     cpf.main(pdbfile, libfile, parmfile, cyclic_peptide )
     #################################################
     print "Histidines are set according to Rosettta"
-
     # Generate parameters for amber
-    generate_parms_for_amber = "/gscratch/baker/greisen/AT12/amber12/bin/tleap -s -f /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB -f generate_input_parameters_disulfides.sh"
-
+    generate_parms_for_amber = "/gscratch/baker/greisen/AT12/amber12/bin/tleap -s -f $AMBERHOME/dat/leap/cmd/leaprc_cyclic.ff14SB -f generate_input_parameters_disulfides.sh"
     # for cyclic_peptides this has to be different
     if( cyclic_peptide == True ):
-        generate_parms_for_amber = "/gscratch/baker/greisen/AT12/amber12/bin/tleap -s -f /gscratch/baker/greisen/AT12/amber12/dat/leap/cmd/leaprc.ff12SB_cyclic_peptide -f generate_input_parameters_disulfides.sh"
-
-
+        generate_parms_for_amber = "/gscratch/baker/greisen/AT12/amber12/bin/tleap -s -f $AMBERHOME/dat/leap/cmd/leaprc_cyclic.ff14SB -f generate_input_parameters_disulfides.sh"
     subprocess.Popen(generate_parms_for_amber,shell=True).wait()
-
     # The script is executed in Minimization
     # Minimization of complex
     minimization = "/gscratch/baker/greisen/AT12/amber12/bin/sander -O -i /gscratch/baker/greisen/qsub_md_simulation/vacuum_min.in -p vacuum.prmtop -c vacuum.inpcrd -r min.rst"
     subprocess.Popen(minimization,shell=True).wait()
-
     # get minimized pdb
     get_minimized_pdb = "$AMBERHOME/bin/ambpdb -p vacuum.prmtop < min.rst > minimized.pdb"
     subprocess.Popen(get_minimized_pdb,shell=True).wait()
-
     os.chdir("../")
-
     os.mkdir("SolvateComplex")
     os.chdir("SolvateComplex")
-
     copy_mini_file = "cp ../Minimization/minimized.pdb ."
     subprocess.Popen(copy_mini_file,shell=True).wait()
-
-
     # copy disulfides to dir
     copy_ds_file = "cp ../Minimization/disulfide_pairs.txt ."
     subprocess.Popen(copy_ds_file,shell=True).wait()
@@ -280,7 +266,8 @@ def main():
         sffa.get_template_protein_ligand_complex(ligname,parmfile,libfile, disulfides)
 
     elif( cyclic_peptide == True ):
-        sffa.get_template_cp( disulfides )
+        # sffa.get_template_protein_ligand_complex(ligname,parmfile,libfile, disulfides)
+        sffa.get_template_cp( disulfides, ligname,parmfile,libfile )
 
     else:
         sffa.get_template( disulfides )

@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="run_holo.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="run_holo.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_holo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="5520">
+            <state line="349" column="0" selection-start="11778" selection-end="11778" vertical-scroll-proportion="0.9661017" vertical-offset="4380" max-vertical-offset="5325">
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -34,19 +34,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../rmsd_ligands/main.py">
+      <file leaf-file-name="SolvationFileForAmber.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SolvationFileForAmber.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="6" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0" vertical-offset="485" max-vertical-offset="1455">
+            <state line="95" column="69" selection-start="2339" selection-end="2404" vertical-scroll-proportion="0.0" vertical-offset="1182" max-vertical-offset="2415">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="translate_rotate.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../../rmsd_ligands/translate_rotate.py">
+      <file leaf-file-name="CleanPDBFormat.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CleanPDBFormat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="36" selection-start="2575" selection-end="2575" vertical-scroll-proportion="0.6208791" vertical-offset="755" max-vertical-offset="1740">
+            <state line="120" column="37" selection-start="3182" selection-end="3266" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="4380">
               <folding />
             </state>
           </provider>
@@ -64,6 +64,9 @@
       <list>
         <option value="$PROJECT_DIR$/../../../rmsd_ligands/main.py" />
         <option value="$PROJECT_DIR$/../../../rmsd_ligands/translate_rotate.py" />
+        <option value="$PROJECT_DIR$/CleanPDBFormat.py" />
+        <option value="$PROJECT_DIR$/SolvationFileForAmber.py" />
+        <option value="$PROJECT_DIR$/run_holo.py" />
       </list>
     </option>
   </component>
@@ -135,7 +138,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24986567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -162,26 +165,40 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/run_holo.py">
+    <entry file="file://$PROJECT_DIR$/../../../rmsd_ligands/translate_rotate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="5520">
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state line="81" column="36" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.6208791" vertical-offset="650" max-vertical-offset="1635">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../rmsd_ligands/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="6" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0" vertical-offset="485" max-vertical-offset="1455">
+        <state line="93" column="6" selection-start="2516" selection-end="2516" vertical-scroll-proportion="0.8681319" vertical-offset="575" max-vertical-offset="1545">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../rmsd_ligands/translate_rotate.py">
+    <entry file="file://$PROJECT_DIR$/CleanPDBFormat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="36" selection-start="2575" selection-end="2575" vertical-scroll-proportion="0.6208791" vertical-offset="755" max-vertical-offset="1740">
+        <state line="120" column="37" selection-start="3182" selection-end="3266" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="4380">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolvationFileForAmber.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="69" selection-start="2339" selection-end="2404" vertical-scroll-proportion="0.0" vertical-offset="1182" max-vertical-offset="2415">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_holo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="349" column="0" selection-start="11778" selection-end="11778" vertical-scroll-proportion="0.9661017" vertical-offset="4380" max-vertical-offset="5325">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

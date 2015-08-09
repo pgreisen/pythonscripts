@@ -146,6 +146,9 @@ quit'''
 source leaprc.gaff
 loadoff ions08.lib
 # load protein
+loadoff '''+libraryfile+'''
+loadoff ions08.lib
+loadamberparams '''+parameterfile+'''
 prt = loadpdb design1.pdb
 '''+ds_string+'''
 # Add cyclic bond
