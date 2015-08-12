@@ -92,7 +92,6 @@ quit'''
         return cyclic_paris
 
 
-    # def get_template_cp(self,disulfide_pairs):
     def get_template_cp(self, disulfides, ligname,parmfile,libfile ):
         ds_string = ""
         for i in disulfide_pairs:
@@ -117,7 +116,7 @@ loadamberparams '''+parm+'''
 
 # Add cyclic bond
 '''+bond+'''
-
+it is added
 solvateBox PRT TIP3PBOX 10
 '''+ds_string+'''
 addions PRT Na+ 0
@@ -131,8 +130,6 @@ quit
             f.write(template)
 
         return template
-
-
 
     def main(self,cyclic_peptide=False):
 

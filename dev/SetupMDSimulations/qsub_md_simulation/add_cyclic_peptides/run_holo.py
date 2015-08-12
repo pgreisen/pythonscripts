@@ -261,23 +261,16 @@ def main():
     subprocess.Popen(copy_ds_file,shell=True).wait()
 
     disulfides = sffa.get_disulfide_pairs()
-    # Break line 256
-    if( libfile != None  ):
-        sffa.get_template_protein_ligand_complex(ligname,parmfile,libfile, disulfides)
-
-    elif( cyclic_peptide == True ):
-        # sffa.get_template_protein_ligand_complex(ligname,parmfile,libfile, disulfides)
+    if( cyclic_peptide == True ):
         sffa.get_template_cp( disulfides, ligname,parmfile,libfile )
-
     else:
-        sffa.get_template( disulfides )
+        sys.exit(1)
 
 
     generate_amber_exe_for_generate_parameters_for_solvation()
 
     # 
     if( cyclic_peptide == True ):
-
         generate_amber_exe_for_generate_parameters_for_solvation_cp()
 
 
