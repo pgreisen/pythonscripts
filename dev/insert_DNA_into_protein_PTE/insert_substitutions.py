@@ -1,3 +1,5 @@
+import sys
+
 gencode = {
     'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M', 'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T',
     'AAC':'N', 'AAT':'N', 'AAA':'K', 'AAG':'K', 'AGC':'S', 'AGT':'S', 'AGA':'R', 'AGG':'R',
@@ -32,12 +34,6 @@ aa_codon_table = {
     'Y': ('TAT', 'TAC'),
     '*': ('TAA', 'TAG', 'TGA'),
 }
-
-
-'''
-
-
-'''
 
 insert_mutations ={
     '130' : 'G',
@@ -80,38 +76,45 @@ def translate_dna(dna):
         all_translations.append(translate_dna_single(dna, frame))
     return all_translations
 
+def get_fasta_design_seq(fastafile):
+    ff = ""
+    with open(fastafile,'r') as f:
+        for line in f:
+            if(line[0] != '>'):
+                print line
+                ff += line.strip()
+    return ff
+
+
+
+fastafile = sys.argv[1]
+ff = get_fasta_design_seq(fastafile)
 
 pte = "ggaaggatttcagaattcatcaccaacagcggcgaccgtatcaacaccgtccgtggtccgatcaccatctctgaggcgggcttcaccctgactcacgaacacatttgcggttctagcgcaggttttctgcgcgcttggccggagtttttcggttctcgtgctgctctggtggaaaaagcggttcgtggcctgcgtcgtgcgcgtgcggctggtgtgcgtaccatcgttgacgtttctaccttcgacattggtcgtgatgtttctctgctggccgaggtttctgaagcggccgatgttcacattgttgcagcgactggtctgtgggaagatccgccgctgtctatgcgtctgcgctctgttgaagaactcacccagttctttctccgtgaaatccagtacggcatcgaggacacgggtatccgtgccggtatcattaaagttgccaccaacggtaaagcgaccccgtttcaggaactggttctgcgtgcagcagctcgtgcctccctcgccaccggcgttccggtcaccacccacaccgacgcttctcagcgtgacggtgaacagcaggcggcgatcttcgaaagcgaaggtctggacccgtctcgtgtttgtatcggtcactctgacgacaccgatgatctggactacctgaccgcgctcgcggctcgtggttacctgattggcctggatggtattccgcactctgcgatcggcctcgaagacaacgcatctgcgtccgctctgctcggtaatcgctcttggcagacccgtgcgctgctgatcaaagcgctgatcgaccagggctacgttaaacagatcctggtttctaacgattggctgttcggtttttcttcttgggttaccaacatcatggacgttatggactctgttaacccagacggtatggcgttcatcccgctgcgtgttatcccgttcctgcgcgagaaaggtgttccacaagagacgctggcgaccatcaccgttgaaaaccctgctcgtttcctgtctccaaccctccgtgcttcttgataactgcaggcaagcttggc"
 
+pte_dna = pte[33:1017]
+test2 = translate_dna(pte[33:1017])
 
-# GRISEFITNSG
-# The protein is kept between these sequencs
-# RAS
-
-test = translate_dna(pte)
-#print test
-print test[0][11:338]
-
-##print pte[33:1014]
-pte_dna = pte[33:1014]
-test2 = translate_dna(pte[33:1014])
-##print test2[0], len(test2[0])
-##print "Resi 132 is ",test2[0][96:98]
-##print "AA: ",aa_codon_table['W'][0]
-# insert the mutations into the string
 new_chain = pte_dna
 for key in insert_mutations:
-    # key is residue number
-    # multiple by 3 to get sequence
-    # print key,aa_codon_table[ insert_mutations[key]  ][0]
-
     insert_here = 3*(int( key) - 35)
-    print insert_here
     new_chain = new_chain[0:insert_here]+aa_codon_table[ insert_mutations[key]  ][0]+new_chain[insert_here+3:]
 
-    #print insert_mutations[key], key, aa_codon_table[ insert_mutations[key]  ][0]
-    #print test2[0][0:int(key)]
-    #print aa_codon_table[ insert_mutations[key]  ][0]
-    # print translate_dna( aa_codon_table[ insert_mutations[key]  ][0] )[0]
-
-print translate_dna( new_chain )[0]
+moshe_gene = translate_dna( new_chain )[0]
+assert len( moshe_gene ) == len( ff )
+design_pte_seq = pte_dna
+designed_fasta_seq = ""
+for aa in range ( len( moshe_gene ) ):
+    if( moshe_gene[aa] != ff[aa] ):
+        end = (aa + 1)*3
+        begin = end - 3
+        dna_sub = aa_codon_table[ff[aa] ][0].lower()
+        design_pte_seq = design_pte_seq[0:begin]+dna_sub+design_pte_seq[end:]
+    else:
+        designed_fasta_seq += moshe_gene[aa]
+final_seq = pte[0:33]+design_pte_seq+pte[1017:]
+print final_seq
+dna_file = fastafile.split('.')[0]
+with open(dna_file+'.gb','w') as f:
+    for line in final_seq:
+        f.write(line)

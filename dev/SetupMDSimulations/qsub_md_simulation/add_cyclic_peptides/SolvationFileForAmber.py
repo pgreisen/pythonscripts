@@ -1,4 +1,5 @@
 import os, shutil, sys, subprocess
+from CleanPDBFormat import *
 # from numpy import *
 
 class SolvationFileForAmber:
@@ -92,35 +93,37 @@ quit'''
         return cyclic_paris
 
 
-    def get_template_cp(self,disulfide_pairs):
+    def get_template_cp(self, disulfides, ligname,parmfile,libfile ):
         ds_string = ""
-        for i in disulfide_pairs:
+        for i in disulfides:
             pair = i.split(',')
 
             ds_string = ds_string +"bond PRT."+str(pair[0])+".SG PRT."+str(pair[1]).strip()+".SG\n"
 
         cp = self.get_cyclic_pairs()
-
-        bond = "bond PRT."+str( str( cp[0]).strip() )+".N PRT."+str( str( cp[1]).strip() )+".C\n"
+        # get the cyclic atoms
+        cl = CleanPDBFormat()
+        first,last =  cl.get_atom_numbers_for_cyclic_peptide_bond("minimized.pdb")
+        ###
+        bond = "bond PRT."+str( first.strip() )+".N PRT."+str( str( last.strip()) )+".C\n"
 
         template = '''
 source leaprc.gaff
-
 #loadoff phosphoaa10.lib
 loadoff ions08.lib
-
 loadamberparams frcmod.ionsjc_tip3p
-
+loadoff ions08.lib
+loadoff '''+libfile+'''
+loadamberparams frcmod.ionsjc_tip3p
+loadamberparams '''+parmfile+'''
 PRT = loadpdb minimized.pdb
-
 # Add cyclic bond
 '''+bond+'''
-
+it is added
 solvateBox PRT TIP3PBOX 10
 '''+ds_string+'''
 addions PRT Na+ 0
 addions PRT Cl- 0
-
 saveamberparm PRT solv.prmtop solv.inpcrd
 
 quit
@@ -129,8 +132,6 @@ quit
             f.write(template)
 
         return template
-
-
 
     def main(self,cyclic_peptide=False):
 
