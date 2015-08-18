@@ -24,10 +24,6 @@ A directory with one pdb file.
 
 
 '''
-<<<<<<< HEAD
-
-=======
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
 sffa = SolvationFileForAmber()
 
 def setup_and_run_qsub(wt="3:59:00",np="12",queue="bf"):
@@ -163,7 +159,6 @@ def main():
 
     parser.add_option('-q',dest='queue', help='queue for the simulatio',default='bf')
 
-
     parser.add_option('--wt',dest='wt', help='Wall time limit',default='3:59:00')
 
     parser.add_option('--lib',dest='libfile', help='Name of library file',default=None)
@@ -171,6 +166,8 @@ def main():
     parser.add_option('--parm',dest='parmfile', help='Name of parameter file',default=None)
 
     parser.add_option('--lig',dest='ligname', help='Name of ligand',default=None)
+
+    parser.add_option('--cyclic_peptide',dest='cyclic_peptide', help='Input is a cyclic peptide',default=False, action="store_true")
 
     (options,args) = parser.parse_args()
 
@@ -185,6 +182,8 @@ def main():
     libfile = options.libfile
     parmfile = options.parmfile
     ligname = options.ligname
+    cyclic_peptide = options.cyclic_peptide
+
 
     print "The following parameters have been set:"
     print "Temperature= ",temperature
@@ -196,6 +195,7 @@ def main():
     print "Libfile is= ",libfile
     print "Ligand name is= ",ligname
     print "Setting AMBERHOME"
+    print "Cyclic Peptide has been set",cyclic_peptide
 
     amberhome="export AMBERHOME=/gscratch/baker/greisen/AT14/amber14"
     subprocess.Popen(amberhome,shell=True).wait()
@@ -219,12 +219,11 @@ def main():
     subprocess.Popen(exp1,shell=True).wait()
     exp2="export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/gscratch/baker/buildbot/opt/lib/"
     subprocess.Popen(exp2,shell=True).wait()
-
-
     subprocess.Popen("mv *.pdb Minimization/",shell=True).wait()
     os.chdir("Minimization")
 
     ##################################################
+    # TODO add brief comment
     cpf = CleanPDBFormat()
     cpf.main(pdbfile, libfile, parmfile )
     #################################################

@@ -208,7 +208,6 @@ def main():
     if(cyclic_peptide == True):
         print "The simulation is performed on a cyclic peptide"
 
-
     amberhome="export AMBERHOME=/gscratch/baker/greisen/AT12/amber12"
     subprocess.Popen(amberhome,shell=True).wait()
     

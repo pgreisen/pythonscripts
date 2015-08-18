@@ -15,22 +15,6 @@ class CleanPDBFormat:
 
     def __init__(self):
         self.DISULFIDESDISTANCE = 2.5
-<<<<<<< HEAD
-        self.first_residue = ""
-        self.last_residue = ""
-        self.residue_numbers = []
-
-
-
-    def write_first_last_residue_to_file(self):
-        import pdb;pdb.set_trace()
-        with open("first_last.txt", 'w') as f:
-            f.write( self.first_residue +"\n")
-            f.write( self.last_residue +"\n")
-
-
-=======
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
 
     def set_correct_histidines(self,tmplist, hie_numbers):
         '''
@@ -151,30 +135,6 @@ saveamberparm prt vacuum.prmtop vacuum.inpcrd
 quit'''
         return template
 
-<<<<<<< HEAD
-       # Added for cyclic peptides
-    def write_amber_input_file_lib_cp(self,disulfides_pair):
-        ds_string = ""
-        for i in disulfides_pair:
-            pair = i.split(',')
-            ds_string = ds_string +"bond prt."+str(pair[0])+".SG prt."+str(pair[1])+".SG\n"
-        # first_atom, last_atom = self.get_atom_numbers_for_cyclic_peptide_bond()
-        bond = "bond prt."+str(self.first_residue)+".N prt."+str(self.last_residue)+".C\n"
-        self.write_first_last_residue_to_file()
-        template = '''
-source leaprc.gaff
-loadoff ions08.lib
-# load protein
-prt = loadpdb design1.pdb
-'''+ds_string+'''
-# Add cyclic bond
-'''+bond+'''
-saveamberparm prt vacuum.prmtop vacuum.inpcrd
-quit'''
-        return template
-
-=======
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
 
 
     def write_to_pdb_file(self,pdblist, libraryfile ):
@@ -191,19 +151,10 @@ quit'''
                     f.write(line)
 
 
-<<<<<<< HEAD
-    def write_amber_parameterfile(self, libraryfile, parameterfile, sulfide_positions,cyclic_peptide):
-
-        if( cyclic_peptide != 1):
-            output_file = self.write_amber_input_file_lib_cp( sulfide_positions  )
-
-        elif( libraryfile != None ):
-=======
     def write_amber_parameterfile(self, libraryfile, parameterfile, sulfide_positions):
         # changed 17-06-2014 to type None
         #        if( libraryfile != "None"):
         if( libraryfile != None ):
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
             output_file = self.write_amber_input_file_lib( sulfide_positions, libraryfile, parameterfile )
         else:
             output_file = self.write_amber_input_file( sulfide_positions )
@@ -213,22 +164,7 @@ quit'''
                 f.write(i)
 
 
-<<<<<<< HEAD
-    def write_first_last_residue_to_file(self):
-        '''
-        writing the number of the first and the last residue to file
-        this is done for debug options
-        @return:
-        '''
-        with open("first_last.txt", 'w') as f:
-            f.write( self.first_residue +"\n")
-            f.write( self.last_residue +"\n")
-
-
-    def main(self,pdbfile, libraryfile,parameterfile,cyclic_peptide=0):
-=======
     def main(self,pdbfile, libraryfile, parameterfile):
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
         filename = open(pdbfile, 'r')
 
         tmplist = []
@@ -240,13 +176,6 @@ quit'''
         change = False
 
         for line in filename:
-<<<<<<< HEAD
-
-            if ( line[0:4] == "ATOM" and line[13:15] == "CA" ):
-                self.residue_numbers.append( int( line[22:26]) )
-
-=======
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
             if ( line[17:20] == "HIS" ):
                 # HD1 - proton located on Nd1
                 if ( line[13:16] == "HD1" ):
@@ -258,20 +187,6 @@ quit'''
             if (line[13:14] != 'H' and line[13:15] != "NV" and line[12:14] != "OV" and line[13:14] != 'X'):
                 tmplist.append(line)
         filename.close()
-<<<<<<< HEAD
-
-
-        # set the first and last residue
-        self.first_residue =  str( min( self.residue_numbers  ) )
-        self.last_residue = str( max( self.residue_numbers  ) )
-
-        print self.residue_numbers
-        print self.first_residue
-        print self.last_residue
-
-
-=======
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
         # replace histidine protonations
         if ( len(hid_residue_id) > 0 or len(hie_residue_id) > 0):
             tmplist = self.set_correct_histidines(tmplist, hie_residue_id)
@@ -285,10 +200,5 @@ quit'''
             tmplist = self.set_disulfide_pairs(tmplist, positions_to_change_for_sulfides)
 
         self.write_to_pdb_file( tmplist , libraryfile )
-<<<<<<< HEAD
-
-        self.write_amber_parameterfile(libraryfile, parameterfile, positions_to_change_for_sulfides, cyclic_peptide)
-=======
         
         self.write_amber_parameterfile(libraryfile, parameterfile, positions_to_change_for_sulfides)
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656

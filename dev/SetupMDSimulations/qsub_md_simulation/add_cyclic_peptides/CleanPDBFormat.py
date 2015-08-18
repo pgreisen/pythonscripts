@@ -247,7 +247,6 @@ quit'''
             # 02-12-2014
             if ( line[0:4] == "ATOM" and line[13:15] == "CA" ):
                 self.residue_numbers.append( int( line[22:26]) )
-
             if ( line[17:20] == "HIS" ):
                 # HD1 - proton located on Nd1
                 if ( line[13:16] == "HD1" ):
@@ -274,7 +273,7 @@ quit'''
         positions_to_change_for_sulfides = self.get_disulfide_pairs(sulfur_coordinates)
 
         # Debug
-        print "## Disulfide pairs: ", positions_to_change_for_sulfides
+        ##print "## Disulfide pairs: ", positions_to_change_for_sulfides
 
         if ( len(positions_to_change_for_sulfides) > 0):
             tmplist = self.set_disulfide_pairs(tmplist, positions_to_change_for_sulfides)

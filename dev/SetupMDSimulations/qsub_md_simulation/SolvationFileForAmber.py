@@ -36,58 +36,6 @@ quit
 
         return template
 
-<<<<<<< HEAD
-    def get_template_cp(self,disulfide_pairs):
-        ds_string = ""
-        for i in disulfide_pairs:
-            pair = i.split(',')
-
-            ds_string = ds_string +"bond PRT."+str(pair[0])+".SG PRT."+str(pair[1]).strip()+".SG\n"
-
-        cp = self.get_cyclic_pairs()
-
-        bond = "bond PRT."+str( str( cp[0]).strip() )+".N PRT."+str( str( cp[1]).strip() )+".C\n"
-
-        template = '''
-source leaprc.gaff
-
-#loadoff phosphoaa10.lib
-loadoff ions08.lib
-loadoff ions08.lib
-
-loadamberparams frcmod.ionsjc_tip3p
-
-PRT = loadpdb minimized.pdb
-
-# Add cyclic bond
-'''+bond+'''
-
-solvateBox PRT TIP3PBOX 10
-'''+ds_string+'''
-addions PRT Na+ 0
-addions PRT Cl- 0
-
-saveamberparm PRT solv.prmtop solv.inpcrd
-
-quit
-'''
-
-        with open("parameters_for_solvation.sh",'w') as f:
-            f.write(template)
-        return template
-
-
-    def get_cyclic_pairs(self):
-        tmpfile = open("../Minimization/first_last.txt",'r')
-        cyclic_paris = []
-        for i in tmpfile:
-            cyclic_paris.append(i)
-        return cyclic_paris
-
-
-
-=======
->>>>>>> a927ed3a91cd4c7ef1f5ac88590773437b627656
     def get_template_ligand(self,ligandname,parm,lib):
         template = '''
 source leaprc.gaff
