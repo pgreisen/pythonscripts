@@ -1,0 +1,3 @@
+'''+self.exe+''' -database '''+self.database+''' @'''+self.flags+''' -parser:protocol '''+self.xml+''' -s  '''+self.pdbfile+''' -out:nstruct '''+self.nstruct+''' -in:file:native '''+self.pdbfile+''' -out:file:silent '''+self.output_directory+str( self.id )+'''default.out -out:file:silent_struct_type binary  -out:file:scorefile '''+self.output_directory+self.id+'''dock.sc > self.output_directory/'''+self.id+'''_logfile
+
+exit'''

@@ -3,12 +3,9 @@ import os,shutil, commands, sys, math
 from numpy import mean
 from pylab import *
 import argparse,csv
-
+import operator
 
 '''
-
-
-
 
 Assume a single data file first column with names and second column values:
 
@@ -43,6 +40,10 @@ class PlotScorefileRosetta:
             # Skip the first line
             if( line[0:4] == "SEQU" ):
                 pass
+
+            elif( line[0:4] == "SCOR" and i != 1 and line.split()[1] == "total_score"):
+                
+                continue
 
             elif( line[0:4] == "SCOR" and i == 1):
                 x_index = 0
@@ -98,6 +99,10 @@ class PlotScorefileRosetta:
             if( line[0:4] == "SEQU" ):
                 pass
 
+            elif( line[0:4] == "SCOR" and i != 1 and line.split()[1] == "total_score"):
+                continue
+                
+
             elif( line[0:4] == "SCOR" and i == 1):
 
                 indexer = 0
@@ -109,7 +114,6 @@ class PlotScorefileRosetta:
 
                 for score in tmpline:
 
-                    print score, x_string, score == x_string
 
                     if ( x_string == score ):
 
@@ -149,15 +153,23 @@ class PlotScorefileRosetta:
     def write_csv_table_rmsd_analysis(self,tagstring, xstring, ystring):
         with open('datafile.csv', 'wb') as csvfile:
             spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            spamwriter.writerow(["Tag",str(xstring),str(ystring)])
+            #spamwriter.writerow(["Tag",str(xstring),str(ystring)])
 
             length_tag = len( tagstring )
-
+            keydict = {}
             assert length_tag == len( xstring ) == len( ystring )
+            dummy = 1
             for index in range(length_tag):
                 spamwriter.writerow([ tagstring[index], xstring[index], ystring[index] ])
+                keydict[ tagstring[index]+" "+str(dummy) ] = float(ystring[index] )
+                dummy += 1
 
+        #sorted_x = sorted(keydict.items(), key=operator.itemgetter(1),reverse=True)
+        sorted_x = sorted(keydict.items(), key=operator.itemgetter(1) )
 
+        with open("lowest_energy.txt",'w') as f:
+            for key in sorted_x:
+                f.write( str(key[0])+" "+str(key[1])+"\n")
 
     def get_mean_and_standard_deviation(self,data):
         # print "The mean of the data set is ", round( mean(data), 3 )
@@ -193,22 +205,22 @@ class PlotScorefileRosetta:
 
         parser.add_argument("-n", "--name", dest="filename", help="Name for the plot", default="results")
 
-        parser.add_argument("--histogram", dest="histogram", help="Only plot one varaible", default="0", type=bool)
+        parser.add_argument("--histogram", dest="histogram", help="Only plot one varaible", default=0, type=int )
 
         parser.add_argument("-c", dest="column", help="Only plot one varaible", default="False", type=bool)
 
         input_variables = parser.parse_args()
-        print input_variables.histogram 
+        print "Plot histogram: ",input_variables.histogram 
 
 
-        if( input_variables.histogram == False ):
+        if( input_variables.histogram == 0 ):
             x,y,tag = self.get_scores(input_variables.scorefile,input_variables.x_string, input_variables.y_string)
 
             self.plot_data(x,y, input_variables.filename)
             self.write_csv_table_rmsd_analysis(tag, x, y)
 
 
-        elif( input_variables.histogram == True and input_variables.column == True):
+        elif( input_variables.histogram == 1 and input_variables.column == True):
             data = self.get_data_single_column( input_variables.scorefile )
             self.plot_histogram( data, input_variables.filename )
             self.get_mean_and_standard_deviation( data )
