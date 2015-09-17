@@ -9,7 +9,7 @@ def main():
     
     pdbfile = sys.argv[1]
     
-    newchainid = "B" #sys.argv[2]
+    newchainid = "A" #sys.argv[2]
 
     filename = open(pdbfile,'r')
 

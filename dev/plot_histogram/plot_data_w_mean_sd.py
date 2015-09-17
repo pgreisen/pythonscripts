@@ -14,11 +14,6 @@ python plot_data_w_mean_sd.py -f FILE --histogram True -n Histogram
 
 '''
 
-
-
-
-
-
 class PlotScorefileRosetta:
 
 
@@ -38,6 +33,7 @@ class PlotScorefileRosetta:
         i = 0
         for line in input_file:
             # Skip the first line
+            
             if( line[0:4] == "SEQU" ):
                 pass
 
@@ -102,7 +98,6 @@ class PlotScorefileRosetta:
             elif( line[0:4] == "SCOR" and i != 1 and line.split()[1] == "total_score"):
                 continue
                 
-
             elif( line[0:4] == "SCOR" and i == 1):
 
                 indexer = 0
@@ -139,6 +134,9 @@ class PlotScorefileRosetta:
 
                 tmpline =  line.split()
 
+                if( len(tmpline) < tag_index ):
+                    continue
+
                 x.append( tmpline[ x_index ] )
                 y.append( tmpline[ y_index ] )
                 tag.append( tmpline[ tag_index ] )
@@ -151,25 +149,37 @@ class PlotScorefileRosetta:
 
 
     def write_csv_table_rmsd_analysis(self,tagstring, xstring, ystring):
+
+        p_y = []
+        p_x = []
+
         with open('datafile.csv', 'wb') as csvfile:
             spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             #spamwriter.writerow(["Tag",str(xstring),str(ystring)])
 
             length_tag = len( tagstring )
-            keydict = {}
+            # keydict = {}
             assert length_tag == len( xstring ) == len( ystring )
             dummy = 1
             for index in range(length_tag):
                 spamwriter.writerow([ tagstring[index], xstring[index], ystring[index] ])
-                keydict[ tagstring[index]+" "+str(dummy) ] = float(ystring[index] )
+                # keydict[ tagstring[index]+" "+str(dummy) ] = float(ystring[index] )
+                p_x.append( tagstring[index]+":  "+xstring[index] )
+                p_y.append( tagstring[index]+":  "+ystring[index] )
+
                 dummy += 1
 
-        #sorted_x = sorted(keydict.items(), key=operator.itemgetter(1),reverse=True)
-        sorted_x = sorted(keydict.items(), key=operator.itemgetter(1) )
+        # sorted_x = sorted(keydict.items(), key=operator.itemgetter(1),reverse=True)
+        # sorted_x = sorted(keydict.items(), key=operator.itemgetter(1) )
+        with open("px.dat",'w') as f:
+            for key in p_x:
+                # Only get poses where the total energy is less than zero
+                f.write( str( key+"\n" ) )
+        with open("py.dat",'w') as f:
+            for key in p_y:
+                # Only get poses where the total energy is less than zero
+                f.write( str( key+"\n" ) )
 
-        with open("lowest_energy.txt",'w') as f:
-            for key in sorted_x:
-                f.write( str(key[0])+" "+str(key[1])+"\n")
 
     def get_mean_and_standard_deviation(self,data):
         # print "The mean of the data set is ", round( mean(data), 3 )

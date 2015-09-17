@@ -56,6 +56,9 @@ class get_union:
         self.iterations = 3
         self.px = []
         self.py = []
+        self.xmin = True
+        self.ymin = False
+
 
     '''
     def pareto_frontier_multi(myArray):
@@ -102,9 +105,17 @@ class get_union:
                 tmp = line.split()
 
                 if( len(tmp) == 2 ):
-
-                    data[ tmp[1] ] = tmp[0].split(':')[0]
+                    # print tmp[0].split(':')[0], tmp
+                    #if(  str( float(tmp[1]) ) in  data.keys() ):
+                    #    print  str( float(tmp[1]) )
+                    #    continue
+                    data[ str( float(tmp[1]) ) ] = tmp[0].split(':')[0]
                     dt.append( float(tmp[1]) )
+
+        # debug
+        # import pdb; pdb.set_trace()
+        # dt - scores ( type float )
+        # data - dictionary with score as a key and pdb id as value
         return data, dt
 
     def get_pdbs(self):
@@ -114,7 +125,7 @@ class get_union:
             for i in self.pdbs_on_front:
                 f.write(i+" ")
             f.write(";\n")
-            f.write("do\n cp $i pareto_pdbs/;\ndone;" )
+            f.write("do\n cp $i* pareto_pdbs/;\ndone;" )
 
 
 
@@ -131,6 +142,10 @@ class get_union:
         parser.add_argument("--xlabel", dest="xlabel", help="xlabel", default="SC" )
 
         parser.add_argument("--ylabel", dest="ylabel", help="ylabel", default="IFE" )
+
+        # minimum
+        parser.add_argument("--xmin", dest="xmin", help="optimize where the minimum value is desired (True) else invoke flag by --xmin", default=True, action="store_false" )
+        parser.add_argument("--ymin", dest="ymin",  help="optimize where the maximum value is desired (False) else invoke flag by --ymin", default=False, action="store_true" )
 
         # number of rounds to take pareto front
         parser.add_argument("--iterations", dest="iterations", help="Number of iterations that we will remove the pareto front and recompute a new one", type=int, default=3 )
@@ -149,9 +164,15 @@ class get_union:
 
         for iteration in range(self.iterations):
             # tmp variables
-            px,py = self.pareto_frontier(x_array, y_array, True, False )
+            # 11-09-2015 modified old line
+            # px,py = self.pareto_frontier(x_array, y_array, True, False )
+
+            px,py = self.pareto_frontier(x_array, y_array, self.xmin, self.ymin )
+
 
             for i,j in zip(px, py):
+                # 11-09-2015 Debug
+                # print i, round(i,3),x[str(i)]
                 self.pdbs_on_front.append( x[str(i)] )
                 x.pop( str(i) )
                 x_array.remove( i )
