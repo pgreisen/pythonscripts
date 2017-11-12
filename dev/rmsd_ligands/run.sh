@@ -1,1 +1,0 @@
-python main.py aligned_DIG10_3_xtal_chainA.pdb DIG_0001.fa_1z1s_nohet_1_relax_patchdock.out.1.pdb

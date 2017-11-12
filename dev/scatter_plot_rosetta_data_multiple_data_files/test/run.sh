@@ -1,1 +1,0 @@
-python ../scatter_hist.py -x dock_design_number_of_mutations.dat matcher_number_of_mutations.dat hbi_md1_number_of_mutations.dat -y dock_design_sc.dat matcher_sc.dat hbi_md1_sc.dat --label DockDesign Matching MDDesign --xlabel Mutations --ylabel SC --name HBI_SC_score

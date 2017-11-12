@@ -1,1 +1,0 @@
-getligandpositionmatchermain.py -f $1 -p newpos.pos -n O1

@@ -1,1 +1,0 @@
-~/git_rosetta/rosetta_master/Rosetta/main/source/bin/rosetta_scripts.linuxgccrelease -extra_res_fa LG.params -in:file:silent binary_silent.file -in::file::silent_struct_type binary @flags -database ~/git_rosetta/rosetta_master/Rosetta/main/database -out:file:score_only score.sc

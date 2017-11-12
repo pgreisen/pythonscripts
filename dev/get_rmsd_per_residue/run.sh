@@ -1,1 +1,0 @@
-python get_rmsd_per_residue.py --file1 2RIN_chainA_0001.pdb --file2 docking_2RIN_chainA_0001_0026.pdb 

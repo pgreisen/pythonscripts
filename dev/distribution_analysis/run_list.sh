@@ -1,1 +1,0 @@
-python2.7 get_distribution.py -l list 
