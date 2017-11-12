@@ -55,7 +55,6 @@ class SearchPDBwSmiles:
 
 
 
-
     def get_gz_pdbfile(self,pdbname):
         '''
         # Requires Protein Data Bank url

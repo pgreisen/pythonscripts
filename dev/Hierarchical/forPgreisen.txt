@@ -1,0 +1,46 @@
+https://web.archive.org/web/20150404034126/http://stanford.edu/~mwaskom/software/seaborn/tutorial/dataset_exploration.html
+
+# correlate data of light chain
+from Bio import Phylo
+from Bio.Phylo.TreeConstruction import DistanceCalculator
+from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
+from Bio import AlignIO
+
+aln = AlignIO.read('/z/insulin/users/pjug/Projects/factors/fVIII/TGT_Analysis/20170314_TGT_R4.5_0365-0000-1886/seqs/lc/tot.aln', 'clustal')
+#Computations for the unrooted tree
+calculator = DistanceCalculator('identity')
+dm = calculator.get_distance(aln)
+#dists = squareform(dm)
+linkage_matrix = linkage(dm, "single")
+dendrogram(linkage_matrix,labels=dm.names)
+
+plt.title("Light chains")
+plt.show()
+# Compute and plot first dendrogram.
+fig = plt.figure(figsize=(8,8))
+# x ywidth height
+ax1 = fig.add_axes([0.05,0.1,0.2,0.6])
+Y = linkage(dm, method='single')
+# not possible here
+Z1 = dendrogram(Y, orientation='right',labels=dm.names) # adding/removing the axes
+ax1.set_xticks([])
+
+# Compute and plot second dendrogram.
+ax2 = fig.add_axes([0.3,0.71,0.6,0.2])
+Z2 = dendrogram(Y)
+ax2.set_xticks([])
+ax2.set_yticks([])
+
+#Compute and plot the heatmap
+#axmatrix = fig.add_axes([0.3,0.1,0.6,0.6])
+#idx1 = Z1['leaves']
+#idx2 = Z2['leaves']
+#D = squareform(data_dist)
+#D = D[idx1,:]
+#D = D[:,idx2]
+#im = axmatrix.matshow(D, aspect='auto', origin='lower', cmap=plt.cm.YlGnBu)
+#axmatrix.set_xticks([])
+#axmatrix.set_yticks([])
+# Plot colorbar.
+#axcolor = fig.add_axes([0.91,0.1,0.02,0.6])
+#plt.colorbar(im, cax=axcolor)

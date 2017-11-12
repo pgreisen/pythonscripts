@@ -61,7 +61,6 @@ class translate_rotate:
     # Returning the superimposed coordinates
     # Requires two arrays same length
     # Returns array of transformed coordinates
-
     # a contains the coordinates needed to be transformed
 
     def get_transformed_coor(self,a,b):
@@ -82,22 +81,29 @@ class translate_rotate:
     # Requires transformed array and original array
     # Returns rmsd 
     def get_rmsd(self,t_a,o_a,t_atoms,o_atoms):
-        
         # Number of rows in matrices
         nr_r = shape(t_a)[0]
-
         df = 0
         
         for i in range(nr_r):
-
             x = (t_a[i]-o_a[i])
-            
             df = df + linalg.norm(x)
-            # Debug
-            # print round(df,3),t_atoms[i],o_atoms[i],round(linalg.norm(x),3)
-
 
         # Difference between matrices
         # df = (t_a - o_a) /nr_r
         
         return df/nr_r
+
+    def get_rmsd_dic(self, t_a, o_a, t_atoms, o_atoms):
+        df = 0
+
+        # print type(t_a),type(o_a)
+        #assert  1 == 0
+        nr_r = len(o_a.keys())
+        for i in o_a.keys():
+            x = (t_a[i] - o_a[i])
+            df = df + linalg.norm(x)
+
+        # Difference between matrices
+        # df = (t_a - o_a) /nr_r
+        return df / nr_r

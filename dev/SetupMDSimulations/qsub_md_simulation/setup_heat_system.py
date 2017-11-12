@@ -12,11 +12,20 @@ ntr    = 1,
 ntc    = 2,
 ntf    = 2,
 tempi  = 0.0,
-temp0  = '''+str(temperature)+''',
+nmropt=1,
 ntt    = 3,
 gamma_ln = 1.0,
+iwrap=1,
 nstlim = 50000, dt = 0.002
 ntpr = 5000, ntwx = 5000, ntwr = 5000
+/
+&end
+ &wt
+  type='TEMP0', istep1=0, istep2=25000,
+                value1=0, value2='''+str(temperature)+''',
+ &end
+ &wt 
+  type='END'
 /
 Keep protein fixed with weak restraints
 50.0

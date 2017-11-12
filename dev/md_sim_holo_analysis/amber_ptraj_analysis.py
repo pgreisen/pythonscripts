@@ -10,7 +10,8 @@ class amber_ptraj_analysis:
         self.RMSD_CUT_OFF = 1
         self.CHI_ANGLE_SD_CUT_OFF = 20
         self.pdbfile = 0
-
+        self.amber_bin = "/Users/pgreisen/Programs/amber14/bin"
+        self.dummy_traj = "1 1000 1"
 
 
     # avg_pdb.ptraj
@@ -41,7 +42,7 @@ image origin center
 
 average avg.pdb pdb
 
-quit
+##quit
 
         '''
 
@@ -60,28 +61,14 @@ quit
         last_protein_residue =  str(int(ligand_number)-1)
         ln = str(ligand_number)
         apo_string = ""
-        if(apo != "apo"):
+        if(apo != ""):
             apo_string = '''
             atomicfluct out rmsf.data :1-'''+str(ln)+''' byres
             atomicfluct out rmsf_ligand.data :'''+str(ln)+''' byres
             diffusion :'''+str(ln)+'''
-            # Insert donor and acceptor residues
-            donor mask :HCY@O4
-            donor mask :HCY@O1
-
-            donor mask :HCY@O2
-            donor mask :HCY@O3
-            donor mask :HCY@O5
-
-            acceptor mask  :HCY@O5 :HCY@H30
-            acceptor mask  :HCY@O3 :HCY@H29
-            acceptor mask  :HCY@O2 :HCY@H28
-
             '''
         else:
             ln = last_protein_residue
-
-
         # add the proline string for the HB-analysis to the script
         proline_residues = self.get_proline_positions( self.pdbfile, last_protein_residue )
         print "The proline residues are: ", proline_residues
@@ -196,7 +183,7 @@ hbond print .05 series hbt
 
 
 
-quit
+##quit
 
         '''
         return template
@@ -295,7 +282,7 @@ mol addrep top
         i = 0
         while i <= number_of_directories:
 
-            template_string = template_string+"trajin MD_"+str(i)+"/mdcrd\n"
+            template_string = template_string+"trajin MD_"+str(i)+"/mdcrd  "+self.dummy_traj+" \n"
             i += 1
         return template_string
 
@@ -492,7 +479,8 @@ mol addrep top
 
     def get_number_of_directories(self):
         # loop over all the
-        number_of_directories = 0
+        # count from 0 in python
+        number_of_directories = -1
         path = './'
         dirs = os.listdir(path)
         for dr in dirs:
@@ -529,13 +517,20 @@ mol addrep top
 
 
     def execute_ptraj(self,ligand_parameter):
+        '''
 
-        generate_avg = "~greisen/amber12/bin/ptraj MD_1/"+str(ligand_parameter)+" < avg_pdb.ptraj"
+        @param ligand_parameter: parameter file from Amber
+        @return: 0
+        '''
 
+
+        generate_avg = self.amber_bin+"/cpptraj MD_1/"+str(ligand_parameter)+" < avg_pdb.ptraj"
         # run amber command
-        exe = "~greisen/amber12/bin/ptraj MD_1/"+str(ligand_parameter)+" < analysis.ptraj > hbond_analysis.dat"
-        subprocess.Popen(generate_avg,shell=True).wait()
+        exe = self.amber_bin+"/cpptraj MD_1/"+str(ligand_parameter)+" < analysis.ptraj > hbond_analysis.dat"
+        ## import pdb;pdb.set_trace()
 
+
+        subprocess.Popen(generate_avg,shell=True).wait()
         subprocess.Popen(exe,shell=True).wait()
 
 
@@ -635,18 +630,20 @@ mol addrep top
                         if ( fl.endswith( "prmtop" ) ):
                             parameterfile = fl
 
-                        elif ( fl == "md.rst"):
+                        elif ( fl == "npt.rst"):
                             rst_file = fl
 
                     # execute command and move file
-                    exe = "~greisen/amber12/bin/ambpdb -p "+str(parameterfile)+" <"+rst_file+" > tmp.pdb"
+                    exe = self.amber_bin+"/ambpdb -p "+str(parameterfile)+" <"+rst_file+" > tmp.pdb"
+                    #import pdb
+                    #pdb.set_trace()
                     subprocess.Popen(exe,shell=True).wait()
                     # move file down
                     mv_file = "mv tmp.pdb ../"
                     subprocess.Popen(mv_file,shell=True).wait()
                     os.chdir('../')
                     break
-        print "getting pdb file from MD simulation in directory MD_1",parameterfile
+        print "getting pdb file from MD simulation in directory MD_1", parameterfile
         return parameterfile
 
     def clean_up_directory(self):
@@ -665,8 +662,6 @@ mol addrep top
         cc_vector = []
 
         os.chdir("data_files_for_analysis")
-
-        # data_files_for_analysis/cross_correlation.dat
         cc_file = open("cross_correlation.dat",'r')
         for line in cc_file:
             if( dummy == line_number ):
@@ -730,16 +725,13 @@ mol addrep top
             pymol_session.write("alter protein_rmsf, b=0.0\n")
             pymol_session.write("alter protein_rmsf and n. CA, b=stored.newB.pop(0)\n")
             pymol_session.write("spectrum b, rainbow_rev, protein_rmsf and n. CA\n")
-
             pymol_session.write("create p_rmsf, protein_rmsf\n")
             pymol_session.write("spectrum b, rainbow_rev, p_rmsf and n. CA\n")
             pymol_session.write("cartoon putty, p_rmsf\n")
-
             # cc data
             for cc_rp_residue in rp.split('+'):
                 if( cc_rp_residue == ""):
                     continue
-
                 pymol_session.write("inFile = open(\"cc_vector_"+str( cc_rp_residue )+".dat\", 'r')\n")
                 pymol_session.write("stored.newB = []\n")
                 pymol_session.write("for line in inFile.readlines(): stored.newB.append( float(line) )\n")
@@ -749,7 +741,6 @@ mol addrep top
                 pymol_session.write("alter cc_residue_"+str(cc_rp_residue)+", b=0.0\n")
                 pymol_session.write("alter cc_residue_"+str(cc_rp_residue)+" and n. CA, b=stored.newB.pop(0)\n")
                 pymol_session.write("spectrum b, rainbow_rev, cc_residue_"+str(cc_rp_residue)+" and n. CA\n")
-
 
             pymol_session.write("hide everything, elem h\n")
 

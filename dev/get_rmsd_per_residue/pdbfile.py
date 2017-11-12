@@ -2,7 +2,6 @@ import os,shutil,sys
 from translate_rotate import *
 
 class pdbfile:
-
 	'''
 
 	read_file : readpdb file and returns list
@@ -10,11 +9,6 @@ class pdbfile:
 	replace_xyz  : takes a file and transform its coordinates
 	
 	'''
-
-    def __init__(self):
-        pass
-
-
 
 	def write_file(self,list_of_lines,filename='new.pdb'):
 		fl = open(filename,'w')

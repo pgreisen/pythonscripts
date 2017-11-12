@@ -1,0 +1,1 @@
+df = pandas.DataFrame(numpy.random.randn(7,4), index=dates, columns={’dog’,’cat’,’mouse’,’duck’}

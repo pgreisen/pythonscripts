@@ -3,10 +3,7 @@ from matcherposformat import *
 from getconstraintatoms import *
 from amber_analysis_format import *
 from alignment import *
-
 from amber_ptraj_analysis import *
-
-
 import argparse, subprocess,os
 
 
@@ -17,8 +14,11 @@ class RotamerAnalysisfromMDSimulation:
         gp = GetLigandPositions()
         mp = matcherposformat()
         aa = AmberAnalysisFormat()
-        print "Constructor initialized"
-
+        self.chi_script = "/Users/pgreisen/pythonscripts/dev/chi_value_analysis"
+        self.path_to_amber = "/Users/pgreisen/Programs/amber14/bin"
+        self.apo = ""
+        self.pdbfile = ""
+        self.ligandname = ""
 
     """
     Generate position file for design for all residues XX Aangstrom
@@ -89,25 +89,30 @@ class RotamerAnalysisfromMDSimulation:
         parser.add_argument("-a", "--apo", dest="apo", help="Run analysis on apo if -a apo is given as input")
 
         input_var = parser.parse_args()
-        first_shell_residues_from_rosetta_design = self.get_first_shell_from_rosetta_design(input_var.pdbfile,input_var.ligandname)
+
+        args_dict = vars(parser.parse_args())
+        for item in args_dict:
+            setattr(self, item, args_dict[item])
+
+
+
+        first_shell_residues_from_rosetta_design = self.get_first_shell_from_rosetta_design(self.pdbfile,self.ligandname)
+
+        ##import pdb; pdb.set_trace()
 
         positions_in_protein = ""
         for key in first_shell_residues_from_rosetta_design:
             positions_in_protein = positions_in_protein+" "+key
 
-
         # chi-angle analysis
         # Just called script and it should dump table
-        exe = "python ~greisen/pythonbin/chi_analysis.py -f "+input_var.pdbfile+" -l \" "+positions_in_protein+" \" "
+        exe = "python "+self.chi_script+"/chi_analysis.py -f "+self.pdbfile+" -l \" "+positions_in_protein+" \" "
         subprocess.Popen(exe,shell=True).wait()
 
         # dumping pdb file from MD simulation
         mda = amber_ptraj_analysis()
         mda.get_parameterfile_and_rst_file()
-
-        # get_ptraj_analysis_file(self,pdbfile,ligandname)
-
-        mda.get_ptraj_analysis_file( input_var.ligandname, first_shell_residues_from_rosetta_design,input_var.apo)
+        mda.get_ptraj_analysis_file( self.ligandname, first_shell_residues_from_rosetta_design, self.apo)
 
 
 

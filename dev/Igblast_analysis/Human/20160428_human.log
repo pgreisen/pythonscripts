@@ -1,0 +1,30 @@
+
+
+Building a new DB, current time: 04/28/2016 11:18:09
+New DB name:   20160428_human_VH.db
+New DB title:  20160428_human_VH.fasta
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 490 sequences in 0.024739 seconds.
+
+
+Building a new DB, current time: 04/28/2016 11:18:09
+New DB name:   20160428_human_VJ.db
+New DB title:  20160428_human_VJ.fasta
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 36 sequences in 0.00546408 seconds.
+
+
+Building a new DB, current time: 04/28/2016 11:18:09
+New DB name:   20160428_human_VD.db
+New DB title:  20160428_human_VD.fasta
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 34 sequences in 0.00541282 seconds.

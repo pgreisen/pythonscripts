@@ -14,11 +14,9 @@ from pdbfile import *
 
 class GetRmsdPerResidue:
 
-
     def __init__(self):
         self.rmsd_per_residue = {}
         self.counts = {}
-
 
     def get_rmsd_between_residues(self, p1_coordinates, p2_coordinates):
         rmsd = {}
@@ -34,8 +32,6 @@ class GetRmsdPerResidue:
 
         return rmsd
 
-
-
     def get_coordinates(self,pdbfile):
         pdbcoordinates = {}
         rmsd_per_residue = {}
@@ -47,19 +43,13 @@ class GetRmsdPerResidue:
                 self.counts[key2] = 0
         return pdbcoordinates
 
-
-
-
     def main(self):
-
         parser = argparse.ArgumentParser(description=" Computes the RMSD between two poses and plots it as well as dumping a rmsd.dat ")
         parser.add_argument("--file1", dest="pdbfile1", help="First pdb file")
         parser.add_argument("--file2", dest="pdbfile2", help="First pdb file")
-
         input_variables = parser.parse_args()
         # initialize pdbfile
         pf = pdbfile()
-
         pdbfile1 = pf.read_file(input_variables.pdbfile1)
         pdbfile2 = pf.read_file(input_variables.pdbfile2)
 
@@ -68,7 +58,6 @@ class GetRmsdPerResidue:
         p2_coordinates = self.get_coordinates(pdbfile2)
 
         rmsd = self.get_rmsd_between_residues(p1_coordinates,p2_coordinates)
-
         rmsd_file = open("rmsd.dat","w")
 
         for key in rmsd:
@@ -76,7 +65,6 @@ class GetRmsdPerResidue:
         rmsd_file.close()
 
     def test(self):
-
         pdbfile1 = pf.read("2RIN_chainA_0001.pdb")
         pdbfile2 = pf.read("docking_2RIN_chainA_0001_0026.pdb")
 

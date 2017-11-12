@@ -1,76 +1,366 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85ef38f3-c82c-46bb-ab79-9be879269bd0" name="Default" comment="" />
+    <list default="true" id="85ef38f3-c82c-46bb-ab79-9be879269bd0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AnalysesLigandInteractions/Treebeard.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_0328_0001LEU60HIS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_0328_0001LEU60LYS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_0328_0001_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1026_0001VAL19PHE_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1026_0001VAL37TYR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1026_0001_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1124_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1124_0001GLU118SER_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1124_0001VAL19ARG_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1124_0001VAL84SER_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1134_0001PRO40GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1134_0001VAL123ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1134_0001VAL123TRP_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1134_0001VAL37PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1221_0001GLN58HIS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1221_0001GLU118GLY_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1221_0001GLU118HIS_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1221_0001GLU118ILE_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1221_0001GLU118PRO_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1221_0001VAL62MET_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1221_0001VAL84ILE_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1221_0001_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1488_0001ASN89SER_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1488_0001GLN91MET_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1488_0001GLN91THR_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1488_0001_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1527_0001ALA114VAL_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1527_0001CYS93ARG_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1527_0001VAL84TYR_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1527_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.10_1743_0001GLU118ARG_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_0246_0001ASN39ILE_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_0246_0001VAL62GLN_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_0246_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_0248_0001VAL37ARG_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_0248_0001_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_0308_0001_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_1325_0001_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_1361_0001LEU121HIS_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_1361_0001LEU95VAL_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_1503_0001CYS93GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_1503_0001LEU121ILE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_1549_0001PRO40TRP_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_1549_0001VAL62TRP_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.1_1549_0001_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0058_0001ALA64TYR_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0058_0001MET86TYR_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0058_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001LEU121TYR_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001MET86VAL_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001VAL19LEU_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001VAL19MET_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001VAL62PRO_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001VAL84PHE_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001VAL97GLN_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001VAL97LEU_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0169_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001ALA114ASN_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001ALA64ILE_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001ASN39HIS_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001ASN39TYR_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001ASP99ILE_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001GLN58ARG_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001GLN58LEU_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001GLN58MET_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001GLN58SER_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001LEU18GLN_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001LEU18ILE_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001MET86HIS_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001VAL19ILE_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001VAL62THR_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0415_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001ALA64ASP_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001ASP99ARG_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001ASP99MET_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001LEU18ASN_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001LEU18HIS_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001LEU18LYS_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001LEU18PHE_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001LEU95TYR_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001VAL62PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001VAL62TYR_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001VAL97GLU_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001VAL97MET_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_0601_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.2_1210_0001LEU60ILE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0390_0001VAL84GLN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0390_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001CYS93GLY_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001CYS93LYS_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001CYS93SER_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51ALA_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51ARG_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51ASP_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51ILE_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51LEU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51PRO_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51SER_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51TRP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001GLN51VAL_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001ILE46LYS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001LEU121ASP_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001LEU121GLY_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001LEU95ASN_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001LEU95GLN_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001LEU95GLU_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001LEU95GLY_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001MET86ASP_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001MET86PHE_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001PHE55ASP_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001PHE55LEU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001PHE55MET_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001VAL37ASP_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001VAL37ILE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001VAL37SER_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001VAL62ASN_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001VAL62ASP_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001VAL62SER_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001VAL84ALA_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001VAL84ASN_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0426_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0734_0001GLN58ALA_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0734_0001GLN58TYR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0734_0001MET86ILE_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0796_0001_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0961_0001LEU60PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0961_0001VAL123ARG_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0961_0001VAL123GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_0961_0001_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_1396_0001ASN89ARG_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_1396_0001ASN89GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_1396_0001ASN89VAL_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_1396_0001GLN91ALA_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_1396_0001GLN91ILE_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_1396_0001GLY59SER_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.3_1396_0001_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0077_0001ALA114SER_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0077_0001LEU121PHE_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0077_0001LEU60THR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0077_0001LEU60VAL_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0077_0001VAL97ALA_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0077_0001VAL97SER_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0077_0001VAL97TRP_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0077_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0125_0001VAL84ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0350_0001ALA114ILE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0350_0001MET86TRP_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0350_0001VAL62LEU_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0350_0001VAL97HIS_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0350_0001VAL97ILE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0350_0001VAL97PHE_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001ALA114ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001ALA114GLN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001ALA114HIS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001ALA114LYS_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001ALA114TYR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001ASP99GLN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001CYS93VAL_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001GLN58GLY_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001GLY59PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_0830_0001_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1077_0001CYS93THR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1077_0001GLN58THR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1077_0001LEU95MET_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1077_0001LEU95PHE_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1077_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1267_0001VAL123LEU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1267_0001VAL19TRP_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001CYS93LEU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001CYS93TRP_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001GLN51PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001GLN58VAL_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001ILE46TYR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001TRP88ALA_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001TRP88THR_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001TRP88VAL_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001VAL37TRP_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001VAL62GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1783_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.4_1971_0001CYS93ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0286_0001ALA64VAL_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0286_0001ASN39ARG_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0286_0001PRO40GLY_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0286_0001PRO40HIS_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0286_0001PRO40SER_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0369_0001ALA64PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0369_0001_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0645_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0907_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0996_0001ALA64ARG_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0996_0001ALA64GLN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0996_0001ASN39GLN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0996_0001ASN39LEU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_0996_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001ALA114LEU_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001ALA114PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001GLN58GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001GLN58TRP_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001MET86ALA_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001MET86ASN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001MET86GLY_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001MET86THR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001PHE82TRP_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001PRO40ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001TRP116TYR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001VAL123TYR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001VAL84GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.5_1202_0001VAL97ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0151_0001_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0497_0001_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0523_0001ALA64HIS_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0523_0001ALA64LYS_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0523_0001ALA64SER_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0523_0001ASN39MET_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0523_0001LEU95TRP_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0523_0001PRO40LEU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0523_0001VAL84HIS_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0523_0001VAL84TRP_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_0615_0001_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_1167_0001ASN39VAL_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_1167_0001PRO40ALA_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_1167_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_1228_0001ASN39SER_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_1228_0001_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_1479_0001CYS93ASN_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.6_1479_0001GLN58ASN_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0372_0001GLN51THR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0372_0001PHE55TRP_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0372_0001VAL84THR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0372_0001_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001CYS93PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001CYS93TYR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001GLN51GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001GLN51MET_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001GLN51TYR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001GLN58ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001GLN58LYS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001GLY59ALA_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001GLY59LEU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001LEU95HIS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001PRO40ARG_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001PRO40ASN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001PRO40GLN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001PRO40LYS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001PRO40TYR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001VAL123HIS_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001VAL123PHE_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001VAL123PRO_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0675_0001VAL123SER_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_0691_0001GLN58ILE_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1002_0001VAL62HIS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001GLN51GLY_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001GLN58PHE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001GLY59ASN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001GLY59GLN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001GLY59GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001GLY59HIS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001GLY59MET_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001GLY59THR_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001ILE46ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001LEU121VAL_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1384_0001_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.7_1499_0001ALA114THR_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_0168_0001VAL123ILE_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_0168_0001VAL123MET_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_0379_0001ASN39LYS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_0379_0001LEU95ASP_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_0794_0001ASN39PHE_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_0794_0001ASN39TRP_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001ALA64GLU_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001ALA64LEU_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001ALA64THR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001ASN39ASP_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001ASN39THR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001CYS93ALA_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001CYS93GLN_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001ILE27HIS_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001ILE27LYS_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001LEU18ARG_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001LEU18GLY_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001LEU18MET_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001LEU18THR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1089_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001ALA114GLY_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001ALA114MET_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001ILE52VAL_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001LEU121ASN_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001LEU121MET_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001LEU121THR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001PHE15TRP_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001VAL19GLN_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001VAL19HIS_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1284_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1622_0001ASN39GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1622_0001_0001.pdbFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.8_1629_0001ASN39ALA_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0025_0001ASN39PRO_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0025_0001PHE55HIS_0001.pdbFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0025_0001PRO40MET_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0025_0001VAL19GLU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0025_0001VAL62ILE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0032_0001ALA64MET_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0032_0001ASN39GLY_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0032_0001LEU95ILE_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0032_0001PHE55GLN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0032_0001VAL123GLN_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0032_0001_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0066_0001CYS93HIS_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0066_0001CYS93MET_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0066_0001MET86LEU_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0066_0001VAL123ASN_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0066_0001VAL84MET_0001.pdbFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0066_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0601_0001PRO40PHE_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0601_0001VAL123ALA_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0601_0001VAL123GLY_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0601_0001VAL123THR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0601_0001VAL19THR_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0601_0001_0001.pdbFAILEDFAILEDFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RBAnalysis/test/rb_docking_FEN_patchdock.out.9_0852_0001VAL37MET_0001.pdbFAILEDFAILEDFAILED" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/#tmp#" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/#tmp2#" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.idea/misc.xml" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.idea/modules.xml" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ParetoAnalysis/get_paretofront.py" afterPath="$PROJECT_DIR$/../ParetoAnalysis/get_paretofront.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RBAnalysis/RBAnalysis.py" afterPath="$PROJECT_DIR$/../RBAnalysis/RBAnalysis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SetupMDSimulations/qsub_md_simulation/run_holo.py" afterPath="$PROJECT_DIR$/../SetupMDSimulations/qsub_md_simulation/run_holo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SetupMDSimulations/qsub_md_simulation/setup_heat_system.py" afterPath="$PROJECT_DIR$/../SetupMDSimulations/qsub_md_simulation/setup_heat_system.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../chemicalsimilaritysearch/SearchPDBwSmiles.py" afterPath="$PROJECT_DIR$/../chemicalsimilaritysearch/SearchPDBwSmiles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_rmsd_per_residue.py" afterPath="$PROJECT_DIR$/get_rmsd_per_residue.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdbfile.py" afterPath="$PROJECT_DIR$/pdbfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../md_sim_holo_analysis/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../md_sim_holo_analysis/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../md_sim_holo_analysis/amber_ptraj_analysis.py" afterPath="$PROJECT_DIR$/../md_sim_holo_analysis/amber_ptraj_analysis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py" afterPath="$PROJECT_DIR$/../md_sim_holo_analysis/rotamer_analysis_from_md_simulation.py" />
+    </list>
     <ignored path="get_rmsd_per_residue.iws" />
     <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="get_rmsd_per_residue" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="get_rmsd_per_residue.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/get_rmsd_per_residue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="59" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.21390374" vertical-offset="430" max-vertical-offset="1365">
-              <folding>
-                <element signature="e#190#205#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generate_cst.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../generate_cst_file/generate_cst.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="223" column="32" selection-start="6534" selection-end="6534" vertical-scroll-proportion="0.0" vertical-offset="3345" max-vertical-offset="4500">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pydevd.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1531" column="0" selection-start="60412" selection-end="60412" vertical-scroll-proportion="0.0" vertical-offset="22965" max-vertical-offset="23070">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pdbfile.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pdbfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2370">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="translate_rotate.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/translate_rotate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="12" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1455">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>get_tra</find>
+    </findStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -86,36 +376,24 @@
     </option>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/get_rmsd_per_residue.py" />
-        <option value="$PROJECT_DIR$/../generate_cst_file/generate_cst.py" />
-        <option value="$PROJECT_DIR$/translate_rotate.py" />
         <option value="$PROJECT_DIR$/pdbfile.py" />
+        <option value="$PROJECT_DIR$/get_rmsd_per_residue.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="37" />
     <option name="y" value="23" />
-    <option name="width" value="1881" />
-    <option name="height" value="1058" />
+    <option name="width" value="1440" />
+    <option name="height" value="830" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -125,8 +403,11 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -137,7 +418,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,8 +449,107 @@
       <module name="get_rmsd_per_residue" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_rmsd_per_residue.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="get_rmsd_per_residue" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="get_rmsd_per_residue" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="get_rmsd_per_residue" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="get_rmsd_per_residue" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="get_rmsd_per_residue" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
@@ -196,103 +576,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="get_rmsd_per_residue" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="get_rmsd_per_residue" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="get_rmsd_per_residue" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="get_rmsd_per_residue" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="get_rmsd_per_residue" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Python.get_rmsd_per_residue" />
     </list>
@@ -302,7 +585,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -324,121 +609,119 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="85ef38f3-c82c-46bb-ab79-9be879269bd0" name="Default" comment="" />
       <created>1408137594535</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1408137594535</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="23" width="1881" height="1058" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="830" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498671" sideWeight="0.6002077" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997923" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.6002077" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997923" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/get_rmsd_per_residue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="59" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="1365">
+        <state relative-caret-position="0">
+          <caret line="42" column="59" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#190#205#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_cst_file/generate_cst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="32" selection-start="6534" selection-end="6534" vertical-scroll-proportion="0.0" vertical-offset="3345" max-vertical-offset="4500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../generate_cst_file/generate_cst.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1531" column="0" selection-start="60412" selection-end="60412" vertical-scroll-proportion="0.0" vertical-offset="22965" max-vertical-offset="23070">
+        <state relative-caret-position="0">
+          <caret line="1531" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pdbfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2370">
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/translate_rotate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1455">
+        <state relative-caret-position="0">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../generate_cst_file/generate_cst.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1531" column="0" selection-start="60412" selection-end="60412" vertical-scroll-proportion="0.0" vertical-offset="21530" max-vertical-offset="22080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../generate_cst_file/generate_cst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="32" selection-start="6534" selection-end="6534" vertical-scroll-proportion="0.0" vertical-offset="3345" max-vertical-offset="4500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/translate_rotate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdbfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
+        <state relative-caret-position="15">
+          <caret line="1531" column="0" lean-forward="false" selection-start-line="1531" selection-start-column="0" selection-end-line="1531" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get_rmsd_per_residue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="59" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.21390374" vertical-offset="430" max-vertical-offset="1365">
+        <state relative-caret-position="384">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="e#190#205#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdbfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translate_rotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
