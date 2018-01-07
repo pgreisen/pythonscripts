@@ -9,8 +9,8 @@ import operator
 
 Assume a single data file first column with names and second column values:
 
+python generate_fasta.py -f wt.fasta -n NATIVE -p POSITION -m MUTATION -c A -g GROUP_ID
 
-python plot_data_w_mean_sd.py -f FILE --histogram True -n Histogram
 
 '''
 
@@ -21,7 +21,7 @@ class PlotScorefileRosetta:
         self.data = {}
         self.fastaseq = ""
         self.newfasta = ""
-        self.chain = "LC"
+        self.chain = "A"
         self.group = ""
         self.name = "-1"
         self.filename_id = ""
@@ -64,7 +64,7 @@ class PlotScorefileRosetta:
         '''
 
 
-        python generate_fasta.py -f 1886_lc.fasta -n NATIVE -p POSITION -m MUTATION -c LC -g GROUP_ID
+        python generate_fasta.py -f wt.fasta -n NATIVE -p POSITION -m MUTATION -c LC -g GROUP_ID
 
 
         '''
