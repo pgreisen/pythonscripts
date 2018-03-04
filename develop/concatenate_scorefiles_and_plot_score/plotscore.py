@@ -12,7 +12,8 @@ class ScoreMultiplefiles:
         self.scorex = ""
         self.scorey = ""
         self.scorez = ""
-
+        self.cst_threshold = 7.0
+        self.nr_to_file = 5
         self.df = None
 
 
@@ -49,16 +50,14 @@ class ScoreMultiplefiles:
         print df[self.scorez].describe()
 
         # filter values
-        df = df[ ( df[self.scorey] < stat[u'25%']  ) & ( df[self.scorez] < 3  )   ]
+
+
+
+        df = df[ ( df[self.scorey] < stat[u'25%']  ) & ( df[self.scorez] < self.cst_threshold  )   ]
         # sort dataframe
         df.sort_values(by=self.scorex,ascending=False, inplace=True)
         self.plot_data(self.scorex,self.scorey,df)
-        print df.head(1)
-        print df['description'].head(1)
-
-        with open('lowest_pdb.txt','w') as f:
-            f.write(list(df['description'].head(1))[0])
-
+        df.to_csv("lowest_scoring.csv")
 
 
 if __name__ == "__main__":

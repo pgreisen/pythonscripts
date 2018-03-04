@@ -31,7 +31,7 @@ class Combinations:
         # number of combinations
         self.combi = 4
 
-        self.python_path = "~/pythonscripts/dev/GenerateMultiVariants/"
+        self.python_path = "." # "~/pythonscripts/develop/GenerateMultiVariants"
 
         self.exe_hc = "python "+self.python_path+"/generate_fasta_tmp.py -f ori_HC.fasta -p "
 

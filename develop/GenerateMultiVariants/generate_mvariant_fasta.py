@@ -23,8 +23,9 @@ class PlotScorefileRosetta:
         self.newfasta = ""
         self.chain = "A"
         self.group = ""
-        self.name = "-1"
+        self.name = ""
         self.filename_id = ""
+        self.fasta_header = ""
 
 
     def getdata(self, inputfile):
@@ -47,15 +48,15 @@ class PlotScorefileRosetta:
 
 
     def write2file(self,filename):
-        filename = filename.replace("__","_")
+        filename = filename.replace("__", "_")
+        self.fasta_header = self.fasta_header.replace("__", "_")
         # print filename
         print self.name
         if(self.name != "-1"):
-            filename = self.name+self.group+".fasta"
-            print filename
+            filename = self.fasta_header+".fasta"
 
-        with open(filename+self.filename_id,'w') as f:
-            f.write(">"+filename.split('.')[0]+'\n')
+        with open(filename[0:]+self.filename_id,'w') as f:
+            f.write(">"+self.fasta_header+'\n')
             f.write(self.newfasta)
 
 
@@ -84,7 +85,7 @@ class PlotScorefileRosetta:
 
         parser.add_argument("-c", "--chain", dest="chain", help="Light or heavy chain",default="" )
 
-        parser.add_argument("-g", "--group", dest="group", help="Group to determine heavy and light chain pairing", default="-1")
+        parser.add_argument("-g", "--group", dest="group", help="Group to determine heavy and light chain pairing", default="")
 
         parser.add_argument("-x", "--name", dest="name", help="Name for fasta file and header", default="-1")
 
@@ -115,8 +116,11 @@ class PlotScorefileRosetta:
         for i,j,k in zip(positions,natives, mutations):
             self.newfasta = self.insert_mutations( int(i), j, k, self.newfasta )
             tmp_filename = tmp_filename+"_"+j+str(i)+k+"_"
-        print input_variables.scorefile, tmp_filename, input_variables.chain, self.group
         filename = input_variables.scorefile.split('.')[0].split('_')[0]+tmp_filename+input_variables.chain+"_"+self.group+".fasta"
+
+        self.fasta_header = tmp_filename[1:-1]
+
+
         self.write2file( filename )
 
 
