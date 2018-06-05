@@ -8,14 +8,54 @@ from rdkit.Chem.Draw import MolDrawing, DrawingOptions
 from rdkit.Geometry import rdGeometry as geom
 
 
-class VXconformers:
+from rdkit import Chem
+from rdkit.Chem import AllChem
+from rdkit.Chem import rdMolTransforms as rdmt
+import numpy as np
+# from rdkit import Chem
+from rdkit.Chem.Draw import IPythonConsole
+from rdkit.Chem.Draw import MolDrawing, DrawingOptions
+from rdkit.Geometry import rdGeometry as geom
+import os
 
+
+class VXconformers:
 
     def __init__(self):
         # what is this value???
         # distance between P-N
         # remove self interaction
-        self.distance_threshold = 3.0
+        self.distance_threshold = 2.3
+
+        self.OH_INDEX_OXYGEN = 0
+        self.OH_INDEX_HYDROGEN = 0
+
+        # set atoms here
+        self.p_id = None
+        self.pc_id = None
+        self.po_id = None
+        self.poe_id = None
+
+        self.s_id = None
+        self.nh_id = None
+
+        self.p_s_dist = 2.36
+        self.ANGLE_HYDROGEN = 112
+
+        # Number of conformers
+        self.nr_confs = 500
+        # RMSD between the generated conformers
+        self.rmsd_cutoff = 0.1
+
+
+
+
+
+
+
+
+
+
 
 
     def get_conformer_rmsd(self,mol):
@@ -58,7 +98,7 @@ class VXconformers:
         return energies
 
 
-    def set_new_bond_distance(self, mol, dist, atm1, atm2, confid=0):
+    def set_new_bond_distance(self,mol, dist, atm1, atm2, confid=0):
         """
         Set a new bond distance between two atoms
         ----------
@@ -76,8 +116,7 @@ class VXconformers:
         rdmt.SetBondLength(conf, atm1, atm2, dist)
         return mol
 
-
-    def set_new_angle(self,mol, angle, atm1, atm2, atm3, confid=0):
+    def set_new_angle(self, mol, angle, atm1, atm2, atm3, confid=0):
         """
         Set a new angle between three atoms
         ----------
@@ -97,7 +136,7 @@ class VXconformers:
         return mol
 
 
-    def generate_molecule(self, name, smiles):
+    def generate_molecule(self,name, smiles):
         """
         Generate the 3D molecular structure based on input SMILES
         ----------
@@ -117,9 +156,7 @@ class VXconformers:
         m_h.SetProp("_Name", LIGAND_NAME)
         return m_h
 
-
-
-    def get_conformers(self,mol,nr=500,rmsthreshold=0.1):
+    def get_conformers(self, mol, nr=500, rmsthreshold=0.1):
         """
         Generate 3D conformers of molecule using CSD-method
         ----------
@@ -131,11 +168,50 @@ class VXconformers:
         List of new conformation IDs
         """
         # Generate conformers on the CSD-method
-        return AllChem.EmbedMultipleConfs(mol, numConfs=nr,useBasicKnowledge=True,\
-                                          pruneRmsThresh=rmsthreshold,useExpTorsionAnglePrefs=True)
+        return AllChem.EmbedMultipleConfs(mol, numConfs=nr, useBasicKnowledge=True, \
+                                          pruneRmsThresh=rmsthreshold, useExpTorsionAnglePrefs=True)
 
+    def get_carbon_atoms(self, mol, idx, old_c):
+        '''
 
-    def get_index_atms(self,mol):
+        '''
+        for atom in mol.GetAtoms():
+            if (atom.GetIdx() == idx):
+                bonds = atom.GetBonds()
+                for bnd in bonds:
+                    tmp_ = bnd.GetOtherAtom(atom)
+                    if (tmp_.GetSymbol() == 'C' and tmp_.GetIdx() not in old_c):
+                        old_c.append(tmp_.GetIdx())
+                        # recursive call for graph
+                        self.get_carbon_atoms(mol, tmp_.GetIdx(), old_c)
+                    elif (tmp_.GetSymbol() != 'C'):
+                        continue
+                    else:
+                        continue
+        return old_c
+
+    def get_o_ether_carbon_atoms(self, mol, poe_idx):
+        '''
+
+        '''
+        poe_carbons = []
+        # what are we connected to
+        for atom in mol.GetAtoms():
+            tmp_atm = atom.GetSymbol()
+
+            if (tmp_atm == 'O' and atom.GetIdx() == poe_idx):
+                bonds = atom.GetBonds()
+                for bnd in bonds:
+                    tmp_ = bnd.GetOtherAtom(atom)
+                    if (tmp_.GetSymbol() == 'C'):
+                        poe_carbons.append(tmp_.GetIdx())
+                        tmp_ = tmp_.GetIdx()
+                        # get all carbons attached starting with o-ether
+                        poe_carbons = self.get_carbon_atoms(mol, tmp_, poe_carbons)
+
+        return poe_carbons
+
+    def get_index_atms(self, mol):
         """
         get the index of atoms to set geometry
         methyl bonded to phosphorus
@@ -150,34 +226,68 @@ class VXconformers:
         index of atoms
 
         """
+
         chiral_atm = {}
         o_groups = []
         for atom in mol.GetAtoms():
             tmp_atm = atom.GetSymbol()
             bonds = atom.GetBonds()
             if (tmp_atm == 'P'):
-                p_id = atom.GetIdx()
+                self.p_id = atom.GetIdx()
                 for bond in bonds:
                     target = bond.GetOtherAtom(atom)
                     # methyl group
                     if (target.GetSymbol() == 'C'):
-                        pc_id = target.GetIdx()
+                        self.pc_id = target.GetIdx()
                     elif (target.GetSymbol() == 'O'):
                         if (str(bond.GetBondType()) == 'DOUBLE'):
-                            po_id = target.GetIdx()
+                            self.po_id = target.GetIdx()
                         else:
-                            poe_id = target.GetIdx()
+                            self.poe_id = target.GetIdx()
             elif (tmp_atm == 'S'):
-                s_id = atom.GetIdx()
+                self.s_id = atom.GetIdx()
             elif (tmp_atm == 'N'):
                 for bond in bonds:
                     target = bond.GetOtherAtom(atom)
                     if (target.GetSymbol() == 'H'):
-                        nh_id = atom.GetIdx()
+                        self.nh_id = atom.GetIdx()
             else:
                 for bond in bonds:
                     target = bond.GetOtherAtom(atom)
-        return p_id, s_id, pc_id, nh_id, po_id, poe_id
+        return self.p_id, self.s_id, self.pc_id, self.nh_id, self.po_id, self.poe_id
+
+    def get_rmsd_after_minimization_conformers(self, mol, cids):
+        '''
+
+        '''
+        # Do a short minimization and compute the RMSD
+        for cid in cids:
+            _ = AllChem.MMFFOptimizeMolecule(mol, confId=cid)
+        rmslist = []
+        AllChem.AlignMolConformers(mol, RMSlist=rmslist)
+        return rmslist
+
+    def prune_conformers(self, mol, cids):
+        '''
+
+
+        '''
+        from rdkit.Chem import rdMolTransforms as rdmt
+        new = Chem.Mol(mol)
+        for cid in cids:
+            conf = new.GetConformer(cid)
+            # Proton phosphoryl distance
+            dist = rdmt.GetBondLength(conf, self.nh_id, self.po_id)
+            # remove conformers
+            if (dist <= self.distance_threshold):
+                new.RemoveConformer(cid)
+
+        conf_ids = [conf.GetId() for conf in new.GetConformers()]
+        dummy = 1
+        for m in conf_ids:
+            w = Chem.SDWriter('prune' + str(dummy) + '.sdf')
+            w.write(new, confId=m)
+            dummy += 1
 
     def get_ts_geom(self, m, p_s_dist, p_id, s_id, poe_id, pc_id):
         '''
@@ -187,21 +297,21 @@ class VXconformers:
         plane_angle = 120
         off_plane = 90
         # P-S bond distance is set here
-        m = set_new_bond_distance(m, p_s_dist, p_id, s_id)
+        m = self.set_new_bond_distance(m, p_s_dist, p_id, s_id)
         # setting o-ethyl group
-        m = set_new_angle(m, 90, s_id, p_id, poe_id)
+        m = self.set_new_angle(m, 90, s_id, p_id, poe_id)
         # setting methyl-group
-        m = set_new_angle(m, 90, s_id, p_id, pc_id)
+        m = self.set_new_angle(m, 90, s_id, p_id, pc_id)
         # setting phosphoryl
-        m = set_new_angle(m, 90, s_id, p_id, po_id)
+        m = self.set_new_angle(m, 90, s_id, p_id, self.po_id)
         # Setting plane angle to 120 degrees
-        m = set_new_angle(m, 120, poe_id, p_id, pc_id)
-        m = set_new_angle(m, 120, po_id, p_id, pc_id)
+        m = self.set_new_angle(m, 120, poe_id, p_id, pc_id)
+        m = self.set_new_angle(m, 120, self.po_id, p_id, pc_id)
         # conformers
         conf = m.GetConformer(0)
         # Proton sulfur distance
-        dst1 = rdmt.GetBondLength(conf, po_id, nh_id)
-        if (dst1 > self.distance_threshold):
+        dst1 = rdmt.GetBondLength(conf, self.po_id, self.nh_id)
+        if (dst1 > 3.0):
             return m
         else:
             return
@@ -228,16 +338,27 @@ class VXconformers:
                 tmp = Chem.FindMolChiralCenters(m, includeUnassigned=True)
 
                 if (tmp[0][1] == 'S'):
-                    m = get_ts_geom(m, p_s_dist, p_id, s_id, poe_id, pc_id)
+                    m = self.get_ts_geom(m, self.p_s_dist, self.p_id, self.s_id, self.poe_id, self.pc_id)
                     if (m != None):
                         s_isomers.append(m)
                 elif (tmp[0][1] == 'R'):
-                    m = self.get_ts_geom(m, p_s_dist, p_id, s_id, poe_id, pc_id)
+                    m = self.get_ts_geom(m, self.p_s_dist, self.p_id, self.s_id, self.poe_id, self.pc_id)
                     if (m != None):
                         r_isomers.append(m)
                 else:
                     print "Error"
         return s_isomers, r_isomers
+
+    def write_transition_states_isomers_to_file(self, dist, list_of_isomers, isomer="S"):
+        '''
+
+        '''
+        dummy = 1
+        for test in s_isomers:
+            writer3 = Chem.SDWriter(isomer + '_' + LIGAND_NAME + '_' + str(dist) + '_' + str(dummy) + '.sdf')
+            writer3.write(test, confId=0)
+            dummy += 1
+        writer3.close()
 
     def write_aligned_to_file(self, list_of_confs, atoms_to_match=(8, 9, 10, 11), filename='Aligned.sdf'):
         aligned = None
@@ -254,6 +375,34 @@ class VXconformers:
             writer3.write(aligned, confId=i)
         return aligned
 
+    def get_index_dummy_atms(self, mol):
+        """
+        get the index of atoms to set geometry
+        methyl bonded to phosphorus
+        ether bonded to phosphorus
+        phosphoryl bonded to phosphorus
+        sulfur atom bonded to phosphorus
+        hydrogen bonded to nitrogen
+        ----------
+        mol: RKdit mol
+        Returns
+        ----------
+        index of atoms
+
+        """
+
+        dmm = []
+        for atom in mol.GetAtoms():
+            back = Chem.RWMol(mol)
+            tmp_atm = atom.GetSymbol()
+            bonds = atom.GetBonds()
+            if (tmp_atm == '*'):
+                dmm.append(atom.GetIdx())
+
+        dmm.sort(reverse=True)
+        for idx in dmm:
+            back.RemoveAtom(idx)
+        return back
 
     def get_index_of_nucleophile(self, combo):
         '''
@@ -269,9 +418,9 @@ class VXconformers:
                     h_hydroxide = target.GetIdx()
         return o_hydroxide, h_hydroxide
 
-
     # setup and generate transition states
-    def add_hydroxide_to_transition_state_model(self, nucleophile, p_id, s_id, conformer, bond_increase=1.9):
+    def add_hydroxide_to_transition_state_model(self, nucleophile, p_id, s_id, conformer, o_ether_idx, bond_increase=1.9):
+        # type: (object, object, object, object, object, object) -> object
         '''
 
 
@@ -288,14 +437,133 @@ class VXconformers:
         # combine molecule
         combo = Chem.CombineMols(conformer, nucleophile)
         # get new index of oxygen of hydroxide
-        o_hydroxide, h_hydroxide = get_index_of_nucleophile(combo)
+        o_hydroxide, h_hydroxide = self.get_index_of_nucleophile(combo)
+
+        self.OH_INDEX_OXYGEN = o_hydroxide
+        self.OH_INDEX_HYDROGEN = h_hydroxide
+
+
         edcombo = Chem.EditableMol(combo)
         edcombo.AddBond(p_id, o_hydroxide, order=Chem.rdchem.BondType.SINGLE)
         back = edcombo.GetMol()
-        # rdmt.SetAngleDeg(back.GetConformer(0),p_id,o_hydroxide, h_hydroxide,180)
+
+        ## p_id, s_id = get_index_atms_hydroxide(m)
+
+        bond = back.GetBondBetweenAtoms(p_id, s_id)
+        back = Chem.FragmentOnBonds(back, [bond.GetIdx()], addDummies=True, dummyLabels=[(1, 1)])
+
+        atom1 = back.GetAtomWithIdx(self.OH_INDEX_OXYGEN)
+        atom1.SetFormalCharge(0)
+        Chem.SanitizeMol(back)
+        rdmt.SetAngleDeg(back.GetConformer(0), p_id, self.OH_INDEX_OXYGEN, self.OH_INDEX_HYDROGEN, self.ANGLE_HYDROGEN)
+
+        ########## REMOVE ATOMS
+        back = self.get_index_dummy_atms(back)
+
+        print "::::::",type(back),back
+
+        # Add bond between P-S
+        edcombo = Chem.EditableMol(back)
+        edcombo.AddBond(p_id, s_id, order=Chem.rdchem.BondType.SINGLE)
+        back = edcombo.GetMol()
+
+        # get distance constraints
+        # o_ether_idx
+        for i in o_ether_idx:
+            dst1 = rdmt.GetBondLength(back.GetConformer(0), i, o_hydroxide)
+            # 2.4 AA is approximately covalent distance range
+            if (dst1 < 2.4):
+                return -1
         return back
 
+    # Setup transition state with hydroxide
+    def write_hydroxide_transition_state_model(self, oh, molecule_name, isomer_name, o_ether_idx):
+        '''
 
+        '''
+        # Get x,y,z position of oxygen atom of hydroxide
+        pos = oh.GetConformer().GetAtomPosition(0)
+        prefix_ = "TS_model"
+        fls = os.listdir('.')
+        # Identify
+        ## molecule+"_R_aligned_isomers"
+        id_fl = molecule_name + "_" + isomer_name + "_aligned_isomers"
+        for fl in fls:
+            if (fl.startswith(id_fl)):
+                conformer = Chem.MolFromMolFile(fl, True, False)
+                new_ts_model = self.add_hydroxide_to_transition_state_model(oh, self.p_id, self.s_id, conformer, o_ether_idx)
+                if (new_ts_model != -1):
+                    writer3 = Chem.SDWriter(prefix_ + "_" + fl)
+                    writer3.write(new_ts_model, confId=0)
 
+    def get_index_atms_hydroxide(self, mol):
+        """
+        get the index of atoms to set geometry
+        methyl bonded to phosphorus
+        ether bonded to phosphorus
+        phosphoryl bonded to phosphorus
+        sulfur atom bonded to phosphorus
+        hydrogen bonded to nitrogen
+        ----------
+        mol: RKdit mol
+        Returns
+        ----------
+        index of atoms
 
+        """
+        for atom in mol.GetAtoms():
+            tmp_atm = atom.GetSymbol()
+            bonds = atom.GetBonds()
+            if (tmp_atm == 'P'):
+                p_id = atom.GetIdx()
+            elif (tmp_atm == 'S'):
+                s_id = atom.GetIdx()
+        return p_id, s_id
 
+    def get_index_dummy_atms(self, mol):
+        """
+        get the index of atoms to set geometry
+        methyl bonded to phosphorus
+        ether bonded to phosphorus
+        phosphoryl bonded to phosphorus
+        sulfur atom bonded to phosphorus
+        hydrogen bonded to nitrogen
+        ----------
+        mol: RKdit mol
+        Returns
+        ----------
+        index of atoms
+
+        """
+
+        dmm = []
+        for atom in mol.GetAtoms():
+            tmp_atm = atom.GetSymbol()
+            bonds = atom.GetBonds()
+            if (tmp_atm == 'R'):
+                dmm.append(atom.GetIdx())
+        return dmm
+
+    # Setup transition state with hydroxide
+    def set_angle_hydroxide(self, angle_size):
+        prefix_ = "TS_model"
+        fls = os.listdir('.')
+        for fl in fls:
+            if (fl.startswith(prefix_)):
+                m = Chem.MolFromMolFile(fl, False, False, False)
+                # get index of atoms:::
+                p_id, s_id = get_index_atms_hydroxide(m)
+                bond = m.GetBondBetweenAtoms(p_id, s_id)
+                new_m = Chem.FragmentOnBonds(m, [bond.GetIdx()], addDummies=True, dummyLabels=[(1, 1)])
+
+                # Chem.SanitizeMol(new_m)
+                # rdmt.SetAngleDeg(new_m.GetConformer(0),p_id,OH_INDEX_OXYGEN,OH_INDEX_HYDROGEN,angle)
+                edcombo = Chem.EditableMol(new_m)
+                edcombo.AddBond(p_id, s_id, order=Chem.rdchem.BondType.SINGLE)
+                back = edcombo.GetMol()
+                dmm = get_index_dummy_atms(back)
+                for dm in dmm:
+                    edcombo.RemoveAtom(dm)
+
+                writer3 = Chem.SDWriter("FIXED_" + fl)
+                writer3.write(edcombo.GetMol(), confId=0)

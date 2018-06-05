@@ -7,7 +7,7 @@ import argparse
 Generate resfile for enzyme design
 
 @requires pdb file with ligand present
-@return resfile with natro for all residue > 10 AA and nataa > 8 AA
+@return resfile with natro for all residue > DISTANCE1 AA and nataa < DISTANCE1
 
 """
 
