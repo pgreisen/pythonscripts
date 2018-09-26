@@ -1,0 +1,199 @@
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<style type="text/css">
+  td.submit { background: #999;}
+  th { background: #bbb;}
+  th.sub { background: #e0e0e0;}
+  td.label  { background: #e0e0e0;}
+  td.input  { background: #e0e0f0;}
+ 
+</style>
+
+<title>circularLogo - Create Circular Sequence Logos </title>
+</head>
+
+<body align="center">
+            
+{% include "head.html" %}
+
+<table border="0" cellpadding="2" cellspacing="3" width="80%" align="center">
+
+<tr>
+<td colspan="4" align="left">
+<font size=4>
+<p><strong>Introduction</strong></p>
+<p>The sequence logo, a graphical representation depicting the consensus and diversity at each position of DNA motif, has been used for more than three decades. However, such in-line sequence logo is insufficient for fully characterize DNA motifs and fails to unveil the intra-motif dependencies, which have been observed in many studies(Man <i>et al</i>, 2001; Bulyk <i>et al</i>, 2004). <strong>circularLogo</strong> (circular sequence logo) is a web application to create circular sequence logos for DNA (or RNA) motifs. By virtue of the circular layout, circularLogo not only displays base stack at each position like the traditional sequence logo, but also depicts intra-motif dependencies. </p>
+<p>As a general visualization tool,  <strong>circularLogo</strong> takes  <strong>JSON</strong> or  <strong>FASTA</strong> format files as input and generates circular sequence logo in <strong>png</strong>, <strong>jpeg</strong> or <strong>tiff</strong> format. Please note, those commonly used frequency, count and log-based probability matrices are NOT accepted because these formats do not preserve the intra-motif dependencies.</p>
+
+<p><strong>JSON input format</strong></p>
+
+<p>JSON (JavaScript Object Notation) format file contains 3 sections to describe a circular motif. Below is an example JSON file characterizing a toy motif.</p>
+
+<textarea readonly style="resize:none" name="name" cols="128" rows="22">
+    {
+      "id": "Toy motif",
+      "nodes": [
+        {"index": 0, "label": "1", "bit": 1.9, "base": ["A", "T", "C", "G"], "freq": [0.0, 0.0, 0.2, 0.8]  },
+        {"index": 1, "label": "2", "bit": 1.8, "base": ["T", "C", "A", "G"], "freq": [0.1, 0.2, 0.3, 0.4]  },
+        {"index": 2, "label": "3", "bit": 1.6, "base": ["C", "G", "A", "T"], "freq": [0.05, 0.05, 0.2, 0.7]},
+        {"index": 3, "label": "4", "bit": 0.8, "base": ["G", "C", "A", "T"], "freq": [0.1, 0.2, 0.3, 0.4]  },
+        {"index": 4, "label": "5", "bit": 1.5, "base": ["G", "T", "C", "A"], "freq": [0.04, 0.06, 0.2, 0.7]  },
+        {"index": 5, "label": "6", "bit": 0.8, "base": ["T", "C", "G", "A"], "freq": [0.1, 0.2, 0.3, 0.4]  },
+        {"index": 6, "label": "7", "bit": 0.9, "base": ["G", "T", "C", "A"], "freq": [0.1, 0.2, 0.2, 0.5]  },
+        {"index": 7, "label": "8", "bit": 1.8, "base": ["C", "G", "A", "T"], "freq": [0.02, 0.08, 0.2,0.7]  },
+        {"index": 8, "label": "9", "bit": 0.8, "base": ["T", "G", "A", "C"], "freq": [0.1, 0.2, 0.3, 0.4]  },
+        {"index": 9, "label": "10", "bit": 0.8, "base": ["T", "A", "G", "C"],"freq": [0.1, 0.2, 0.3, 0.4]  }
+      ],
+      "links": [
+        {"source": 0, "target": 1, "value": 2.0},
+        {"source": 2, "target": 4, "value": 8.0},
+        {"source": 2, "target": 7, "value": 10.0},
+        {"source": 7, "target": 8, "value": 5.0},
+        {"source": 3, "target": 8, "value": 5.0}
+      ]
+    }
+</textarea>
+
+
+<ol>
+<li><strong>id section:</strong> Specifies the name of the motif, will be displayed on top of the graph.</li>
+<BR> 
+<li><strong>nodes section:</strong> This section is used to describe the motif residues.
+    <ul type="square">
+      <li><strong>index:</strong> indicates the order (in anticlockwise ) of the residues along the circular track. Index is starting from 0 and increased by 1.</li> 
+      <li><strong>label:</strong> indicates the label of each position. </li>
+      <li><strong>bit:</strong> indicates information content of residues at a position.  </li>
+      <li><strong>base:</strong> denotes the array of residues, the order of residues should be concordent with "freq". For example, in the position with index = 0, the frequency for each residue is "A" = 0.0, "T" = 0.0, "C" = 0.2, "G" = 0.8.</li>
+      <li><strong>freq:</strong> denotes the frequencies of each residue.</li>
+    </ul>     
+<BR> 
+<li><strong>links section:</strong> This section is used to describe the links between motif residues.</li>
+	<ul type="square">
+	<li><strong>source:</strong> indicates the "index" of source node (or the start position of the link). </li>
+	<li><strong>target:</strong> indicates the "index" of target node (or the end position of the link). </li>
+	<li><strong>value:</strong> indicates the strength of the link between the source and target nodes.  The values associated with links would be linearly mapped to the "width" of the arc-edges in the output image. Since the motif-graph is not in-line format, we generally advise to put the smaller index as "source" and the bigger as "target", but this is not mandatory.</li>
+	</ul>       
+</li>
+
+</ol>
+
+
+<p><strong>circularLogo</strong> will transform the above JSON format motif into a circular logo, and the strock width of links will reflect the strength of dependence among positions.</p>
+
+<div align="center"><img alt="ToyMotif" width="450" height="350" border="0" src="{% static "circularlogo/img/ToyMotif.png" %}" /></div>
+
+
+
+<p><strong>FASTA input format</strong></p>
+<p>In addition to the JSON format, <strong>circularLogo</strong> also accepts FASTA sequences
+as input to create a circular logo (use the "Load FASTA Demo" in home page). In this scenario,
+the JSON format motif representation will be calculated internally from the input FASTA file,
+and the intra-motif dependency will be measured by chi-square statistics.  Currently, many
+methods have been developed to quantify the intra-motif dependencies, such as the generalized
+weight matrix models (Zhou <i>et al</i>. 2004), sparse local inhomogeneous mixture (Slim) models
+(Jens <i>et al</i>. 2011), transcription factor flexible models (TFFMs) based on hidden Markov models
+(Mathelier <i>et al</i>. 2013), a binding energy model (BEM) (Zhao <i>et al</i>. 2012), inhomogeneous parsimonious
+Markov (PMMs) models (Eggeling <i>et al</i>. 2015). Therefore, users need to make their customized JSON
+files if they want to use their preferred methods, by replacing "value" in "links" section of JSON with their own scores.</p>
+
+<textarea readonly style="resize:none" name="name" cols="128" rows="21"> 
+>site1
+GGTACAGTTTGTACA
+>site2
+AATACAGATTGTTCT
+>site3
+AATACAGAGTGTACT
+>site4
+AGAACATAATGTACA
+>site5
+AGTACACTCTGTAAT
+>site6
+GGAACATTTTGTTTT
+>site7
+AGCACAAGATGTTCT
+>site8
+AGTACTTCCTGTTCC
+>site9
+GGTACACTGTGTACT
+>site10
+GGTACAAACTGTTCT
+...
+</textarea>
+
+
+<p><strong>Customize circularLogo output</strong></p>
+<p><strong>circularLogo</strong> has several parameters (including width, height, startAngle and
+endAngle, etc) that control the appearance of graphical motif output. People can interactively
+adjust these parameters to customize the output. Especially, dependence scores associated with links 
+will internally be scaled into a linear range [0, 100], adjusting the slider can restrict partial links
+within a desirable range for display and relative strength ordering.</p>
+</font>  
+</td> 
+</tr>
+
+<tr><td colspan="4"><div align="center"><img alt="ToyMotif" width="800" height="500" border="0" src="{% static "circularlogo/img/interface.png" %}" /></div></td></tr>
+
+<tr><td colspan="4"><br/></td></tr>
+
+<tr><td colspan="4" align="left">
+<p><strong>References:</strong></p>
+
+<tr><td colspan="4" align="left">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;Bulyk ML, Johnson PL, Church GM. (2002) Nucleotides of transcription factor binding sites exert interdependent effects on the binding affinities of transcription factors. <i>Nucleic Acids Res</i> <strong>30</strong>: 1255–1261.</span>
+</td> 
+</tr>
+
+
+</td> 
+</tr>
+<tr><td colspan="4" align="left">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;Crooks G. E., et al. (2004) Weblogo: a sequence logo generator. <i>Genome Res.</i>, <strong>14</strong>, 1188-1190.</span>
+</td> 
+</tr>
+<tr><td colspan="4" align="left">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;Eggeling R., Roos T., Myllymäki P. and Grosse I. (2015) Inferring intra-motif dependencies of DNA binding sites from ChIP-seq data. <i>BMC Bioinformatics</i>, <strong>16</strong>, 375.</span>
+</td> 
+</tr>
+<tr><td colspan="4" align="left">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;Jens K. and Jan G. (2015) Varying levels of complexity in transcription factor binding motifs. <i>Nucleic Acids Res.</i>, <strong>43</strong>, (18):e119.</span>
+</td> 
+</tr>
+
+<tr><td colspan="4" align="left">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;Man TK, Stormo GD (2001) Non-independence of Mnt repressor-operator interaction determined by a new quantitative multiple fluorescence relative affinity (QuMFRA) assay. <i>Nucleic Acids Res</i> <strong>29</strong>:2471–2478.</span>
+</td> 
+</tr>
+
+
+
+<tr><td colspan="4" align="left">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;Mathelier A. and Wasserman W.W. (2013) The next generation of transcription factor binding site prediction. <i>PLoS Comput Biol.</i>, <strong>9</strong>, (9):e1003214.</span>
+</td> 
+</tr>
+<tr><td colspan="4" align="left">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;Zhao Y., Ruan S., Pandey M., and Stormo G.D. (2012) Improved models for transcription factor binding site identification using nonindependent interactions. <i>Genetics</i>, <strong>191</strong>, (3):781-790.</span>
+</td> 
+</tr>
+<tr><td colspan="4" align="left">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;Zhou Q. and Liu J.S. (2004) Modeling within-motif dependence of transcription factor binding site predications. <i>Bioinformatics</i>, <strong>20</strong>, 909-916.</span>
+</td> 
+</tr>
+
+
+<tr><td colspan="4"><hr></td></tr>
+
+
+
+<tr><td colspan="4" align="left">
+ <strong>Contact Us:</strong> Zhenqing Ye&nbsp;&nbsp;(ye.zhenqing@mayo.edu)&nbsp;&nbsp;&nbsp;Liguo Wang&nbsp;&nbsp;(wang.liguo@mayo.edu)
+</td></tr>
+
+
+</table>
+
+</body>
+</html>

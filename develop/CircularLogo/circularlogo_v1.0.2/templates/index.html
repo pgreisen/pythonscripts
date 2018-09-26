@@ -1,0 +1,175 @@
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<style type="text/css">
+  td.submit { background: #999;}
+  th { background: #bbb;}
+  th.sub { background: #e0e0e0;}
+  td.label  { background: #e0e0e0;}
+  td.input  { background: #e0e0f0;}
+ 
+</style>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="{% static 'circularlogo/js/demofasta.js' %}"></script>
+<script type="text/javascript" src="{% static 'circularlogo/js/circularlogo.js' %}"></script>
+<title>CircularLogo - Create Circular Sequence Logos </title>
+
+</head>
+
+<!--http://lagavulin.ccbb.pitt.edu/cgi-bin/enologos/enologos.cgi-->
+<body align="center">
+            
+{% include "head.html" %}
+
+
+<table border="0" cellpadding="2" cellspacing="3" width="80%" align="center">
+<tr><td colspan="4" align="left">
+{% if form.errors %}
+   <p style="color:red;"> Please correct the errors below. </p>  
+    <font color="red"> <strong> 
+    {{ form.non_field_errors }}
+    </strong> </font> 
+{% endif %}
+
+</td></tr>
+
+<form method="post" action="" enctype="multipart/form-data">
+
+
+<tr>
+<td colspan="4" align="left">
+<span ><font size=4 align="left"><strong>CircularLogo</strong> is a web application for creating circularized sequence logo, with the aim of revealing pairwise dependencies among residues within a motif. As a general visualization tool,  <strong>CircularLogo</strong> takes  <strong>JSON</strong> or <strong>FASTA</strong> format files as input and generates circular sequence logo in <strong>png</strong>, <strong>jpeg</strong> or <strong>tiff</strong> format. Please note, those commonly used frequency, count and log-based probability matrices are NOT accepted because these formats do not preserve the intra-motif dependencies. Please refer to <a href="http://circularlogo.sourceforge.net/"><strong>Help</strong></a> page for JSON format.<br/><br/>
+</font>
+</span>
+</td> 
+</tr>
+
+<tr><td colspan="4"><br/></td></tr>
+
+<tr><td colspan="4">
+{% for choice in form.format %}
+  <span class="select">{{ choice.tag }}</span> &nbsp;<strong>{{ choice.choice_label }} </strong>&nbsp;&nbsp;&nbsp;
+{% endfor %}
+</td></tr>
+
+
+<tr><th colspan="4" >
+Input Sites: Sequences FASTA Sequences Format or Customized JSON Format
+</th></tr>
+
+<tr>
+<td colspan="3" class="input" align="center" >
+  {{ form.inputText }}
+</td>
+
+<td colspan="1" align="left" class="input" >
+  <div ><font size=3 align="left" valign="top">For those <strong>FASTA input sequences</strong>, please refer to the button
+  <input type="button" value="Load FASTA Demo" onclick="loadFastaDemo()"/>
+  <br/><br/>
+  For the <strong>Customized JSON Format</strong>, please refer to the button <input type="button" value="Load JSON Demo" onclick="loadJsonDemo()" />
+  <br/><br/>
+  or please refer to <strong><a href="http://circularlogo.sourceforge.net/">"Help"</a></strong> page.
+  <br/><br/>
+</font>
+  </div>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="4" class="input" align="left">
+  <!-- <input type="file" name="fasta_file"  /> -->
+ Upload Input Data:&nbsp;&nbsp;{{ form.inputFile }}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <input type="button" value="Load FASTA Demo" onclick="loadFastaDemo()" />
+ &nbsp;&nbsp;&nbsp;
+ <input type="button" value="Load JSON Demo" onclick="loadJsonDemo()" />
+</td>
+
+</tr>
+
+<tr><th colspan="4" >
+Logo Parameters
+</th></tr>
+
+<tr>
+<td colspan="4", align="center">
+  <table border="0" rules=NONE cellpadding="2" cellspacing="3" width="100%" align="center">
+        <TR bgcolor="#EEEEEE">
+          <TD colspan="1" align="left" >logo title:</TD>
+          <!--<TD colspan="1" ALIGN="left" ><input name="TITLE_TEXT" size=30 value=""></TD>-->
+          <TD colspan="1" ALIGN="left" >{{ form.title }}</TD>
+          <TD colspan="1" align="left" >width:</TD>
+          <TD colspan="1" ALIGN="left"  size=5> {{ form.width }} </TD>
+          <TD colspan="1" align="left" >height:</TD>
+          <TD colspan="1" ALIGN="left" size=5> {{ form.height }}&nbsp;pixels</TD>
+        </TR>
+        <TR bgcolor="#EEEEEE">
+          <TD colspan="1" align="left" width="15%">pseudocounts:</TD>
+          <td colspan="3" align="left">
+             A:&nbsp;&nbsp; {{form.pseudoA}} <!--<input name="LETTER_3" size=8 value="0.25">-->
+             T:&nbsp;&nbsp; {{form.pseudoT}} <!--<input name="LETTER_3" size=8 value="0.25">-->
+             C:&nbsp;&nbsp; {{form.pseudoC}} <!--<input name="LETTER_3" size=8 value="0.25">-->
+             G:&nbsp;&nbsp; {{form.pseudoG}} <!--<input name="LETTER_3" size=8 value="0.25">-->
+          </td>  
+          <TD colspan="1" align="left" >Method:</TD>
+          <TD colspan="1" ALIGN="left"> 
+          {{form.method}}
+          </TD>          
+        </TR>
+        <TR bgcolor="#EEEEEE">
+          <TD colspan="1" align="left" width="15%">genome background:</TD>
+          <td colspan="3" align="left">
+             A:&nbsp;&nbsp; {{form.gbkgA}} <!--<input name="LETTER_3" size=8 value="0.25">-->
+             T:&nbsp;&nbsp; {{form.gbkgT}} <!--<input name="LETTER_3" size=8 value="0.25">-->
+             C:&nbsp;&nbsp; {{form.gbkgC}} <!--<input name="LETTER_3" size=8 value="0.25">-->
+             G:&nbsp;&nbsp; {{form.gbkgG}} <!--<input name="LETTER_3" size=8 value="0.25">-->
+          </td>  
+          <TD colspan="1" align="left" >p-value:</TD>
+          <TD colspan="1" ALIGN="left"> 
+          {{form.pvalue}}&nbsp;for cutoff.
+          </TD>          
+        </TR>
+        <TR bgcolor="#EEEEEE"><TD colspan="6">{{form.hidden_config}}</TD></TR>
+  </table>
+</td>
+
+</tr>
+
+<tr>
+
+{% csrf_token %}
+
+<tr>
+<td class="submit" align="center" colspan="4">
+  <input type="submit"  value="Create Logo" />
+  &nbsp;&nbsp;
+  <input type="reset"  value="Reset" />
+</td>
+</tr>
+
+<tr><td colspan="4"><hr></td></tr>
+
+<tr>
+<td colspan="4" align="left">
+Zhenqing Ye, Liguo Wang, et al. xxx,  Circular sequence logo: an interactive web application to visualize intra-motif dependencies. (manuscript under preparation)  </font>
+</span>
+</td> 
+</tr>
+
+
+<tr><td colspan="4" align="left">
+ <strong>Contact Us:</strong> Zhenqing Ye&nbsp;&nbsp;(ye.zhenqing@mayo.edu)&nbsp;&nbsp;&nbsp;Liguo Wang&nbsp;&nbsp;(wang.liguo@mayo.edu)
+</td></tr>
+
+
+</form>
+</table>
+
+
+
+</body>
+</html>

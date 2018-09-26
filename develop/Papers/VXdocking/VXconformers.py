@@ -375,7 +375,7 @@ class VXconformers:
             writer3.write(aligned, confId=i)
         return aligned
 
-    def get_index_dummy_atms(self, mol):
+    def get_index_dummy_atms_mol(self, mol):
         """
         get the index of atoms to set geometry
         methyl bonded to phosphorus
@@ -390,6 +390,7 @@ class VXconformers:
         index of atoms
 
         """
+        print "from method::: ", mol
 
         dmm = []
         for atom in mol.GetAtoms():
@@ -402,6 +403,7 @@ class VXconformers:
         dmm.sort(reverse=True)
         for idx in dmm:
             back.RemoveAtom(idx)
+        print "from method::: ", back
         return back
 
     def get_index_of_nucleophile(self, combo):
@@ -452,15 +454,18 @@ class VXconformers:
         bond = back.GetBondBetweenAtoms(p_id, s_id)
         back = Chem.FragmentOnBonds(back, [bond.GetIdx()], addDummies=True, dummyLabels=[(1, 1)])
 
+        print "::::::", type(back), back
+
         atom1 = back.GetAtomWithIdx(self.OH_INDEX_OXYGEN)
         atom1.SetFormalCharge(0)
         Chem.SanitizeMol(back)
         rdmt.SetAngleDeg(back.GetConformer(0), p_id, self.OH_INDEX_OXYGEN, self.OH_INDEX_HYDROGEN, self.ANGLE_HYDROGEN)
 
+        print "::::::", type(back), back
         ########## REMOVE ATOMS
-        back = self.get_index_dummy_atms(back)
+        back = self.get_index_dummy_atms_mol(back)
 
-        print "::::::",type(back),back
+        print "::::::", type(back), back
 
         # Add bond between P-S
         edcombo = Chem.EditableMol(back)

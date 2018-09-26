@@ -1,0 +1,543 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Circular Logo</title>
+<link rel="stylesheet" href="{% static 'circularlogo/css/circularlogo.css' %}">
+<link rel="stylesheet" href="{% static 'circularlogo/css/jquery-ui.css' %}">
+
+<style type="text/css">       
+   #spindiv input {width: 25px}
+</style>
+
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="{% static 'circularlogo/js/saveSvgAsPng.js' %}"></script>
+<script type="text/javascript" src="{% static 'circularlogo/js/colorbrewer.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'circularlogo/js/demofasta.js' %}"></script> 
+<script type="text/javascript" src="{% static 'circularlogo/js/circularlogo.js' %}"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+function spinMinerStop(elem, event) {
+    var spinMin = elem.spinner('value');
+    var spinMax = $( "#spinner2" ).spinner('value');
+    if(spinMin > spinMax){
+        alert("Min side must be less or equal to Max side!");
+        elem.spinner( "value", spinMax );
+        event.preventDefault();
+        return;
+    };
+    visParam.minArcLen = spinMin;
+    visParam.maxArcLen = spinMax;
+    d3.select("svg").remove();
+    drawingMainSVG(motifGraph, visParam);
+};
+
+function spinMaxerStop(elem, event) {
+    var spinMax = elem.spinner('value');
+    var spinMin = $( "#spinner1" ).spinner('value');
+    if(spinMin > spinMax){
+        alert("Min side must be less or equal to Max side!");
+        elem.spinner( "value", spinMin );
+        event.preventDefault();
+        return;
+    };
+    visParam.minArcLen = spinMin;
+    visParam.maxArcLen = spinMax;
+    d3.select("svg").remove();
+    drawingMainSVG(motifGraph, visParam);
+};
+
+function slide(event, ui) {
+    // Allow time for exact positioning
+    setTimeout(function () {
+        $(ui.handle).attr('title', ui.value).tooltip('fixTitle').tooltip('show');
+    }, 0);
+    
+    visParam.minVal = ui.values[0];
+    visParam.maxVal = ui.values[1];
+    d3.select("svg").remove();
+    drawingMainSVG(motifGraph, visParam);
+    
+};
+
+function slideScale(event, ui, realMin, realMax) {
+    // Allow time for exact positioning
+    setTimeout(function () {
+        $(ui.handle).attr('title', ui.value).tooltip('fixTitle').tooltip('show');
+    }, 0);
+    
+    visParam.minVal = ui.values[0]/100.0*realMax + realMin ;
+    visParam.maxVal = ui.values[1]/100.0*realMax + realMin;
+    d3.select("svg").remove();
+    drawingMainSVG(motifGraph, visParam);
+    
+};
+
+function create(event, ui, start, end) {
+    var handles = $(event.target).find('span');
+    handles.eq(0).tooltip({
+        animation: false,
+        placement: 'bottom',
+        trigger: 'manual',
+        container: handles.eq(0),
+        title: start
+    }).tooltip('show');
+    handles.eq(1).tooltip({
+        animation: false,
+        placement: 'bottom',
+        trigger: 'manual',
+        container: handles.eq(1),
+        title: end
+    }).tooltip('show');
+};
+
+function calcSpinWidth(visParam){
+    var itemAngWidth = (visParam.endAng - visParam.startAng - visParam.padAng*(visParam.motifL-1))/visParam.motifL;
+    var arclength = Math.floor(itemAngWidth * visParam.innerRadius*0.60);
+    return arclength;
+};
+    
+$(function() {
+    //console.log(visParam);
+    //console.log(motifGraph);
+    document.getElementById("titleElem").innerText=visParam.title;
+    visParam.padding = 30;
+    visParam.startAng = -5*Math.PI/6; //-3*Math.PI/4;
+    visParam.endAng = 5*Math.PI/6;  //3*Math.PI/4;
+    var itemAngWidth = (visParam.endAng - visParam.startAng)/(visParam.motifL + 0.15*(visParam.motifL-1))
+    //padAng = 0.02  //2% width of each positional rectangle            
+    visParam.padAng = 0.15*itemAngWidth;
+    visParam.outerRadius = 0.5*visParam.height - visParam.padding;
+    //console.log(visParam.outerRadius);
+    visParam.innerRadius = visParam.outerRadius - 80;
+    
+    
+    var elem = document.getElementById("innerRd_slider");
+    elem.max = Math.min(0.5*(visParam.height - visParam.padding), 0.5*visParam.width);
+    elem.value = visParam.innerRadius;
+    document.getElementById("innerRd_val").innerText = elem.value;
+    
+    elem = document.getElementById("outerRd_slider");
+    elem.max = Math.min(0.5*(visParam.height - visParam.padding), 0.5*visParam.width);
+    elem.value = visParam.outerRadius;
+    document.getElementById("outerRd_val").innerText = elem.value;
+
+    var motifLinks = motifGraph.links;
+    if(motifLinks) {
+        motifLinks.sort(function(a, b) {
+                   return a.value - b.value;
+                });
+        //ceil or floor         
+        //valMin = Math.floor(motifLinks[0].value); 
+        //valMax = Math.ceil(motifLinks[motifLinks.length - 1].value);
+        //how about linear mapping to the range of [0, 100]
+        absMin = motifLinks[0].value;
+        absMax = motifLinks[motifLinks.length - 1].value
+        
+        visParam.minVal = absMin;
+        visParam.maxVal = absMax;
+        //console.log(absMin);
+        //console.log(absMax);
+      
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,   //valMin,
+          max: 100, //valMax,
+          step: 0.01,
+          values: [0, 100],  //valMin, valMax
+          create: function(event, ui) {
+            create(event, ui, $(this).slider('values', 0), $(this).slider('values', 1));
+          },
+          slide: function( event, ui ) {    
+             //slide(event, ui);
+             slideScale(event, ui, absMin, absMax);
+          }
+        });
+
+        //$("#slider-range .ui-slider-range").css({"background":"#ef2929"});
+        //$("#slider-range .ui-slider-handle").css({"border-color":"#ef2929"});
+        //$("#slider-range .ui-slider-handle").css({"background":"#ef2929"});
+        
+        
+        var arclength = calcSpinWidth(visParam);
+        //console.log(arclength);
+        var minArc = Math.max(1, Math.min(1, arclength));
+        var maxArc = Math.max(1, Math.max(1, arclength));
+        var spinnerMin = $( "#spinner1" ).spinner({ 
+          min: minArc, max: maxArc
+        });
+        spinnerMin.spinner( "value", minArc );
+        //spinnerMin.spinner( { start: function( event, ui ) { spinMinerStart($(this), event);} } );
+        spinnerMin.spinner( { stop: function( event, ui )  { spinMinerStop($(this), event);} } );
+
+        var spinnerMax = $( "#spinner2" ).spinner({ 
+              min: minArc, max: maxArc
+        });
+        spinnerMax.spinner( "value", arclength );
+        spinnerMax.spinner( { stop: function( event, ui )  { spinMaxerStop($(this), event);} } );
+        
+        visParam.minArcLen = $('#spinner1').spinner('value');
+        visParam.maxArcLen = $('#spinner2').spinner('value');
+    };
+    
+    //customize the demo cases
+    if(visParam.hconfig) {
+        tokens = visParam.hconfig.split(";");
+        for(var tk in tokens){
+            var pair = tokens[tk].split(':')
+            command = "visParam." + pair[0] + "=" + pair[1];
+            eval(command);            
+        };
+        $('#spinner1').spinner('value', visParam.minArcLen);
+        $('#spinner2').spinner('value', visParam.maxArcLen);
+        
+        if(visParam.case && visParam.case == "HNF6Demo"){
+            if(visParam.method == "chi")
+                visParam.minVal = 308.0;  
+            else visParam.minVal = 0.0265; 
+        };
+        //alert(absMin + ':' + absMax);
+        var absGap = absMax - absMin;
+        var sclMinVal = Math.floor(100.0*(visParam.minVal - absMin)/absGap);
+        var sclMinVal = Math.max(0, sclMinVal);
+        var sclMaxVal = Math.ceil(100.0*(visParam.maxVal - absMin)/absGap);
+        var sclMaxVal = Math.min(100, sclMaxVal);
+        var linkMinMax = [ sclMinVal, sclMaxVal ];
+        //alert(sclMinVal + ':' + sclMaxVal);
+        $( "#slider-range" ).slider('values', 0, linkMinMax[0]);
+        $( "#slider-range" ).slider('values', 1, linkMinMax[1]);
+        $( "#slider-range .ui-slider-handle").attr('title', function(d){
+                                                       return linkMinMax[d];
+                                                  })
+                                             .tooltip('fixTitle').tooltip('show'); 
+        
+        //discarding hconfig after using these information
+        visParam.hconfig = '';
+    };
+   
+    drawingMainSVG(motifGraph, visParam);
+    
+});
+  
+</script>
+</head>
+<body align="center" > 
+
+<script type="text/javascript">
+    var visParam = {{visParam|safe}};
+    //console.log(visParam);
+    var motifGraph = {{motifGraph|safe}};
+    
+    function widthAlt(){
+        var width = Math.floor(document.getElementById("widthBox").value);
+        if(! width){
+            alert("Please input a rational integer!")
+            return;
+        };
+        visParam.width = width;
+        var radius = 0.5*(visParam.height - visParam.padding);
+        radius = Math.min(radius, 0.5*visParam.width);
+        visParam.outerRadius = radius;
+        //console.log(visParam.outerRadius);
+        visParam.innerRadius = visParam.outerRadius - 80;
+
+        var elem = document.getElementById("innerRd_slider");
+        elem.max = radius;
+        elem.value = visParam.innerRadius;
+        document.getElementById("innerRd_val").innerText = elem.value;
+        
+        elem = document.getElementById("outerRd_slider");
+        elem.max = radius;
+        elem.value = visParam.outerRadius;
+        document.getElementById("outerRd_val").innerText = elem.value;
+        
+        var arclength = calcSpinWidth(visParam);
+        var minArc = Math.max(1, Math.min(1, arclength));
+        var maxArc = Math.max(1, Math.max(1, arclength));
+        visParam.minArcLen = minArc;
+        visParam.maxArcLen = maxArc;
+        $('#spinner1').spinner('option', 'min', minArc);
+        $('#spinner2').spinner('option', 'max', maxArc);
+        $('#spinner1').spinner( "value", minArc );
+        $('#spinner2').spinner( "value", maxArc );
+        d3.select("svg").remove();
+        drawingMainSVG(motifGraph, visParam);
+    };
+    
+    function heightAlt(){
+        var height = Math.floor(document.getElementById("heightBox").value);
+        if(! height){
+            alert("Please input a rational integer!")
+            return;
+        };
+        visParam.height = height;
+        var radius = 0.5*(visParam.height - 2.0*visParam.padding);
+        radius = Math.min(radius, 0.5*visParam.width);
+        visParam.outerRadius = radius;
+        //console.log(visParam.outerRadius);
+        visParam.innerRadius = visParam.outerRadius - 80;
+
+        var elem = document.getElementById("innerRd_slider");
+        elem.max = radius;
+        elem.value = visParam.innerRadius;
+        document.getElementById("innerRd_val").innerText = elem.value;
+        
+        elem = document.getElementById("outerRd_slider");
+        elem.max = radius;
+        elem.value = visParam.outerRadius;
+        document.getElementById("outerRd_val").innerText = elem.value;
+        
+        var arclength = calcSpinWidth(visParam);
+        var minArc = Math.max(1, Math.min(1, arclength));
+        var maxArc = Math.max(1, Math.max(1, arclength));
+        visParam.minArcLen = minArc;
+        visParam.maxArcLen = maxArc;
+        $('#spinner1').spinner('option', 'min', minArc);
+        $('#spinner2').spinner('option', 'max', maxArc);
+        $('#spinner1').spinner( "value", minArc );
+        $('#spinner2').spinner( "value", maxArc );
+        d3.select("svg").remove();
+        drawingMainSVG(motifGraph, visParam);
+    };
+    
+    function startAng_sliding(){
+        var y = document.getElementById("startAng_slider");
+        //document.getElementById("startAng_val").innerText = y.value;
+        document.getElementById("startAng_val").innerText = parseFloat(y.value).toFixed(2);
+        visParam.startAng = y.value * Math.PI;
+        var arclength = calcSpinWidth(visParam);
+        var minArc = Math.max(1, Math.min(1, arclength));
+        var maxArc = Math.max(1, Math.max(1, arclength));
+        visParam.minArcLen = minArc;
+        visParam.maxArcLen = maxArc;
+        $('#spinner1').spinner('option', 'min', minArc);
+        $('#spinner2').spinner('option', 'max', maxArc);
+        $('#spinner1').spinner( "value", minArc );
+        $('#spinner2').spinner( "value", maxArc );
+        d3.select("svg").remove();
+        drawingMainSVG(motifGraph, visParam);
+    };   
+
+    function endAng_sliding(){
+        var y = document.getElementById("endAng_slider");
+        //document.getElementById("endAng_val").innerText = y.value;
+        document.getElementById("endAng_val").innerText = parseFloat(y.value).toFixed(2);
+        visParam.endAng = y.value * Math.PI;
+        var arclength = calcSpinWidth(visParam);
+        var minArc = Math.max(1, Math.min(1, arclength));
+        var maxArc = Math.max(1, Math.max(1, arclength));
+        visParam.minArcLen = minArc;
+        visParam.maxArcLen = maxArc;
+        $('#spinner1').spinner('option', 'min', minArc);
+        $('#spinner2').spinner('option', 'max', maxArc);
+        $('#spinner1').spinner( "value", minArc );
+        $('#spinner2').spinner( "value", maxArc );
+        d3.select("svg").remove();
+        drawingMainSVG(motifGraph, visParam);
+    };    
+
+    function padAng_sliding(){
+        var y = document.getElementById("padAng_slider");
+        document.getElementById("padAng_val").innerText = Math.floor(y.value*100);
+        var itemAngWidth = (visParam.endAng - visParam.startAng)/(visParam.motifL + y.value*(visParam.motifL-1));      
+        visParam.padAng = y.value*itemAngWidth;
+        var arclength = calcSpinWidth(visParam);
+        var minArc = Math.max(1, Math.min(1, arclength));
+        var maxArc = Math.max(1, Math.max(1, arclength));
+        visParam.minArcLen = minArc;
+        visParam.maxArcLen = maxArc;
+        $('#spinner1').spinner('option', 'min', minArc);
+        $('#spinner2').spinner('option', 'max', maxArc);
+        $('#spinner1').spinner( "value", minArc );
+        $('#spinner2').spinner( "value", maxArc );
+        d3.select("svg").remove();
+        drawingMainSVG(motifGraph, visParam);
+    };   
+
+    function innerRd_sliding(){
+        var y =  document.getElementById("innerRd_slider");
+        document.getElementById("innerRd_val").innerText = Math.floor(y.value);
+        visParam.innerRadius = parseInt(y.value);
+        var arclength = calcSpinWidth(visParam);
+        var minArc = Math.max(1, Math.min(1, arclength));
+        var maxArc = Math.max(1, Math.max(1, arclength));
+        visParam.minArcLen = minArc;
+        visParam.maxArcLen = maxArc;
+        $('#spinner1').spinner('option', 'min', minArc);
+        $('#spinner2').spinner('option', 'max', maxArc);
+        $('#spinner1').spinner( "value", minArc );
+        $('#spinner2').spinner( "value", maxArc );
+        d3.select("svg").remove();
+        drawingMainSVG(motifGraph, visParam);
+    };   
+
+    function outerRd_sliding(){
+        var y =  document.getElementById("outerRd_slider");
+        document.getElementById("outerRd_val").innerText = Math.floor(y.value);
+        visParam.outerRadius = parseInt(y.value);
+        var arclength = calcSpinWidth(visParam);
+        var minArc = Math.max(1, Math.min(1, arclength));
+        var maxArc = Math.max(1, Math.max(1, arclength));
+        visParam.minArcLen = minArc;
+        visParam.maxArcLen = maxArc;
+        $('#spinner1').spinner('option', 'min', minArc);
+        $('#spinner2').spinner('option', 'max', maxArc);
+        $('#spinner1').spinner( "value", minArc );
+        $('#spinner2').spinner( "value", maxArc );
+        d3.select("svg").remove();
+        drawingMainSVG(motifGraph, visParam);
+    };      
+    
+    function nodeFocusChg(){
+        var elem =  document.getElementById("focusnode");
+        var nid = parseInt(elem.options[elem.selectedIndex].value) - 1;
+        
+        var visnodes = d3.selectAll("#nodeG").selectAll("path");
+        visnodes.filter(function(n) { return n.data.index == nid;})
+                .style("stroke", "#d62728");
+        visnodes.filter(function(n) {return n.data.index != nid;})
+                .style("stroke", "steelblue");                
+        
+        var vislinks = d3.select("#linkG").selectAll("path");  
+        
+        if(nid < 0){
+            vislinks
+                .style("stroke", "steelblue")
+                .style('stroke-opacity', 0.25);
+        }
+        else{
+            vislinks
+                .filter(function(l) { return l.target.id === nid || l.source.id === nid; })
+                .style('stroke', function(l){return "red";})
+                .style('stroke-opacity', 0.6);
+                
+            vislinks
+                .filter(function(l) { return l.target.id != nid && l.source.id != nid; })
+                .style('stroke-opacity', 0);
+        };
+
+    };
+    
+    function downloadImg(){
+        var elem = document.getElementById("logo_title");
+        var title = elem.value;
+        if(!title){title = "circularLogo"};
+        var elem = document.getElementById("OUTPUT_FORMAT");
+        var format = elem.options[elem.selectedIndex].value;
+        if(format != "json"){
+            saveSvgAsPng(document.getElementsByTagName("svg")[0], format, title + '.' + format);
+        }else{
+            var blob = new Blob([JSON.stringify(motifGraph)], {type: "application/json"});
+            var uri  = URL.createObjectURL(blob);
+            saveAsJson(title + ".json", uri);
+        };
+        
+    };
+            
+</script>
+        
+    {% include "head.html" %}
+    
+    <table border="1" rules=NONE cellpadding="5" cellspacing="5" width="75%" align="center">
+    <tr><th colspan="9" bgcolor="#e0e0e0">Visual Parameters</th></tr>
+        <TR bgcolor="#EEEEEE">
+          <TD colspan="1" align="right">logo title:</TD>
+          <TD colspan="1" ALIGN="left" ><input id="logo_title" width="100%" size=20 value="{{visParam.title}}" onchange="document.getElementById('titleElem').innerText=this.value; motifGraph.id=this.value;"></TD>
+          <TD colspan="1" align="left">&nbsp;</TD>
+          <TD colspan="1" align="right" >width:</TD>
+          <TD colspan="1" ALIGN="left" ><input id="widthBox" width="100%" value="{{ visParam.width }}" onchange="widthAlt();" ></TD>
+          <TD colspan="1" align="left">&nbsp;px</TD>
+          <TD colspan="1" align="right" >height:</TD>
+          <TD colspan="1" ALIGN="left" > <input id="heightBox" width="100%" value="{{ visParam.height }}" onchange="heightAlt();"></TD>
+          <TD colspan="1" align="left">&nbsp;px</TD>
+        </TR>
+        <TR bgcolor="#EEEEEE">
+          <TD colspan="1" align="right" >startAngle:</TD>
+          <TD colspan="1" align="left">
+            <input type="range" style="width:100%;" min="-1" max="0" value="-0.75" step="0.01" id="startAng_slider" onchange="startAng_sliding()"/></TD>
+          <TD colspan="1" align="left"><span id="startAng_val">-0.75</span>&pi;</TD>
+          <TD colspan="1" align="right" >endAngle:</TD>
+          <TD colspan="1" align="left">
+            <input type="range" style="width:100%;" min="0" max="1" value="0.75" step="0.01" id="endAng_slider" onchange="endAng_sliding()"/></TD>
+          <TD colspan="1" align="left"><span id="endAng_val">0.75</span>&pi;</TD>
+          <TD colspan="1" align="right" >padAngle:</TD>  <!--relative to the angular width of each arc-->
+          <TD colspan="1" align="left">
+            <input type="range" style="width:100%;" min="0" max="0.50" value="0.15" step="0.01" id="padAng_slider" onchange="padAng_sliding()" /></TD>
+          <TD colspan="1" align="left"> <span id="padAng_val">15</span>%</TD>
+        </TR>
+        <TR bgcolor="#EEEEEE">
+          <TD colspan="1" align="right" >innerRadius:</TD>
+          <TD colspan="1" align="left">
+            <input type="range" style="width:100%;" min="0" step="1" id="innerRd_slider" onchange="innerRd_sliding()" />
+          </TD>
+          <TD colspan="1" align="left"><span id="innerRd_val">&nbsp;</span>px</TD>
+          
+          <TD colspan="1" align="right" >outerRadius:</TD>
+          <TD colspan="1" align="left">
+            <input type="range" style="width:100%;" min="0" step="1" id="outerRd_slider" onchange="outerRd_sliding()" />
+          </TD>
+          <TD colspan="1" align="left"><span id="outerRd_val">&nbsp;</span>px</TD>
+          
+          <!--
+          <TD colspan="1" align="right" style="white-space:nowrap;">top percent:</TD>
+          <TD colspan="1" align="left">
+            <input type="range" style="width:100%;" min="0" max="100" value="30" id="toplinks_slider" onchange="toplinks_sliding()" />
+          </TD>
+          <TD colspan="1" align="left"><span id="toplinks_val">30</span>%</TD>
+          -->
+          
+          <TD colspan="3" align="center">focus on node:
+            <select id="focusnode" style="width:20%;" onchange="nodeFocusChg()">
+              <option selected="selected" VALUE="0">0
+              {% for i in visParam.looptime  %}
+              <option value="{{i}}">{{i}}</option>
+              {% endfor %}
+            </select>
+          </TD>
+          
+          <!--
+          <TD colspan="4" align="left">
+            <table border="none" cellpadding="5" cellspacing="5" width="80%" align="center">
+            <tr><td colspan="1">oX:&nbsp;<input name="oXinput" size="5" value="{{ visParam.width }}"></td>
+                <td colspan="1">oY:&nbsp;<input name="oYinput" size="5" value="{{ visParam.height }}"></td>
+            </tr></table>
+          </TD>
+          -->
+        </TR>
+        
+        <TR bgcolor="#EEEEEE">
+          <TD colspan="1" valign="top" align="right"><div id="spindiv"><input type="text" id="spinner1" />&nbsp;</div>
+          </TD>
+          <TD colspan="4" align="left" valign="top" ><div id="slider-range" 
+<div id="slider" style="-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;"></div></TD>
+          <TD colspan="2" valign="top" align="left"><div id="spindiv">&nbsp;<input type="text" id="spinner2" /></div></TD>
+          <TD colspan="1" align="left" style="white-space:nowrap;">output format:
+            <select id="OUTPUT_FORMAT">  <!--style="width:50%;"-->
+              <option VALUE="png">png
+              <option VALUE="jpeg">jpeg
+              <option VALUE="tiff">tiff
+              <option VALUE="json">json
+            </select>
+          </TD>  
+          <TD colspan="1" align="center" >
+            <input type="button" label="Download" value="Download" onclick="downloadImg()" /> 
+          </TD>
+          
+        </TR>
+  </table> 
+  <table id="svgtable" border="0" rules=NONE cellpadding="1" cellspacing="1" width="75%" align="center">
+    <tr><td><H2><p align="center" id="titleElem"></p></H2></td></tr>
+    <tr><td align="center"><span id="svgcontainer"></span></td></tr>
+  </table>
+<table border="0" rules=NONE cellpadding="5" cellspacing="5" width="75%" align="center">
+<tr><td colspan="4"><hr></td></tr>
+<tr><td colspan="4" align="left">
+ <strong>Contact Us:</strong> Zhenqing Ye&nbsp;&nbsp;(ye.zhenqing@mayo.edu)&nbsp;&nbsp;&nbsp;Liguo Wang&nbsp;&nbsp;(wang.liguo@mayo.edu)
+</td></tr>
+</table>   
+</body>
+</html>
