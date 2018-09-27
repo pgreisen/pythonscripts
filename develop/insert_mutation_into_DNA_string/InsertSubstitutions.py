@@ -45,17 +45,17 @@ class InsertSubstitutions:
                     self.codon_table[tmpaa][tmpline[1]] = round(float(tmpline[2]),2)
                 else:
                     self.codon_table[tmpaa][tmpline[1]] = round(float(tmpline[2]),2)
-        print(self.codon_table)
+
 
     def get_codon(self,aa):
-        lngth = len(self.codon_table[aa])
+        lngth = len(self.codon_table[self.aa[aa]])
         rnr = random.random()
         sum = 0
-        for key, value in self.codon_table[aa].items():
+        for key, value in self.codon_table[self.aa[aa]].items():
             sum += value
             if(rnr < sum):
-                return value
-        return value
+                return key
+        return key
 
 
     # a function to translate a single codon
@@ -90,17 +90,17 @@ class InsertSubstitutions:
         with open(fastafile, 'r') as f:
             for line in f:
                 if (line[0] != '>'):
-                    print(line)
+
                     ff += line.strip()
         return ff
 
-    def insert_mutation(self, mutational_dictionary):
-        new_chain = self.DNAseq
-        for key in mutational_dictionary.keys():
-            insert_here = 3 * (int(key) - 35)
-            #new_chain = new_chain[0:insert_here] + aa_codon_table[insert_mutations[key]][0] + new_chain[insert_here + 3:]
-            new_chain = new_chain[0:insert_here] + self.get_codon(mutational_dictionary[key]) + new_chain[insert_here + 3:]
+    def insert_mutation(self, DNAseq, mutational_dictionary):
+        new_chain = DNAseq
 
+
+        for key in mutational_dictionary.keys():
+            insert_here = 3 * (int(key) -1)
+            new_chain = new_chain[0:insert_here] + self.get_codon(mutational_dictionary[key]).lower() + new_chain[insert_here + 3:]
         return new_chain
 
 
@@ -114,6 +114,41 @@ class InsertSubstitutions:
             self.mutational_table[key] = mut
 
 
+
+    def get_mutational_table(self,mutations):
+        tmpstring = mutations.split('_')
+        mutational_table = {}
+        for i in tmpstring:
+            # position
+            key = i[1:-1]
+            # amino acids
+            mut = i[-1]
+            mutational_table[key] = mut
+        return mutational_table
+
+
+    def to_file(self,fastaheader,sequence):
+        with open(fastaheader+".fasta",'w') as f:
+            f.write(">"+fastaheader+"\n")
+            f.write(sequence)
+
+    def run(self, DNAfile, codonFILE, mutations):
+
+        DNAseq = self.get_fasta_design_seq(DNAfile)
+        self.codon_table_file = codonFILE
+        self.mutations = mutations
+
+        self.setup_codon_table()
+        mutational_table = self.get_mutational_table(mutations)
+        newDNA = self.insert_mutation(DNAseq, mutational_table)
+
+        # Make sure that no deletions have been made
+        assert len(newDNA) == len(DNAseq)
+
+        return self.mutations, newDNA
+
+
+
     def main(self):
         parser = argparse.ArgumentParser(description="")
         # get the initial rosetta design as input
@@ -125,10 +160,18 @@ class InsertSubstitutions:
         for item in args_dict:
             setattr(self, item, args_dict[item])
 
+        self.DNAseq = self.get_fasta_design_seq(self.DNAfile)
         self.setup_codon_table()
+
         self.set_mutational_table()
         newDNA = self.insert_mutation(self.mutational_table)
-        print newDNA
+
+        # Make sure that no deletions have been made
+        print(newDNA, DNAseq)
+        assert len(newDNA) == len(self.DNAseq)
+
+        self.to_file(self.mutations, newDNA)
+
 
 if __name__ == "__main__":
    run = InsertSubstitutions()

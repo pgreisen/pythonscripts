@@ -50,16 +50,16 @@ class DiffFasta:
         i = 1
         # print "A is ", a
         for key in a:
-            print key
+            print(key)
             self.key_a = key
             seq_a = a[key]
             seqlengthA = len(a[key])
 
         seq_b = b
         seqlengthB = len(b)
-        print "B is: ", b
+        print("B is: ", b)
         # print key
-        print seqlengthA, seqlengthB, a, b
+        print(seqlengthA, seqlengthB, a, b)
 
         assert seqlengthA == seqlengthB
 
@@ -104,7 +104,6 @@ class DiffFasta:
     	# dictionary with group id 
         # next HC/LC division
         # with sequence
-        print "Data file",datafile
     	with open(datafile,'r') as f:
     	    for line in f:
                 if(line[0] == ">"):
@@ -128,7 +127,7 @@ class DiffFasta:
                     elif (self.chain_hc == "HC"):
                         sequences[ids]["HC"] = sequences[ids]["HC"] + tmp
                     else:
-                        print "Debug code or no chain was set for this run"
+                        print("Debug code or no chain was set for this run")
 
     def main(self):
         parser = argparse.ArgumentParser(description=" ")
@@ -196,7 +195,7 @@ class DiffFasta:
 
 
             else:
-                print "Nothing to do!!!!!!"
+                print("Nothing to do!!!!!!")
                 continue
 
         with open("sciworm.fasta",'w') as f:

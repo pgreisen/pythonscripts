@@ -1,9 +1,11 @@
 import sys
-import argparse,csv
+import argparse, csv
+
 
 class DiffFasta:
 
     def __init__(self):
+
         self.fastafile1 = ""
         self.fastafile2 = ""
         self.all_designs = ""
@@ -17,33 +19,29 @@ class DiffFasta:
         self.prefix = "CSA_"
         self.sciworm_format = {}
 
-    def set_fasta_file(self,fastafile,container):
+    def set_fasta_file(self, fastafile, container):
         # dummy variable in case fasta names are not unique
         dummy = 0
-        with open(fastafile,'r') as f:
+        with open(fastafile, 'r') as f:
             for line in f:
-                if( line[0] == ">"):
-                    key = line.strip()[1:]+str(dummy)
+                if (line[0] == ">"):
+                    key = line.strip()[1:] + str(dummy)
                     container[key] = ""
                     dummy += 1
-                    print dummy
+                    print(dummy)
                 else:
-                    container[key] = container[key]+line.strip()
+                    container[key] = container[key] + line.strip()
 
-    def sequence_a_b(self,a,b):
+    def sequence_a_b(self, a, b):
         i = 1
         # print "A is ", a
         for key in a:
-
             self.key_a = key
             seq_a = a[key]
             seqlengthA = len(a[key])
 
         seq_b = b
         seqlengthB = len(b)
-        #print "B is: ",b
-        #print key
-        # print seqlengthA,seqlengthB, a, b
 
         assert seqlengthA == seqlengthB
 
@@ -52,43 +50,36 @@ class DiffFasta:
         for i in range(seqlengthA):
 
             if (seq_a[i] != seq_b[i]):
-                #print seq_a[i], seq_b[i]
-                #print key_a,key_b
-                diff_dummy = diff_dummy + seq_a[i] + str(dummy) + seq_b[i]+"_"
+                diff_dummy = diff_dummy + seq_a[i] + str(dummy) + seq_b[i] + "_"
                 self.mutations.append(seq_a[i] + str(dummy) + seq_b[i])
             dummy += 1
         return diff_dummy
 
-    def set_designs(self,datafile,sequences):
-
-    	# dictionary with group id 
-        # next HC/LC division
-        # with sequence
-        # print "Data file",datafile
+    def set_designs(self, datafile, sequences):
         dummy = 1
-    	with open(datafile,'r') as f:
-    	    for line in f:
-                if(line[0] == ">"):
+        with open(datafile, 'r') as f:
+            for line in f:
+                if (line[0] == ">"):
                     # 2016-12-07 change such that it goes for group id
-            	    # tmp = line.split()
-            	    # ids = tmp[0]
+                    # tmp = line.split()
+                    # ids = tmp[0]
                     tmp = line.strip().split("_")
-                    
+
                     # ids = tmp[-1]
-                    ids = line[1:].strip()+"_"+str(dummy)
+                    ids = line[1:].strip() + "_" + str(dummy)
                     dummy += 1
 
-                    if(ids not in sequences.keys()):
+                    if (ids not in sequences.keys()):
                         sequences[ids] = {}
                         sequences[ids]["LC"] = ""
                         sequences[ids]["HC"] = ""
                 else:
                     tmp = line.strip()
                     # Todo fix this towards generic algorithm
-                    if(tmp[0] == "M"):
+                    if (tmp[0] == "M"):
                         sequences[ids]["LC"] = sequences[ids]["LC"] + tmp
                     else:
-                        print "Debug code"
+                        print("Debug code")
 
     def main(self):
         parser = argparse.ArgumentParser(description=" ")
@@ -96,14 +87,13 @@ class DiffFasta:
         parser.add_argument("-p", "--file2", dest="fastafile2", help="Native heavy chain", default="")
         # parse file with sequences
         parser.add_argument("-a", "--all", dest="all_designs", help="Fasta format")
-        args_dict = vars( parser.parse_args() )
+        args_dict = vars(parser.parse_args())
         for item in args_dict:
             setattr(self, item, args_dict[item])
 
-        self.set_designs(self.all_designs,self.design_seq)
-        #print self.fastafile2
+        self.set_designs(self.all_designs, self.design_seq)
 
-        if (len( self.fastafile1 ) != 0):
+        if (len(self.fastafile1) != 0):
             self.set_fasta_file(self.fastafile1, self.fasta_1)
 
         if (len(self.fastafile2) != 0):
@@ -111,48 +101,44 @@ class DiffFasta:
 
         for key in self.design_seq.keys():
             mutations = ""
-            #print "Debug fasta: ",self.fasta_2
-            #print "Debug fasta: ",self.fasta_1
-            #print "Key is ", key, self.design_seq[key]
-            #print "Debug HC: " ,self.design_seq[key]["HC"], key, len( self.design_seq[key]["HC"])
-            #print "Debug LC: " ,self.design_seq[key]["LC"], key, len( self.design_seq[key]["LC"])
 
-            if(len(self.design_seq[key]["HC"]) != 0 and len(self.design_seq[key]["LC"]) != 0 ):
+            if (len(self.design_seq[key]["HC"]) != 0 and len(self.design_seq[key]["LC"]) != 0):
                 hc_mutations = self.sequence_a_b(self.fasta_2, self.design_seq[key]["HC"])
-                mutations = hc_mutations+"HC_"
-                lc_mutations = self.sequence_a_b(self.fasta_1,self.design_seq[key]['LC'])
-                mutations = mutations+lc_mutations+"LC"
-                new_key = self.prefix+mutations+"_"+key.split("_")[-1]
-                self.sciworm_format[new_key] = (self.design_seq[key]["HC"],self.design_seq[key]["LC"])
+                mutations = hc_mutations + "HC_"
+                lc_mutations = self.sequence_a_b(self.fasta_1, self.design_seq[key]['LC'])
+                mutations = mutations + lc_mutations + "LC"
+                new_key = self.prefix + mutations + "_" + key.split("_")[-1]
+                self.sciworm_format[new_key] = (self.design_seq[key]["HC"], self.design_seq[key]["LC"])
 
-            elif(len(self.design_seq[key]["HC"]) != 0):
+            elif (len(self.design_seq[key]["HC"]) != 0):
 
                 hc_mutations = self.sequence_a_b(self.fasta_2, self.design_seq[key]["HC"])
-                mutations = hc_mutations+"HC"
-                new_key = self.prefix+mutations # +"_"+key.split("_")[-1]
-                self.sciworm_format[new_key] = (self.design_seq[key]["HC"],"")
+                mutations = hc_mutations + "HC"
+                new_key = self.prefix + mutations  # +"_"+key.split("_")[-1]
+                self.sciworm_format[new_key] = (self.design_seq[key]["HC"], "")
 
-            elif( len(self.design_seq[key]["LC"]) != 0):
-                
-                lc_mutations = self.sequence_a_b(self.fasta_1,self.design_seq[key]['LC'])
-                mutations = mutations+lc_mutations
-                new_key = self.prefix+mutations # +"_"+key.split("_")[-1]
-                self.sciworm_format[new_key] = ("",self.design_seq[key]["LC"])
+            elif (len(self.design_seq[key]["LC"]) != 0):
+
+                lc_mutations = self.sequence_a_b(self.fasta_1, self.design_seq[key]['LC'])
+                mutations = mutations + lc_mutations
+                new_key = self.prefix + mutations  # +"_"+key.split("_")[-1]
+                self.sciworm_format[new_key] = ("", self.design_seq[key]["LC"])
 
 
             else:
-                print "Nothing to do!!!!!!"
+                print("Nothing to do!!!!!!")
                 continue
 
-        with open("sciworm.fasta",'w') as f:
+        with open("sciworm.fasta", 'w') as f:
             for key in self.sciworm_format.keys():
-                if( self.sciworm_format[key][0] != ""):
-                    f.write(">"+key+"\n" )
-                    f.write(self.sciworm_format[key][0]+"\n" )
-                if( self.sciworm_format[key][1] != ""):
-                    f.write(">"+key +"\n" )
-                    f.write(self.sciworm_format[key][1]+"\n" )
+                if (self.sciworm_format[key][0] != ""):
+                    f.write(">" + key + "\n")
+                    f.write(self.sciworm_format[key][0] + "\n")
+                if (self.sciworm_format[key][1] != ""):
+                    f.write(">" + key + "\n")
+                    f.write(self.sciworm_format[key][1] + "\n")
+
 
 if __name__ == "__main__":
-   run = DiffFasta()
-   run.main()
+    run = DiffFasta()
+    run.main()

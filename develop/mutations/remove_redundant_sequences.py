@@ -82,7 +82,7 @@ def main():
         os.mkdir(dst)
 
     except:
-        print "Directory already exists"
+        print("Directory already exists")
     
     for fl1 in files:
 
@@ -107,7 +107,7 @@ def main():
                     mut = print_def(a,b)
 
                     if(mut == 0):
-                        print "The files have same sequence ", fl1, fl2
+                        print("The files have same sequence ", fl1, fl2)
                         shutil.move(fl2,dst)
                 else:
                     continue
