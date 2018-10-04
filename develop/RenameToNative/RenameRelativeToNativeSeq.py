@@ -101,29 +101,20 @@ class DiffFasta:
 
     def set_designs(self,datafile,sequences):
 
-    	# dictionary with group id 
-        # next HC/LC division
-        # with sequence
     	with open(datafile,'r') as f:
     	    for line in f:
                 if(line[0] == ">"):
                     # 2016-12-07 change such that it goes for group id
-            	    # tmp = line.split()
-            	    # ids = tmp[0]
                     tmp = line.strip().split("_")
-                    # ids = tmp[-1]
                     ids = line[1:].strip()
-
                     if(ids not in sequences.keys()):
                         sequences[ids] = {}
                         sequences[ids]["LC"] = ""
                         sequences[ids]["HC"] = ""
                 else:
                     tmp = line.strip()
-                    #if(tmp[0] == "D"):
                     if (self.chain_lc == "LC"):
                         sequences[ids]["LC"] = sequences[ids]["LC"] + tmp
-                    #elif(tmp[0] == "V"):
                     elif (self.chain_hc == "HC"):
                         sequences[ids]["HC"] = sequences[ids]["HC"] + tmp
                     else:
@@ -150,14 +141,8 @@ class DiffFasta:
         for item in args_dict:
             setattr(self, item, args_dict[item])
 
-        #print "HC: ", self.chain_hc
-        #print "LC: ",self.chain_lc
-        #assert 1 == 0
-
         self.set_designs(self.all_designs,self.design_seq)
-        #print self.fastafile2
-        #assert 1 == 0
-        # print "Postfix:  ",self.postfix
+
         if (len( self.fastafile1 ) != 0):
             self.set_fasta_file(self.fastafile1, self.fasta_1)
 
@@ -166,10 +151,6 @@ class DiffFasta:
 
         for key in self.design_seq.keys():
             mutations = ""
-            #print "Debug fasta: ",self.fasta_2
-            #print "Debug fasta: ",self.fasta_1
-            #print "Key is ", key, self.design_seq[key]
-            #print "Debug HC: " ,self.design_seq[key]["HC"], key, len( self.design_seq[key]["HC"])
 
             if(len(self.design_seq[key]["HC"]) != 0 and len(self.design_seq[key]["LC"]) != 0 ):
                 hc_mutations = self.sequence_a_b(self.fasta_2, self.design_seq[key]["HC"])
@@ -192,8 +173,6 @@ class DiffFasta:
                 # print "###########################CCCCCCCCCCCCCCCCCC################################", mutations
                 new_key = self.prefix+mutations # +"_"+key.split("_")[-1]+"_"+self.postfix
                 self.sciworm_format[new_key] = ("",self.design_seq[key]["LC"])
-
-
             else:
                 print("Nothing to do!!!!!!")
                 continue
