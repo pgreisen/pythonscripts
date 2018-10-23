@@ -52,7 +52,7 @@ class CleanPDB:
 
 
                 elif( line[0:4] == "ENDM"  ):
-                    print "NMR structure"
+                    print("NMR structure")
                     break
 
         return self.pdbfile_chains, self.het_chains

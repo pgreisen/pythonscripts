@@ -55,15 +55,15 @@ class AnalyseMutations:
 
         for i in range(ln):
             if a[i] != b[i]:
-                print a[i]+'                  '+b[i]
+                print(a[i]+'                  '+b[i])
                 mut = mut +1
                 mt.append(b[i])
 
                 tmp = a[i].split()
                 string = string + '+' + str(tmp[1])
 
-        print 'Number of mutations',mut
-        print string
+        print('Number of mutations',mut)
+        print(string)
         pymol_file.write("show sticks, resi "+string+"\n")
         pymol_file.write("hide everything, elem h")
         pymol_file.close()
@@ -90,21 +90,21 @@ class AnalyseMutations:
         return self.get_number_of_mutations(seq_a, seq_b)
 
 
-    def main():
+    def main(self):
 
         fl1 = sys.argv[1]
         fl2 = sys.argv[2]
 
-        a = get_seq_pdbfile(fl2)
-        b = get_seq_pdbfile(fl1)
+        a = self.get_seq_pdbfile(fl2)
+        b = self.get_seq_pdbfile(fl1)
 
         seq_a = len(a)
         seq_b = len(b)
 
-        print "Length of "+fl1+" is", seq_a
-        print "Length of "+fl2+" is", seq_b
-        print "Seq1 : "+fl2+" Seq2 : "+fl1
-        tmp = print_def(a,b)
+        print("Length of "+fl1+" is", seq_a)
+        print("Length of "+fl2+" is", seq_b)
+        print("Seq1 : "+fl2+" Seq2 : "+fl1)
+        tmp = self.print_def(a,b)
 
 if __name__ == "__main__":
    analysemutations = AnalyseMutations()

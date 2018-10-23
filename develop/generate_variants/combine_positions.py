@@ -79,7 +79,8 @@ class Combinations:
     def setdata(self,datafile):
         with open(datafile) as f:
             for line in f:
-                self.list_of_mutations.append(line.strip())
+                self.list_of_mutations.append(line.strip() ) 
+        self.list_of_mutations = list(set(self.list_of_mutations ))
 
     def getUniquePositions(self, list_w_mutations):
 
@@ -201,7 +202,7 @@ class Combinations:
         with ThreadPoolExecutor(self.processors) as p:
             name_seq = p.map(self.generate_fasta_in_parallel,mutations,dummy)
 
-        with open("designs.fasta",'w') as f:
+        with open("designs_"+str(self.combi)+".fasta",'w') as f:
             for i in name_seq:
                 f.write(">"+i[0]+"\n")
                 f.write(i[1]+"\n")
