@@ -1,0 +1,1 @@
+/Users/greisen/Library/Developer/Xcode/DerivedData/Rosetta-ewikrpnfibaqliatrefrmizrpewh/Build/Products/Release/rosetta_scripts -database ~/git_rosetta/Rosetta/main/database @flags -parser:protocol sc_ife.xml -in:file:s $1 -overwrite -enzdes:cstfile constraint.cst # -extra_res_fa CYZ.params
