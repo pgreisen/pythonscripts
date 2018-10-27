@@ -201,6 +201,7 @@ class Combinations:
 
     def evalute_fasta_file(self):
         for eval_wt in self.list_of_mutations:
+            print(eval_wt)
             # count from 0 in python
             pos = int(eval_wt[1:-1] ) -1
             aa = eval_wt[0]
