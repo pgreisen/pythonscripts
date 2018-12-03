@@ -1,0 +1,920 @@
+Query         _1
+Match_columns 497
+No_of_seqs    273 out of 382
+Neff          10.7289
+Searched_HMMs 61044
+Date          Sun Dec  2 13:43:38 2018
+Command       /home/ubuntu/hh-suite/build/bin/hhsearch -i taxus_cuspidata_taxadiene_5-alpha_hydroxylase.pep.a3m -d /home/ubuntu/hhsearch_databases/pdb70/pdb70 -o taxus_cuspidata_taxadiene_5-alpha_hydroxylase.pep_pdb.hhr 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5E0E_A Cytochrome P450 family  100.0 3.7E-53 6.1E-58  423.9   0.0  413   49-472     1-437 (463)
+  2 2FDV_A Cytochrome P450 2A6 (E. 100.0 3.9E-53 6.3E-58  425.3   0.0  422   41-472     2-446 (476)
+  3 1Z11_A cytochrome P450, family 100.0 3.9E-53 6.3E-58  425.3   0.0  422   41-472     2-446 (476)
+  4 4UHL_B STEROL 14-ALPHA DEMETHY 100.0 1.4E-52 2.3E-57  417.5   0.0  407   49-471     2-420 (446)
+  5 6C94_A Cytochrome P450 4B1 (E. 100.0 1.7E-52 2.8E-57  423.4   0.0  439   45-497    18-484 (497)
+  6 5A5I_A CYTOCHROME P450 2C9; OX 100.0 2.1E-52 3.4E-57  420.3   0.0  443   42-497     4-474 (477)
+  7 3K9V_B 1,25-dihydroxyvitamin D 100.0 2.3E-52 3.7E-57  420.5   0.0  448   37-496    12-482 (482)
+  8 3N9Y_A Cholesterol side-chain  100.0 5.4E-52 8.8E-57  418.7   0.0  442   42-497     4-475 (487)
+  9 6CIZ_C Steroid 17-alpha-hydrox 100.0 5.7E-52 9.4E-57  419.2   0.0  441   46-496     5-478 (494)
+ 10 5IRQ_C Steroid 17-alpha-hydrox 100.0 5.7E-52 9.4E-57  419.2   0.0  441   46-496     5-478 (494)
+ 11 4LXJ_A Lanosterol 14-alpha dem 100.0 6.3E-52   1E-56  423.3   0.0  445   37-496    42-524 (536)
+ 12 5HS1_A Lanosterol 14-alpha dem 100.0 8.5E-52 1.4E-56  421.4   0.0  451   31-496    30-518 (528)
+ 13 4UHI_C STEROL 14-ALPHA DEMETHY 100.0 8.8E-52 1.4E-56  411.5   0.0  428   51-496     1-441 (443)
+ 14 5YLW_A Ferruginol synthase (E. 100.0 1.1E-51 1.8E-56  416.8   0.0  419   44-471    22-465 (495)
+ 15 5YM3_A Ferruginol synthase (E. 100.0 1.1E-51 1.8E-56  416.8   0.0  419   44-471    22-465 (495)
+ 16 4RSN_A Bifunctional P-450/NADP 100.0 1.1E-51 1.9E-56  413.1   0.0  426   46-496     5-456 (460)
+ 17 3DL9_B Cytochrome P450 2R1 (E. 100.0 1.3E-51 2.1E-56  414.7   0.0  420   43-471     6-450 (479)
+ 18 3T3Z_B Cytochrome P450 2E1 (E. 100.0 1.3E-51 2.1E-56  414.0   0.0  419   43-472     4-445 (476)
+ 19 3E6I_B Cytochrome P450 2E1 (E. 100.0 1.3E-51 2.1E-56  414.0   0.0  419   43-472     4-445 (476)
+ 20 5XXI_A Cytochrome P450 2C9 (E. 100.0 1.6E-51 2.6E-56  412.1   0.0  412   49-472     1-437 (463)
+ 21 1PO5_A Cytochrome P450 2B4 (E. 100.0   2E-51 3.2E-56  412.7   0.0  416   45-472     6-446 (476)
+ 22 3CZH_B Cytochrome P450 2R1 (E. 100.0 3.5E-51 5.7E-56  412.0   0.0  419   43-470     6-449 (481)
+ 23 6B82_B Cytochrome P450, family 100.0 3.7E-51 6.1E-56  415.1   0.0  417   45-471    19-465 (509)
+ 24 6C93_A Cytochrome P450 4B1 (E. 100.0 3.9E-51 6.3E-56  413.5   0.0  451   33-497     6-484 (497)
+ 25 3PM0_A Cytochrome P450 1B1 (E. 100.0   4E-51 6.5E-56  414.2   0.0  417   43-470     3-457 (507)
+ 26 5JKV_A Aromatase (E.C.1.14.14. 100.0 4.6E-51 7.5E-56  413.7   0.0  436   46-497    42-496 (503)
+ 27 3TBG_C Cytochrome P450 2D6 (E. 100.0 8.2E-51 1.4E-55  408.7   0.0  418   43-470     4-448 (479)
+ 28 5TFT_A Cytochrome P450 2D6 (E. 100.0 8.2E-51 1.4E-55  408.7   0.0  418   43-470     4-448 (479)
+ 29 2VE3_A PUTATIVE CYTOCHROME P45 100.0 9.9E-51 1.6E-55  404.3   0.0  430   44-496     7-443 (444)
+ 30 2VE3_B PUTATIVE CYTOCHROME P45 100.0 9.9E-51 1.6E-55  404.3   0.0  430   44-496     7-443 (444)
+ 31 2IJ2_A Cytochrome P450 BM3 (EC 100.0 1.1E-50 1.9E-55  407.3   0.0  427   48-496     2-451 (470)
+ 32 3B98_A Prostaglandin I2 syntha 100.0 1.2E-50 1.9E-55  407.7   0.0  424   45-497    14-471 (475)
+ 33 3B98_B Prostaglandin I2 syntha 100.0 1.2E-50 1.9E-55  407.7   0.0  424   45-497    14-471 (475)
+ 34 2HI4_A Cytochrome P450 1A2 (E. 100.0 1.3E-50 2.1E-55  409.6   0.0  418   42-471     9-462 (495)
+ 35 3NA0_A Cholesterol side-chain  100.0 1.3E-50 2.1E-55  406.4   0.0  430   52-495    11-470 (471)
+ 36 5TZ1_B Sterol 14-alpha demethy 100.0 1.5E-50 2.5E-55  408.1   0.0  440   48-497     3-482 (490)
+ 37 4R21_B Cytochrome P450 family  100.0 1.7E-50 2.7E-55  407.7   0.0  415   46-470    15-452 (486)
+ 38 4R21_A Cytochrome P450 family  100.0 1.7E-50 2.7E-55  407.7   0.0  415   46-470    15-452 (486)
+ 39 2CIB_A CYTOCHROME P450 51 (E.C 100.0 1.8E-50 2.9E-55  403.7   0.0  412   46-472     2-423 (455)
+ 40 4KQ8_A Cytochrome P450 19A1 (E 100.0 2.1E-50 3.4E-55  405.6   0.0  437   44-496     6-461 (473)
+ 41 5TL8_A CYP51; CYP51, sterol 14 100.0 2.6E-50 4.3E-55  404.1   0.0  413   46-470     7-432 (466)
+ 42 1E9X_A CYTOCHROME P450 51-LIKE 100.0   4E-50 6.6E-55  401.1   0.0  412   46-472     2-423 (455)
+ 43 4UYM_A 14-ALPHA STEROL DEMETHY 100.0 4.4E-50 7.3E-55  402.6   0.0  411   49-472     1-443 (470)
+ 44 2IAG_A Prostacyclin synthase ( 100.0 4.9E-50 8.1E-55  403.7   0.0  429   47-497     5-478 (482)
+ 45 5VEU_C Cytochrome P450 3A5 (E. 100.0 5.6E-50 9.2E-55  402.9   0.0  436   48-496    14-474 (480)
+ 46 5VBU_C Cytochrome P450 21-hydr 100.0 9.5E-50 1.5E-54  401.1   0.0  433   46-496     7-465 (476)
+ 47 3B6H_A Prostacyclin synthase ( 100.0 1.1E-49 1.8E-54  403.0   0.0  410   41-473    11-461 (498)
+ 48 4Y8W_A Steroid 21-hydroxylase; 100.0 1.3E-49 2.2E-54  400.8   0.0  408   45-470     6-437 (482)
+ 49 4I8V_A Cytochrome P450 1A1 (E. 100.0 1.4E-49 2.3E-54  401.4   0.0  416   44-470     6-457 (491)
+ 50 4G7G_D Lanosterol 14-alpha-dem 100.0 2.3E-49 3.8E-54  394.6   0.0  403   49-471     2-422 (448)
+ 51 4G3J_B Lanosterol 14-alpha-dem 100.0 2.3E-49 3.8E-54  394.6   0.0  403   49-471     2-422 (448)
+ 52 4DVQ_C Cytochrome P450 11B2, m 100.0 2.4E-49 3.9E-54  399.2   0.0  411   48-471    15-452 (483)
+ 53 4DVQ_E Cytochrome P450 11B2, m 100.0 2.4E-49 3.9E-54  399.2   0.0  411   48-471    15-452 (483)
+ 54 3V8D_A Cholesterol 7-alpha-mon 100.0 2.8E-49 4.6E-54  399.3   0.0  410   43-471     7-455 (491)
+ 55 3V8D_B Cholesterol 7-alpha-mon 100.0 2.8E-49 4.6E-54  399.3   0.0  410   43-471     7-455 (491)
+ 56 6CR2_A 14-alpha sterol demethy 100.0   3E-49   5E-54  397.7   0.0  411   48-472     3-446 (477)
+ 57 3DBG_B Putative cytochrome P45 100.0   5E-49 8.2E-54  394.9   0.0  407   47-473    21-440 (467)
+ 58 3EL3_B Putative cytochrome P45 100.0   5E-49 8.2E-54  394.9   0.0  407   47-473    21-440 (467)
+ 59 5VCC_A Cytochrome P450 3A4 (E. 100.0 1.2E-48 1.9E-53  393.9   0.0  436   47-496    14-476 (487)
+ 60 3DAN_A Cytochrome P450 74A2 (E 100.0 1.4E-47 2.3E-52  385.0   0.0  412   47-472     7-455 (473)
+ 61 3DSK_A Cytochrome P450 74A, ch 100.0   2E-47 3.2E-52  386.5   0.0  402   47-471    26-472 (495)
+ 62 4J14_A Cholesterol 24-hydroxyl 100.0 2.4E-47 3.9E-52  381.3   0.0  390   72-472     9-418 (456)
+ 63 3MDM_A Cholesterol 24-hydroxyl 100.0 2.4E-47 3.9E-52  381.3   0.0  390   72-472     9-418 (456)
+ 64 6FYJ_A Fatty-acid peroxygenase 100.0 4.2E-47 6.9E-52  375.8   0.0  406   45-496     3-419 (421)
+ 65 1IZO_B Cytochrome P450 152A1 ( 100.0 5.6E-47 9.2E-52  374.3   0.0  401   49-496     3-415 (417)
+ 66 4C9P_A CYTOCHROME P450; OXIDOR 100.0 6.2E-47   1E-51  374.6   0.0  379   46-472    10-395 (421)
+ 67 5YHJ_B Cytochrome P450; Fatty  100.0 6.5E-47 1.1E-51  373.3   0.0  402   50-496     1-411 (413)
+ 68 5M0N_A Terminal olefin-forming 100.0 1.6E-46 2.6E-51  372.5   0.0  403   55-496    11-423 (428)
+ 69 5FYF_B CYTOCHROME P450; OXIDOR 100.0 1.9E-46 3.1E-51  376.8   0.0  405   49-497    53-470 (470)
+ 70 5FYG_A CYTOCHROME P450; OXIDOR 100.0 1.9E-46 3.1E-51  376.8   0.0  405   49-497    53-470 (470)
+ 71 4C9M_A CYTOCHROME P450; OXIDOR 100.0 2.1E-46 3.5E-51  370.7   0.0  382   45-472     9-395 (421)
+ 72 3AWM_A Fatty acid alpha-hydrox 100.0 2.6E-46 4.3E-51  369.2   0.0  397   53-495     3-412 (415)
+ 73 4L0E_A P450 monooxygenase (E.C 100.0   5E-46 8.2E-51  371.1   0.0  399   46-497    20-432 (446)
+ 74 4L0F_A P450 monooxygenase (E.C 100.0   5E-46 8.2E-51  371.1   0.0  399   46-497    20-432 (446)
+ 75 4L54_A Terminal olefin-forming 100.0   6E-46 9.8E-51  367.4   0.0  403   53-496     3-417 (422)
+ 76 3NC3_B Cytochrome P450 cypX (E 100.0 1.3E-45 2.1E-50  367.6   0.0  384   46-469    23-415 (441)
+ 77 3NC6_B Cytochrome P450 cypX (E 100.0 1.3E-45 2.1E-50  367.6   0.0  384   46-469    23-415 (441)
+ 78 3ZPI_B CYTOCHROME P450 HYDROXY 100.0 1.6E-45 2.6E-50  366.4   0.0  395   44-496    21-428 (436)
+ 79 4BF4_K CYTOCHROME P450 HYDROXY 100.0 1.6E-45 2.6E-50  366.4   0.0  395   44-496    21-428 (436)
+ 80 4R1Z_A Cyp17a1 protein; Cytoch 100.0 1.8E-45 2.9E-50  366.2   0.0  370   95-471     2-401 (439)
+ 81 5KYO_A CYP101J2; cytochrome P4 100.0 2.4E-45 3.9E-50  364.5   0.0  368   47-473    32-410 (430)
+ 82 5KYO_F CYP101J2; cytochrome P4 100.0 2.4E-45 3.9E-50  364.5   0.0  368   47-473    32-410 (430)
+ 83 6GII_A Cytochrome P450; Cytoch 100.0 3.9E-45 6.4E-50  368.2   0.0  375   47-471    44-447 (479)
+ 84 5XJN_A Cytochrome; cytochrome  100.0 4.5E-45 7.4E-50  365.2   0.0  374   45-471    39-432 (455)
+ 85 5OFQ_A Cytochrome P450 (E.C.1. 100.0 8.5E-45 1.4E-49  358.1   0.0  373   50-473     2-381 (409)
+ 86 5OFQ_D Cytochrome P450 (E.C.1. 100.0 8.5E-45 1.4E-49  358.1   0.0  373   50-473     2-381 (409)
+ 87 1N97_B CYP175A1; P450, ELECTRO 100.0   1E-44 1.7E-49  355.0   0.0  382   49-496     2-386 (389)
+ 88 4L4E_A Camphor 5-monooxygenase 100.0 1.3E-44 2.1E-49  357.5   0.0  370   46-471    11-387 (415)
+ 89 3TKT_A Cytochrome P450; Cytoch 100.0 1.4E-44 2.3E-49  361.2   0.0  366   56-471    33-427 (450)
+ 90 1UED_A P450 monooxygenase (E.C 100.0 1.4E-44 2.4E-49  356.1   0.0  362   52-469     4-383 (406)
+ 91 1CPT_A CYTOCHROME P450-TERP; O 100.0 1.6E-44 2.6E-49  358.3   0.0  375   44-469    11-404 (428)
+ 92 2XKR_A PUTATIVE CYTOCHROME P45 100.0 1.6E-44 2.6E-49  354.8   0.0  364   51-474     2-372 (398)
+ 93 3VOO_A Fatty acid alpha-hydrox 100.0 2.2E-44 3.6E-49  354.5   0.0  389   60-495     2-404 (407)
+ 94 5VWS_A Cytochrome P450; Cytoch 100.0 2.6E-44 4.3E-49  352.3   0.0  368   47-473     3-373 (393)
+ 95 2GQX_B Cytochrome P450-cam (E. 100.0 3.2E-44 5.3E-49  353.5   0.0  390   48-496     3-400 (405)
+ 96 2ZBX_A Cytochrome P450-SU1 (E. 100.0 3.3E-44 5.4E-49  354.3   0.0  372   44-475     3-387 (412)
+ 97 5MNS_E Cytochrome P-450; P450, 100.0 3.6E-44 5.8E-49  353.4   0.0  369   45-472     2-385 (407)
+ 98 5MNV_A Cytochrome P-450; P450, 100.0 3.6E-44 5.8E-49  353.4   0.0  369   45-472     2-385 (407)
+ 99 5X7E_A Vitamin D3 dihydroxylas 100.0 4.1E-44 6.7E-49  353.6   0.0  366   48-471     4-384 (412)
+100 5IT1_B Putative cytochrome P45 100.0 4.3E-44   7E-49  351.8   0.0  360   49-469     3-374 (399)
+101 3ABA_A Cytochrome P450 (E.C.1. 100.0 4.9E-44 7.9E-49  351.7   0.0  387   51-496     2-402 (403)
+102 4DXY_A Cytochrome P450; Cytoch 100.0   5E-44 8.2E-49  353.6   0.0  371   49-471    15-393 (417)
+103 1S1F_A putative cytochrome P45 100.0 7.8E-44 1.3E-48  350.9   0.0  364   47-473     6-384 (406)
+104 3TYW_D Putative cytochrome P45 100.0 8.3E-44 1.4E-48  352.0   0.0  369   46-474    10-391 (417)
+105 3TYW_C Putative cytochrome P45 100.0 8.3E-44 1.4E-48  352.0   0.0  369   46-474    10-391 (417)
+106 5L92_B Cytochrome P450 (E.C.1. 100.0 1.2E-43 1.9E-48  350.1   0.0  364   56-465     6-374 (410)
+107 5L91_A Cytochrome P450 (E.C.1. 100.0 1.2E-43 1.9E-48  350.1   0.0  364   56-465     6-374 (410)
+108 2WM4_A PUTATIVE CYTOCHROME P45 100.0 1.3E-43 2.1E-48  352.6   0.0  376   45-471    16-414 (435)
+109 2WM5_A PUTATIVE CYTOCHROME P45 100.0 1.3E-43 2.1E-48  352.6   0.0  376   45-471    16-414 (435)
+110 3WVS_A Putative monooxygenase; 100.0 1.3E-43 2.1E-48  348.7   0.0  366   47-472     5-382 (401)
+111 1GWI_A CYTOCHROME P450 154C1;  100.0 1.6E-43 2.6E-48  349.2   0.0  364   49-470     2-383 (411)
+112 1GWI_B CYTOCHROME P450 154C1;  100.0 1.6E-43 2.6E-48  349.2   0.0  364   49-470     2-383 (411)
+113 2JJN_A CYTOCHROME P450 113A1 ( 100.0 1.8E-43   3E-48  348.9   0.0  371   50-471     8-381 (411)
+114 2JJP_A CYTOCHROME P450 113A1 ( 100.0 1.8E-43   3E-48  348.9   0.0  371   50-471     8-381 (411)
+115 2D09_A putative cytochrome P45 100.0 1.9E-43   3E-48  348.3   0.0  366   46-474     5-385 (407)
+116 4Z5Q_A Cytochrome P450 hydroxy 100.0 1.9E-43 3.1E-48  350.1   0.0  367   45-472    26-404 (423)
+117 5L1Q_A Pentalenolactone syntha 100.0 2.3E-43 3.8E-48  346.9   0.0  363   50-474     3-382 (401)
+118 5L1R_A Pentalenolactone syntha 100.0 2.3E-43 3.8E-48  346.9   0.0  363   50-474     3-382 (401)
+119 5HH3_A OxyA protein; Cytochrom 100.0 3.4E-43 5.6E-48  345.0   0.0  366   47-474     3-380 (397)
+120 5HH3_C OxyA protein; Cytochrom 100.0 3.4E-43 5.6E-48  345.0   0.0  366   47-474     3-380 (397)
+121 3R9C_A Cytochrome P450 164A2 ( 100.0 3.4E-43 5.6E-48  347.6   0.0  371   50-471     9-394 (418)
+122 3R9B_C CYTOCHROME P450 164A2 ( 100.0 3.4E-43 5.6E-48  347.6   0.0  371   50-471     9-394 (418)
+123 3P3O_A Cytochrome P450; Cytoch 100.0 5.3E-43 8.7E-48  346.0   0.0  373   43-471    10-393 (416)
+124 2Z3U_A Cytochrome P450 (E.C.1. 100.0 5.9E-43 9.7E-48  346.8   0.0  363   56-470     8-391 (425)
+125 2Z3T_A Cytochrome P450 (E.C.1. 100.0 5.9E-43 9.7E-48  346.8   0.0  363   56-470     8-391 (425)
+126 5Y5F_A NADP nitrous oxide-form 100.0 6.6E-43 1.1E-47  343.8   0.0  362   54-470     2-380 (403)
+127 1JFB_A nitric-oxide reductase  100.0   7E-43 1.1E-47  343.8   0.0  365   50-470     2-381 (404)
+128 4Z5P_B Cytochrome P450 hydroxy 100.0 7.3E-43 1.2E-47  343.2   0.0  363   49-471     3-378 (400)
+129 2DKK_A cytochrome P450; strept 100.0   9E-43 1.5E-47  343.9   0.0  366   45-473     7-387 (411)
+130 6F8C_B Cytochrome P450 CYP260A 100.0 1.2E-42   2E-47  341.7   0.0  361   58-470     3-368 (400)
+131 6F8A_A Cytochrome P450 CYP260A 100.0 1.2E-42   2E-47  341.7   0.0  361   58-470     3-368 (400)
+132 3A50_B Vitamin D hydroxylase;  100.0 1.4E-42 2.3E-47  342.6   0.0  358   47-465     2-369 (411)
+133 5HIW_A Cytochrome P450 CYP260B 100.0 1.5E-42 2.5E-47  340.8   0.0  374   57-485     2-381 (398)
+134 3MGX_B Putative P450 monooxyge 100.0 1.8E-42 2.9E-47  342.3   0.0  359   52-470    21-392 (415)
+135 5LI7_A Putative cytochrome P45 100.0 1.8E-42 2.9E-47  342.2   0.0  371   55-478     8-398 (414)
+136 5LIE_B Putative cytochrome P45 100.0 1.8E-42 2.9E-47  342.2   0.0  371   55-478     8-398 (414)
+137 5NWS_A saAcmM; actinomycin, P4 100.0   2E-42 3.3E-47  344.1   0.0  369   49-472    14-412 (435)
+138 4YT3_A CYTOCHROME P450 106A2 ( 100.0 2.1E-42 3.5E-47  341.1   0.0  366   49-469     2-381 (410)
+139 5IKI_B Cytochrome P450(MEG) (E 100.0 2.1E-42 3.5E-47  341.1   0.0  366   49-469     2-381 (410)
+140 4MM0_A P450-like monooxygenase 100.0 2.2E-42 3.5E-47  339.8   0.0  360   50-471     6-376 (399)
+141 4MM0_B P450-like monooxygenase 100.0 2.2E-42 3.5E-47  339.8   0.0  360   50-471     6-376 (399)
+142 3ABB_A Cytochrome P450 hydroxy 100.0 2.2E-42 3.6E-47  340.8   0.0  360   48-471     7-382 (408)
+143 2WIY_A CYTOCHROME P450-LIKE PR 100.0 2.6E-42 4.3E-47  338.6   0.0  350   73-472    20-375 (394)
+144 6BLD_A Cytochrome P450 268A2 C 100.0 3.1E-42 5.1E-47  341.0   0.0  376   49-468     2-398 (419)
+145 2Z36_B Cytochrome P450 type co 100.0 3.6E-42 5.8E-47  339.9   0.0  367   48-474     3-388 (413)
+146 1N40_A CYTOCHROME P450 121, (E 100.0 3.8E-42 6.2E-47  337.8   0.0  348   72-472    15-375 (396)
+147 3OFT_B Cytochrome P450; Oxidor 100.0 3.9E-42 6.4E-47  337.7   0.0  344   72-470    23-373 (396)
+148 3OFU_C Cytochrome P450; Oxidor 100.0 3.9E-42 6.4E-47  337.7   0.0  344   72-470    23-373 (396)
+149 3A4G_A Vitamin D hydroxylase;  100.0 4.6E-42 7.5E-47  338.9   0.0  361   48-470     3-375 (411)
+150 4UBS_A CYP105D7; Cytochrome P4 100.0 4.7E-42 7.6E-47  336.7   0.0  359   54-474     2-374 (393)
+151 5NCB_A Cytochrome P450; Cytoch 100.0 5.1E-42 8.3E-47  338.1   0.0  372   54-472     8-388 (409)
+152 3ZBY_B P450 HEME-THIOLATE PROT 100.0 5.7E-42 9.4E-47  337.8   0.0  367   54-474     7-375 (407)
+153 5GWE_A Cytochrome; cytochrome  100.0 6.4E-42   1E-46  337.2   0.0  360   57-470     1-381 (405)
+154 5HDI_A Cytochrome P450 144 (E. 100.0 7.4E-42 1.2E-46  336.7   0.0  365   58-472     2-384 (404)
+155 5HDI_B Cytochrome P450 144 (E. 100.0 7.4E-42 1.2E-46  336.7   0.0  365   58-472     2-384 (404)
+156 3IVY_A Cytochrome P450 CYP125  100.0   1E-41 1.7E-46  338.8   0.0  369   72-496    36-428 (433)
+157 5FOI_B MYCINAMICIN VIII C21 ME 100.0 1.1E-41 1.8E-46  335.8   0.0  369   46-473    10-388 (408)
+158 5FOI_A MYCINAMICIN VIII C21 ME 100.0 1.1E-41 1.8E-46  335.8   0.0  369   46-473    10-388 (408)
+159 3BUJ_A Crystal Structure of Ca 100.0 1.2E-41 1.9E-46  334.3   0.0  350   72-474    12-374 (397)
+160 5KDY_A Cytochrome P450; P450,  100.0 1.2E-41   2E-46  333.6   0.0  351   72-475    15-374 (393)
+161 2XBK_A PIMD PROTEIN; EPOXIDATI 100.0 1.2E-41   2E-46  335.1   0.0  343   73-474    26-384 (404)
+162 4TPO_A Cytochrome TxtE; cytoch 100.0 1.7E-41 2.7E-46  334.4   0.0  365   56-471     3-386 (407)
+163 4KTK_A Cytochrome P450 121 (E. 100.0   2E-41 3.4E-46  332.4   0.0  358   58-472     4-374 (395)
+164 1Q5D_A P450 epoxidase; cytochr 100.0   3E-41 4.8E-46  334.0   0.0  366   52-471    10-394 (419)
+165 1Q5E_A P450 epoxidase; cytochr 100.0   3E-41 4.8E-46  334.0   0.0  366   52-471    10-394 (419)
+166 5KDZ_A Cytochrome P450; P450,  100.0   3E-41 4.8E-46  331.0   0.0  370   72-496    15-393 (393)
+167 4WPZ_A cytochrome P450; P450,  100.0 3.1E-41 5.1E-46  331.2   0.0  359   54-474     1-378 (397)
+168 1ODO_A PUTATIVE CYTOCHROME P45 100.0 3.5E-41 5.7E-46  332.2   0.0  349   72-471    13-383 (408)
+169 2XN8_A PUTATIVE CYTOCHROME P45 100.0 5.9E-41 9.7E-46  332.3   0.0  371   44-472     3-397 (423)
+170 4YZR_A cytochrome P450 enzyme; 100.0 5.9E-41 9.7E-46  330.3   0.0  359   57-472     4-382 (405)
+171 4TPN_A Cytochrome TxtE; cytoch 100.0 6.6E-41 1.1E-45  330.0   0.0  354   73-472    14-386 (406)
+172 2UUQ_A CYTOCHROME P450 130 (E. 100.0 8.5E-41 1.4E-45  330.2   0.0  349   72-470    24-389 (414)
+173 2UVN_A CYTOCHROME P450 130 (E. 100.0 8.5E-41 1.4E-45  330.2   0.0  349   72-470    24-389 (414)
+174 2Y5N_A P-450-LIKE PROTEIN; OXI 100.0 9.3E-41 1.5E-45  330.3   0.0  348   75-475    39-398 (417)
+175 5YSM_A Cytochrome P450; Cytoch 100.0 9.8E-41 1.6E-45  332.5   0.0  340   81-472    58-417 (441)
+176 4WQ0_A cytochrome P450; P450,  100.0 1.1E-40 1.8E-45  327.5   0.0  355   56-472     3-376 (397)
+177 4GGV_A Cytochrome P450 superfa 100.0 1.1E-40 1.8E-45  329.7   0.0  386   43-479     8-403 (418)
+178 5CWE_B Cytochrome P450 hydroxy 100.0 1.3E-40 2.2E-45  326.3   0.0  357   60-469     1-370 (393)
+179 5H1Z_A putative CYP alkane hyd 100.0 1.4E-40 2.3E-45  327.9   0.0  371   50-471     3-385 (407)
+180 4RM4_A Cytochrome P450 (E.C.1. 100.0 1.6E-40 2.6E-45  326.0   0.0  367   58-470     9-377 (396)
+181 5UHU_A Mycinamicin IV hydroxyl 100.0 1.7E-40 2.7E-45  326.2   0.0  343   76-471    20-375 (397)
+182 5YSW_A Cytochrome P450; Cytoch 100.0 2.2E-40 3.7E-45  330.0   0.0  342   79-472    56-417 (441)
+183 3RWL_A Cytochrome P450 alkane  100.0 2.8E-40 4.5E-45  327.9   0.0  371   47-469    17-403 (426)
+184 4JBT_A Cytochrome P450 monooxy 100.0 4.8E-40 7.8E-45  324.4   0.0  363   61-476     7-390 (410)
+185 4J6C_B Cytochrome P450 monooxy 100.0 4.8E-40 7.8E-45  324.4   0.0  363   61-476     7-390 (410)
+186 3EJB_H Acyl carrier protein, B 100.0 9.7E-40 1.6E-44  321.5   0.0  359   59-470     2-371 (404)
+187 5XW2_A Cytochrome P450 107B1 ( 100.0 1.9E-39 3.2E-44  321.1   0.0  374   44-470     9-393 (419)
+188 1Z8O_A 6-deoxyerythronolide B  100.0 2.3E-39 3.8E-44  318.9   0.0  343   72-469    13-377 (404)
+189 1T2B_B P450cin; B'-helix, loop 100.0 2.6E-39 4.2E-44  317.7   0.0  355   43-470     8-368 (397)
+190 4FB2_C P450cin; HEME, MONOOXYG 100.0 2.8E-39 4.5E-44  317.7   0.0  350   49-471    15-370 (398)
+191 3OO3_A Oxy protein; cytochrome 100.0 3.7E-39 6.1E-44  315.1   0.0  358   58-479     2-368 (384)
+192 1LGF_A P450 monooxygenase; Cyt 100.0 5.1E-39 8.3E-44  315.8   0.0  337   81-471    20-375 (398)
+193 1LFK_A P450 monooxygenase; OXI 100.0 5.1E-39 8.3E-44  315.8   0.0  337   81-471    20-375 (398)
+194 1JIP_A CYTOCHROME P450 107A1 ( 100.0 5.3E-39 8.6E-44  316.2   0.0  343   72-469    12-376 (403)
+195 4OQS_A CYP105AS1; Cytochrome P 100.0 5.7E-39 9.3E-44  319.1   0.0  348   56-472    12-378 (433)
+196 4OQR_A CYP105AS1; Cytochrome P 100.0 7.3E-39 1.2E-43  320.4   0.0  336   79-474    65-419 (457)
+197 6GK6_A CypA6 protein (E.C.1.14 100.0 1.2E-38   2E-43  314.5   0.0  350   74-471    18-383 (411)
+198 5Y1I_B Uncharacterized protein 100.0 5.4E-38 8.9E-43  309.0   0.0  363   51-470     2-379 (403)
+199 1IO7_B CYTOCHROME P450 CYP119( 100.0 7.1E-38 1.2E-42  304.3   0.0  330   76-471     2-345 (368)
+200 4TUV_A Cyp119; Oxidoreductase; 100.0 7.1E-38 1.2E-42  304.3   0.0  330   76-471     2-345 (368)
+201 3WEC_A Cytochrome P450; P450 f 100.0 1.3E-37 2.1E-42  308.1   0.0  342   72-469    23-388 (419)
+202 1UE8_A 367aa long hypothetical 100.0   4E-37 6.6E-42  298.9   0.0  331   77-472     3-346 (367)
+203 3B4X_A 367aa long hypothetical 100.0   4E-37 6.6E-42  298.9   0.0  331   77-472     3-346 (367)
+204 2RFB_A Cytochrome P450 (E.C.1. 100.0 5.4E-37 8.9E-42  295.2   0.0  322   84-472     2-324 (343)
+205 2RFC_A Cytochrome P450 (E.C.1. 100.0 5.4E-37 8.9E-42  295.2   0.0  322   84-472     2-324 (343)
+206 2YJN_B GLYCOSYLTRANSFERASE, DT  99.9   3E-32 4.9E-37  265.2   0.0  318   47-472    42-362 (381)
+207 2KV5_A Putative uncharacterize  46.6      12  0.0002   21.9   0.0   22   22-43      3-24  (33)
+208 4B19_A PEPA1; TOXIN, TOXIN APO  44.9      14 0.00022   21.2   0.0   22   22-43      2-23  (30)
+209 6BWB_B Importin subunit alpha-  25.5      46 0.00075   19.4   0.0   16  438-453     7-22  (41)
+210 6BW9_B Importin subunit alpha-  25.5      46 0.00075   19.4   0.0   16  438-453     7-22  (41)
+
+No 1
+>5E0E_A Cytochrome P450 family 2 subfamily; Cytochrome P450, CYP2B37, 4-(4-chlorophenyl)imidazole, Inhibitor; HET: HEM, CPZ; 3.4A {Neotoma lepida}
+Probab=100.00  E-value=3.7e-53  Score=423.86  Aligned_cols=413  Identities=22%  Similarity=0.320  Sum_probs=315.6  Template_Neff=12.000
+
+Q _1               49 KLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVEMEGPKSFM  128 (497)
+Q Consensus        49 ~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~~~~~~~~~~~~~  128 (497)
+                      ++||+|+++|++|+++.+..    .....++.+++++||++|++++++.++++++|++.+++++.++...+.........
+T Consensus         1 ~~pP~p~~~p~~G~~~~~~~----~~~~~~~~~~~~~yg~i~~~~~~~~~~vvv~~p~~~~~v~~~~~~~~~~~~~~~~~   76 (463)
+T 5E0E_A            1 HLPPGPRPLPLLGNLLQMDR----GGFLNSFRRIREKYGDVFTVHLGPRPVVMLYGTEAIREALVDQAEAFSGRGTIAVV   76 (463)
+T ss_dssp             CCCCCCCCBTTTBTSSTTTS----SSTTHHHHHHSTTSCSEEEEEETTEEEEEEESHHHHHHHHTTTHHHHCEECCCTTT
+T ss_pred             CCCCCCCCCCCcccHhhcCC----CchHHHHHHHHHHHCCEEEEEeCCeeEEEEeCHHHHHHHHHhcchHhccCCchHhh
+Confidence            57999999999999998854    44567788999999999999999999999999999999998765445443322222
+
+
+Q _1              129 K-LIGEDSIVAKRGEDHRILRTALARFLGAQALQNY-LGRMSSEIGHHFNEKWK-GKD-EVKVLPLVRGLIFSIASTLFF  204 (497)
+Q Consensus       129 ~-~~~~~~~~~~~~~~w~~~R~~l~~~~~~~~~~~~-~~~~i~~~~~~l~~~l~-~~~-~vdl~~~~~~~~~~~~~~~~f  204 (497)
+                      . ...+.+++..+++.|+.+|+.+.+.+........ +.+.+.+.++.+++.+. ..+ .+|+.+.+..+++++++.++|
+T Consensus        77 ~~~~~~~~l~~~~g~~w~~~R~~~~~~~~~~~~~~~~~~~~~~~~~~~l~~~~~~~~~~~~dl~~~~~~~~~~~i~~~~~  156 (463)
+T 5E0E_A           77 EPIFRGYGVVFANGERWKALRRFSLVTMRDFGMGKRSVEERIQEEARCLVEEFRKSQGAPLDPTFLFQCITANIICSIVF  156 (463)
+T ss_dssp             HHHHTTCSTTTCCHHHHHHHHHHHHHTTTTTCSSSCCHHHHHHHHHHHHHHHHHTTTTCCBCTHHHHHHHHHHHHHHHHH
+T ss_pred             hHHhCCCcceecCChhHHHHHHHHHHHHHhccCCCCCHHHHHHHHHHHHHHHHHHcCCCCCChHHHHHHHHHHHHHHHHh
+Confidence            2 3445677778889999999998888765321112 66777777778877776 322 589999999999999999999
+
+
+Q _1              205 DVNDG-H--QQKQLHHLLETILV----GSLSVPLDFP------GTRYRKGLQARLKLDEILSSLIKRRRRDLRSGIASDD  271 (497)
+Q Consensus       205 G~~~~-~--~~~~~~~~~~~~~~----~~~~~~~~~p------~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~~~~~~~  271 (497)
+                      |.+++ .  ...+....+.....    ........++      ....+...+..+.+.+.+.+.++++++.....   ..
+T Consensus       157 G~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~~---~~  233 (463)
+T 5E0E_A          157 GERFDYKDHQFLRLLYLFYQSFSLISSFSSQVFELFSGFLKYFPGTHRQISRNLQEILDYIGQSVEKHRATLDPS---HP  233 (463)
+T ss_dssp             SSCCCTTCHHHHHHHC-CHHHHHHHTSHHHHHHHHHHHHHTTSCSHHHHHHHHHHHHHHHHHHHHHHHHHHCCSS---SC
+T ss_pred             ccCCCCCChHHHHHHHHHHHHHHHhccchhHHHHHhHHHHHhCccchHHHHHHHHHHHHHHHHHHHHHHHhcCCC---CC
+Confidence            98765 1  11111111111100    0000000011      11112223344556666666666665543322   34
+
+
+Q _1              272 QDLLSVLLTFRDE-----KGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEIIGNKKEGEE  346 (497)
+Q Consensus       272 ~d~l~~ll~~~~~-----~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~Ei~~~~~~~~~~~~  346 (497)
+                      .++++.++.....     .. .++.+++...++.+++||.+||+.+++|++++|++||++++++++|++++.+..   ..
+T Consensus       234 ~~~l~~~l~~~~~~~~~~~~-~~~~~~i~~~~~~~~~ag~~tt~~~~~~~l~~L~~~p~~~~~l~~Ei~~~~~~~---~~  309 (463)
+T 5E0E_A          234 RDFIDTYLLRMEKEKSNQHT-EFDHQNLVISVLSLFFAGTETSSTTLRYGFLLMLKYPHVAEKVQKEIDQVIGSH---RL  309 (463)
+T ss_dssp             CSHHHHHHHHHHHGGGCTTC-SCCHHHHHHHHHHHHHHHTHHHHHHHHHHHHHHHHSTTHHHHHHHHHHHHTCSS---SC
+T ss_pred             ccHHHHHHHHHhHhccCCCC-cCCHHHHHHHHHHHHHhchHhHHHHHHHHHHHHHhCHHHHHHHHHHHHHHhCCC---CC
+Confidence            5666666543211     12 578889999999999999999999999999999999999999999999998542   35
+
+
+Q _1              347 ISWKDLKSMKYTWQAVQESLRMYPPVF-GIFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEPEEFRPSRFEDEG  425 (497)
+Q Consensus       347 ~~~~~l~~lp~L~a~i~E~lRl~p~~~-~~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~P~~F~P~Rf~~~~  425 (497)
+                      ++.+++.++||+++|++|++|++|+.+ ...|.+.+|++++|+.||+|+.|.++...+|+|+++|++|++|+|+||++..
+T Consensus       310 ~~~~~~~~l~~l~~~i~E~lRl~p~~~~~~~r~~~~d~~~~~~~ip~g~~v~~~~~~~~~d~~~~~~p~~f~P~R~l~~~  389 (463)
+T 5E0E_A          310 PTLEDRTKMPYTEAVIYEIQRFSDLIPIGVPHKVTKDTLFRGYLLPKNTEVYPILSSALHDPQYFEQPDTFNPDHFLDAN  389 (463)
+T ss_dssp             CCSTTGGGCHHHHHHHHHHHHHHCSCSSCCCEECSSCEEETTEEECTTCEEEEETHHHHSCTTTCSSTTSCCGGGSBCTT
+T ss_pred             CCHHHHhcCHHHHHHHHHHHHhhCCCCCCCCcccCCCEEeCCEEcCCCCEEEccHHHHhCCccccCCCCccCHHHhcCcC
+Confidence            677888999999999999999999999 5889999999999999999999999999999999999999999999999875
+
+
+Q _1              426 R-HVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDP  472 (497)
+Q Consensus       426 ~-~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~  472 (497)
+                      . ......++|||.|+|.|+|+++|..|++++++.++++|+++...++
+T Consensus       390 ~~~~~~~~~~~fg~G~r~C~G~~~a~~~~~~~l~~l~~~~~~~~~~~~  437 (463)
+T 5E0E_A          390 GALKKSEAFMPFSIGKRICLGEGIARNELFLFFTTILQNFSLSSPVAP  437 (463)
+T ss_dssp             CSBCCCTTCCTTCCSTTCCTTHHHHHHHHHHHHHHHHHHEEEECSSCG
+T ss_pred             CCCCCCCCCCccccccccCCCHHHHHHHHHHHHHHHHHhCCCcCCCCC
+Confidence            4 2245679999999999999999999999999999999999988765
+
+
+No 2
+>2FDV_A Cytochrome P450 2A6 (E.C.1.14.14.1); CYP2A6, P450 2A6, P450, MONOOXYGENASE; HET: HEM, EDO, D2G, SO4; 1.65A {Homo sapiens}
+Probab=100.00  E-value=3.9e-53  Score=425.27  Aligned_cols=422  Identities=20%  Similarity=0.309  Sum_probs=315.4  Template_Neff=12.000
+
+Q _1               41 RYNHRSSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVE  120 (497)
+Q Consensus        41 ~~~~~~~~~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~~~~~  120 (497)
+                      |.+++...++||||.++|++|+++.+..    ...+..+.+++++||++|++++++.+.++++|++.+++++.++...+.
+T Consensus         2 ~~~~~~~~~~ppgp~~~p~~G~~~~~~~----~~~~~~~~~~~~~yG~i~~~~~g~~~~vvv~~p~~~~~i~~~~~~~~~   77 (476)
+T 2FDV_A            2 AKKTSSKGKLPPGPTPLPFIGNYLQLNT----EQMYNSLMKISERYGPVFTIHLGPRRVVVLCGHDAVREALVDQAEEFS   77 (476)
+T ss_dssp             ------CCBCCCCCCCBTTTBTGGGCCT----TBHHHHHHHHHHHHCSEEEEEETTEEEEEECSHHHHHCCCCCTTTTTC
+T ss_pred             CcccCCCCCCCCCCCCcCccccHHHcCh----hHHHHHHHHHHHHHCCEEEEEeCCeEEEEECCHHHHHHHHhhChhhcc
+Confidence            3456677889999999999999998744    456677889999999999999999999999999999999987754444
+
+
+Q _1              121 MEGPKSFMK-LIGEDSIVAKRGEDHRILRTALARFLGAQALQNY-LGRMSSEIGHHFNEKWK-GKD-EVKVLPLVRGLIF  196 (497)
+Q Consensus       121 ~~~~~~~~~-~~~~~~~~~~~~~~w~~~R~~l~~~~~~~~~~~~-~~~~i~~~~~~l~~~l~-~~~-~vdl~~~~~~~~~  196 (497)
+                      ......... ...+.+++..+++.|+.+|+.+.+.+........ +.+.+.+.++.+++.+. ..+ .+|+.+.+..+++
+T Consensus        78 ~~~~~~~~~~~~~~~~l~~~~g~~w~~~R~~~~~~l~~~~~~~~~~~~~i~~~~~~l~~~l~~~~~~~vd~~~~~~~~~~  157 (476)
+T 2FDV_A           78 GRGEQATFDWVFKGYGVVFSNGERAKQLRRFSIATLRDFGVGKRGIEERIQEEAGFLIDALRGTGGANIDPTFFLSRTVS  157 (476)
+T ss_dssp             EECCCHHHHHHHTTCSSSSCCHHHHHHHHHHHHHHHHHTTTTSHHHHHHHHHHHHHHHHHHHHTTTCCBCCHHHHHHHHH
+T ss_pred             CCCchhhhhHHhcCCceeecCCHHHHHHHHHHHHHHhhcCCCcccHHHHHHHHHHHHHHHHHccCCCCCChHHHHHHHHH
+Confidence            432222222 4456677778889999999999888875422112 56677777777777776 222 5999999999999
+
+
+Q _1              197 SIASTLFFDVNDG---HQQKQLHHLLETILV----GSLSVPLDFP------GTRYRKGLQARLKLDEILSSLIKRRRRDL  263 (497)
+Q Consensus       197 ~~~~~~~fG~~~~---~~~~~~~~~~~~~~~----~~~~~~~~~p------~~~~~~~~~~~~~~~~~~~~~i~~~~~~~  263 (497)
+                      ++++..+||.+++   ....+....+.....    ........++      ....+...+..+.+.+.+.+.++++.+..
+T Consensus       158 ~~i~~~~fG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~i~~~~~~~  237 (476)
+T 2FDV_A          158 NVISSIVFGDRFDYKDKEFLSLLRMMLGIFQFTSTSTGQLYEMFSSVMKHLPGPQQQAFQLLQGLEDFIAKKVEHNQRTL  237 (476)
+T ss_dssp             HHHHHHHHSSCCCTTCHHHHHHHHHHHHHHHHHTSHHHHHHHHHHHHHTTSCSHHHHHHHHHHHHHHHHHHHHHHHHTTC
+T ss_pred             HHHHHHHhcCCCCCCCHHHHHHHHHHHHHHHHhcCchhhHHHhhHHHHhcCCCcHHHHHHHHHHHHHHHHHHHHHhhhcC
+Confidence            9999999999765   111111111111100    0000000000      01111222334455566666666554433
+
+
+Q _1              264 RSGIASDDQDLLSVLLTFRDE----KGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEIIG  339 (497)
+Q Consensus       264 ~~~~~~~~~d~l~~ll~~~~~----~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~Ei~~~~~  339 (497)
+                      ...   ...++++.++....+    .+..++.+++...++.+++||++||+.+++|++++|+.||++++++++|++++.+
+T Consensus       238 ~~~---~~~d~l~~ll~~~~~~~~~~~~~~~~~~i~~~~~~~~~ag~~tt~~~l~~~l~~L~~~p~~~~~l~~Ei~~~~~  314 (476)
+T 2FDV_A          238 DPN---SPRDFIDSFLIRMQEEEKNPNTEFYLKNLVMTTLNLFIGGTETVSTTLRYGFLLLMKHPEVEAKVHEEIDRVIG  314 (476)
+T ss_dssp             CTT---SCCSHHHHHHHHHHHTTTCTTCSCSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCHHHHHHHHHHHHHHTC
+T ss_pred             CCC---CcchHHHHHHHHHHHccCCCCCcccHHHHHHHHHHHHHhcchHHHHHHHHHHHHHHhCHHHHHHHHHHHHHHhC
+Confidence            222   345666666543211    0114677889999999999999999999999999999999999999999999885
+
+
+Q _1              340 NKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVFG-IFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEPEEFRP  418 (497)
+Q Consensus       340 ~~~~~~~~~~~~l~~lp~L~a~i~E~lRl~p~~~~-~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~P~~F~P  418 (497)
+                      ..   ..++.+++.++|||++||+|++|++|+++. ..|.+.+|++++|+.||+|+.|.++.+.+|+||++|++|++|+|
+T Consensus       315 ~~---~~~~~~~l~~l~~l~~~i~E~lRl~p~~~~~~~r~~~~~~~~~g~~ip~G~~v~~~~~~~~~~~~~~~~p~~f~P  391 (476)
+T 2FDV_A          315 KN---RQPKFEDRAKMPYMEAVIHEIQRFGDVIPMSLARRVKKDTKFRDFFLPKGTEVYPMLGSVLRDPSFFSNPQDFNP  391 (476)
+T ss_dssp             SS---SCCCGGGGGGCHHHHHHHHHHHHHHCSSTTCSCEECSSCEEETTEEECTTCEEEECHHHHHTCTTTCSSTTSCCG
+T ss_pred             CC---CCCCHHHHhcCHHHHHHHHHHHHHhCCCCcceeeeccCCCEEcceeeCCCCEEEechhHHHcChhhcCCccccCh
+Confidence            43   467788899999999999999999999995 78999999999999999999999999999999999999999999
+
+
+Q _1              419 SRFEDEGR-HVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDP  472 (497)
+Q Consensus       419 ~Rf~~~~~-~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~  472 (497)
+                      +||++... ......++|||.|+|.|+|+++|..+++++++.++++|+++...++
+T Consensus       392 ~R~~~~~~~~~~~~~~~~Fg~G~r~C~G~~~a~~~~~~~~~~ll~~~~~~~~~~~  446 (476)
+T 2FDV_A          392 QHFLNEKGQFKKSDAFVPFSIGKRNCFGEGLARMELFLFFTTVMQNFRLKSSQSP  446 (476)
+T ss_dssp             GGGBCTTSCBCCCTTCCTTCCSTTCCTTHHHHHHHHHHHHHHHHHHEEEEESSCG
+T ss_pred             hHhcCCCCcccCCCccccCCCCccCCCCHHHHHHHHHHHHHHHHHhccCCCCCCC
+Confidence            99998743 2235678999999999999999999999999999999999987544
+
+
+No 3
+>1Z11_A cytochrome P450, family 2, subfamily; CYP2A6, P450 2A6, P450, monooxygenase; HET: 8MO, HEM; 2.05A {Homo sapiens}
+Probab=100.00  E-value=3.9e-53  Score=425.27  Aligned_cols=422  Identities=20%  Similarity=0.309  Sum_probs=315.4  Template_Neff=12.000
+
+Q _1               41 RYNHRSSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVE  120 (497)
+Q Consensus        41 ~~~~~~~~~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~~~~~  120 (497)
+                      |.+++...++||||.++|++|+++.+..    ...+..+.+++++||++|++++++.+.++++|++.+++++.++...+.
+T Consensus         2 ~~~~~~~~~~ppgp~~~p~~G~~~~~~~----~~~~~~~~~~~~~yG~i~~~~~g~~~~vvv~~p~~~~~i~~~~~~~~~   77 (476)
+T 1Z11_A            2 AKKTSSKGKLPPGPTPLPFIGNYLQLNT----EQMYNSLMKISERYGPVFTIHLGPRRVVVLCGHDAVREALVDQAEEFS   77 (476)
+T ss_dssp             ------CCCCCCCCCCBTTTBTGGGCCG----GGHHHHHHHHHHHHCSEEEEEETTEEEEEECSHHHHHCCCCCTTTTTC
+T ss_pred             CcccCCCCCCCCCCCCcCccccHHHcCh----hHHHHHHHHHHHHHCCEEEEEeCCeEEEEECCHHHHHHHHhhChhhcc
+Confidence            3456677889999999999999998744    456677889999999999999999999999999999999987754444
+
+
+Q _1              121 MEGPKSFMK-LIGEDSIVAKRGEDHRILRTALARFLGAQALQNY-LGRMSSEIGHHFNEKWK-GKD-EVKVLPLVRGLIF  196 (497)
+Q Consensus       121 ~~~~~~~~~-~~~~~~~~~~~~~~w~~~R~~l~~~~~~~~~~~~-~~~~i~~~~~~l~~~l~-~~~-~vdl~~~~~~~~~  196 (497)
+                      ......... ...+.+++..+++.|+.+|+.+.+.+........ +.+.+.+.++.+++.+. ..+ .+|+.+.+..+++
+T Consensus        78 ~~~~~~~~~~~~~~~~l~~~~g~~w~~~R~~~~~~l~~~~~~~~~~~~~i~~~~~~l~~~l~~~~~~~vd~~~~~~~~~~  157 (476)
+T 1Z11_A           78 GRGEQATFDWVFKGYGVVFSNGERAKQLRRFSIATLRDFGVGKRGIEERIQEEAGFLIDALRGTGGANIDPTFFLSRTVS  157 (476)
+T ss_dssp             EECCCHHHHHHHTTCSSSSCCHHHHHHHHHHHHHHHHHTTTTSHHHHHHHHHHHHHHHHHHHTTTTCCBCCHHHHHHHHH
+T ss_pred             CCCchhhhhHHhcCCceeecCCHHHHHHHHHHHHHHhhcCCCcccHHHHHHHHHHHHHHHHHccCCCCCChHHHHHHHHH
+Confidence            432222222 4456677778889999999999888875422112 56677777777777776 222 5999999999999
+
+
+Q _1              197 SIASTLFFDVNDG---HQQKQLHHLLETILV----GSLSVPLDFP------GTRYRKGLQARLKLDEILSSLIKRRRRDL  263 (497)
+Q Consensus       197 ~~~~~~~fG~~~~---~~~~~~~~~~~~~~~----~~~~~~~~~p------~~~~~~~~~~~~~~~~~~~~~i~~~~~~~  263 (497)
+                      ++++..+||.+++   ....+....+.....    ........++      ....+...+..+.+.+.+.+.++++.+..
+T Consensus       158 ~~i~~~~fG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~i~~~~~~~  237 (476)
+T 1Z11_A          158 NVISSIVFGDRFDYKDKEFLSLLRMMLGIFQFTSTSTGQLYEMFSSVMKHLPGPQQQAFQLLQGLEDFIAKKVEHNQRTL  237 (476)
+T ss_dssp             HHHHHHHHSSCCCTTCHHHHHHHHHHHHHHHHTTSHHHHHHHHHHHHHTTSCSHHHHHHHHHHHHHHHHHHHHHHHHTTC
+T ss_pred             HHHHHHHhcCCCCCCCHHHHHHHHHHHHHHHHhcCchhhHHHhhHHHHhcCCCcHHHHHHHHHHHHHHHHHHHHHhhhcC
+Confidence            9999999999765   111111111111100    0000000000      01111222334455566666666554433
+
+
+Q _1              264 RSGIASDDQDLLSVLLTFRDE----KGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEIIG  339 (497)
+Q Consensus       264 ~~~~~~~~~d~l~~ll~~~~~----~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~Ei~~~~~  339 (497)
+                      ...   ...++++.++....+    .+..++.+++...++.+++||++||+.+++|++++|+.||++++++++|++++.+
+T Consensus       238 ~~~---~~~d~l~~ll~~~~~~~~~~~~~~~~~~i~~~~~~~~~ag~~tt~~~l~~~l~~L~~~p~~~~~l~~Ei~~~~~  314 (476)
+T 1Z11_A          238 DPN---SPRDFIDSFLIRMQEEEKNPNTEFYLKNLVMTTLNLFIGGTETVSTTLRYGFLLLMKHPEVEAKVHEEIDRVIG  314 (476)
+T ss_dssp             CTT---SCCSHHHHHHHHHHHGGGCTTCSCSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCHHHHHHHHHHHHHHTC
+T ss_pred             CCC---CcchHHHHHHHHHHHccCCCCCcccHHHHHHHHHHHHHhcchHHHHHHHHHHHHHHhCHHHHHHHHHHHHHHhC
+Confidence            222   345666666543211    0114677889999999999999999999999999999999999999999999885
+
+
+Q _1              340 NKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVFG-IFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEPEEFRP  418 (497)
+Q Consensus       340 ~~~~~~~~~~~~l~~lp~L~a~i~E~lRl~p~~~~-~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~P~~F~P  418 (497)
+                      ..   ..++.+++.++|||++||+|++|++|+++. ..|.+.+|++++|+.||+|+.|.++.+.+|+||++|++|++|+|
+T Consensus       315 ~~---~~~~~~~l~~l~~l~~~i~E~lRl~p~~~~~~~r~~~~~~~~~g~~ip~G~~v~~~~~~~~~~~~~~~~p~~f~P  391 (476)
+T 1Z11_A          315 KN---RQPKFEDRAKMPYMEAVIHEIQRFGDVIPMSLARRVKKDTKFRDFFLPKGTEVYPMLGSVLRDPSFFSNPQDFNP  391 (476)
+T ss_dssp             SS---SCCCGGGGGGCHHHHHHHHHHHHHHCSSTTCSCEECSSCEEETTEEECTTCEEEECHHHHHTCTTTCSSTTSCCG
+T ss_pred             CC---CCCCHHHHhcCHHHHHHHHHHHHHhCCCCcceeeeccCCCEEcceeeCCCCEEEechhHHHcChhhcCCccccCh
+Confidence            43   467788899999999999999999999995 78999999999999999999999999999999999999999999
+
+
+Q _1              419 SRFEDEGR-HVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDP  472 (497)
+Q Consensus       419 ~Rf~~~~~-~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~  472 (497)
+                      +||++... ......++|||.|+|.|+|+++|..+++++++.++++|+++...++
+T Consensus       392 ~R~~~~~~~~~~~~~~~~Fg~G~r~C~G~~~a~~~~~~~~~~ll~~~~~~~~~~~  446 (476)
+T 1Z11_A          392 QHFLNEKGQFKKSDAFVPFSIGKRNCFGEGLARMELFLFFTTVMQNFRLKSSQSP  446 (476)
+T ss_dssp             GGGBCTTSCBCCCTTCCTTCCSTTCCTTHHHHHHHHHHHHHHHHHHEEEEESSCG
+T ss_pred             hHhcCCCCcccCCCccccCCCCccCCCCHHHHHHHHHHHHHHHHHhccCCCCCCC
+Confidence            99998743 2235678999999999999999999999999999999999987544
+
+
+No 4
+>4UHL_B STEROL 14-ALPHA DEMETHYLASE (E.C.1.14.13.70); CYTOCHROME P450, CYP51, OXIDOREDUCTASE, MONOOXYGENASE; HET: VFV, HEM; 2.5A {HOMO SAPIENS}
+Probab=100.00  E-value=1.4e-52  Score=417.50  Aligned_cols=407  Identities=21%  Similarity=0.363  Sum_probs=309.6  Template_Neff=12.100
+
+Q _1               49 KLPPGKL-GFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVEMEGPKSF  127 (497)
+Q Consensus        49 ~~PpgP~-~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~~~~~~~~~~~~  127 (497)
+                      ++||||+ ++|++|+++.+..     ..+.++.+++++||+||++++++.+.++|++++.+++++.+++..+........
+T Consensus         2 ~~pPg~~~~~P~~G~~~~~~~-----~~~~~~~~~~~~yG~i~~~~~~~~~~vvv~~~~~~~~i~~~~~~~~~~~~~~~~   76 (446)
+T 4UHL_B            2 KLPPYIFSPIPFLGHAIAFGK-----SPIEFLENAYEKYGPVFSFTMVGKTFTYLLGSDAAALLFNSKNEDLNAEDVYSR   76 (446)
+T ss_dssp             CCCCBCCCCSTTTBTHHHHHH-----CHHHHHHHHHHHHCSEEEEEETTEEEEEECSHHHHHHHHHCCTTTEESHHHHHH
+T ss_pred             CCCCCccCCCcchhHHHHhcc-----CHHHHHHHHHHHHCCEEEEEeCCeEEEEEecHHHHHHHHcCCcccCChhHHHHH
+Confidence            6899996 9999999998743     456778899999999999999999999999999999999887534433222111
+
+
+Q _1              128 MK-LIGEDSI-VAKRGEDHRILRTALARFLGAQALQNY--LGRMSSEIGHHFNEKWK-GKDEVKVLPLVRGLIFSIASTL  202 (497)
+Q Consensus       128 ~~-~~~~~~~-~~~~~~~w~~~R~~l~~~~~~~~~~~~--~~~~i~~~~~~l~~~l~-~~~~vdl~~~~~~~~~~~~~~~  202 (497)
+                      .. ...+.+. +..+++.|+.+|+.+.+.++..   ..  +.+.+.+.++.+++.+. ... +|+.+.+..+++++++..
+T Consensus        77 ~~~~~~g~~~~~~~~g~~w~~~R~~~~~~~~~~---~l~~~~~~~~~~~~~~~~~~~~~~~-~~~~~~~~~~~~~~~~~~  152 (446)
+T 4UHL_B           77 LTTPVFGKGVAYDVPNPVFLEQKKMLKSGLNIA---HFKQHVSIIEKETKEYFESWGESGE-KNVFEALSELIILTASHC  152 (446)
+T ss_dssp             HHHHHHCTTSGGGSCHHHHHHHHHHHHHHSSHH---HHHHHHHHHHHHHHHHHHTTCSEEE-EEHHHHHHHHHHHHHCCC
+T ss_pred             hcccccCCCceecCCChHHHHHHHHHhhcCCHH---HHHHHHHHHHHHHHHHHHhhccccc-hhHHHHHHHHHHHHHHHH
+Confidence            11 2223444 4467799999999999998765   33  66777777777777766 444 889999999999999999
+
+
+Q _1              203 FFDVNDG-HQQKQLHHLLETILVGSLSVPLDFP----GTRYRKGLQARLKLDEILSSLIKRRRRDLRSGIASDDQDLLSV  277 (497)
+Q Consensus       203 ~fG~~~~-~~~~~~~~~~~~~~~~~~~~~~~~p----~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~~~~~~~~d~l~~  277 (497)
+                      ++|.... .....+...+..+...........+    ....+...+..+.+.+++.+.++++.+...     ...++++.
+T Consensus       153 ~~G~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~-----~~~~~l~~  227 (446)
+T 4UHL_B          153 LHGKEIRSQLNEKVAQLYADLDGGFSHAAWLLPGWLPLPSFRRRDRAHREIKDIFYKAIQKRRQSQE-----KIDDILQT  227 (446)
+T ss_dssp             CCCHHHHHTCCHHHHHHHHHHHTTSSHHHHHSCTTSCCHHHHHHHHHHHHHHHHHHHHHHHHHTCSS-----CCCSHHHH
+T ss_pred             HhhHHHHHHHHHHHHHHHHHhcccccchhHhccccCCCccHHHHHHHHHHHHHHHHHHHHHHhcchh-----hhccHHHH
+Confidence            9999754 1111122222111100000011111    111122233444555556666655544321     24677777
+
+
+Q _1              278 LLTFRDEKGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEIIGNKKEGEEISWKDLKSMKY  357 (497)
+Q Consensus       278 ll~~~~~~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~Ei~~~~~~~~~~~~~~~~~l~~lp~  357 (497)
+                      +++.....+..++.+++...++.+++||.+|++.++.|+++.|+.||++|+++++|++++.+..  ...++.+++.++||
+T Consensus       228 ll~~~~~~~~~~~~~~i~~~~~~~~~ag~~tt~~~l~~~~~~L~~~p~~~~~l~~Ei~~~~~~~--~~~~~~~~~~~l~~  305 (446)
+T 4UHL_B          228 LLDATYKDGRPLTDDEVAGMLIGLLLAGQHTSSTTSAWMGFFLARDKTLQKKCYLEQKTVCGEN--LPPLTYDQLKDLNL  305 (446)
+T ss_dssp             HHTCBCTTSCBCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHCTT--CCCCCHHHHTTCHH
+T ss_pred             HHHHhhcCCCCCCHHHHHHHHHHHHHHcchhHHHHHHHHHHHHHhCHHHHHHHHHHHHHHcCCC--CCCCCHHHHhcCHH
+Confidence            7765322111578899999999999999999999999999999999999999999999988432  13566778889999
+
+
+Q _1              358 TWQAVQESLRMYPPVFGIFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEPEEFRPSRFEDEGR-HVTPYTYVPF  436 (497)
+Q Consensus       358 L~a~i~E~lRl~p~~~~~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~P~~F~P~Rf~~~~~-~~~~~~~~~F  436 (497)
+                      +++|++|++|++|+.+...|.+.+|++++|+.||||+.|.++.+.+|+|+++|++|++|+|+||++... ......++||
+T Consensus       306 l~a~i~E~lRl~p~~~~~~r~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~p~~F~P~Rf~~~~~~~~~~~~~~~F  385 (446)
+T 4UHL_B          306 LDRCIKETLRLRPPIMIMMRMARTPQTVAGYTIPPGHQVCVSPTVNQRLKDSWVERLDFNPDRYLQDNPASGEKFAYVPF  385 (446)
+T ss_dssp             HHHHHHHHHHHCCSCCCEEEEESSCEEETTEEECTTCEEEECHHHHTTCTTTCTTTTSCCGGGGGSCCHHHHSSSSCCTT
+T ss_pred             HHHHHHHHHhhCCCceeeeeeCCCCeeeCCEEECCCCEEEeCHHHhcCChhhCCCcccCChHHhcCCCCCcCCCcccCCC
+Confidence            999999999999999977899999999999999999999999999999999999999999999999743 2345679999
+
+
+Q _1              437 GGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVD  471 (497)
+Q Consensus       437 G~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~  471 (497)
+                      |.|+|.|||+.+|..+++++++.++++|+++++..
+T Consensus       386 g~G~r~C~G~~~a~~~~~~~l~~l~~~~~~~~~~~  420 (446)
+T 4UHL_B          386 GAGRHRCIGENFAYVQIKTIWSTMLRLYEFDLIDG  420 (446)
+T ss_dssp             CCGGGCCSCHHHHHHHHHHHHHHHHHHEEEECSTT
+T ss_pred             CCCccCCCCHHHHHHHHHHHHHHHHHhCeEEecCC
+Confidence            99999999999999999999999999999999754
+
+
+No 5
+>6C94_A Cytochrome P450 4B1 (E.C.1.14.14.1); cytochrome P450, fatty acid omega-hydroxylase; HET: HEM, V16; 2.72A {Oryctolagus cuniculus}
+Probab=100.00  E-value=1.7e-52  Score=423.45  Aligned_cols=439  Identities=20%  Similarity=0.287  Sum_probs=320.2  Template_Neff=11.600
+
+Q _1               45 RSSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIG-HPTVVLCGPAGNKLVLSNEDKLVEMEG  123 (497)
+Q Consensus        45 ~~~~~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~-~~~vvv~dpe~~~~il~~~~~~~~~~~  123 (497)
+                      ....+.||||+++|++|+++.+..    ......+.+++++||+++.++++. ...++++|++.+++++.+....+..  
+T Consensus        18 ~~~~~~~Pgp~~~p~iG~~~~~~~----~~~~~~~~~~~~~yg~i~~~~~g~~~~~v~v~dp~~~~~vl~~~~~~~~~--   91 (497)
+T 6C94_A           18 ARAMDSFPGPPTHWLFGHALEIQK----TGSLDKVVTWTQQFPYAHPLWVGQFIGFLNIYEPDYAKAVYSRGDPKAPD--   91 (497)
+T ss_dssp             HHHTTTCCCCCCBTTTBTHHHHTS----TTHHHHHHHHHHHSSSEEEEEETTTEEEEEECSHHHHHHHHTTTCCBCHH--
+T ss_pred             HHHHHcCCCCCCcccccchhHhcC----CCchHHHHHHHHhCCCCcceeecceeEEEEEcCHHHHHHHHcCCCCCCCc--
+Confidence            345677899999999999988755    334456788999999999999887 5699999999999999875322111  
+
+
+Q _1              124 PKSFMKLIGEDSIVAKRGEDHRILRTALARFLGAQALQNY--LGRMSSEIGHHFNEKWK-G--KD-EVKVLPLVRGLIFS  197 (497)
+Q Consensus       124 ~~~~~~~~~~~~~~~~~~~~w~~~R~~l~~~~~~~~~~~~--~~~~i~~~~~~l~~~l~-~--~~-~vdl~~~~~~~~~~  197 (497)
+                      ....+....+.+++..+++.|+++|+.+.+.|+..   ..  +.+.+.+.++.+++.+. .  .+ .+|+.+.+..++++
+T Consensus        92 ~~~~~~~~~~~~~~~~~g~~w~~~R~~~~~~f~~~---~l~~~~~~i~~~~~~~i~~l~~~~~~~~~~d~~~~~~~~~~~  168 (497)
+T 6C94_A           92 VYDFFLQWIGKGLLVLDGPKWFQHRKLLTPGFHYD---VLKPYVAIFADSTRIMLEKWEKKACEGKSFDIFSDVGHMALD  168 (497)
+T ss_dssp             HHGGGTTTTCSSTTTCCSHHHHHHHHHHGGGGSHH---HHTTHHHHHHHHHHHHHHHHHHHHTTTCCEECHHHHHHHHHH
+T ss_pred             hHHHHHHhhccCceeechHHHHHHHHhhccccCHH---HHHHHHHHHHHHHHHHHHHHHHHHhcCCCCCcHHHHHHHHHH
+Confidence            11111122344666777899999999999988765   33  66777788888887776 2  12 68999999999999
+
+
+Q _1              198 IASTLFFDVNDG--H-QQKQLHHLLETIL----VGSLSV---PLDFP--GTRYRKGLQARLKLDEILSSLIKRRRRDLRS  265 (497)
+Q Consensus       198 ~~~~~~fG~~~~--~-~~~~~~~~~~~~~----~~~~~~---~~~~p--~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~  265 (497)
+                      +++.++||.+++  . ....+...+....    ......   ....+  ....+...+..+.+.+.+.+.+++..+....
+T Consensus       169 vi~~~~fG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~  248 (497)
+T 6C94_A          169 TLMKCTFGKGDSGLNHRDSSYYVAVSELTLLMQQRIDSFQYHNDFIYWLTPHGRRFLRACRAAHDHTDRVIRQRKAALQD  248 (497)
+T ss_dssp             HHHHHHSCCCTTCCCHHHHHHHHHHHHHHHHHHHHHTCGGGGSHHHHTTSHHHHHHHHHHHHHHHHHHHHHHHHHHHTTS
+T ss_pred             HHHHHHhCCCcccccCCCchHHHHHHHHHHHHHHHhhChhHHhHHHHhhChhhHHHHHHHHHHHHHHHHHHHHHHHHHHh
+Confidence            999999999754  1 1111222222111    000000   00011  1111122233344555555555555443321
+
+
+Q _1              266 GI------ASDDQDLLSVLLTFRDEKGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEIIG  339 (497)
+Q Consensus       266 ~~------~~~~~d~l~~ll~~~~~~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~Ei~~~~~  339 (497)
+                      ..      .....++++.+++...+.+..++.+++...+..+++||.+|++.+++|++++|++||++|+++++|++++.+
+T Consensus       249 ~~~~~~~~~~~~~~~l~~l~~~~~~~~~~~~~~~i~~~~~~~~~ag~~tts~~l~~~l~~L~~~P~~q~kl~~Ei~~~~~  328 (497)
+T 6C94_A          249 EKEREKIQNRRHLDFLDILLDVRGESGVQLSDTDLRAEVDTFMFEGHDTTTSGISWFLYCMALYPEHQQRCREEVREILG  328 (497)
+T ss_dssp             HHHHHHHHHSSSCCHHHHHTTTTSTTCSCCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHT
+T ss_pred             HHHHHHHhccchhhHHHHHHHhccccCCCCCHHHHHHHHchhhhcCchHHHHHHHHHHHHHHhCHHHHHHHHHHHHHHHC
+Confidence            10      113467888887653221115788999999999999999999999999999999999999999999999985
+
+
+Q _1              340 NKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVFGIFRKAITDIH-YDGYTIPKGWRVLCSPYTTHLREEYFPEPEEFRP  418 (497)
+Q Consensus       340 ~~~~~~~~~~~~l~~lp~L~a~i~E~lRl~p~~~~~~R~~~~~~~-~~g~~ip~G~~v~~~~~~~~~d~~~~~~P~~F~P  418 (497)
+                      +.   ..++.+++.++|||+++++|++|++|+++...|.+.+|++ ++|+.||+|+.|.++.+.+|+||++|++|++|+|
+T Consensus       329 ~~---~~~~~~~~~~lpyl~a~i~E~lRl~p~~~~~~r~~~~~~~~~~g~~Ip~g~~v~~~~~~~~~d~~~~~~p~~F~P  405 (497)
+T 6C94_A          329 DQ---DSFQWEDLAKMTYLTMCMKECFRLYPPVPQVYRQLSKPVSFVDGRSLPAGSLISLHIYALHRNSDVWPDPEVFDP  405 (497)
+T ss_dssp             TC---SSCCGGGGGGCHHHHHHHHHHHHHSCSSCEEEEECSSCEECTTSCEECTTCEEEEEHHHHTTCTTTSSSTTSCCG
+T ss_pred             CC---CCCCHHHHHhCHHHHHHHHHHHHHCCCcccccceeCCCccccCCeeeCCCCEEEEehHHHhcCcccCCCCccCCh
+Confidence            53   4677788899999999999999999999976788888875 4789999999999999999999999999999999
+
+
+Q _1              419 SRFEDEGR-HVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDPNEKVLSDP-LPPLPANGFSIKLFPR  496 (497)
+Q Consensus       419 ~Rf~~~~~-~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~~~~~~~~~-~~~~~~~~~~~~~~~~  496 (497)
+                      +||++... ......++|||.|+|.|+|+++|..+++++++.++++|+++++.+...  ...+ ...-|.+|..+++-||
+T Consensus       406 ~R~~~~~~~~~~~~~~~~Fg~G~r~C~G~~la~~~~~~~~~~l~~~f~~~~~~~~~~--~~~~~~~~~~~~~~~~~~~~~  483 (497)
+T 6C94_A          406 LRFSPENSSGRHPYAFIPFSAGPRNCIGQQFAMNEMKVVTALCLLRFEFSVDPLRLP--IKLPQLVLRSKNGIHLYLKPL  483 (497)
+T ss_dssp             GGGSHHHHHTSCTTSCCTTCCGGGSCTTHHHHHHHHHHHHHHHHHHEEEEECTTSCC--CEEESSSEEETTCCEEEEEEC
+T ss_pred             HHcCCCCCCCCCCCCcCCCCCCcCCCchHHHHHHHHHHHHHHHHhcceeEeCcccCC--CCccEEEeecCCceEEEEEEC
+Confidence            99998743 134567899999999999999999999999999999999998643311  1111 2234678888888776
+
+
+Q _1              497 S  497 (497)
+Q Consensus       497 ~  497 (497)
+                      +
+T Consensus       484 ~  484 (497)
+T 6C94_A          484 G  484 (497)
+T ss_dssp             -
+T ss_pred             C
+Confidence            3
+
+
+No 6
+>5A5I_A CYTOCHROME P450 2C9; OXIDOREDUCTASE; HET: XI1, HEM; 2.0A {HOMO SAPIENS}
+Probab=100.00  E-value=2.1e-52  Score=420.27  Aligned_cols=443  Identities=22%  Similarity=0.312  Sum_probs=320.4  Template_Neff=11.900
+
+Q _1               42 YNHRSSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVEM  121 (497)
+Q Consensus        42 ~~~~~~~~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~~~~~~  121 (497)
+                      .+..+..+.||+|+++|++|+++.+..    ...+.++.+++++||+||++++++.++++++|++.+++++.+....+..
+T Consensus         4 ~~~~~~~~~~p~p~~~p~lG~~~~~~~----~~~~~~~~~~~~~yG~i~~~~~~~~~~v~v~dp~~~~~v~~~~~~~~~~   79 (477)
+T 5A5I_A            4 KTSSGRGKLPPGPTPLPVIGNILQIGI----KDISKSLTNLSKVYGPVFTLYFGLKPIVVLHGYEAVKEALIDLGEEFSG   79 (477)
+T ss_dssp             -----CCBCCCCCCSCC-----CCBCH----HHHHHHHHHHHHHHCSEEEEEETTEEEEEECSHHHHCCCCCTTTTTTCE
+T ss_pred             cccCCCCCCCCCCCCCCcceehhhcCc----chHHHHHHHHHHHHCCEEEEEeCCEEEEEEeCHHHHHHHHhhcchhhcC
+Confidence            455667788999999999999998854    4566788999999999999999999999999999999999876544444
+
+
+Q _1              122 EGPKSFMK-LIGEDSIVAKRGEDHRILRTALARFLGAQALQNY-LGRMSSEIGHHFNEKWK-GKD-EVKVLPLVRGLIFS  197 (497)
+Q Consensus       122 ~~~~~~~~-~~~~~~~~~~~~~~w~~~R~~l~~~~~~~~~~~~-~~~~i~~~~~~l~~~l~-~~~-~vdl~~~~~~~~~~  197 (497)
+                      ........ ...+.+++..+++.|+.+|+.+.+.+........ +.+.+.+.++.+++.+. ... .+|+.+.+..++++
+T Consensus        80 ~~~~~~~~~~~~~~~l~~~~g~~w~~~R~~~~~~~~~~~~~~~~~~~~i~~~~~~l~~~l~~~~~~~~d~~~~~~~~~~~  159 (477)
+T 5A5I_A           80 RGIFPLAERANRGFGIVFSNGKKWKEIRRFSLMTLRNFGMGKRSIEDRVQEEARCLVEELRKTKASPCDPTFILGCAPCN  159 (477)
+T ss_dssp             ECC--CCCTTCCTTSSSSCCHHHHHHHHHHHHHHHTTSSSCSCCHHHHHHHHHHHHHHHHHHTTTCCBCTHHHHHHHHHH
+T ss_pred             CCCchhhhhccCCcceeccCcHHHHHHHHHHHHHHHhcCCCchhHHHHHHHHHHHHHHHHHhcCCCCCChHHHHHHHHHH
+Confidence            32222222 3345677777889999999999888765422112 66777788888888777 322 58999999999999
+
+
+Q _1              198 IASTLFFDVNDGHQQKQLHHLLETIL---V----GSLSV-------PLDFPGTRYRKGLQARLKLDEILSSLIKRRRRDL  263 (497)
+Q Consensus       198 ~~~~~~fG~~~~~~~~~~~~~~~~~~---~----~~~~~-------~~~~p~~~~~~~~~~~~~~~~~~~~~i~~~~~~~  263 (497)
+                      +++.++||.+.+....++......+.   .    .....       ....+ .......+..+.+.+.+.+.++++.+..
+T Consensus       160 ~i~~~~~G~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p-~~~~~~~~~~~~l~~~~~~~i~~~~~~~  238 (477)
+T 5A5I_A          160 VICSIIFHKRFDYKDQQFLNLMEKLNENIKILSSPWIQICNNFSPIIDYFP-GTHNKLLKNVAFMKSYILEKVKEHQESM  238 (477)
+T ss_dssp             HHHHHHHSCCCCTTCHHHHHHHHHHHHHHHHHTCCBC-------CCBSCCS-SHHHHHHHHHHHHHHHHHHHHHHHHHTC
+T ss_pred             HHHHHHhCCCCCCCCHHHHHHHHHHHHHHHHhhCchHhhhhhchHHHHhCC-ChhHHHHHHHHHHHHHHHHHHHHHHHhc
+Confidence            99999999875500011211221111   0    00000       00011 1111122233455556666666555443
+
+
+Q _1              264 RSGIASDDQDLLSVLLTFRDE-----KGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEII  338 (497)
+Q Consensus       264 ~~~~~~~~~d~l~~ll~~~~~-----~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~Ei~~~~  338 (497)
+                      ...   ...++++.++.....     .. .++.+++...+..+++||.+|++.+++|+++.|+.||++|+++++|++++.
+T Consensus       239 ~~~---~~~~~l~~ll~~~~~~~~~~~~-~l~~~~i~~~~~~~~~ag~~tta~~l~~~l~~L~~~P~~~~~l~~Ei~~~~  314 (477)
+T 5A5I_A          239 DMN---NPQDFIDCFLMKMEKEKHNQPS-EFTIESLENTAVDLFGAGTETTSTTLRYALLLLLKHPEVTAKVQEEIERVI  314 (477)
+T ss_dssp             CTT---CCCSHHHHHHHHHHHTTTSCSC-SCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCHHHHHHHHHHHHHHH
+T ss_pred             CCC---CCchHHHHHHHHHHHhcCCCCC-cCCHHHHHHHHHHHHhhcchHHHHHHHHHHHHHHhCHHHHHHHHHHHHHHh
+Confidence            322   345677666653221     12 678899999999999999999999999999999999999999999999988
+
+
+Q _1              339 GNKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVF-GIFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEPEEFR  417 (497)
+Q Consensus       339 ~~~~~~~~~~~~~l~~lp~L~a~i~E~lRl~p~~~-~~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~P~~F~  417 (497)
+                      +..   ..++.+++.++|||++|++|+||++|+++ ...|.+.+|++++|+.||+|+.|.++...+|+||++|++|++|+
+T Consensus       315 ~~~---~~~~~~~l~~l~~l~~~i~E~lRl~p~~~~~~~r~~~~d~~~~~~~ip~G~~v~~~~~~~~~d~~~~~~p~~f~  391 (477)
+T 5A5I_A          315 GRN---RSPCMQDRSHMPYTDAVVHEVQRYIDLLPTSLPHAVTCDIKFRNYLIPKGTTILISLTSVLHDNKEFPNPEMFD  391 (477)
+T ss_dssp             TTT---SCCCGGGGGGCHHHHHHHHHHHHHHCSSTTCSCEECSSCEEETTEEECTTCEEEECSHHHHTCTTTSSSTTSCC
+T ss_pred             CCC---CCCCHHHhhcCHHHHHHHHHHHHHhccCCCCCCcccCCCeEEcCEEeCCCCEEEeeHHHHHCCCCcCCCchhhC
+Confidence            442   35677888999999999999999999999 47788889999999999999999999999999999999999999
+
+
+Q _1              418 PSRFEDEGR-HVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDPNEKV---LSDPLPPLPANGFSIKL  493 (497)
+Q Consensus       418 P~Rf~~~~~-~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~~~~~---~~~~~~~~~~~~~~~~~  493 (497)
+                      |+||+.... ......++|||.|+|.|||+++|..|++++++.++++|+++...++.+.-   -.+-+...|. .|.|++
+T Consensus       392 p~R~~~~~~~~~~~~~~~~fg~G~r~C~G~~~a~~~~~~~l~~l~~~f~~~~~~~~~~~~~~~~~~~~~~~~~-~~~~~~  470 (477)
+T 5A5I_A          392 PHHFLDEGGNFKKSKYFMPFSAGKRICVGEALAGMELFLFLTSILQNFNLKSLVDPKNLDTTPVVNGFASVPP-FYQLCF  470 (477)
+T ss_dssp             GGGGBCTTSCBCCCTTCCTTCCGGGSCTTHHHHHHHHHHHHHHHHHHEEEEESSCTTTCCCCCBCCSSSCBCC-CCCEEE
+T ss_pred             hhhccCCCCCccccCCCCcCCCCCCCCCcHHHHHHHHHHHHHHHHHhCCcccCCCCCCCCCCcceeccccCCC-cceeee
+Confidence            999998743 12345689999999999999999999999999999999998665432110   1123333444 677777
+
+
+Q _1              494 FPRS  497 (497)
+Q Consensus       494 ~~~~  497 (497)
+                      -||+
+T Consensus       471 ~~~~  474 (477)
+T 5A5I_A          471 IPIH  474 (477)
+T ss_dssp             EECC
+T ss_pred             eeCC
+Confidence            7764
+
+
+No 7
+>3K9V_B 1,25-dihydroxyvitamin D(3) 24-hydroxylase, mitochondrial (E.C.1.14.13.n4); MITOCHONDRIAL CYTOCHROME P450, MONOTOPIC MEMBRANE; HET: HEM, CPS; 2.5A {Rattus norvegicus}
+Probab=100.00  E-value=2.3e-52  Score=420.52  Aligned_cols=448  Identities=17%  Similarity=0.253  Sum_probs=324.1  Template_Neff=11.900
+
+Q _1               37 LLLFRYNHRSSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNED  116 (497)
+Q Consensus        37 ~~~~~~~~~~~~~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~  116 (497)
+                      ..++........+.||||+++|++||++.+............+.+++++||++|++++++.+.++++|++.+++++.+..
+T Consensus        12 ~~~~~~~~~~~~~~~Pgp~~~p~iG~~~~~~~~~~~~~~~~~~~~~~~~yG~i~~~~~~~~~~vvv~dp~~i~~i~~~~~   91 (482)
+T 3K9V_B           12 CPLMTDGETRNVTDLPGPTNWPLLGSLLEIFWKGGLKKQHDTLAEYHKKYGQIFRMKLGSFDSVHLGSPSLLEALYRTES   91 (482)
+T ss_dssp             -------CCCCGGGCCCSCCBTTTBTHHHHHHHTGGGGHHHHHHHHHHHHCSEEEEEETTEEEEEECSHHHHHHHHHTCC
+T ss_pred             ccccCCCCCCCccCCCCCCccccchhHHHHHhccCchHHHHHHHHHHHHHCCceEeEcCCcCEEEeCCHHHHHHHHhcCC
+Confidence            33444455667788999999999999988754100123556788899999999999999999999999999999998765
+
+
+Q _1              117 KLVEMEGPKS--FMK--LIGEDSIVAKRGEDHRILRTALARFLGAQALQNYLGRMSSEIGHHFNEKWK-G---KD-EVKV  187 (497)
+Q Consensus       117 ~~~~~~~~~~--~~~--~~~~~~~~~~~~~~w~~~R~~l~~~~~~~~~~~~~~~~i~~~~~~l~~~l~-~---~~-~vdl  187 (497)
+                      ..+.......  .+.  ...+.+++..+++.|+.+|+.+.+.+........+.+.+.+.++.+++.+. .   .+ .+|+
+T Consensus        92 ~~~~~~~~~~~~~~~~~~~~~~~l~~~~g~~w~~~R~~~~~~~~~~~~~~~~~~~~~~~~~~l~~~l~~~~~~~~~~~dl  171 (482)
+T 3K9V_B           92 AHPQRLEIKPWKAYRDHRNEAYGLMILEGQEWQRVRSAFQKKLMKPVEIMKLDKKINEVLADFLERMDELCDERGRIPDL  171 (482)
+T ss_dssp             SSCCCCCCHHHHHHHHHTTCCCCTTTCCHHHHHHHHHHHHHHHTCHHHHHTTHHHHHHHHHHHHHHHHHHCCSSSCCTTH
+T ss_pred             CCCCCCCCcchHHHhccCccccccccccCHHHHHHHHHHHHHhcCHHHHHHHHHHHHHHHHHHHHHHHHHHccCCCCCCH
+Confidence            3332211111  111  234456777788999999999988876431111266677777777777665 1   12 5899
+
+
+Q _1              188 LPLVRGLIFSIASTLFFDVNDG-H--Q----QKQLHHLLETIL-VGSLSVPLD---FP---GTRYRKGLQARLKLDEILS  253 (497)
+Q Consensus       188 ~~~~~~~~~~~~~~~~fG~~~~-~--~----~~~~~~~~~~~~-~~~~~~~~~---~p---~~~~~~~~~~~~~~~~~~~  253 (497)
+                      .+.+..+++++++..+||..++ .  .    ..++...+..+. .........   ..   ....+....+.+.+.+.+.
+T Consensus       172 ~~~~~~~~~~~i~~~~fG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~l~~~~~  251 (482)
+T 3K9V_B          172 YSELNKWSFESICLVLYEKRFGLLQKETEEEALTFITAIKTMMSTFGKMMVTPVELHKRLNTKVWQAHTLAWDTIFKSVK  251 (482)
+T ss_dssp             HHHHHHHHHHHHHHHHHSCCCCCSSTTTGGGGHHHHHHHHHHHHHHGGGSSSCHHHHHHTTCHHHHHHHHHHHHHHHHHH
+T ss_pred             HHHHHHHHHHHHHHHHhccccCCCCCCCHHHHHHHHHHHHHHHHHHHhhcCCcHHHHHHhCcHHHHHHHHHHHHHHHHHH
+Confidence            9999999999999999999765 1  0    111222222221 000000000   00   1111112223344555666
+
+
+Q _1              254 SLIKRRRRDLRSGIASDDQDLLSVLLTFRDEKGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQE  333 (497)
+Q Consensus       254 ~~i~~~~~~~~~~~~~~~~d~l~~ll~~~~~~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~E  333 (497)
+                      +.++++.+.....   ...++++.++..    . .++++++...+..+++||.+|++.++.|++++|++||++++++++|
+T Consensus       252 ~~i~~~~~~~~~~---~~~d~l~~l~~~----~-~~~~~~i~~~~~~~~~ag~~tt~~~l~~~l~~L~~~p~~~~~l~~E  323 (482)
+T 3K9V_B          252 PCIDNRLQRYSQQ---PGADFLCDIYQQ----D-HLSKKELYAAVTELQLAAVETTANSLMWILYNLSRNPQAQRRLLQE  323 (482)
+T ss_dssp             HHHHHHHHHSTTS---GGGCHHHHHHHH----H-CCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTCHHHHHHHHHH
+T ss_pred             HHHHHHHHHhhcC---ccchHHHHHHhc----C-CCCHHHHHHHHHHHHHHHhHHHHHHHHHHHHHHhhCHHHHHHHHHH
+Confidence            6666655544333   456777777654    3 6888999999999999999999999999999999999999999999
+
+
+Q _1              334 QLEIIGNKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVFGIFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEP  413 (497)
+Q Consensus       334 i~~~~~~~~~~~~~~~~~l~~lp~L~a~i~E~lRl~p~~~~~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~P  413 (497)
+                      ++++.+..   ..++.+++.++||++++++|+||++|+.+...|.+.+|++++|+.||+|+.|.++...+|+||++|++|
+T Consensus       324 i~~~~~~~---~~~~~~~~~~lp~l~a~i~E~lRl~p~~~~~~r~~~~d~~~~~~~ip~G~~v~~~~~~~~~d~~~~~~p  400 (482)
+T 3K9V_B          324 VQSVLPDN---QTPRAEDLRNMPYLKACLKESMRLTPSVPFTTRTLDKPTVLGEYALPKGTVLTLNTQVLGSSEDNFEDS  400 (482)
+T ss_dssp             HHHHSCSS---CCCCGGGGGGCHHHHHHHHHHHHHSCSCCEEEEECSSCEEETTEEECTTCEEEEESTGGGSCTTTSTTT
+T ss_pred             HHHhCCCC---CCCCHHHHhcCHHHHHHHHHHHhhCCCCCCceeeeCCCeEEcCEEeCCCCEEEEecccccCCcccCCCh
+Confidence            99988542   356777889999999999999999999997779999999999999999999999999999999999999
+
+
+Q _1              414 EEFRPSRFEDEGRHVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDPNEKVLSDPLPPLPANGFSIKL  493 (497)
+Q Consensus       414 ~~F~P~Rf~~~~~~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  493 (497)
+                      ++|+|+||++.........++|||.|+|.|||+++|..|++++++.|+++|+++...+...+....+ ...|.+++.|++
+T Consensus       401 ~~F~P~Rf~~~~~~~~~~~~~~Fg~G~r~C~G~~~a~~~~~~~l~~l~~~~~~~~~~~~~~~~~~~~-~~~p~~~~~~~~  479 (482)
+T 3K9V_B          401 HKFRPERWLQKEKKINPFAHLPFGIGKRMCIGRRLAELQLHLALCWIIQKYDIVATDNEPVEMLHLG-ILVPSRELPIAF  479 (482)
+T ss_dssp             TSCCGGGGTCTTSCCCGGGCCTTCCSTTSCSSHHHHHHHHHHHHHHHHHHEEEEESCCSCCCEEESS-SEEESSCCCEEE
+T ss_pred             hhcChHHhcccCCCCCcccccCCCCCcCCCcCHHHHHHHHHHHHHHHHHhCceecCCCCccceeEee-eeccCCCCCeEe
+Confidence            9999999998633123567899999999999999999999999999999999998754322222222 234566777776
+
+
+Q _1              494 FPR  496 (497)
+Q Consensus       494 ~~~  496 (497)
+                      -+|
+T Consensus       480 ~~r  482 (482)
+T 3K9V_B          480 RPR  482 (482)
+T ss_dssp             EEC
+T ss_pred             eeC
+Confidence            554
+
+
+No 8
+>3N9Y_A Cholesterol side-chain cleavage enzyme, mitochondrial; cytochrome P450, cholesterol side chain; HET: CLR, HEM; 2.1A {Homo sapiens}
+Probab=100.00  E-value=5.4e-52  Score=418.68  Aligned_cols=442  Identities=16%  Similarity=0.204  Sum_probs=312.8  Template_Neff=11.600
+
+Q _1               42 YNHRSSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVEM  121 (497)
+Q Consensus        42 ~~~~~~~~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~~~~~~  121 (497)
+                      |.+..+...||+|.++|++|+++++..   ....+..+.+++++||+||++++++.+.++++|++.+++++.++...+..
+T Consensus         4 ~~~~~~~~P~P~~~~~p~~g~~~~~~~---~~~~~~~~~~~~~~yG~v~~i~~~~~~~v~v~~p~~~~~il~~~~~~~~~   80 (487)
+T 3N9Y_A            4 SPRPFNEIPSPGDNGWLNLYHFWRETG---THKVHLHHVQNFQKYGPIYREKLGNVESVYVIDPEDVALLFKSEGPNPER   80 (487)
+T ss_dssp             CCBCGGGSCCSCSCHHHHHHHHHHHTC---GGGHHHHHHHHHHHHCSEEEEEETTEEEEEECCHHHHHHHHHTCCSSCCC
+T ss_pred             CCCChhhCCCCCcchhHhHHHHHhhhC---cccchHHHHHHHHHHCCeeEEEcCCeeEEEECCHHHHHHHHhccCCCCCc
+Confidence            444555566777778999999999753   36677889999999999999999999999999999999999876433322
+
+
+Q _1              122 EGPKSFMK----LIGEDSIVAKRGEDHRILRTALARFLGAQALQNYLGRMSSEIGHHFNEKWK-G------KD-EVKVLP  189 (497)
+Q Consensus       122 ~~~~~~~~----~~~~~~~~~~~~~~w~~~R~~l~~~~~~~~~~~~~~~~i~~~~~~l~~~l~-~------~~-~vdl~~  189 (497)
+                      ........    ...+.+++..+++.|+.+|+.+.+.+......+.+.+.+.+.++.+++.+. .      .+ .+|+.+
+T Consensus        81 ~~~~~~~~~~~~~~~~~~~~~~~~~~w~~~Rk~~~~~~~~~~~l~~~~~~i~~~~~~~~~~l~~~~~~~~~~~~~vd~~~  160 (487)
+T 3N9Y_A           81 FLIPPWVAYHQYYQRPIGVLLKKSAAWKKDRVALNQEVMAPEATKNFLPLLDAVSRDFVSVLHRRIKKAGSGNYSGDISD  160 (487)
+T ss_dssp             CCCHHHHHHHHHTTCCCCGGGCCHHHHHHHHHHHHHHHTSHHHHTTHHHHHHHHHHHHHHHHHHHHHHHTSSSEEECCHH
+T ss_pred             cCCcHHHHHHHHcCCCeeeeecCCHHHHHHHHHHHhhhcCHHHHHhHHHHHHHHHHHHHHHHHHHHHHcCCCCCcCCchH
+Confidence            21111111    123456666778999999999875543331112266666777777766654 1      11 589999
+
+
+Q _1              190 LVRGLIFSIASTLFFDVNDG--HQ-----QKQLHHLLETILVGSLSVPLDF----P---GTRYRKGLQARLKLD----EI  251 (497)
+Q Consensus       190 ~~~~~~~~~~~~~~fG~~~~--~~-----~~~~~~~~~~~~~~~~~~~~~~----p---~~~~~~~~~~~~~~~----~~  251 (497)
+                      .+..+++++++.++||.+++  ..     ..++.+.+..+...........    +   ....+...+....+.    ..
+T Consensus       161 ~~~~~~~~~i~~~~fG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  240 (487)
+T 3N9Y_A          161 DLFRFAFESITNVIFGERQGMLEEVVNPEAQRFIDAIYQMFHTSVPMLNLPPDLFRLFRTKTWKDHVAAWDVIFSKADIY  240 (487)
+T ss_dssp             HHHHHHHHHHHHHHHSSCCCTTSSSCCHHHHHHHHHHHHHHHHHGGGTTSCHHHHHHHCHHHHHHHHHHHHHHHHHHHHH
+T ss_pred             HHHHHHHHHHHHHHHCCCcccccccCCHHHHHHHHHHHHHHHhhhHHhcCCHHHHHHhcchhhHHHHHHHHHHHHHHHHH
+Confidence            99999999999999999865  10     1112222222210000000000    0   000111111112222    22
+
+
+Q _1              252 LSSLIKRRRRDLRSGIASDDQDLLSVLLTFRDEKGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVF  331 (497)
+Q Consensus       252 ~~~~i~~~~~~~~~~~~~~~~d~l~~ll~~~~~~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~  331 (497)
+                      +.+.+++..+.....  ....+.+..++..    + .++.+++...+..+++||.+|++.++.|++++|++||++|++++
+T Consensus       241 ~~~~~~~~~~~~~~~--~~~~~~l~~~~~~----~-~~~~~~i~~~~~~~~~Ag~dtt~~~l~~~l~~L~~~P~~q~kl~  313 (487)
+T 3N9Y_A          241 TQNFYWELRQKGSVH--HDYRGILYRLLGD----S-KMSFEDIKANVTEMLAGGVDTTSMTLQWHLYEMARNLKVQDMLR  313 (487)
+T ss_dssp             HHHHHHHHHHHCCCC--SSCCCHHHHHHHS----C-SSCHHHHHHHHHHHHHHHHTHHHHHHHHHHHHHHHCHHHHHHHH
+T ss_pred             HHHHHHHHHhhCCCC--cchhhHHHHHhcC----C-CCCHHHHHHHHHHHHHhhchHHHHHHHHHHHHHHhCHHHHHHHH
+Confidence            223332222211111  1122333333332    3 68899999999999999999999999999999999999999999
+
+
+Q _1              332 QEQLEIIGNKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVFGIFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFP  411 (497)
+Q Consensus       332 ~Ei~~~~~~~~~~~~~~~~~l~~lp~L~a~i~E~lRl~p~~~~~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~  411 (497)
+                      +|++++++..   .....+...++|||+++++|+||++|+++...|.+.+|++++|+.||+|+.|.++.+.+|+||++|+
+T Consensus       314 ~Ei~~~~~~~---~~~~~~~~~~l~yl~a~i~E~lR~~p~~~~~~r~~~~d~~i~g~~ip~G~~v~~~~~~~~~~~~~~~  390 (487)
+T 3N9Y_A          314 AEVLAARHQA---QGDMATMLQLVPLLKASIKETLRLHPISVTLQRYLVNDLVLRDYMIPAKTLVQVAIYALGREPTFFF  390 (487)
+T ss_dssp             HHHHHHHHHT---TTCHHHHTTSCHHHHHHHHHHHHHSCSSSEEEEECSSCEEETTEEECTTCEEEEEHHHHHTCTTTSS
+T ss_pred             HHHHHHHhhc---cCCHHHHHHhhHHHHHHHHHHHhhCCCCcccceeeccceeeCCEEECCCCEEEEcchhccCCcccCC
+Confidence            9999998542   2223345677999999999999999999987899999999999999999999999999999999999
+
+
+Q _1              412 EPEEFRPSRFEDEGRHVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDPNEKVLSDPLPPLPANGFSI  491 (497)
+Q Consensus       412 ~P~~F~P~Rf~~~~~~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~~~~~~~~~~~~~~~~~~~~  491 (497)
+                      +|++|+|+||+..........++|||.|+|.|||+++|..+++++++.++++|++++....+.+... ....-|.+++.|
+T Consensus       391 ~p~~F~PeR~~~~~~~~~~~~~~pFg~G~r~C~G~~~a~~~~~~~l~~l~~~f~~~~~~~~~~~~~~-~~~~~p~~~~~~  469 (487)
+T 3N9Y_A          391 DPENFDPTRWLSKDKNITYFRNLGFGWGVRQCLGRRIAELEMTIFLINMLENFRVEIQHLSDVGTTF-NLILMPEKPISF  469 (487)
+T ss_dssp             STTSCCGGGGTCSCTTSSTTTCCTTCCGGGSCTTHHHHHHHHHHHHHHHHHHEEEECTTCCCCCEEE-SSSEEESSCCCE
+T ss_pred             CcccCChhhhccCCCCcccccccCCCCcccCChHHHHHHHHHHHHHHHHHHhcceeccCcccCcceE-EEEecCCCCcee
+Confidence            9999999999987431234568999999999999999999999999999999999977543222111 245678899999
+
+
+Q _1              492 KLFPRS  497 (497)
+Q Consensus       492 ~~~~~~  497 (497)
+                      ++-||+
+T Consensus       470 ~~~~r~  475 (487)
+T 3N9Y_A          470 TFWPFN  475 (487)
+T ss_dssp             EEEEC-
+T ss_pred             EEEeCC
+Confidence            998874
+
+
+No 9
+>6CIZ_C Steroid 17-alpha-hydroxylase/17,20 lyase (E.C.1.14.14.19,1.14.14.32); CYTOCHROME P450, P450, CYP17A1, P450C17; HET: HEM, 3NR; 2.601A {Homo sapiens}
+Probab=100.00  E-value=5.7e-52  Score=419.24  Aligned_cols=441  Identities=20%  Similarity=0.278  Sum_probs=316.9  Template_Neff=11.600
+
+Q _1               46 SSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVEMEGPK  125 (497)
+Q Consensus        46 ~~~~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~~~~~~~~~~  125 (497)
+                      ...++||+|+++|++|++..+..   .......+.+++++||++|++++++.+++++++++.+++++.++...+...+..
+T Consensus         5 ~~~~~pp~~~~~P~lG~~~~~~~---~~~~~~~~~~~~~~yG~i~~~~~~~~~~vvv~~p~~~~~v~~~~~~~~~~~~~~   81 (494)
+T 6CIZ_C            5 TGAKYPKSLLSLPLVGSLPFLPR---HGHMHNNFFKLQKKYGPIYSVRMGTKTTVIVGHHQLAKEVLIKKGKDFSGRPQM   81 (494)
+T ss_dssp             ----CCSCSBCCCEEEEECCCCC---SSCHHHHHHHHHHHHCSEEEEEETTEEEEEECSHHHHHCCCCCTTTTTCBCCCC
+T ss_pred             cCCCCCCCCCCcCcCCCcccccc---CCchhHHHHHHHHHHCCeEEEEeCCEEEEEECCHHHHHHHHHhcCcccCCCCCc
+Confidence            35678999999999999887754   355677788999999999999999999999999999999998775444433222
+
+
+Q _1              126 SFMK--LIGEDSIVA-KRGEDHRILRTALARFLGAQA-LQNYLGRMSSEIGHHFNEKWK-GKD-EVKVLPLVRGLIFSIA  199 (497)
+Q Consensus       126 ~~~~--~~~~~~~~~-~~~~~w~~~R~~l~~~~~~~~-~~~~~~~~i~~~~~~l~~~l~-~~~-~vdl~~~~~~~~~~~~  199 (497)
+                      ....  ...+.+++. ..++.|+.+|+.+.+.+.... ....+.+.+.+.++.+++.+. ... .+|+...+..++++++
+T Consensus        82 ~~~~~~~~~~~~~~~~~~g~~w~~~R~~~~~~~~~~~~~~~~~~~~i~~~~~~l~~~l~~~~~~~vd~~~~~~~~~~~~i  161 (494)
+T 6CIZ_C           82 ATLDIASNNRKGIAFADSGAHWQLHRRLAMATFALFKDGDQKLEKIICQEISTLCDMLATHNGQSIDISFPVFVAVTNVI  161 (494)
+T ss_dssp             HHHHHHTTTTCSSSSSCSSHHHHHHHHHHHHHHHHTSSSTTCHHHHHHHHHHHHHHHHHTTTTCEECCHHHHHHHHHHHH
+T ss_pred             ceeeccccCcceeeecCCcHHHHHHHHHHHHHHhhccccchHHHHHHHHHHHHHHHHHHcCCCccccCchHHHHHHHHHH
+Confidence            2112  122344443 456999999999988876321 011156667777777777666 222 5899999999999999
+
+
+Q _1              200 STLFFDVNDG--H-QQKQLHHLLETIL-V-GSLSVPLDFP------GTRYRKGLQARLKLDEILSSLIKRRRRDLRSGIA  268 (497)
+Q Consensus       200 ~~~~fG~~~~--~-~~~~~~~~~~~~~-~-~~~~~~~~~p------~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~~~~  268 (497)
+                      +..+||..++  + ....+......+. . ........+|      ....+...+..+.+.+.+..+++++.+.....  
+T Consensus       162 ~~~~fG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~l~~~p~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~~--  239 (494)
+T 6CIZ_C          162 SLICFNTSYKNGDPELNVIQNYNEGIIDNLSKDSLVDLVPWLKIFPNKTLEKLKSHVKIRNDLLNKILENYKEKFRSD--  239 (494)
+T ss_dssp             HHHHHSCCCCTTCHHHHHHHHHHHHHHHHHCSSSCCTTSCTTTSSSSCHHHHHHHHHHHHHHHHHHHHHHHHHHCCTT--
+T ss_pred             HHHHccCCCCCCCHHHHHHHHHHHHHHHhccccchhhhHHHHhhCCchhHHHHHHHHHHHHHHHHHHHHHHHHHcCCc--
+Confidence            9999998765  1 1111111111111 0 0000011111      11122233333445556666666655443322  
+
+
+Q _1              269 SDDQDLLSVLLTFRDE-----------KGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEI  337 (497)
+Q Consensus       269 ~~~~d~l~~ll~~~~~-----------~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~Ei~~~  337 (497)
+                       ...++++.++....+           .. .++++++...+..+++||.+||+.+++|++++|++||++|+++++|++++
+T Consensus       240 -~~~d~l~~ll~~~~~~~~~~~~~~~~~~-~l~~~~i~~~~~~~l~ag~dtt~~~l~~~l~~L~~~p~~~~kl~~Ei~~~  317 (494)
+T 6CIZ_C          240 -SITNMLDTLMQAKMNSDNGNAGPDQDSE-LLSDNHILTTIGDIFGAGVETTTSVVKWTLAFLLHNPQVKKKLYEEIDQN  317 (494)
+T ss_dssp             -CCCSHHHHHHHHHHHHTTSTTCCCTTSG-GGSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTCHHHHHHHHHHHHHH
+T ss_pred             -cHHHHHHHHHHHHhhcCCCCCCCCcccc-cCCHHHHHHHHHHHHHHchhhHHHHHHHHHHHHHcCHHHHHHHHHHHHHH
+Confidence             346777776653211           12 56788899999999999999999999999999999999999999999999
+
+
+Q _1              338 IGNKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVF-GIFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEPEEF  416 (497)
+Q Consensus       338 ~~~~~~~~~~~~~~l~~lp~L~a~i~E~lRl~p~~~-~~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~P~~F  416 (497)
+                      .+..   ..++.+++.++||+++|++|+||++|+.+ ...|.+.+|++++|+.||+|+.|.++.+.+|+|+++|++|++|
+T Consensus       318 ~~~~---~~~~~~~~~~lpyl~a~i~E~lRl~p~~~~~~~r~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~dp~~F  394 (494)
+T 6CIZ_C          318 VGFS---RTPTISDRNRLLLLEATIREVLRLRPVAPMLIPHKANVDSSIGEFAVDKGTEVIINLWALHHNEKEWHQPDQF  394 (494)
+T ss_dssp             TCSS---SCCCGGGGGTCHHHHHHHHHHHHHSCSCTTCSCEECSSSEEETTEEECTTCEEEECHHHHHHCTTTSSSTTSC
+T ss_pred             hCCC---CCCCHHHHHhcHHHHHHHHHHHhHCCCCCccCceecCCCcEECCEEECCCCEEEEehhHHhcCcccCCCchhc
+Confidence            8542   35677888999999999999999999999 5678889999999999999999999999999999999999999
+
+
+Q _1              417 RPSRFEDEGR---HVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDPNEK-VLSDPLPPLPANGFSIK  492 (497)
+Q Consensus       417 ~P~Rf~~~~~---~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~~~~-~~~~~~~~~~~~~~~~~  492 (497)
+                      +|+||++...   ......++|||.|+|.|||+.+|..+++++++.++++|+++++.++... +...+.-..+..++-++
+T Consensus       395 ~P~R~~~~~~~~~~~~~~~~~~Fg~G~r~C~G~~~a~~~~~~~l~~l~~~f~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  474 (494)
+T 6CIZ_C          395 MPERFLNPAGTQLISPSVSYLPFGAGPRSCIGEILARQELFLIMAWLLQRFDLEVPDDGQLPSLEGIPKVVFLIDSFKVK  474 (494)
+T ss_dssp             CGGGGBCTTSSSBCCCCSCCCTTCCGGGSCSCHHHHHHHHHHHHHHHHHHEEEECCTTCCCCCCSCEESSSEECCCCCEE
+T ss_pred             CchhcCCCCCCccccCCCCccCCCCCccCCCCHHHHHHHHHHHHHHHHHhCCccCCCCCCCCCccccCcceeecCcceEE
+Confidence            9999998743   1234678999999999999999999999999999999999988653110 10001112344556667
+
+
+Q _1              493 LFPR  496 (497)
+Q Consensus       493 ~~~~  496 (497)
+                      +.+|
+T Consensus       475 ~~~r  478 (494)
+T 6CIZ_C          475 IKVR  478 (494)
+T ss_dssp             EEEC
+T ss_pred             EEEh
+Confidence            6665
+
+
+No 10
+>5IRQ_C Steroid 17-alpha-hydroxylase/17,20 lyase (E.C.1.14.14.19, 4.1.2.30); Oxidoreductase, Inhibitor complex, LYASE-INHIBITOR complex; HET: HEM, 6D7, 7D6; 2.202A {Homo sapiens}
+Probab=100.00  E-value=5.7e-52  Score=419.24  Aligned_cols=441  Identities=20%  Similarity=0.278  Sum_probs=313.2  Template_Neff=11.600
+
+Q _1               46 SSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVEMEGPK  125 (497)
+Q Consensus        46 ~~~~~PpgP~~~P~~G~~~~~~~~~~~~~~~~~l~~~~~~yG~vf~~~~~~~~~vvv~dpe~~~~il~~~~~~~~~~~~~  125 (497)
+                      ...++||+|+++|++|++..+..   .......+.+++++||++|++++++.+++++++++.+++++.++...+...+..
+T Consensus         5 ~~~~~pp~~~~~P~lG~~~~~~~---~~~~~~~~~~~~~~yG~i~~~~~~~~~~vvv~~p~~~~~v~~~~~~~~~~~~~~   81 (494)
+T 5IRQ_C            5 TGAKYPKSLLSLPLVGSLPFLPR---HGHMHNNFFKLQKKYGPIYSVRMGTKTTVIVGHHQLAKEVLIKKGKDFSGRPQM   81 (494)
+T ss_dssp             --------CBCCCEEEEECCCCC---SSCHHHHHHHTHHHHCSEEEEEETTEEEEEECSHHHHHCCCCCTTTTTCBCCCC
+T ss_pred             cCCCCCCCCCCcCcCCCcccccc---CCchhHHHHHHHHHHCCeEEEEeCCEEEEEECCHHHHHHHHHhcCcccCCCCCc
+Confidence            35678999999999999887754   355677788999999999999999999999999999999998775444433222
+
+
+Q _1              126 SFMK--LIGEDSIVA-KRGEDHRILRTALARFLGAQA-LQNYLGRMSSEIGHHFNEKWK-GKD-EVKVLPLVRGLIFSIA  199 (497)
+Q Consensus       126 ~~~~--~~~~~~~~~-~~~~~w~~~R~~l~~~~~~~~-~~~~~~~~i~~~~~~l~~~l~-~~~-~vdl~~~~~~~~~~~~  199 (497)
+                      ....  ...+.+++. ..++.|+.+|+.+.+.+.... ....+.+.+.+.++.+++.+. ... .+|+...+..++++++
+T Consensus        82 ~~~~~~~~~~~~~~~~~~g~~w~~~R~~~~~~~~~~~~~~~~~~~~i~~~~~~l~~~l~~~~~~~vd~~~~~~~~~~~~i  161 (494)
+T 5IRQ_C           82 ATLDIASNNRKGIAFADSGAHWQLHRRLAMATFALFKDGDQKLEKIICQEISTLCDMLATHNGQSIDISFPVFVAVTNVI  161 (494)
+T ss_dssp             HHHHHHTTTTCSSTTSCSSHHHHHHHHHHHHHHGGGSSSTTCHHHHHHHHHHHHHHHHHTTTTCEECCHHHHHHHHHHHH
+T ss_pred             ceeeccccCcceeeecCCcHHHHHHHHHHHHHHhhccccchHHHHHHHHHHHHHHHHHHcCCCccccCchHHHHHHHHHH
+Confidence            2112  122344443 456999999999988876321 011156667777777777666 222 5899999999999999
+
+
+Q _1              200 STLFFDVNDG--H-QQKQLHHLLETIL-V-GSLSVPLDFP------GTRYRKGLQARLKLDEILSSLIKRRRRDLRSGIA  268 (497)
+Q Consensus       200 ~~~~fG~~~~--~-~~~~~~~~~~~~~-~-~~~~~~~~~p------~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~~~~  268 (497)
+                      +..+||..++  + ....+......+. . ........+|      ....+...+..+.+.+.+..+++++.+.....  
+T Consensus       162 ~~~~fG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~l~~~p~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~~--  239 (494)
+T 5IRQ_C          162 SLICFNTSYKNGDPELNVIQNYNEGIIDNLSKDSLVDLVPWLKIFPNKTLEKLKSHVKIRNDLLNKILENYKEKFRSD--  239 (494)
+T ss_dssp             HHHHHSCCCCTTCHHHHHHHHHHHHHHHHHCSSSCCTTSCGGGSSSSCHHHHHHHHHHHHHHHHHHHHHHHTTTCCTT--
+T ss_pred             HHHHccCCCCCCCHHHHHHHHHHHHHHHhccccchhhhHHHHhhCCchhHHHHHHHHHHHHHHHHHHHHHHHHHcCCc--
+Confidence            9999998765  1 1111111111111 0 0000011111      11122233333445556666666655443322  
+
+
+Q _1              269 SDDQDLLSVLLTFRDE-----------KGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEI  337 (497)
+Q Consensus       269 ~~~~d~l~~ll~~~~~-----------~~~~ls~~~i~~~~~~~l~ag~~tt~~~l~~~l~~L~~~P~~~~~l~~Ei~~~  337 (497)
+                       ...++++.++....+           .. .++++++...+..+++||.+||+.+++|++++|++||++|+++++|++++
+T Consensus       240 -~~~d~l~~ll~~~~~~~~~~~~~~~~~~-~l~~~~i~~~~~~~l~ag~dtt~~~l~~~l~~L~~~p~~~~kl~~Ei~~~  317 (494)
+T 5IRQ_C          240 -SITNMLDTLMQAKMNSDNGNAGPDQDSE-LLSDNHILTTIGDIFGAGVETTTSVVKWTLAFLLHNPQVKKKLYEEIDQN  317 (494)
+T ss_dssp             -CCCSHHHHHHHHHHHHHSSTTCCCTTTG-GGCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCHHHHHHHHHHHHHH
+T ss_pred             -cHHHHHHHHHHHHhhcCCCCCCCCcccc-cCCHHHHHHHHHHHHHHchhhHHHHHHHHHHHHHcCHHHHHHHHHHHHHH
+Confidence             346777776653211           12 56788899999999999999999999999999999999999999999999
+
+
+Q _1              338 IGNKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVF-GIFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEPEEF  416 (497)
+Q Consensus       338 ~~~~~~~~~~~~~~l~~lp~L~a~i~E~lRl~p~~~-~~~R~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~~P~~F  416 (497)
+                      .+..   ..++.+++.++||+++|++|+||++|+.+ ...|.+.+|++++|+.||+|+.|.++.+.+|+|+++|++|++|
+T Consensus       318 ~~~~---~~~~~~~~~~lpyl~a~i~E~lRl~p~~~~~~~r~~~~~~~~~g~~ip~G~~v~~~~~~~~~d~~~~~dp~~F  394 (494)
+T 5IRQ_C          318 VGFS---RTPTISDRNRLLLLEATIREVLRLRPVAPMLIPHKANVDSSIGEFAVDKGTEVIINLWALHHNEKEWHQPDQF  394 (494)
+T ss_dssp             TCSS---SCCCGGGGGTCHHHHHHHHHHHHHSCSSTTCSCEECSSSEEETTEEECTTCEEEECHHHHHTCTTTSSSTTSC
+T ss_pred             hCCC---CCCCHHHHHhcHHHHHHHHHHHhHCCCCCccCceecCCCcEECCEEECCCCEEEEehhHHhcCcccCCCchhc
+Confidence            8542   35677888999999999999999999999 5678889999999999999999999999999999999999999
+
+
+Q _1              417 RPSRFEDEGR---HVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDPNEK-VLSDPLPPLPANGFSIK  492 (497)
+Q Consensus       417 ~P~Rf~~~~~---~~~~~~~~~FG~G~~~C~G~~la~~~~~~~l~~ll~~f~~~~~~~~~~~-~~~~~~~~~~~~~~~~~  492 (497)
+                      +|+||++...   ......++|||.|+|.|||+.+|..+++++++.++++|+++++.++... +...+.-..+..++-++
+T Consensus       395 ~P~R~~~~~~~~~~~~~~~~~~Fg~G~r~C~G~~~a~~~~~~~l~~l~~~f~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  474 (494)
+T 5IRQ_C          395 MPERFLNPAGTQLISPSVSYLPFGAGPRSCIGEILARQELFLIMAWLLQRFDLEVPDDGQLPSLEGIPKVVFLIDSFKVK  474 (494)
+T ss_dssp             CGGGGBCTTSSSBCCCCSCCCTTCCGGGCCSCHHHHHHHHHHHHHHHHHHEEEECCSSCCCCCCSCEESSSEECCCCCEE
+T ss_pred             CchhcCCCCCCccccCCCCccCCCCCccCCCCHHHHHHHHHHHHHHHHHhCCccCCCCCCCCCccccCcceeecCcceEE
+Confidence            9999998743   1234678999999999999999999999999999999999988653110 10001112344556667
+
+
+Q _1              493 LFPR  496 (497)
+Q Consensus       493 ~~~~  496 (497)
+                      +.+|
+T Consensus       475 ~~~r  478 (494)
+T 5IRQ_C          475 IKVR  478 (494)
+T ss_dssp             EEEC
+T ss_pred             EEEh
+Confidence            6665
+
+

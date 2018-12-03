@@ -66,14 +66,14 @@ class AnalyseMutations:
                 tmp = a[i].split()
                 string = string + '+' + str(tmp[1])
 
+
         pymol_file = open("mut.pml",'w')
         pymol_file.write("load "+self.design+", "+self.design[0:-4]+"\n")
         pymol_file.write("show cartoon\n")
         pymol_file.write("hide lines\n")
-        pymol_file.write("hide sticks, not het\n")
         pymol_file.write("show sticks, het\n")
         pymol_file.write("color cyan, name C* and het\n")
-        pymol_file.write("create "+tmp_str[0:-1].replace(',','_')+", resi "+string+" and chain "+self.chain+"\n")
+        pymol_file.write("create "+tmp_str[0:-1].replace(',','_')+", resi "+string+" and chain "+self.chain+" and "+self.design[0:-4]+" \n")
         pymol_file.write("show sticks, "+tmp_str[0:-1].replace(',','_')+"\n")
         pymol_file.write("color copper, "+tmp_str[0:-1].replace(',','_')+" and name C*\n")
         pymol_file.write("hide everything, elem h\n")
@@ -144,7 +144,7 @@ class AnalyseMutations:
         #print("Length of "+self.design+" is", seq_b)
         #print("Seq1 : "+self.design+" Seq2 : "+self.native)
         mutational_string = self.print_def(a,b)
-        print(mutational_string[0:-1])
+        print(self.design+": "+mutational_string[0:-1])
 
 
 if __name__ == "__main__":

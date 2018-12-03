@@ -204,7 +204,7 @@ class Combinations:
             # count from 0 in python
             pos = int(eval_wt[1:-1] ) -1
             aa = eval_wt[0]
-            assert aa == self.fastasequence[pos], "WT =  "+self.fastasequence[pos]+str(pos)+" input AA: "+aa
+            assert aa == self.fastasequence[pos], "WT =  "+self.fastasequence[pos]+str(pos+1)+" input AA: "+aa+" mut file contains: "+eval_wt
 
     def main(self):
 
