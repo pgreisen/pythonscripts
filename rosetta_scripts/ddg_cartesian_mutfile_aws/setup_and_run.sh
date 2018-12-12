@@ -31,7 +31,7 @@ cd ..;
 # their calculations
 for i in *.mutfile;
 do
-    dir=${i#*.mutfile};
+    dir=${i%*.mutfile};
     mkdir $dir;
     mv $i $dir/;
     cd $dir;

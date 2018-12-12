@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import sys,os
-from numpy import *
 import argparse
 
 hhsearchfile = sys.argv[1]

@@ -1,4 +1,4 @@
-for i in *;
+for i in $(seq 1 100);
 do
     if [ -d "$i" ]; then
 	cd $i;
