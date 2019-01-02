@@ -26,7 +26,6 @@ class RemoveCBCB:
                 self.list_w_cutoffs.append( pairs )
 
 
-
     def get_fasta_files_and_filter_distance(self,fastafile):
         designs = {}
         with open(fastafile, 'r') as f:
@@ -36,9 +35,6 @@ class RemoveCBCB:
                     designs[key] = ""
                 else:
                     designs[key] += line.strip()
-        # my_dict.pop('key', None)
-        # S102_A,L85_A,
-        # >A55E_D18N_R77T_0
         self.designs_before = len(designs.keys() )
 
         for i in self.list_w_cutoffs:
@@ -51,8 +47,8 @@ class RemoveCBCB:
         self.designs_after = len(designs.keys() )
         with open("designs_filtered_based_on_distance.fasta",'w') as f:
             for line in designs.keys():
-                f.write('>'+key+'\n')
-                f.write(designs[key]+'\n')
+                f.write('>'+line+'\n')
+                f.write(designs[line]+'\n')
         print("Designs before removal: ",self.designs_before)
         print("Designs after removal: ",self.designs_after)
                     
