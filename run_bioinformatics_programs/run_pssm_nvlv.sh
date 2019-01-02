@@ -5,7 +5,7 @@ sh update_ec2_ubuntu_aws_no_python.sh;
 ######################################
 # next copy executables from S3 bucket
 aws s3 cp s3://enevolvcomputationalbiology/databases/uniref90files.zip .
-aws s3 cp s3://tempfilespssm/ . --include="*.zip"
+aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive
 ######################################
 # setup for pssm run
 path=/home/ubuntu/ncbi-blast-2.7.1+/bin
