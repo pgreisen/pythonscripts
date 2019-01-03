@@ -33,7 +33,7 @@ export HHLIB=/home/ubuntu/hh-suite;
 exe_hhsearch=/home/ubuntu/hh-suite/build/bin/hhsearch;
 exe_hhblist=/home/ubuntu/hh-suite/build/bin/hhblits;
 database_seqs=/home/ubuntu/hhsearch_databases/pfam/pfam;
-database_pdb=/home/ubuntu/hhsearch_databases/pdb70;
+database_pdb=/home/ubuntu/hhsearch_databases/pdb70/pdb70;
 ####################
 # gather seequences
 unzip *zip;
@@ -44,8 +44,8 @@ do
     mkdir $dst;
     mv $i $dst;
     cd $dst;
-    $exe_hhblist -d $database_seqs -i $1 -v 1 -oa3m ${1%.fasta}.a3m -n 3
+    $exe_hhblist -d $database_seqs -i $i -v 1 -oa3m ${1%.fasta}.a3m -n 3
     # gather homologous structures
-    $exe_hhsearch -i ${1%.fasta}.a3m -d $database_pdb -o ${1%.fasta}\_pdb.hhr
+    $exe_hhsearch -i ${i%.fasta}.a3m -d $database_pdb -o ${i%.fasta}\_pdb.hhr
     cd ..;
 done
