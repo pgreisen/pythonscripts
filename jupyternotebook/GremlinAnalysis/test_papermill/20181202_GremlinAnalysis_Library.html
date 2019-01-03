@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>gremlin_analysis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>20181202_GremlinAnalysis_Library</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11791,7 +11791,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
@@ -11811,10 +11811,10 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inputfile</span> <span class="o">=</span> <span class="s2">&quot;1542451026.re1.txt&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inputfile</span> <span class="o">=</span> <span class="s2">&quot;test.txt&quot;</span>
 </pre></div>
 
 </div>
@@ -11824,21 +11824,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Parameters</span>
-<span class="n">inputfile</span> <span class="o">=</span> <span class="s2">&quot;1545972452.re1.txt&quot;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Getting the input amino acid sequence</span>
@@ -11856,7 +11842,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">inputfile</span><span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -11869,7 +11855,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">covariance</span> <span class="o">=</span> <span class="p">{}</span>
@@ -11896,7 +11882,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_lowest_scores</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span><span class="n">key_w_aa</span><span class="p">):</span>
@@ -11941,7 +11927,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfs</span> <span class="o">=</span> <span class="p">[]</span>
@@ -11962,7 +11948,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dftot</span><span class="p">[</span><span class="s2">&quot;Diff_score&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dftot</span><span class="p">[</span><span class="s2">&quot;GremlinScore&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dftot</span><span class="p">[</span><span class="s2">&quot;WTscore&quot;</span><span class="p">]</span>
@@ -11975,7 +11961,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># remove all G,P,C -&gt; X</span>
@@ -11990,7 +11976,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dftot</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12000,10 +11986,121 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>WT</th>
+      <th>WT_Pos</th>
+      <th>AA_WT</th>
+      <th>AA_Pos</th>
+      <th>AA</th>
+      <th>GremlinScore</th>
+      <th>WTscore</th>
+      <th>Diff_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>38</th>
+      <td>0</td>
+      <td>K</td>
+      <td>241</td>
+      <td>S</td>
+      <td>254</td>
+      <td>T</td>
+      <td>2.11</td>
+      <td>1.65</td>
+      <td>0.46</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>0</td>
+      <td>E</td>
+      <td>256</td>
+      <td>K</td>
+      <td>328</td>
+      <td>R</td>
+      <td>1.32</td>
+      <td>1.04</td>
+      <td>0.28</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>1</td>
+      <td>E</td>
+      <td>256</td>
+      <td>K</td>
+      <td>328</td>
+      <td>H</td>
+      <td>1.43</td>
+      <td>1.04</td>
+      <td>0.39</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>0</td>
+      <td>I</td>
+      <td>232</td>
+      <td>A</td>
+      <td>258</td>
+      <td>F</td>
+      <td>0.28</td>
+      <td>-0.3</td>
+      <td>0.58</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>1</td>
+      <td>I</td>
+      <td>232</td>
+      <td>A</td>
+      <td>258</td>
+      <td>I</td>
+      <td>0.67</td>
+      <td>-0.3</td>
+      <td>0.97</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dftot</span> <span class="o">=</span> <span class="n">dftot</span><span class="p">[</span><span class="n">dftot</span><span class="p">[</span><span class="s2">&quot;GremlinScore&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
@@ -12016,7 +12113,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dftot</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -12026,10 +12123,41 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 482 entries, 38 to 744
+Data columns (total 9 columns):
+index           482 non-null int64
+WT              482 non-null object
+WT_Pos          482 non-null object
+AA_WT           482 non-null object
+AA_Pos          482 non-null object
+AA              482 non-null object
+GremlinScore    482 non-null object
+WTscore         482 non-null object
+Diff_score      482 non-null object
+dtypes: int64(1), object(8)
+memory usage: 37.7+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dftot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s2">&quot;Diff_score&quot;</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">)</span>
@@ -12039,10 +12167,45 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a0e811470&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cutoff</span> <span class="o">=</span> <span class="n">dftot</span><span class="p">[</span><span class="s2">&quot;Diff_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">dftot</span><span class="p">[</span><span class="s2">&quot;Diff_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
@@ -12055,7 +12218,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dftot</span> <span class="o">=</span> <span class="n">dftot</span><span class="p">[</span><span class="n">dftot</span><span class="p">[</span><span class="s2">&quot;Diff_score&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cutoff</span><span class="p">]</span>
@@ -12066,10 +12229,325 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>WT</th>
+      <th>WT_Pos</th>
+      <th>AA_WT</th>
+      <th>AA_Pos</th>
+      <th>AA</th>
+      <th>GremlinScore</th>
+      <th>WTscore</th>
+      <th>Diff_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>157</th>
+      <td>16</td>
+      <td>P</td>
+      <td>23</td>
+      <td>L</td>
+      <td>22</td>
+      <td>T</td>
+      <td>1.94</td>
+      <td>-0.08</td>
+      <td>2.02</td>
+    </tr>
+    <tr>
+      <th>171</th>
+      <td>4</td>
+      <td>D</td>
+      <td>336</td>
+      <td>S</td>
+      <td>340</td>
+      <td>R</td>
+      <td>1.74</td>
+      <td>0.06</td>
+      <td>1.68</td>
+    </tr>
+    <tr>
+      <th>678</th>
+      <td>11</td>
+      <td>P</td>
+      <td>65</td>
+      <td>A</td>
+      <td>183</td>
+      <td>H</td>
+      <td>1.72</td>
+      <td>-0.36</td>
+      <td>2.08</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>5</td>
+      <td>R</td>
+      <td>67</td>
+      <td>V</td>
+      <td>14</td>
+      <td>E</td>
+      <td>1.68</td>
+      <td>0.29</td>
+      <td>1.39</td>
+    </tr>
+    <tr>
+      <th>494</th>
+      <td>5</td>
+      <td>W</td>
+      <td>263</td>
+      <td>V</td>
+      <td>278</td>
+      <td>S</td>
+      <td>1.51</td>
+      <td>-0.15</td>
+      <td>1.66</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>14</td>
+      <td>K</td>
+      <td>425</td>
+      <td>T</td>
+      <td>228</td>
+      <td>E</td>
+      <td>1.5</td>
+      <td>0</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>1</td>
+      <td>F</td>
+      <td>151</td>
+      <td>V</td>
+      <td>157</td>
+      <td>S</td>
+      <td>1.5</td>
+      <td>0.16</td>
+      <td>1.34</td>
+    </tr>
+    <tr>
+      <th>235</th>
+      <td>4</td>
+      <td>K</td>
+      <td>224</td>
+      <td>L</td>
+      <td>418</td>
+      <td>E</td>
+      <td>1.48</td>
+      <td>-0.09</td>
+      <td>1.57</td>
+    </tr>
+    <tr>
+      <th>469</th>
+      <td>9</td>
+      <td>S</td>
+      <td>302</td>
+      <td>M</td>
+      <td>286</td>
+      <td>N</td>
+      <td>1.39</td>
+      <td>0.11</td>
+      <td>1.28</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>0</td>
+      <td>F</td>
+      <td>151</td>
+      <td>V</td>
+      <td>157</td>
+      <td>A</td>
+      <td>1.38</td>
+      <td>0.16</td>
+      <td>1.22</td>
+    </tr>
+    <tr>
+      <th>622</th>
+      <td>10</td>
+      <td>E</td>
+      <td>256</td>
+      <td>C</td>
+      <td>252</td>
+      <td>R</td>
+      <td>1.38</td>
+      <td>0.01</td>
+      <td>1.37</td>
+    </tr>
+    <tr>
+      <th>509</th>
+      <td>20</td>
+      <td>V</td>
+      <td>278</td>
+      <td>W</td>
+      <td>263</td>
+      <td>T</td>
+      <td>1.36</td>
+      <td>-0.15</td>
+      <td>1.51</td>
+    </tr>
+    <tr>
+      <th>532</th>
+      <td>20</td>
+      <td>S</td>
+      <td>383</td>
+      <td>S</td>
+      <td>381</td>
+      <td>W</td>
+      <td>1.26</td>
+      <td>-0.24</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>422</th>
+      <td>12</td>
+      <td>G</td>
+      <td>409</td>
+      <td>I</td>
+      <td>231</td>
+      <td>H</td>
+      <td>1.21</td>
+      <td>0.04</td>
+      <td>1.17</td>
+    </tr>
+    <tr>
+      <th>495</th>
+      <td>6</td>
+      <td>W</td>
+      <td>263</td>
+      <td>V</td>
+      <td>278</td>
+      <td>T</td>
+      <td>1.17</td>
+      <td>-0.15</td>
+      <td>1.32</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>20</td>
+      <td>A</td>
+      <td>258</td>
+      <td>I</td>
+      <td>232</td>
+      <td>L</td>
+      <td>1.04</td>
+      <td>-0.3</td>
+      <td>1.34</td>
+    </tr>
+    <tr>
+      <th>334</th>
+      <td>7</td>
+      <td>A</td>
+      <td>101</td>
+      <td>M</td>
+      <td>102</td>
+      <td>E</td>
+      <td>1</td>
+      <td>-0.34</td>
+      <td>1.34</td>
+    </tr>
+    <tr>
+      <th>527</th>
+      <td>15</td>
+      <td>S</td>
+      <td>383</td>
+      <td>S</td>
+      <td>381</td>
+      <td>F</td>
+      <td>0.99</td>
+      <td>-0.24</td>
+      <td>1.23</td>
+    </tr>
+    <tr>
+      <th>521</th>
+      <td>9</td>
+      <td>S</td>
+      <td>381</td>
+      <td>S</td>
+      <td>383</td>
+      <td>R</td>
+      <td>0.94</td>
+      <td>-0.24</td>
+      <td>1.18</td>
+    </tr>
+    <tr>
+      <th>268</th>
+      <td>5</td>
+      <td>S</td>
+      <td>259</td>
+      <td>I</td>
+      <td>280</td>
+      <td>W</td>
+      <td>0.94</td>
+      <td>-0.26</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <th>331</th>
+      <td>4</td>
+      <td>A</td>
+      <td>101</td>
+      <td>M</td>
+      <td>102</td>
+      <td>V</td>
+      <td>0.87</td>
+      <td>-0.34</td>
+      <td>1.21</td>
+    </tr>
+    <tr>
+      <th>631</th>
+      <td>0</td>
+      <td>P</td>
+      <td>417</td>
+      <td>K</td>
+      <td>420</td>
+      <td>A</td>
+      <td>0.79</td>
+      <td>-0.44</td>
+      <td>1.23</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unique positions: &quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">dftot</span><span class="p">[</span><span class="s2">&quot;WT_Pos&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> <span class="p">)</span>
@@ -12079,10 +12557,28 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Unique positions:  18
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># write to muts.txt</span>
@@ -12098,7 +12594,7 @@ The cutoff is computed as mean + 2*std</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># generate mutation file for ddG cartesian</span>
