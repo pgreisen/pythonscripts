@@ -11,6 +11,21 @@ aws s3 cp s3://enevolvcomputationalbiology/databases/hhsearch_databases.tgz .
 tar zxf hhsearch_databases.tgz 
 rm hhsearch_databases.tgz;
 ######################################
+# unpack files
+cd hhsearch_databases;
+mkdir pfam;
+mv pfamA_32.0.tar.gz pfam;
+cd pfam;
+tar zxf pfamA_32.0.tar.gz;
+rm pfamA_32.0.tar.gz;
+cd ..;
+mkdir pdb70;
+mv pdb70_from_mmcif_latest.tar.gz pdb70/;
+cd pdb70;
+tar zxf pdb70_from_mmcif_latest.tar.gz; 
+rm pdb70_from_mmcif_latest.tar.gz; 
+cd ;
+######################################
 # get fasta files to work on
 aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive
 ######################################
@@ -34,6 +49,3 @@ do
     $exe_hhsearch -i ${1%.fasta}.a3m -d $database_pdb -o ${1%.fasta}\_pdb.hhr
     cd ..;
 done
-
-
-
