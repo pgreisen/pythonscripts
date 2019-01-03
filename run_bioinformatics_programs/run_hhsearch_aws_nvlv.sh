@@ -7,11 +7,9 @@ sh update_ec2_ubuntu_aws_no_python.sh;
 aws s3 cp s3://enevolvcomputationalbiology/databases/hh-suite.tgz .
 tar zxf hh-suite.tgz;
 rm hh-suite.tgz;
-aws s3 cp s3://enevolvcomputationalbiology/databases/hhsearch_databases.tgz .
-tar zxf hhsearch_databases.tgz 
-rm hhsearch_databases.tgz;
-
-aws s3 cp s3://enevolvcomputationalbiology/databases/pdb70_from_mmcif_latest_2019.tar.gz .
+aws s3 cp s3://enevolvcomputationalbiology/databases/hhsearch_databases_2019.tgz .
+tar zxf hhsearch_databases_2019.tgz 
+rm hhsearch_databases_2019.tgz;
 ######################################
 # unpack files
 cd hhsearch_databases;
@@ -22,7 +20,6 @@ tar zxf pfamA_32.0.tar.gz;
 rm pfamA_32.0.tar.gz;
 cd ..;
 mkdir pdb70;
-rm pdb70_from_mmcif_latest.tar.gz
 mv pdb70_from_mmcif_latest_2019.tar.gz pdb70/;
 cd pdb70;
 tar zxf pdb70_from_mmcif_latest_2019.tar.gz; 
