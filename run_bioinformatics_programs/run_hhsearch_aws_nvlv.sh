@@ -10,6 +10,8 @@ rm hh-suite.tgz;
 aws s3 cp s3://enevolvcomputationalbiology/databases/hhsearch_databases.tgz .
 tar zxf hhsearch_databases.tgz 
 rm hhsearch_databases.tgz;
+
+aws s3 cp s3://enevolvcomputationalbiology/databases/pdb70_from_mmcif_latest_2019.tar.gz .
 ######################################
 # unpack files
 cd hhsearch_databases;
@@ -20,10 +22,11 @@ tar zxf pfamA_32.0.tar.gz;
 rm pfamA_32.0.tar.gz;
 cd ..;
 mkdir pdb70;
-mv pdb70_from_mmcif_latest.tar.gz pdb70/;
+rm pdb70_from_mmcif_latest.tar.gz
+mv pdb70_from_mmcif_latest_2019.tar.gz pdb70/;
 cd pdb70;
-tar zxf pdb70_from_mmcif_latest.tar.gz; 
-rm pdb70_from_mmcif_latest.tar.gz; 
+tar zxf pdb70_from_mmcif_latest_2019.tar.gz; 
+rm pdb70_from_mmcif_latest_2019.tar.gz; 
 cd ;
 ######################################
 # get fasta files to work on
@@ -44,7 +47,7 @@ do
     mkdir $dst;
     mv $i $dst;
     cd $dst;
-    $exe_hhblist -d $database_seqs -i $i -v 1 -oa3m ${1%.fasta}.a3m -n 3
+    $exe_hhblist -d $database_seqs -i $i -v 1 -oa3m ${i%.fasta}.a3m -n 3
     # gather homologous structures
     $exe_hhsearch -i ${i%.fasta}.a3m -d $database_pdb -o ${i%.fasta}\_pdb.hhr
     cd ..;
