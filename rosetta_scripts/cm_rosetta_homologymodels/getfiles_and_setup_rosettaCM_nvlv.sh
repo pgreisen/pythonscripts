@@ -18,7 +18,9 @@ do
     rm $i;
 done
 cd ../..;
-aws s3 cp s3://enevolvcomputationalbiology/programs/database . --include="*" --recursive
+aws s3 cp s3://enevolvcomputationalbiology/programs/database.tgz .;
+tar zxf database.tgz;
+rm database.tgz;
 #########################################
 cd $hhsearchdir;
 fasta=`find *fasta`;
