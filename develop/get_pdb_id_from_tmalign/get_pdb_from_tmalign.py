@@ -92,15 +92,15 @@ class GetPDBTMalign:
             try:
                 os.mkdir("Monomer")
             except:
-                print "Monomers exists"
+                print("Monomers exists")
             try:
                 os.mkdir("Dimer")
             except:
-                print "Dimer exists"
+                print("Dimer exists")
             try:
                 os.mkdir("Oligomers")
             except:
-                print "Oligomers exists"
+                print("Oligomers exists")
 
         with open("pdbfile.txt",'w') as f:
 
@@ -118,11 +118,6 @@ class GetPDBTMalign:
                     shutil.copy( pdbfile, "Oligomers")
 
                 f.write(str(key)+" "+str(self.chains[key])+"\n")
-
-
-
-
-
 
 
 
