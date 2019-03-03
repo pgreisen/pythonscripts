@@ -24,6 +24,12 @@ aws s3 cp s3://temppdb/1.zip .
 unzip 1.zip;
 rm 1.zip;
 ####################
+wget https://github.com/pgreisen/pythonscripts/blob/master/rosetta_scripts/ddg_cartesian_mutfile_aws/qsub_run_ddg.sh
+####################
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/develop/GenerateMutfile/GenerateMutationfileDdg.py
+# execute and generate mutfile
+python GenerateMutationfileDdg.py -p 1.pdb
+####################
 initpdb=1.pdb;
 mindir=min_cart;
 mkdir $mindir;
@@ -39,7 +45,7 @@ endrepeat" > cart2.script;
 mv ../1.pdb .;
 # start the cartesian minimization before substitution
 ~/relax.static.linuxgccrelease -s 1.pdb -use_input_sc -constrain_relax_to_start_coords -ignore_unrecognized_res -nstruct 20 -relax:coord_constrain_sidechains -relax:cartesian -score:weights ref2015_cart -relax:min_type lbfgs_armijo_nonmonotone -relax:script cart2.script -database ~/database
-
+#####
 pdbfile=`sort -n -k2 score.sc | awk '{print $NF}' | head -n 1`;
 cp $pdbfile.pdb ../lowest.pdb;
 cd ..;
