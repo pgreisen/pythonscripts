@@ -23,4 +23,4 @@ echo PBS: PATH = $PBS_O_PATH
 echo ------------------------------------------------------
 ###########################################################
 cd $PBS_O_WORKDIR;
-~/cartesian_ddg.static.linuxgccrelease -database ~/database -s $pdbfile -ddg:mut_file $PBS_O_WORKDIR/mutfile -ddg:iterations 10 -ddg::cartesian -ddg::dump_pdbs false -ddg:bbnbr 1 -fa_max_dis 9.0 -score:weights ref2015_cart -out:path:score $PBS_O_WORKDIR -unmute all
+~/cartesian_ddg.static.linuxgccrelease -database ~/database -s $PBS_O_WORKDIR/$pdbfile -ddg:mut_file $PBS_O_WORKDIR/mutfile -ddg:iterations 10 -ddg::cartesian -ddg::dump_pdbs false -ddg:bbnbr 1 -fa_max_dis 9.0 -score:weights ref2015_cart -out:path:score $PBS_O_WORKDIR -unmute all
