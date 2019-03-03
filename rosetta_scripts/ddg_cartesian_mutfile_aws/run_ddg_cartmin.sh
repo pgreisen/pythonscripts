@@ -58,7 +58,7 @@ do
     mkdir $dir;
     mv $i $dir/;
     cd $dir;
-    for j in mutfile_*;
+    for j in *.mutfile;
     do
         resf=$j;
     done
