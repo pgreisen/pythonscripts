@@ -24,7 +24,8 @@ aws s3 cp s3://temppdb/1.zip .
 unzip 1.zip;
 rm 1.zip;
 ####################
-wget https://github.com/pgreisen/pythonscripts/blob/master/rosetta_scripts/ddg_cartesian_mutfile_aws/qsub_run_ddg.sh
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ddg_cartesian_mutfile_aws/qsub_run_ddg.sh
+
 ####################
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/develop/GenerateMutfile/GenerateMutationfileDdg.py
 # execute and generate mutfile
