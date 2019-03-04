@@ -58,11 +58,12 @@ do
     mkdir $dir;
     mv $i $dir/;
     cd $dir;
+    cp ~/lowest.pdb .;
     for j in *.mutfile;
     do
         resf=$j;
     done
     ln -s $resf mutfile;
-    nohup qsub -v pdbfile=~/lowest.pdb ~/qsub_run_ddg.sh & echo "done";
+    nohup qsub -v pdbfile=lowest.pdb ~/qsub_run_ddg.sh & echo "done";
     cd ..;
 done
