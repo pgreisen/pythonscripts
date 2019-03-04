@@ -40,6 +40,7 @@ do
         resf=$j;
     done
     ln -s $resf mutfile;
-    nohup qsub ~/qsub_run_ddg.sh & echo "done";
+    pth=`pwd`;
+    nohup qsub -v pth=$pth ~/qsub_run_ddg.sh & echo "done";
     cd ..;
 done
