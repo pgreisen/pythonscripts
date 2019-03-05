@@ -48,12 +48,14 @@ class GenerateMutationfileDdg:
                 if(line[0:4] == "ATOM"):
                     if( line[13:15] == "CA"):
                         self.pdbfile_singleletter += self.get_single_letter_AA(line[17:20].strip())
+        print(self.pdbfile_singleletter)
 
 
     def generate_mutfile(self):
         for i in range(len(self.pdbfile_singleletter)):
             key=self.pdbfile_singleletter[i]+"_"+str(i+1)
             self.pdb_ddg[key] = i+1
+
 
     def write_mutation_file(self):
         # header = "total 1\n1\n"
@@ -73,7 +75,7 @@ class GenerateMutationfileDdg:
                         tot_substitutions_per_file= len(aas_) - (totsub - self.modulus)
                     else:
                         tot_substitutions_per_file = self.modulus
-                    f= open(wt + str(pos) + "X_"+str(dummy)+".mutfile", 'w')
+                    f= open(wt + str(pos) + "X_"+str(pos)+".mutfile", 'w')
                     header="total "+str(tot_substitutions_per_file)+"\n"
                     f.write(header)
                 f.write("1\n")
