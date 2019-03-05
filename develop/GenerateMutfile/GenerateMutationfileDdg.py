@@ -75,7 +75,7 @@ class GenerateMutationfileDdg:
                         tot_substitutions_per_file= len(aas_) - (totsub - self.modulus)
                     else:
                         tot_substitutions_per_file = self.modulus
-                    f= open(wt + str(pos) + "X_"+str(pos)+".mutfile", 'w')
+                    f= open(wt + str(totsub) + "X_"+str(pos)+".mutfile", 'w')
                     header="total "+str(tot_substitutions_per_file)+"\n"
                     f.write(header)
                 f.write("1\n")
