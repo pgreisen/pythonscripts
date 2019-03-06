@@ -58,6 +58,7 @@ do
     mkdir $dir;
     mv $i $dir/;
     cd $dir;
+    cp ../lowest.pdb .;
     for j in *.mutfile;
     do
         resf=$j;
