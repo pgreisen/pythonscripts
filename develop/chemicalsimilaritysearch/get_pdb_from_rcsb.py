@@ -48,14 +48,14 @@ class GetPDBs:
         @param pdbname:
         @return:
         '''
-        import Bio
-        from Bio.PDB import PDBList
-        '''Selecting structures from PDB'''
-        pdbl = PDBList()
+        ##import Bio
+        ##from Bio.PDB import PDBList
+        ##'''Selecting structures from PDB'''
+        ##pdbl = PDBList()
         #PDBlist2=['4B97','4IPH','4HNO','4HG7','4IRG','4G4W','4JKW','4IPC','2YPM','4KEI']
         #for i in PDBlist2:
-        pdbl.retrieve_pdb_file(pdbname,pdir='PDB')
-        '''
+        ##pdbl.retrieve_pdb_file(pdbname,pdir='PDB')
+        ##'''
         gz_name = self.convert_to_pdb_gz(pdbname)
         print(gz_name)
         url = 'ftp://ftp.wwpdb.org/pub/pdb/data/structures/divided/pdb/'+gz_name[4:6]+'/'+gz_name
@@ -65,7 +65,7 @@ class GetPDBs:
             #self.writes_to_pdb_format(gz_name,pdbname)
         except:
             print("Exit")
-        '''
+        ###'''
 
     def main(self):
 

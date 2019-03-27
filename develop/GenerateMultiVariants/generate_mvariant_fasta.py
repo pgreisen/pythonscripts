@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-import os,shutil, commands, sys, math
+import os,shutil, sys, math
+# , commands
 from numpy import mean
 from pylab import *
 import argparse,csv
@@ -40,7 +41,7 @@ class PlotScorefileRosetta:
     def insert_mutations(self, position, native, newmutation, newfasta ):
         for aa in range (len(self.fastaseq)):
             if aa == position-1:
-                assert self.fastaseq[aa] == native
+                assert self.fastaseq[aa] == native, "WT is "+native+" and position is "+str(aa+1)+" with following substitution "+self.fastaseq[aa]
 
                 newfasta = newfasta[0:position-1]+newmutation+newfasta[position:]
 
@@ -51,7 +52,7 @@ class PlotScorefileRosetta:
         filename = filename.replace("__", "_")
         self.fasta_header = self.fasta_header.replace("__", "_")
         # print filename
-        print self.name
+        print(self.name)
         if(self.name != "-1"):
             filename = self.fasta_header+".fasta"
 
