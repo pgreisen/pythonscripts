@@ -25,7 +25,7 @@
   
   <MOVERS>
     
-    <Disulfidize name="ds" match_rt_limit="2.0" max_disulf_score="1.5" min_disulfides="1" max_disulfides="3" min_loop="4" use_l_cys="true" keep_current_disulfides="true" include_current_disulfides="false" use_d_cys="false" />       
+    <Disulfidize name="ds" match_rt_limit="1.5" max_disulf_score="1.0" min_disulfides="1" max_disulfides="2" min_loop="8" use_l_cys="true" keep_current_disulfides="true" include_current_disulfides="false" use_d_cys="false" />       
 
   </MOVERS>
 
