@@ -1,4 +1,6 @@
 ###############################################
+sudo apt install emacs25 -y
+###############################################
 # this should be the name of the pdb file that you want to 
 # compute on
 disulfide=$1;
