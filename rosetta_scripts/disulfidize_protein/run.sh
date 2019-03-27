@@ -1,5 +1,5 @@
 # run program
-exe=~/rosetta_bin/rosetta_scripts.linuxgccrelease;
+exe=~/rosetta_bin/rosetta_scripts.static.linuxgccrelease;
 database=~/database;
 xml=~/disulfidize.xml;
 flags=~/flags;
