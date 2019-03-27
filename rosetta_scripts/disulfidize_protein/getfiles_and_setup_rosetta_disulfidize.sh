@@ -19,7 +19,7 @@ do
     tar zxf $i;
     rm $i;
 done
-cd ../..;
+cd ../;
 aws s3 cp s3://enevolvcomputationalbiology/programs/database.tgz .;
 tar zxf database.tgz;
 rm database.tgz;
