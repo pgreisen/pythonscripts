@@ -29,3 +29,4 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scr
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/disulfidize_protein/disulfidize.xml;
 # run disulfidize script
 sh run.sh $disulfide.pdb &
+########################################
