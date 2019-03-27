@@ -2,7 +2,7 @@
 
   <SCOREFXNS>
 
-    <ScoreFunction name="hard_rep" weights="ref2015">
+    <ScoreFunction name="hard_rep" weights="ref2015"/>
     
   </SCOREFXNS>
   
