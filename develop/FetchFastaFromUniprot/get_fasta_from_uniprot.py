@@ -1,12 +1,13 @@
 import urllib.request
-
+import sys
 def get_fasta_from_uniprot(uniprot_id):
     data = urllib.request.urlopen("http://www.uniprot.org/uniprot/" + uniprot_id + ".txt").read()
     org = "SQ"
-    prt_name="DE   RecName: Full="
+    prt_name="Full="
     a = data.decode('ascii')
     b = a.split('\n')
     fastaseq = ""
+    fastafunction = ""
     seq = False
     organism = ""
     for i in b:
@@ -23,7 +24,7 @@ def get_fasta_from_uniprot(uniprot_id):
     fastaid=code+"_"+organism
     return fastaid, fastaseq, fastafunction
 
-code = "P81277"
+code = sys.argv[1]
 fastaid, fastaseq, fastafunction = get_fasta_from_uniprot(code)
 print(fastaid)
 print(fastaseq)
