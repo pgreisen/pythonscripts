@@ -4,17 +4,12 @@ aws s3 cp s3://tempfilesdocking/$hhsearchdir.zip .
 unzip $hhsearchdir.zip;
 rm $hhsearchdir.zip;
 ###############################################
-mkdir bin;
-cd bin;
-mkdir rosetta_bin;
-cd rosetta_bin;
 aws s3 cp s3://enevolvcomputationalbiology/programs/rosetta_scripts.static.linuxgccrelease.tgz .
 for i in *tgz;
 do
     tar zxf $i;
     rm $i;
 done
-cd ../..;
 aws s3 cp s3://enevolvcomputationalbiology/programs/database.tgz .;
 tar zxf database.tgz;
 rm database.tgz;
