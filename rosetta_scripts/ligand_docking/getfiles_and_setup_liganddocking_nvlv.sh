@@ -19,13 +19,14 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scr
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ligand_docking/flags;
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ligand_docking/dock.xml;
 
+cd $hhsearchdir;
 parameters=`find *params`;
 native=`find *pdb`;
 x=`head -n 1 xyz.txt`;
 y=`head -n 2 xyz.txt`;
 z=`head -n 3 xyz.txt`;
 
-cd $hhsearchdir;
+
 
 for i in $(seq 1 100);
 do
