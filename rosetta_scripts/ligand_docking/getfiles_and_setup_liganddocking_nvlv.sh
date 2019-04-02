@@ -25,11 +25,9 @@ native=`find *pdb`;
 x=`sed -n '1p' xyz.txt`;
 y=`sed -n '2p' xyz.txt`;
 z=`sed -n '3p' xyz.txt`;
-
-
-
+pth=`pwd`;
 for i in $(seq 1 100);
 do
-    qsub -v parameters="$parameters",prefix="$i",x="$x",y="$y",z="$z",native="$native" ../qsub.sh;
+    qsub -v parameters="$pth/$parameters",prefix="$i",x="$x",y="$y",z="$z",native="$pth/$native" ../qsub.sh;
 done
 cd ..;
