@@ -25,7 +25,10 @@ x=`head -n 1 xyz.txt`;
 y=`head -n 2 xyz.txt`;
 z=`head -n 3 xyz.txt`;
 
+cd $hhsearchdir;
+
 for i in $(seq 1 100);
 do
     qsub -v parameters=$parameters,prefix=$i,x=$x,y=$y,z=$z,native=$native qsub.sh;
 done
+cd ..;
