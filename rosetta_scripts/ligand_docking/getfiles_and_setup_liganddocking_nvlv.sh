@@ -22,9 +22,9 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scr
 cd $hhsearchdir;
 parameters=`find *params`;
 native=`find *pdb`;
-x=`head -n 1 xyz.txt`;
-y=`head -n 2 xyz.txt`;
-z=`head -n 3 xyz.txt`;
+x=`sed -n '1p' xyz.txt`;
+y=`sed -n '2p' xyz.txt`;
+z=`sed -n '3p' xyz.txt`;
 
 
 
