@@ -27,5 +27,5 @@ z=`head -n 3 xyz.txt`;
 
 for i in $(seq 1 100);
 do
-    qsub -v prefix=$i,x=$x,y=$y,z=$z,native=$native qsub.sh;
+    qsub -v parameters=$parameters,prefix=$i,x=$x,y=$y,z=$z,native=$native qsub.sh;
 done
