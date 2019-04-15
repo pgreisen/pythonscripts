@@ -13,7 +13,7 @@ with open(inputfile, 'r') as f:
 plt.hist(nrmuts)
 print(np.mean(nrmuts) )
 print("Nr 3: ",nrmuts.count(3))
-print("Nr 3: ",nrmuts.count(4))
-print("Nr 3: ",nrmuts.count(5))
+print("Nr 4: ",nrmuts.count(4))
+print("Nr 5: ",nrmuts.count(5))
 
 plt.show()

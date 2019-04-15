@@ -7,5 +7,6 @@ sudo apt install -y libgl1-mesa-dev
 sudo apt  install -y awscli 
 sudo apt install -y emacs
 sudo apt install -y unzip
+sudo apt install -y zip
 sudo apt-get install -y zlib1g-dev 
 sudo apt-get install -y scons 
