@@ -12,7 +12,8 @@ def get_dictionary(filename):
                 tmp = line.strip()
                 sequences[ids] = sequences[ids] + tmp
     return sequences
-
+print("File 1 contains all the clustered designs")
+print("File 2 contains all designs and designs from file 1 will be removed in file 2")
 dfile1 = sys.argv[1]
 designs = get_dictionary(dfile1)
 

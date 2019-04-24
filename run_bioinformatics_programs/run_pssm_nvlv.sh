@@ -4,8 +4,10 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts
 sh update_ec2_ubuntu_aws_no_python.sh;
 ######################################
 # next copy executables from S3 bucket
-aws s3 cp s3://enevolvcomputationalbiology/databases/uniref90files.zip .
-aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive
+aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive;
+unzip *zip;
+rm *zip;
+aws s3 cp s3://enevolvcomputationalbiology/databases/uniref90files.zip .;
 ######################################
 # setup for pssm run
 path=/home/ubuntu/ncbi-blast-2.7.1+/bin
@@ -14,8 +16,6 @@ database=/home/ubuntu/uniref90
 # unzip file for pssm
 unzip uniref90files.zip;
 rm uniref90files.zip;
-unzip *zip;
-rm *zip;
 for i in *.fasta;
 do
     dst=${i%.fasta}\_pssm;

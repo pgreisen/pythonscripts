@@ -21,7 +21,7 @@ class spin_and_execute:
         "Login to the remote server"
         try:
             # Paramiko.SSHClient can be used to make connections to the remote server and transfer files
-            print "Establishing ssh connection"
+            print("Establishing ssh connection")
             self.client = paramiko.SSHClient()
             # Parsing an instance of the AutoAddPolicy to set_missing_host_key_policy() changes it to allow any host.
             self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -29,22 +29,22 @@ class spin_and_execute:
             if (self.password == ''):
                 private_key = paramiko.RSAKey.from_private_key_file(self.pkey)
                 self.client.connect(hostname=self.host, port=self.port, username=self.username, pkey=private_key, timeout=self.timeout, allow_agent=False,look_for_keys=False)
-                print "Connected to the server",self.host
+                print("Connected to the server",self.host)
             else:
                 self.client.connect(hostname=self.host, port=self.port, username=self.username, password=self.password,timeout=self.timeout, allow_agent=False,look_for_keys=False)    
-                print "Connected to the server",self.host
+                print("Connected to the server",self.host)
         except paramiko.AuthenticationException:
-            print "Authentication failed, please verify your credentials"
+            print("Authentication failed, please verify your credentials")
             result_flag = False
         except paramiko.SSHException as sshException:
-            print "Could not establish SSH connection: %s" % sshException
+            print("Could not establish SSH connection: %s" % sshException)
             result_flag = False
         except socket.timeout as e:
-            print "Connection timed out"
+            print("Connection timed out")
             result_flag = False
         except Exception,e:
-            print "Exception in connecting to the server"
-            print "PYTHON SAYS:",e
+            print("Exception in connecting to the server")
+            print("PYTHON SAYS:",e)
             result_flag = False
             self.client.close()
         else:

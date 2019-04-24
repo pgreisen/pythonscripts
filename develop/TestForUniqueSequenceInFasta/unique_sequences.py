@@ -26,7 +26,7 @@ def get_fastafiles(datafile):
             else:
                 tmp = line.strip()
                 sequences[ids] = sequences[ids] + tmp
-    print "Total number of fasta sequences: ", len(sequences.keys())
+    print("Total number of fasta sequences: ", len(sequences.keys()))
     return sequences
 
 
@@ -34,23 +34,23 @@ def get_unique(sequences):
     uniq_seq = []
     for key in sequences:
         uniq_seq.append(sequences[key])
-    print "Total number of fasta sequences: ", len(uniq_seq)
-    print "Unique number of fasta sequences: ", len(set(uniq_seq))
+    print("Total number of fasta sequences: ", len(uniq_seq))
+    print("Unique number of fasta sequences: ", len(set(uniq_seq)))
     return uniq_seq
 
 def get_doublicates(sequences):
     reverse_dic = {}
-    for k, v in sequences.iteritems():
+    for k, v in sequences.items():
         reverse_dic[v] = reverse_dic.get(v, [])
         reverse_dic[v].append(k)
 
-    for k, v in reverse_dic.iteritems():
+    for k, v in reverse_dic.items():
         if (len(reverse_dic[k]) > 1):
-            print v
+            print(v)
             for i in v[1:]:
                 sequences.pop(i, None)
     with open("unique.fasta",'w') as f:
-        for k,v in sequences.iteritems():
+        for k,v in sequences.items():
             import re
             k =  re.sub(r'\#.*$', '', k)
             f.write(k+'\n')
@@ -65,5 +65,5 @@ fasta_ = get_fastafiles(datafile)
 uniq_seq = get_unique(fasta_)
 
 if(len(uniq_seq) != len(set(uniq_seq))):
-    print "Removing doublicates from file"
+    print("Removing doublicates from file")
     reverse_dic = get_doublicates(fasta_)
