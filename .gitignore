@@ -1,3 +1,4 @@
+*.zip
 *.tgz
 *.pdb
 *.file
@@ -9,3 +10,5 @@
 *tab
 *.fasta
 *.csv
+*.txt
+*.pem
