@@ -248,6 +248,41 @@ class EnrichmentAnalysis:
 
         self.store.put("/main/{}/outliers".format(label), result_df, format="table", data_columns=result_df.columns)
 
+    def regression_apply(self, timepoints, name="score", weighted=False):
+
+        """
+        :py:meth:`pandas.DataFrame.apply` apply function for calculating
+        enrichment using linear regression. If *weighted* is ``True`` perform
+        weighted least squares; else perform ordinary least squares.
+
+        Weights for weighted least squares are included in *row*.
+
+        Returns a :py:class:`pandas.Series` containing regression coefficients,
+        residuals, and statistics.
+        """
+        # retrieve log ratios from the row
+        y = self.df[[name + '_{}'.format(t) for t in timepoints]]
+
+        new_cols = ['OLS_intercept', 'OLS_slope', 'OLS_SE_slope', 'OLS_t', 'OLS_pvalue_raw'] + ['OLS_e_{}'.format(t) for t in timepoints]
+        self.df = pd.concat([self.df, pd.DataFrame(columns=new_cols)],sort=False)
+        # re-scale the x's to fall within [0, 1]
+        xvalues = [x / float(max(timepoints)) for x in timepoints]
+
+        # perform the fit
+        X = sm.add_constant(xvalues)  # fit intercept
+        if weighted:
+            W = self.df[['W_{}'.format(t) for t in timepoints]]
+            fit = sm.WLS(y, X, weights=W).fit()
+        else:
+            for index, row in y.iterrows():
+                # 0: index
+                # 1: values of df
+                model = sm.OLS(np.array(row), X)
+                results = model.fit()
+                values = np.concatenate([results.params, [results.bse[0], results.tvalues[0], results.pvalues[0]], results.resid])
+
+                for k,m in zip(new_cols, values):
+                    self.df.iloc[index, self.df.columns.get_loc(k)] = m
 
 
     def main(self):
@@ -283,7 +318,6 @@ class EnrichmentAnalysis:
         ##
         self.compute_variant_ratio()
 
-
         # Log2 of ratios with pseudo count
         self.compute_variant_log2_ratio()
         # Compute variance and standard error
@@ -292,9 +326,8 @@ class EnrichmentAnalysis:
         self.set_wt_logscores()
         self.set_wt_se()
 
-
         self.set_and_compute_z_and_p_value()
-        self.df.to_excel("debug.xlsx", index=False)
+
 
         logger.debug('WT index: %s', self.wt_index)
         logger.info('Set the counts of WT %s', self.wt_counts)
@@ -304,41 +337,11 @@ class EnrichmentAnalysis:
         #print(self.df[['SE_1','SE_2','SE_3']])
         pp.barplot(self.df,['SE_1','SE_2','SE_3'],"Test")
 
+        a = self.regression_apply( self.timepoints)
+        self.df.to_excel("debug.xlsx", index=False)
+        print(a)
 
 
 if __name__ == "__main__":
         run = EnrichmentAnalysis()
         run.main()
-
-
-def regression_apply(self, df, timepoints, name="score", weighted=False):
-    """
-    :py:meth:`pandas.DataFrame.apply` apply function for calculating
-    enrichment using linear regression. If *weighted* is ``True`` perform
-    weighted least squares; else perform ordinary least squares.
-
-    Weights for weighted least squares are included in *row*.
-
-    Returns a :py:class:`pandas.Series` containing regression coefficients,
-    residuals, and statistics.
-    """
-    # retrieve log ratios from the row
-    y = df[[name+'_{}'.format(t) for t in timepoints]]
-
-    # re-scale the x's to fall within [0, 1]
-    xvalues = [x / float(max(timepoints)) for x in timepoints]
-
-    # perform the fit
-    X = sm.add_constant(xvalues)  # fit intercept
-    if weighted:
-        W = df[['W_{}'.format(t) for t in timepoints]]
-        fit = sm.WLS(y, X, weights=W).fit()
-    else:
-        fit = sm.OLS(y, X).fit()
-
-    # re-format as a data frame row
-    values = np.concatenate([fit.params, [fit.bse['x1'], fit.tvalues['x1'],
-                                          fit.pvalues['x1']], fit.resid])
-    index = ['intercept', 'slope', 'SE_slope', 't', 'pvalue_raw'] + \
-            ['e_{}'.format(t) for t in timepoints]
-    return pd.Series(data=values, index=index)

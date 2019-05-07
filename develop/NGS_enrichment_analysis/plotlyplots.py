@@ -11,3 +11,4 @@ def barplot(df,cols,title):
     layout = go.Layout(title=title)
     fig = go.Figure(data=data, layout=layout)
     offline.plot(fig, filename="test.html",auto_open=False)
+
