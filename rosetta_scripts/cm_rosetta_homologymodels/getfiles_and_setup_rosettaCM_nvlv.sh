@@ -40,5 +40,5 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scr
 pth=$hhsearchdir/rosetta_cm
 for i in $(seq 1 100);
 do
-    qsub -v path=$pth,prefix=$i qsub.sh;
+    qsub -v path=$pth,prefix=$i\_$hhsearchdir qsub.sh;
 done
