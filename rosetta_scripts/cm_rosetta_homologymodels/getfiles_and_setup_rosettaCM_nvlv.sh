@@ -10,17 +10,24 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scr
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/cm_rosetta_homologymodels/get_top_n_sequence.py;
 mkdir rosetta_bin;
 cd rosetta_bin;
-aws s3 cp s3://enevolvcomputationalbiology/programs/partial_thread.static.linuxgccrelease.tgz .
-aws s3 cp s3://enevolvcomputationalbiology/programs/rosetta_scripts.static.linuxgccrelease.tgz .
+# test if files have already been copied
+if [! -f "partial_thread.static.linuxgccrelease" ]; then
+    aws s3 cp s3://enevolvcomputationalbiology/programs/partial_thread.static.linuxgccrelease.tgz .
+fi
+if [! -f "rosetta_scripts.static.linuxgccrelease" ]; then
+    aws s3 cp s3://enevolvcomputationalbiology/programs/rosetta_scripts.static.linuxgccrelease.tgz .
+fi
 for i in *tgz;
 do
     tar zxf $i;
     rm $i;
 done
 cd ../..;
-aws s3 cp s3://enevolvcomputationalbiology/programs/database.tgz .;
-tar zxf database.tgz;
-rm database.tgz;
+if [ ! -d "database" ]; then
+    aws s3 cp s3://enevolvcomputationalbiology/programs/database.tgz .;
+    tar zxf database.tgz;
+    rm database.tgz;
+fi
 #########################################
 cd $hhsearchdir;
 fasta=`find *fasta`;
