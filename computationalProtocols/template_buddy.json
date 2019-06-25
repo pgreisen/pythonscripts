@@ -1,0 +1,11 @@
+{
+  "Computational methods": [
+    "Phylogenetic analysis",
+    "Coevolution analysis",
+    "Structure guided analysis"
+  ],
+  "Project" : "ProjectName",
+  "Number of total substitutions" : 118,
+  "Date" : "2019-02-04"
+  "Scientist" : "pgreisen"
+}

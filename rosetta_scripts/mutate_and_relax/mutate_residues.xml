@@ -1,0 +1,44 @@
+<ROSETTASCRIPTS>
+
+  <TASKOPERATIONS>
+
+    <InitializeFromCommandline name="init"/>
+    <LimitAromaChi2 name="limchi2"/>
+    <RestrictToRepacking name="repack_only"/>
+    <DesignAround name="da" design_shell="8.0" resnums="%%resid_chains%%" repack_shell="6.0" allow_design="0"/>
+
+  </TASKOPERATIONS>
+
+ <SCOREFXNS>
+    <ScoreFunction name="hard_rep" weights="ref2015">
+
+    </ScoreFunction>
+ </SCOREFXNS>
+  <MOVERS>
+
+  <MutateResidue name="mr" target="%%resid_chains%%" new_res=x="%%resname%%"/>
+
+  # Minimization of complex - no design allowed
+  <TaskAwareMinMover name="min" bb="0" chi="1" jump="1" scorefxn="enzdes" task_operations="init"/>
+  # Packing of rotamers making sure no aromatic with chi2 of 90 degrees
+  <PackRotamersMover name="repack" task_operations="init,limchi2,repack_only,da"/>
+  
+  <ParsedProtocol name="min_repack_min">
+    <Add mover="min"/>
+    <Add mover="repack"/>
+    <Add mover="min"/>
+  </ParsedProtocol>
+
+  </MOVERS>
+
+  <PROTOCOLS>
+
+    # Insert mutations
+    <Add mover_name="mr"/>
+    <Add mover_name="min_repack_min"/>
+
+  </PROTOCOLS>
+
+</ROSETTASCRIPTS>
+
+        

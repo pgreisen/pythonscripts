@@ -4,12 +4,18 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts
 sh update_ec2_ubuntu_aws_no_python.sh;
 ######################################
 # next copy executables from S3 bucket
-aws s3 cp s3://enevolvcomputationalbiology/databases/hh-suite.tgz .
-tar zxf hh-suite.tgz;
-rm hh-suite.tgz;
-aws s3 cp s3://enevolvcomputationalbiology/databases/hhsearch_databases_2019.tgz .
-tar zxf hhsearch_databases_2019.tgz 
-rm hhsearch_databases_2019.tgz;
+
+# test if files have already been copied
+if [ ! -d "hh-suite" ]; then
+    aws s3 cp s3://enevolvcomputationalbiology/databases/hh-suite.tgz .;
+    tar zxf hh-suite.tgz;
+    rm hh-suite.tgz;
+fi
+if [ ! -d "hhsearch_databases" ]; then
+    aws s3 cp s3://enevolvcomputationalbiology/databases/hhsearch_databases_2019.tgz .
+    tar zxf hhsearch_databases_2019.tgz 
+    rm hhsearch_databases_2019.tgz;
+fi
 ######################################
 # unpack files
 cd hhsearch_databases;

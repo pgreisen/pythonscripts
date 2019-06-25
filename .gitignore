@@ -1,3 +1,14 @@
+*checkpoint*
+*FASTA
+*xyz
+*sdf
+*gz
+*xlsx
+*tsv
+*ps
+*png
+*.logfile
+*out
 *.html
 *.zip
 *.tgz
