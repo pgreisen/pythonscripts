@@ -1,5 +1,5 @@
 ###############################################
-hhsearchdir=$1;
+hhsearchdir=${1%.zip};
 aws s3 cp s3://tempfilescm/$hhsearchdir.zip . 
 unzip $hhsearchdir.zip;
 rm $hhsearchdir.zip;
