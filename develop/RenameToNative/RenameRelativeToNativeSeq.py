@@ -29,6 +29,7 @@ class DiffFasta:
         self.chain_lc = ""
         self.chain_hc = ""
         self.sciworm_format = {}
+        self.keep = 0
 
     def set_fasta_file(self,fastafile,container):
 
@@ -135,7 +136,7 @@ class DiffFasta:
         parser.add_argument("--hc", dest="chain_hc", help="Fasta format")
         parser.add_argument("--lc", dest="chain_lc", help="Fasta format")
 
-
+        parser.add_argument("--keep", dest="keep", help="Keep header from fasta file as part of name (Default: No)")
 
         args_dict = vars( parser.parse_args() )
         for item in args_dict:
@@ -151,6 +152,9 @@ class DiffFasta:
 
         for key in self.design_seq.keys():
             mutations = ""
+            # add key to prefix
+            if(self.keep != 0):
+                self.prefix = key+"_"
 
             if(len(self.design_seq[key]["HC"]) != 0 and len(self.design_seq[key]["LC"]) != 0 ):
                 hc_mutations = self.sequence_a_b(self.fasta_2, self.design_seq[key]["HC"])
@@ -167,10 +171,8 @@ class DiffFasta:
                 self.sciworm_format[new_key] = (self.design_seq[key]["HC"],"")
 
             elif( len(self.design_seq[key]["LC"]) != 0):
-
                 lc_mutations = self.sequence_a_b(self.fasta_1,self.design_seq[key]['LC'])
                 mutations = mutations+lc_mutations+"LC"+"_"+str(self.postfix)
-                # print "###########################CCCCCCCCCCCCCCCCCC################################", mutations
                 new_key = self.prefix+mutations # +"_"+key.split("_")[-1]+"_"+self.postfix
                 self.sciworm_format[new_key] = ("",self.design_seq[key]["LC"])
             else:
