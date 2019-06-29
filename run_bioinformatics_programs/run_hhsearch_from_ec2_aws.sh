@@ -32,7 +32,7 @@ fi
 ######################################
 ######################################
 # get fasta files to work on
-aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive
+aws s3 cp s3://tmpfilefasta . --include="*.zip" --recursive;
 ######################################
 export HHLIB=~/hh-suite;
 exe_hhsearch=~/hh-suite/build/bin/hhsearch;
