@@ -6,7 +6,7 @@ sh update_ec2_ubuntu_aws_no_python.sh;
 # next copy executables from S3 bucket
 # test if files have already been copied
 if [ ! -d "hh-suite" ]; then
-    aws s3 cp s3://proteindatabases//hh-suite.tgz .;
+    aws s3 cp s3://proteindatabases/hh-suite.tgz .;
     tar zxf hh-suite.tgz;
     rm hh-suite.tgz;
 fi
