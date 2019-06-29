@@ -34,11 +34,13 @@ fi
 # get fasta files to work on
 aws s3 cp s3://tmpfilefasta . --include="*.zip" --recursive;
 ######################################
-export HHLIB=~/hh-suite;
-exe_hhsearch=~/hh-suite/build/bin/hhsearch;
-exe_hhblist=~/hh-suite/build/bin/hhblits;
-database_seqs=~/hhsearch_databases/pfam/pfam;
-database_pdb=~/hhsearch_databases/pdb70/pdb70;
+pth=`pwd`
+
+export HHLIB=$pth/hh-suite;
+exe_hhsearch=$pth/hh-suite/build/bin/hhsearch;
+exe_hhblist=$pth/hh-suite/build/bin/hhblits;
+database_seqs=$pth/hhsearch_databases/pfam/pfam;
+database_pdb=$pth/hhsearch_databases/pdb70/pdb70;
 ####################
 # gather seequences from fasta file
 unzip *zip;
