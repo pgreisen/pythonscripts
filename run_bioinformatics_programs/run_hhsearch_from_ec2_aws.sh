@@ -40,7 +40,7 @@ exe_hhblist=~/hh-suite/build/bin/hhblits;
 database_seqs=~/hhsearch_databases/pfam/pfam;
 database_pdb=~/hhsearch_databases/pdb70/pdb70;
 ####################
-# gather seequences
+# gather seequences from fasta file
 unzip *zip;
 rm *zip;
 for i in *.fasta;
