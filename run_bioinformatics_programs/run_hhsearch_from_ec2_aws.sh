@@ -4,27 +4,32 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts
 sh update_ec2_ubuntu_aws_no_python.sh;
 ######################################
 # next copy executables from S3 bucket
-aws s3 cp s3://proteindatabases/hh-suite.tgz .
-tar zxf hh-suite.tgz;
-rm hh-suite.tgz;
-aws s3 cp s3://proteindatabases/hhsearch_databases_2019.tgz .
-tar zxf hhsearch_databases_2019.tgz 
-rm hhsearch_databases_2019.tgz;
+# test if files have already been copied
+if [ ! -d "hh-suite" ]; then
+    aws s3 cp s3://proteindatabases//hh-suite.tgz .;
+    tar zxf hh-suite.tgz;
+    rm hh-suite.tgz;
+fi
+if [ ! -d "hhsearch_databases" ]; then
+    aws s3 cp s3://proteindatabases/hhsearch_databases_2019.tgz .
+    tar zxf hhsearch_databases_2019.tgz 
+    rm hhsearch_databases_2019.tgz;
+    # unpack files
+    cd hhsearch_databases;
+    mkdir pfam;
+    mv pfamA_32.0.tar.gz pfam;
+    cd pfam;
+    tar zxf pfamA_32.0.tar.gz;
+    rm pfamA_32.0.tar.gz;
+    cd ..;
+    mkdir pdb70;
+    mv pdb70_from_mmcif_latest_2019.tar.gz pdb70/;
+    cd pdb70;
+    tar zxf pdb70_from_mmcif_latest_2019.tar.gz; 
+    rm pdb70_from_mmcif_latest_2019.tar.gz; 
+    cd ;
+fi
 ######################################
-# unpack files
-cd hhsearch_databases;
-mkdir pfam;
-mv pfamA_32.0.tar.gz pfam;
-cd pfam;
-tar zxf pfamA_32.0.tar.gz;
-rm pfamA_32.0.tar.gz;
-cd ..;
-mkdir pdb70;
-mv pdb70_from_mmcif_latest_2019.tar.gz pdb70/;
-cd pdb70;
-tar zxf pdb70_from_mmcif_latest_2019.tar.gz; 
-rm pdb70_from_mmcif_latest_2019.tar.gz; 
-cd ;
 ######################################
 # get fasta files to work on
 aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive
