@@ -1,0 +1,29 @@
+<ROSETTASCRIPTS>
+  <SCOREFXNS>
+
+    <ScoreFunction name="hard_rep" weights="ref2015_cst">
+
+    </ScoreFunction>
+
+
+  </SCOREFXNS>
+
+  <MOVERS>
+    <MinMover name="min" scorefxn="hard_rep" chi="1" bb="0" type="(dfpmin_armijo_nonmonotone" tolerance="0.01" max_iter="2000"/>
+    <AddOrRemoveMatchCsts name="cstadd" cst_instruction="add_new" cstfile="match.cst" keep_covalent="1"/> 
+
+  </MOVERS>
+
+  <FILTERS>
+    <EnzScore name="allcst" score_type="cstE" scorefxn="hard_rep" whole_pose="1" energy_cutoff="10"/> 
+  </FILTERS>
+
+  <PROTOCOLS>
+    <Add mover_name="cstadd"/>
+    <Add mover_name="min"/>
+    <Add mover_name="min"/>
+    <Add mover_name="allcst"/>
+
+  </PROTOCOLS>
+
+</ROSETTASCRIPTS>

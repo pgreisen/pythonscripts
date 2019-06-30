@@ -1,0 +1,5 @@
+-s 1.pdb
+-match:lig_name NGL
+-match:scaffold_active_site_residues pos.pos
+-match:geometric_constraint_file match.cst
+-extra_res_fa NGL.fa.params
