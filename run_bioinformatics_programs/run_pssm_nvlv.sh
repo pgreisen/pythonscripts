@@ -13,8 +13,9 @@ done
 # setup the database necessary for the run
 if [ ! -d "uniref90" ]; then
     aws s3 cp s3://enevolvcomputationalbiology/databases/uniref90files.zip .;
-    path=/home/ubuntu/ncbi-blast-2.7.1+/bin
-    database=/home/ubuntu/uniref90
+    pth=`pwd`;
+    path=$pth/ncbi-blast-2.7.1+/bin
+    database=$pth/uniref90
     unzip uniref90files.zip;
     rm uniref90files.zip;
 fi
