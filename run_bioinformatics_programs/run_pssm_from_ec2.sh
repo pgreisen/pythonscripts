@@ -5,9 +5,11 @@ sh update_ec2_ubuntu_aws_no_python.sh;
 ######################################
 # next copy executables from S3 bucket
 aws s3 cp s3://tmpfilefasta . --include="*.zip" --recursive;
-unzip *zip;
-rm *zip;
-
+for i in *zip;
+do
+    unzip $i;
+    rm $i;
+done
 
 if [ ! -d "uniref90" ]; then
     aws s3 cp s3://proteindatabases/uniref90files.zip .;
