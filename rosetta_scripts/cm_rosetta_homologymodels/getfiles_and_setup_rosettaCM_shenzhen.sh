@@ -1,8 +1,8 @@
 ###############################################
-hhsearchdir=homology; #${1%.zip};
-#aws s3 cp s3://tempfilescm/$hhsearchdir.zip . 
-#unzip $hhsearchdir.zip;
-#rm $hhsearchdir.zip;
+hhsearchdir=${1%.zip};
+aws s3 cp s3://tempfilescm/$hhsearchdir.zip . 
+unzip $hhsearchdir.zip;
+rm $hhsearchdir.zip;
 ###############################################
 mkdir bin;
 cd bin;
