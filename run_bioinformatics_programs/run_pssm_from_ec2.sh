@@ -7,15 +7,20 @@ sh update_ec2_ubuntu_aws_no_python.sh;
 aws s3 cp s3://tmpfilefasta . --include="*.zip" --recursive;
 unzip *zip;
 rm *zip;
-aws s3 cp s3://proteindatabases/uniref90files.zip .;
+
+
+if [ ! -d "uniref90" ]; then
+    aws s3 cp s3://proteindatabases/uniref90files.zip .;
+    unzip uniref90files.zip;
+    rm uniref90files.zip;
+fi
 ######################################
 # setup for pssm run
-path=~/ncbi-blast-2.7.1+/bin
-database=~/uniref90
+pth=`pwd`
+path=$pth/ncbi-blast-2.7.1+/bin;
+database=$pth/uniref90;
 ######################################
 # unzip file for pssm
-unzip uniref90files.zip;
-rm uniref90files.zip;
 for i in *.fasta;
 do
     dst=${i%.fasta}\_pssm;
