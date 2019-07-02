@@ -63,9 +63,10 @@ done
 # zip file must contain pdb files
 for i in *pdb;
 do
-    dst=${i%.pdb}
-    mv $i $dst;
+    dst=${i%.pdb};
+    mkdir $dst;
+    mv $i $dst/;
     cd $dst;
-    run_relax;
+    run_relax & echo "Running job with pdb $i";
     cd ..;
 done
