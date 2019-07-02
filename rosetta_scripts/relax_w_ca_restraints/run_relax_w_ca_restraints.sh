@@ -15,7 +15,7 @@ if [ ! -f "relax.static.linuxgccrelease" ]; then
 fi
 
 # copy files over
-aws s3 cp $pth_on_S3_pdbs/ . --include="*.zip" --recursive;
+aws s3 cp $pth_on_S3_pdbs . --include="*.zip" --recursive;
 
 for tmp in *zip;
 do
