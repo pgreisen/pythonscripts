@@ -2,14 +2,21 @@
 # Get rosetta executables and database
 pth_on_S3=s3://enevolvcomputationalbiology/programs;
 
-aws s3 cp $pth_on_S3/database.tgz .;
-aws s3 cp $pth_on_S3/relax.static.linuxgccrelease.tgz . ;
+if [ ! -d "database" ]; then
+    aws s3 cp $pth_on_S3/database.tgz .;
+    tar zxf database.tgz;
+    database=/home/ubuntu/database;
+fi
+
+if [ ! -f "relax.static.linuxgccrelease" ]; then
+    aws s3 cp $pth_on_S3/relax.static.linuxgccrelease.tgz . ;
+    tar zxf relax.static.linuxgccrelease.tgz;
+    exe=/home/ubuntu/relax.static.linuxgccrelease;
+fi
 
 i=1;
 ncycles=8;
 ddgcut=1.0;
-exe=/home/ubuntu/relax.static.linuxgccrelease;
-database=/home/ubuntu/database;
 # cd $PBS_O_WORKDIR;
 start=3;
 while [ $i -lt $ncycles ]
