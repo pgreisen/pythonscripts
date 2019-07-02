@@ -15,32 +15,31 @@ if [ ! -d "hhsearch_databases" ]; then
     aws s3 cp s3://enevolvcomputationalbiology/databases/hhsearch_databases_2019.tgz .
     tar zxf hhsearch_databases_2019.tgz 
     rm hhsearch_databases_2019.tgz;
+    ######################################
+    # unpack files
+    cd hhsearch_databases;
+    mkdir pfam;
+    mv pfamA_32.0.tar.gz pfam;
+    cd pfam;
+    tar zxf pfamA_32.0.tar.gz;
+    rm pfamA_32.0.tar.gz;
+    cd ..;
+    mkdir pdb70;
+    mv pdb70_from_mmcif_latest_2019.tar.gz pdb70/;
+    cd pdb70;
+    tar zxf pdb70_from_mmcif_latest_2019.tar.gz; 
+    rm pdb70_from_mmcif_latest_2019.tar.gz; 
+    cd ;
+    ######################################
+    export HHLIB=/home/ubuntu/hh-suite;
+    exe_hhsearch=/home/ubuntu/hh-suite/build/bin/hhsearch;
+    exe_hhblist=/home/ubuntu/hh-suite/build/bin/hhblits;
+    database_seqs=/home/ubuntu/hhsearch_databases/pfam/pfam;
+    database_pdb=/home/ubuntu/hhsearch_databases/pdb70/pdb70;
 fi
-######################################
-# unpack files
-cd hhsearch_databases;
-mkdir pfam;
-mv pfamA_32.0.tar.gz pfam;
-cd pfam;
-tar zxf pfamA_32.0.tar.gz;
-rm pfamA_32.0.tar.gz;
-cd ..;
-mkdir pdb70;
-mv pdb70_from_mmcif_latest_2019.tar.gz pdb70/;
-cd pdb70;
-tar zxf pdb70_from_mmcif_latest_2019.tar.gz; 
-rm pdb70_from_mmcif_latest_2019.tar.gz; 
-cd ;
 ######################################
 # get fasta files to work on
 aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive
-######################################
-export HHLIB=/home/ubuntu/hh-suite;
-exe_hhsearch=/home/ubuntu/hh-suite/build/bin/hhsearch;
-exe_hhblist=/home/ubuntu/hh-suite/build/bin/hhblits;
-database_seqs=/home/ubuntu/hhsearch_databases/pfam/pfam;
-database_pdb=/home/ubuntu/hhsearch_databases/pdb70/pdb70;
-####################
 # gather seequences
 unzip *zip;
 rm *zip;
