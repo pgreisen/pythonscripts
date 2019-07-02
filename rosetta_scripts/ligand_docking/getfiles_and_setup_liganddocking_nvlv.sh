@@ -16,9 +16,9 @@ if [ ! -f $name_exe ]; then
     tar zxf $name_exe.tgz;
     rm $name_exe.tgz;
     exe=$pth/$name_exe;
-    git clone https://github.com/pgreisen/pythonscripts/tree/master/rosetta_scripts/ligand_docking;
-    mv ligand_docking/* .;
-    rm -rf ligand_docking;
+    wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ligand_docking/dock.xml .;
+    wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ligand_docking/flags .;
+    wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ligand_docking/qsub.sh .;
 fi
 
 
@@ -47,4 +47,3 @@ do
     done
     echo "Done with $native";
 done
-    
