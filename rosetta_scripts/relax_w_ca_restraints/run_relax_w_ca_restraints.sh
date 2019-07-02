@@ -1,7 +1,7 @@
 #!/bin/bash -f
 # Get rosetta executables and database
 pth_on_S3=s3://enevolvcomputationalbiology/programs;
-
+pth_on_S3_pdbs=s3://temppdb/;
 if [ ! -d "database" ]; then
     aws s3 cp $pth_on_S3/database.tgz .;
     tar zxf database.tgz;
@@ -14,10 +14,20 @@ if [ ! -f "relax.static.linuxgccrelease" ]; then
     exe=/home/ubuntu/relax.static.linuxgccrelease;
 fi
 
+# copy files over
+aws s3 cp $pth_on_S3_pdbs/ . --include="*.zip" --recursive;
+
+for tmp in *zip;
+do
+    unzip $tmp;
+    rm $tmp;
+done
+
+
 i=1;
-ncycles=8;
+ncycles=10;
 ddgcut=1.0;
-# cd $PBS_O_WORKDIR;
+
 start=3;
 while [ $i -lt $ncycles ]
 do
