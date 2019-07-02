@@ -2,21 +2,23 @@
 # Get rosetta executables and database
 pth_on_S3=s3://enevolvcomputationalbiology/programs;
 pth_on_S3_pdbs=s3://temppdb/;
+pth=`pwd`
 if [ ! -d "database" ]; then
     aws s3 cp $pth_on_S3/database.tgz .;
     tar zxf database.tgz;
-    database=/home/ubuntu/database;
+    database=$pth/database;
 fi
 
 if [ ! -f "relax.static.linuxgccrelease" ]; then
     aws s3 cp $pth_on_S3/relax.static.linuxgccrelease.tgz . ;
     tar zxf relax.static.linuxgccrelease.tgz;
-    exe=/home/ubuntu/relax.static.linuxgccrelease;
+    exe=$pth/relax.static.linuxgccrelease;
+    wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/relax_w_ca_restraints/flags;
 fi
 
 # copy files over
 aws s3 cp $pth_on_S3_pdbs . --include="*.zip" --recursive;
-
+# generalize it
 for tmp in *zip;
 do
     unzip $tmp;
@@ -33,7 +35,7 @@ while [ $i -lt $ncycles ]
 do
     newpdb=`ls -t *pdb | head -1`;
     echo $newpdb;
-    $exe -relax:constrain_relax_to_start_coords -relax:coord_constrain_sidechains -relax:ramp_constraints false -s $newpdb -database $database > /dev/null;
+    $exe -relax:constrain_relax_to_start_coords -relax:coord_constrain_sidechains -relax:ramp_constraints false -s $newpdb @$pth/flags -database $database > /dev/null;
     initscore=$(awk 'NR == start' start=$start score.sc | awk '{print $2}');
     echo $initscore;
     if [ $i -gt 1 ]
