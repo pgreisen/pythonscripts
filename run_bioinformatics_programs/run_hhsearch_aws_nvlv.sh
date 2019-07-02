@@ -30,13 +30,15 @@ if [ ! -d "hhsearch_databases" ]; then
     tar zxf pdb70_from_mmcif_latest_2019.tar.gz; 
     rm pdb70_from_mmcif_latest_2019.tar.gz; 
     cd ;
-    ######################################
-    export HHLIB=/home/ubuntu/hh-suite;
-    exe_hhsearch=/home/ubuntu/hh-suite/build/bin/hhsearch;
-    exe_hhblist=/home/ubuntu/hh-suite/build/bin/hhblits;
-    database_seqs=/home/ubuntu/hhsearch_databases/pfam/pfam;
-    database_pdb=/home/ubuntu/hhsearch_databases/pdb70/pdb70;
 fi
+######################################
+pth=`pwd`;
+export HHLIB=$pth/hh-suite;
+exe_hhsearch=$pth/hh-suite/build/bin/hhsearch;
+exe_hhblist=$pth/hh-suite/build/bin/hhblits;
+database_seqs=$pth/hhsearch_databases/pfam/pfam;
+database_pdb=$pth/hhsearch_databases/pdb70/pdb70;
+
 ######################################
 # get fasta files to work on
 aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive
