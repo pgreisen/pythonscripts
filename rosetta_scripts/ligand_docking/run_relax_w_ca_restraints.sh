@@ -1,4 +1,5 @@
-number_of_trajectories=25;
+#!/bin/bash -f
+
 name_exe=rosetta_scripts.static.linuxgccrelease;
 # Get rosetta executables and database
 pth_on_S3=s3://enevolvcomputationalbiology/programs;
@@ -21,9 +22,7 @@ if [ ! -f $name_exe ]; then
     rm -rf ligand_docking;
 fi
 
-
-# assume file contains all necessary files for 
-# docking
+# copy files over
 aws s3 cp $pth_on_S3_pdbs . --include="*.zip" --recursive;
 # generalize it
 for tmp in *zip;
@@ -32,19 +31,13 @@ do
     rm $tmp;
 done
 
-parameters=`find *fa.params`;
-x=`sed -n '1p' start_from.txt`;
-y=`sed -n '2p' start_from.txt`;
-z=`sed -n '3p' start_from.txt`;
-pth=`pwd`;
-
-for pdb in *.pdb;
+# zip file must contain pdb files
+for i in *pdb;
 do
-    native=$pdb;
-    for i in $(seq 1 $number_of_trajectories);
-    do
-	qsub -v parameters="$pth/$parameters",prefix="$i",x="$x",y="$y",z="$z",native="$pth/$native" qsub.sh;
-    done
-    echo "Done with $native";
+    dst=${i%.pdb};
+    mkdir $dst;
+    mv $i $dst/;
+    cd $dst;
+    run_relax & echo "Running job with pdb $i";
+    cd ..;
 done
-    
