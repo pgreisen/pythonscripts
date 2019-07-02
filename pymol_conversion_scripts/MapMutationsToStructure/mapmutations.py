@@ -2,7 +2,15 @@ import sys
 '''
 Takes a text file with mutations and create a single object for each of them in pymol.
 
+A text file with mutations e.g.:
+
+A11F
+V115G
+
+and method defined as pssm or gremlin etc. 
+
 '''
+
 filename = sys.argv[1]
 method = sys.argv[2]
 
