@@ -42,11 +42,13 @@ if [ ! -d "database" ]; then
     aws s3 cp $pth_on_S3/database.tgz .;
     tar zxf database.tgz;
     database=$pth/database;
+    rm database.tgz;
 fi
 
 if [ ! -f "relax.static.linuxgccrelease" ]; then
     aws s3 cp $pth_on_S3/relax.static.linuxgccrelease.tgz . ;
     tar zxf relax.static.linuxgccrelease.tgz;
+    rm relax.static.linuxgccrelease.tgz;
     exe=$pth/relax.static.linuxgccrelease;
     wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/relax_w_ca_restraints/flags;
 fi
