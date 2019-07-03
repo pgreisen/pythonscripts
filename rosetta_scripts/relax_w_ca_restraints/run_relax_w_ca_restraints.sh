@@ -1,21 +1,4 @@
 #!/bin/bash -f
-
-update() {
-
-    sudo apt update -y
-    DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
-    sudo apt install -y build-essential
-    sudo apt-get install -y libsqlite3-dev
-    sudo apt install -y libgl1-mesa-dev
-    sudo apt  install -y awscli 
-    sudo apt install -y emacs
-    sudo apt install -y unzip
-    sudo apt install -y zip
-    sudo apt-get install -y zlib1g-dev 
-    sudo apt-get install -y scons 
-
-}
-
 run_relax() {
     i=1;
     ncycles=10;
@@ -51,7 +34,18 @@ done
 }
 
 # update machine to contain new libraries
-update()
+sudo apt update -y
+DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
+sudo apt install -y build-essential
+sudo apt-get install -y libsqlite3-dev
+sudo apt install -y libgl1-mesa-dev
+sudo apt  install -y awscli 
+sudo apt install -y emacs
+sudo apt install -y unzip
+sudo apt install -y zip
+sudo apt-get install -y zlib1g-dev 
+sudo apt-get install -y scons 
+
 
 # Get rosetta executables and database
 pth_on_S3=s3://enevolvcomputationalbiology/programs;
