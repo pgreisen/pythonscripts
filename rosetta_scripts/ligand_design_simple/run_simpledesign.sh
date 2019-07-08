@@ -35,6 +35,12 @@ fi
 # copy files over
 aws s3 cp $pth_on_S3_pdbs . --include="*.zip" --recursive;
 # generalize it
+for tmpzip in *zip;
+do
+    unzip $tmpzip;
+    rm $tmpzip;
+done
+
 
 # setup and run design
 nthreads=5;
