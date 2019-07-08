@@ -1,0 +1,55 @@
+<ROSETTASCRIPTS>
+
+  <SCOREFXNS>
+
+    <ScoreFunction name="ligand_soft_rep" weights="ligand_soft_rep">
+      <Reweight scoretype="fa_elec" weight="0.42"/>
+      <Reweight scoretype="hbond_bb_sc" weight="1.3"/>
+      <Reweight scoretype="hbond_sc" weight="1.3"/>
+      <Reweight scoretype="rama" weight="0.2"/>
+    </ScoreFunction>
+
+    <ScoreFunction name="hard_rep" weights="ref2015"/>
+
+  </SCOREFXNS>
+  
+    <TASKOPERATIONS>
+      <ProteinLigandInterfaceUpweighter name="ligup" interface_weight="2.0"/>
+      <DetectProteinLigandInterface name="shell" cut1="6.0" cut2="8.0" cut3="10.0" cut4="12.0" design="1"/>
+      <DetectProteinLigandInterface name="repackshell" cut1="6.0" cut2="8.0" cut3="10.0" cut4="12.0" design="0"/>
+      <LimitAromaChi2 name="limchi2"/>
+
+
+    </TASKOPERATIONS>
+    
+
+    <FILTERS>
+      <LigInterfaceEnergy name="LigIntFilt"  scorefxn="hard_rep" energy_cutoff="0.0"/>
+      <ShapeComplementarity name="sc" min_sc="0.5" jump="1"/>
+    </FILTERS>
+
+    
+    <MOVERS>
+      <Rotate name="InitialRot" chain="X" distribution="uniform" degrees="360" cycles="100"/>
+      <PredesignPerturbMover name="perturb" trans_magnitude="3.0" rot_magnitude="0.0" dock_trials="10"/>
+      <EnzRepackMinimize name="softdesign" scorefxn_repack="ligand_soft_rep" scorefxn_minimize="hard_rep" cst_opt="0" repack_only="0" design="1" fix_catalytic="0" minimize_rb="1" minimize_bb="1" minimize_sc="1" minimize_lig="1" min_in_stages="1" backrub="0" cycles="3" task_operations="shell,ligup,limchi2"/>
+      <EnzRepackMinimize name="harddesign" scorefxn_repack="hard_rep" scorefxn_minimize="hard_rep" cst_opt="0" repack_only="0" design="1" fix_catalytic="0" minimize_rb="1" minimize_bb="1" minimize_sc="1" minimize_lig="1" min_in_stages="1" backrub="0" cycles="1" task_operations="shell,ligup,limchi2"/>
+      <RotamerTrialsMinMover name="RTdesign" scorefxn="hard_rep" task_operations="shell,ligup,limchi2"/>
+      <RotamerTrialsMinMover name="polish" scorefxn="hard_rep" task_operations="repackshell,limchi2"/>
+    </MOVERS>
+    
+    <APPLY_TO_POSE>
+    </APPLY_TO_POSE>
+    
+    <PROTOCOLS>
+      <Add mover="InitialRot"/>
+      <Add mover="perturb"/>
+      <Add mover="softdesign"/>
+      <Add mover="harddesign"/>
+      <Add mover="RTdesign"/>
+      <Add mover="polish"/>
+      <Add filter_name="LigIntFilt"/>
+      <Add filter_name="sc"/>
+    </PROTOCOLS>
+
+</ROSETTASCRIPTS>
