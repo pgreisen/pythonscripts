@@ -27,6 +27,7 @@
     <FILTERS>
       <LigInterfaceEnergy name="LigIntFilt"  scorefxn="hard_rep" energy_cutoff="0.0"/>
       <ShapeComplementarity name="sc" min_sc="0.5" jump="1"/>
+      <DSasa name="dsasa" lower_threshold="0.8" upper_threshold="1.20"/>
     </FILTERS>
 
     
@@ -51,6 +52,8 @@
       <Add mover="polish"/>
       <Add filter_name="LigIntFilt"/>
       <Add filter_name="sc"/>
+      <Add filter_name="dsasa"/>
+
     </PROTOCOLS>
 
 </ROSETTASCRIPTS>
