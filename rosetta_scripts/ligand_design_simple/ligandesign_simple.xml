@@ -26,6 +26,8 @@
     <FILTERS>
       <LigInterfaceEnergy name="LigIntFilt"  scorefxn="hard_rep" energy_cutoff="0.0"/>
       <ShapeComplementarity name="sc" min_sc="0.5" jump="1"/>
+      <DSasa name="dsasa" lower_threshold="0.8" upper_threshold="1.20"/>
+
     </FILTERS>
 
     
@@ -36,12 +38,16 @@
       <EnzRepackMinimize name="harddesign" scorefxn_repack="hard_rep" scorefxn_minimize="hard_rep" cst_opt="0" repack_only="0" design="1" fix_catalytic="0" minimize_rb="1" minimize_bb="1" minimize_sc="1" minimize_lig="1" min_in_stages="1" backrub="0" cycles="1" task_operations="shell,ligup,limchi2"/>
       <RotamerTrialsMinMover name="RTdesign" scorefxn="hard_rep" task_operations="shell,ligup,limchi2"/>
       <RotamerTrialsMinMover name="polish" scorefxn="hard_rep" task_operations="repackshell,limchi2"/>
+
+      <FavorNativeResidue bonus="1.5" name="fnr"/>
+
     </MOVERS>
     
     <APPLY_TO_POSE>
     </APPLY_TO_POSE>
     
     <PROTOCOLS>
+      <Add mover="fnr"/>
       <Add mover="InitialRot"/>
       <Add mover="perturb"/>
       <Add mover="softdesign"/>
@@ -50,6 +56,8 @@
       <Add mover="polish"/>
       <Add filter_name="LigIntFilt"/>
       <Add filter_name="sc"/>
+      <Add filter_name="dsasa"/>
+
     </PROTOCOLS>
 
 </ROSETTASCRIPTS>
