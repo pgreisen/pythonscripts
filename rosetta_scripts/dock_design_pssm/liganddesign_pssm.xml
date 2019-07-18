@@ -19,7 +19,7 @@
       <DetectProteinLigandInterface name="repackshell" cut1="6.0" cut2="8.0" cut3="10.0" cut4="12.0" design="0"/>
       <LimitAromaChi2 name="limchi2"/>
 
-      <SeqprofConsensus name="soc" filename="/home/ubuntu/LigandPSSM_v3/designfiles/ascii_mtx_file" min_aa_probability="1.0" probability_larger_than_current="1" ignore_pose_profile_length_mismatch="1"/>
+      <SeqprofConsensus name="soc" filename="ascii_mtx_file" min_aa_probability="1.0" probability_larger_than_current="1" ignore_pose_profile_length_mismatch="1"/>
 
     </TASKOPERATIONS>
     
