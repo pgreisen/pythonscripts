@@ -7,3 +7,5 @@
 -no_optH false
 -flip_HNQ
 -no_his_his_pairE
+-minimize_ligand 1
+-minimize_ligand_torsions 10

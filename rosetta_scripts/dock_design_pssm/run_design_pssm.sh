@@ -58,6 +58,6 @@ for i in *.pdb;
 do
     for j in $(seq 1 $nthreads);
     do
-	nice ~/rosetta_scripts.static.linuxgccrelease -database $rosetta_db -extra_res_fa $params -parser:protocol $pth/liganddesign_pssm.xml -in:file:s $i -in:file:native $i -nstruct $nstrct -out:file:scorefile liganddesign_pssm.sc -packing:ex1 -packing:ex2 -out:prefix $j\_pssm @$pth/flags
+	nice ~/rosetta_scripts.static.linuxgccrelease -database $rosetta_db -extra_res_fa $params -parser:protocol $pth/liganddesign_pssm.xml -in:file:s $i -in:file:native $i -nstruct $nstrct -out:file:scorefile liganddesign_pssm.sc -packing:ex1 -packing:ex2 -out:prefix $j\_pssm @$pth/flags > /dev/null & echo "Done"
     done
 done   
