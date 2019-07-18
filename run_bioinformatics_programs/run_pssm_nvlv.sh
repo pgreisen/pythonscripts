@@ -17,7 +17,6 @@ database=$pth/uniref90
 
 if [ ! -d "uniref90" ]; then
     aws s3 cp s3://enevolvcomputationalbiology/databases/uniref90files.zip .;
-
     unzip uniref90files.zip;
     rm uniref90files.zip;
 fi
