@@ -28,9 +28,11 @@ if [ ! -f "rosetta_scripts.static.linuxgccrelease" ]; then
     tar zxf $ros.tgz;
     rm $ros.tgz;
     exe=$pth/$ros;
-    wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/dock_design_pssm/flags;
-    wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/dock_design_pssm/ligandesign_pssm.xml;
+
 fi
+
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/dock_design_pssm/flags;
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/dock_design_pssm/liganddesign_pssm.xml;
 
 # copy files over
 aws s3 cp $pth_on_S3_pdbs . --include="*.zip" --recursive;
