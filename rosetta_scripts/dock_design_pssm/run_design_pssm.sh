@@ -46,7 +46,7 @@ rosetta_db=$pth/database;
 # run protein-ligand design
 # setup and run design
 nthreads=5;
-nstruct=20;
+nstrct=20;
 for k in *.fa.params;
 do
     params=$k;
