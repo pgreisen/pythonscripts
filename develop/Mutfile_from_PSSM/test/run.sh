@@ -1,0 +1,1 @@
+python ../gen_mutfile_per_from_pssm.py muts.txt

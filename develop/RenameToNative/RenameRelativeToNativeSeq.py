@@ -14,6 +14,7 @@ class DiffFasta:
 
 
     def __init__(self):
+        self.format = False
         self.fastafile1 = ""
         self.fastafile2 = ""
         self.all_designs = ""
@@ -24,7 +25,7 @@ class DiffFasta:
         self.key_a = ""
         self.key_b = ""
         self.design_seq = {}
-        self.prefix = "0365-0001-1767_"
+        self.prefix = "0365-_"
         self.postfix = ""
         self.chain_lc = ""
         self.chain_hc = ""
@@ -51,16 +52,16 @@ class DiffFasta:
         i = 1
         # print "A is ", a
         for key in a:
-            print(key)
+            #print(key)
             self.key_a = key
             seq_a = a[key]
             seqlengthA = len(a[key])
 
         seq_b = b
         seqlengthB = len(b)
-        print("B is: ", b)
+        #print("B is: ", b)
         # print key
-        print(seqlengthA, seqlengthB, a, b)
+        #print(seqlengthA, seqlengthB, a, b)
 
         assert seqlengthA == seqlengthB
 
@@ -101,25 +102,35 @@ class DiffFasta:
         return diff_dummy
 
     def set_designs(self,datafile,sequences):
-
-    	with open(datafile,'r') as f:
-    	    for line in f:
+        dummy_index = 0
+        with open(datafile,'r') as f:
+            for line in f:
                 if(line[0] == ">"):
                     # 2016-12-07 change such that it goes for group id
-                    tmp = line.strip().split("_")
-                    ids = line[1:].strip()
-                    if(ids not in sequences.keys()):
-                        sequences[ids] = {}
-                        sequences[ids]["LC"] = ""
-                        sequences[ids]["HC"] = ""
+                    #tmp = line.strip().split("_")
+                    #ids = line[1:].strip()
+                    ids = "tmp_id_"+str(dummy_index)
+                    if(self.format == True):
+                        if(ids not in sequences.keys()):
+                            sequences[ids] = {}
+                            # is this an mAb
+                            if(self.format == True):
+                                sequences[ids]["LC"] = ""
+                                sequences[ids]["HC"] = ""
+                    else:
+                        sequences[ids] = ""
+                    dummy_index += 1
                 else:
                     tmp = line.strip()
-                    if (self.chain_lc == "LC"):
-                        sequences[ids]["LC"] = sequences[ids]["LC"] + tmp
-                    elif (self.chain_hc == "HC"):
-                        sequences[ids]["HC"] = sequences[ids]["HC"] + tmp
+                    if(self.format == True):
+                        if (self.chain_lc == "LC"):
+                            sequences[ids]["LC"] = sequences[ids]["LC"] + tmp
+                        elif (self.chain_hc == "HC"):
+                            sequences[ids]["HC"] = sequences[ids]["HC"] + tmp
+                        else:
+                            print("Debug code or no chain was set for this run")
                     else:
-                        print("Debug code or no chain was set for this run")
+                        sequences[ids] += tmp
 
     def main(self):
         parser = argparse.ArgumentParser(description=" ")
@@ -131,6 +142,9 @@ class DiffFasta:
 
         # parse file with sequences
         parser.add_argument("-a", "--all", dest="all_designs", help="Fasta format")
+
+        # renaming is mAb
+        parser.add_argument("--format", dest="format",default=False, help="Which type of format is used")
 
         # LC/HC
         parser.add_argument("--hc", dest="chain_hc", help="Fasta format")
@@ -155,38 +169,53 @@ class DiffFasta:
             # add key to prefix
             if(self.keep != 0):
                 self.prefix = key+"_"
+            if(self.format == True):
+                if(len(self.design_seq[key]["HC"]) != 0 and len(self.design_seq[key]["LC"]) != 0 ):
+                    hc_mutations = self.sequence_a_b(self.fasta_2, self.design_seq[key]["HC"])
+                    mutations = hc_mutations+"HC_"
+                    lc_mutations = self.sequence_a_b(self.fasta_1,self.design_seq[key]['LC'])
+                    mutations = mutations+lc_mutations+"LC"+"_"+str(self.postfix)
+                    new_key = self.prefix+mutations+"_"+key.split("_")[-1]+"_"+self.postfix
+                    self.sciworm_format[new_key] = (self.design_seq[key]["HC"],self.design_seq[key]["LC"])
 
-            if(len(self.design_seq[key]["HC"]) != 0 and len(self.design_seq[key]["LC"]) != 0 ):
-                hc_mutations = self.sequence_a_b(self.fasta_2, self.design_seq[key]["HC"])
-                mutations = hc_mutations+"HC_"
-                lc_mutations = self.sequence_a_b(self.fasta_1,self.design_seq[key]['LC'])
-                mutations = mutations+lc_mutations+"LC"+"_"+str(self.postfix)
-                new_key = self.prefix+mutations+"_"+key.split("_")[-1]+"_"+self.postfix
-                self.sciworm_format[new_key] = (self.design_seq[key]["HC"],self.design_seq[key]["LC"])
+                elif(len(self.design_seq[key]["HC"]) != 0):
+                    hc_mutations = self.sequence_a_b(self.fasta_2, self.design_seq[key]["HC"])
+                    mutations = hc_mutations+"HC"+"_"+str(self.postfix)
+                    new_key = self.prefix+mutations # +"_"+key.split("_")[-1]+"_"+self.postfix
+                    self.sciworm_format[new_key] = (self.design_seq[key]["HC"],"")
 
-            elif(len(self.design_seq[key]["HC"]) != 0):
-                hc_mutations = self.sequence_a_b(self.fasta_2, self.design_seq[key]["HC"])
-                mutations = hc_mutations+"HC"+"_"+str(self.postfix)
-                new_key = self.prefix+mutations # +"_"+key.split("_")[-1]+"_"+self.postfix
-                self.sciworm_format[new_key] = (self.design_seq[key]["HC"],"")
+                elif( len(self.design_seq[key]["LC"]) != 0):
+                    lc_mutations = self.sequence_a_b(self.fasta_1,self.design_seq[key]['LC'])
+                    mutations = mutations+lc_mutations+"LC"+"_"+str(self.postfix)
+                    new_key = self.prefix+mutations # +"_"+key.split("_")[-1]+"_"+self.postfix
+                    self.sciworm_format[new_key] = ("",self.design_seq[key]["LC"])
+                else:
+                    print("Nothing to do!!!!!!")
+                    continue
 
-            elif( len(self.design_seq[key]["LC"]) != 0):
-                lc_mutations = self.sequence_a_b(self.fasta_1,self.design_seq[key]['LC'])
-                mutations = mutations+lc_mutations+"LC"+"_"+str(self.postfix)
-                new_key = self.prefix+mutations # +"_"+key.split("_")[-1]+"_"+self.postfix
-                self.sciworm_format[new_key] = ("",self.design_seq[key]["LC"])
             else:
-                print("Nothing to do!!!!!!")
-                continue
+                hc_mutations = self.sequence_a_b(self.fasta_1, self.design_seq[key])
+                mutations = hc_mutations
+                new_key = mutations
+                self.sciworm_format[new_key[:-1]] = (self.design_seq[key])
 
         with open("sciworm.fasta",'w') as f:
             for key in self.sciworm_format.keys():
-                if( self.sciworm_format[key][0] != ""):
-                    f.write(">"+key+"\n" )
-                    f.write(self.sciworm_format[key][0]+"\n" )
-                if( self.sciworm_format[key][1] != ""):
-                    f.write(">"+key +"\n" )
-                    f.write(self.sciworm_format[key][1]+"\n" )
+
+                if(self.format == True):
+
+                    if (self.sciworm_format[key][0] != ""):
+                        f.write(">" + key + "\n")
+                        f.write(self.sciworm_format[key][0] + "\n")
+
+                    if( self.sciworm_format[key][1] != ""):
+                        f.write(">"+key +"\n" )
+                        f.write(self.sciworm_format[key][1]+"\n" )
+                else:
+                    if (self.sciworm_format[key] != ""):
+                        f.write(">" + key + "\n")
+                        f.write(self.sciworm_format[key] + "\n")
+
 
 if __name__ == "__main__":
    run = DiffFasta()
