@@ -30,9 +30,10 @@ wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scr
 
 for pdb in *.pdb;
 do
-    ln -s $pdb 1.pdb;
-    echo $pdb;
+    tmppdb=$pdb;
 done
+ln -s $tmppdb 1.pdb;
+echo $tmppdb;
 initpdb=1.pdb;
 mindir=min_cart;
 mkdir $mindir;
