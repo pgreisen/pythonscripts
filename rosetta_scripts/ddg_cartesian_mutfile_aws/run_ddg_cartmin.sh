@@ -28,15 +28,15 @@ done
 ####################
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ddg_cartesian_mutfile_aws/qsub_run_ddg.sh
 
+for pdb in *.pdb;
+do
+    ln -s $pdb 1.pdb;
+done
 ####################
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/develop/GenerateMutfile/GenerateMutationfileDdg.py
 # execute and generate mutfile
 python GenerateMutationfileDdg.py -p 1.pdb
 ####################
-for pdb in *.pdb;
-do
-    ln -s $pdb 1.pdb;
-done
 initpdb=1.pdb;
 mindir=min_cart;
 mkdir $mindir;
