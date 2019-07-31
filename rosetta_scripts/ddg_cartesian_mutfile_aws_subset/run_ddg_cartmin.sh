@@ -32,7 +32,7 @@ for pdb in *.pdb;
 do
     tmppdb=$pdb;
 done
-ln -s $tmppdb 1.pdb;
+cp $tmppdb 1.pdb;
 echo $tmppdb;
 initpdb=1.pdb;
 mindir=min_cart;
