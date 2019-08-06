@@ -60,19 +60,30 @@ class ClusterPDBs():
 
         # Generate processes equal to the number of cores
         pool = multiprocessing.Pool()
-        pool = multiprocessing.Pool()
         # Distribute the parameter sets evenly across the cores
         res = pool.map(self.global_alignment, paramlist)
 
         for tmp in res:
             scores[tmp[-2]][tmp[-1]] = tmp[2]
 
+        from sklearn.metrics import pairwise_distances_argmin_min
         kmeans = cluster.KMeans(self.clusters)
+
         results = kmeans.fit(scores)
+        closest, _ = pairwise_distances_argmin_min(results.cluster_centers_, scores)
+        centroids = results.cluster_centers_
+
         labels = results.labels_
         clusters = [[] for i in range(self.clusters)]
         for i in range(0, nm_seqs):
             clusters[labels[i]].append(self.records[i])
+
+        with open("cluster_centers.fasta",'w') as f:
+            for i in range(len(closest)):
+                seq_ = str(self.records[closest[i]].seq)
+                name_ = self.records[closest[i]].name+"_cluster_"+str(i)
+                f.write(">"+name_+"\n")
+                f.write(seq_+"\n")
 
         for i in range(0, len(clusters)):
             output_handle = open("c." + str(i) + ".fasta", "w")

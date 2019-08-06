@@ -3,6 +3,7 @@ from optparse import OptionParser
 from math import sqrt
 from numpy import *
 import os,shutil
+import argparse
 
 '''
 Fix_pdbfile get chain A as well as hetatms connected to chain A.
@@ -36,19 +37,17 @@ class MetalSiteGeometry:
         self.DISTANCEMETAL = 2.9
         # Distance between metal and hetero atom
         self.DISTANCEHET = 2.7
-
         self.metal_coor = {}
-
         self.METAL = "ZN"
-
         self.coor_residues = ['THR','SER','LYS','ARG','ASN','HIS','GLN','TYR','ASP','GLU','CYS','MET','KCX']
         self.coor_atms = ['NE','NH2','NH1','NZ','OG','OG1','ND1','ND2', 'NE2','OE1', 'OE2','OD1','OD2','OH','SD','SG','O1','O2']
         self.protein_ligating_atoms = ['NE','NH2','NH1','NZ','OG','OG1','ND1','ND2', 'NE2','OE1', 'OE2','OD1','OD2','OH','SD','SG','O','O1','O2']
-
         self.coordination_sites_protein = {}
-
         self.chain = ""
-
+        self.pdbfile = ""
+        # LIGAND NAMES - three residues for the cst file
+        self.ligandnames = ""
+        self.ligandresname = ""
         self.metal_coordination = {}
 
 
@@ -59,7 +58,6 @@ class MetalSiteGeometry:
                 for key2 in self.metal_coordination[key]:
                     if(len(self.metal_coordination[key][key2]) == 3):
                         f.write(str(key)+","+str(key2)+","+self.metal_coordination[key][key2][0]+","+self.metal_coordination[key][key2][1]+","+self.metal_coordination[key][key2][2]+"\n")
-
                     else:
                         f.write(str(key)+","+str(key2)+","+self.metal_coordination[key][key2][0]+"\n")
 
@@ -68,9 +66,9 @@ class MetalSiteGeometry:
     # Requires PDB files
     # Returns list with lines in file
     # and sets the metal ions for later geometry determination
-    def get_pdbfile(self,pdbfile):
+    def get_pdbfile(self):
         pdb = []
-        with open(pdbfile) as f:
+        with open(self.pdbfile,'r') as f:
             for line in f:
                 if(line[0:4] == "ATOM"):
                     pdb.append( line )
@@ -79,11 +77,9 @@ class MetalSiteGeometry:
                     het_id = line[13:14]
                     if atom_name == self.METAL:
                         # key is the residue name with the chain and residue number information
-                        self.metal_coor[line[18:26]] = array([float(line[31:39]),float(line[39:47]),float(line[47:55])])
-                        self.coordination_sites_protein[line[18:26]] = {}
-                        self.metal_coordination[line[18:26]] = {}
-
-
+                        self.metal_coor[line[17:26]] = array([float(line[31:39]),float(line[39:47]),float(line[47:55])])
+                        self.coordination_sites_protein[line[17:26]] = {}
+                        self.metal_coordination[line[17:26]] = {}
                     pdb.append(line)
         return pdb
 
@@ -211,13 +207,10 @@ class MetalSiteGeometry:
         return atms[resn]
 
 
-
-
-
     # Get residue from pdb
     # returns dictionary with vector necessary for
     # generating constraints.
-    def get_residue_constraint_pdb(self,PDB,resid, resn):
+    def get_residue_constraint_pdb(self,PDB,resid, resn,chain):
         residue = {}
         # list of atoms of the protein
         try:
@@ -230,7 +223,7 @@ class MetalSiteGeometry:
                     if res == resn[0:3]:
                         if resnr == resid:
                             atom = line[13:16].rstrip()
-                            if atom in atoms:
+                            if atom in atoms and line[21:22].strip() == chain:
                                 vec = array([float(line[31:39]),float(line[39:47]),float(line[47:55])])
                                 residue[atom] = vec
             return residue,atoms
@@ -241,15 +234,12 @@ class MetalSiteGeometry:
     # Returns dictionary with ligands < DISTANCE from metal ion
     def get_protein_ligand_metal(self, PDB ):
 
-
         # loop over metal sites
-        for metal_site in self.coordination_sites_protein:
-
+        for metal_site in self.coordination_sites_protein.keys():
             TRUE = 0
             # Distance between ligands and metal ions
             mt_lig = []
-            #active_site = {}
-
+            # coordinates of metal site
             metal_vec = self.metal_coor[metal_site]
 
             for line in PDB:
@@ -258,39 +248,34 @@ class MetalSiteGeometry:
                 atm = line[0:4]
 
                 if res in self.coor_residues and atm =='ATOM':
-
+                    # Atom name of residue
                     atom = line[13:16].rstrip()
-
                     if atom in self.protein_ligating_atoms:
-
                         vec = array([float(line[31:39]),float(line[39:47]),float(line[47:55])])
-
                         ds_lig = linalg.norm(vec-metal_vec)
-
                         if ds_lig < self.DISTANCEMETAL:
                             # assign value for ASP/GLU etc
-
                             if atom == 'OE2' and res == 'GLU':
                                 res = 'GLU2'
                             elif atom == 'OD2' and res == 'ASP':
                                 res = 'ASP2'
                             elif atom == 'ND1' and res == 'HIS':
                                 res = 'HIS2'
-
-                            iid = res+'  '+line[22:26]
+                            iid = res+' '+line[21:22]+' '+line[22:26]
                             mt_lig.append(iid)
                             self.coordination_sites_protein[metal_site][iid] = vec
-                            chain = line[21:22]
+
 
                 elif atm == 'HETA':
                     vec = array([float(line[31:39]),float(line[39:47]),float(line[47:55])])
                     ds_lig = linalg.norm(vec-metal_vec)
-
                     if ds_lig < self.DISTANCEMETAL and ds_lig > 0.001 :
                         iid = res+'  '+line[22:26]
                         mt_lig.append(iid)
                         self.coordination_sites_protein[metal_site][iid] = vec
-                        # chain = line[21:22]
+                    else:
+                        continue
+                        print("Distance greater than cutoff:", ds_lig)
 
     # Map of amino acids necessary for
     # Rosetta internal naming
@@ -347,15 +332,15 @@ class MetalSiteGeometry:
     # Write constraint file with torsion A set to default value
     # Requires atom names, residue names, distance etc, ligand names
     # Returns string with parameters in Rosetta format
-    def write_constraint_file(self,resn,resi,atom,phosphate_atom,disAB,angA,angB,torAB,torB,LIGANDNAMES,LIGANDRESNAME):
+    def write_constraint_file(self,resn,resi,atom,chain,disAB, angB, torB, het_name_, chain_, residue_nr_,LIGANDRESNAME):
         atm_type     = self.get_list_of_atom_names( atom  )
         residue_type = self.get_single_residue(resn)
 
         const = '''
 
-        # '''+str(self.METAL)+''' - '''+str(resn)+' '+str(resi)+'\n'+'''
+        # '''+het_name_+" "+chain_+" "+residue_nr_+''' - '''+str(resn)+' '+' '+chain+' '+str(resi)+'\n'+'''
         CST::BEGIN
-        TEMPLATE::   ATOM_MAP: 1 atom_name:  '''+LIGANDNAMES+'''
+        TEMPLATE::   ATOM_MAP: 1 atom_name:  '''+self.ligandnames+'''
         TEMPLATE::   ATOM_MAP: 1 residue3:  '''+LIGANDRESNAME+'''
 
         TEMPLATE::   ATOM_MAP: 2 atom_name: '''+str(atm_type)+''' ,
@@ -373,25 +358,20 @@ class MetalSiteGeometry:
 
     # Computes geometry
     # Return gemetrical values
-    def get_geometry(self,atoms,aminos,metal_site):
+    def get_geometry(self,atoms, aminos, metal_site):
 
         if( len(atoms) == 3 ):
             l_a = atoms[0]
             l_s =atoms[1]
             l_t = atoms[2]
-            dis =  '%.2f' %(linalg.norm( self.metal_coor[metal_site]  - aminos[l_a]))
-            angA = 0 # '%.2f' %(self.get_calc_angle(metal_site[1],metal_site[0],aminos[l_a]))
-            angB = '%.2f' %(self.get_calc_angle( self.metal_coor[ metal_site ] ,aminos[l_a],aminos[l_s]))
-            torAB = 0 # '%.2f' %(self.get_dihedral_angle(metal_site[1],metal_site[0],aminos[l_a],aminos[l_s]))
-            torB  = '%.2f' %(self.get_dihedral_angle( self.metal_coor[ metal_site ] ,aminos[l_a],aminos[l_s],aminos[l_t]))
-            return dis,angA,angB,torAB,torB
+            dis = '%.2f' %(linalg.norm(self.metal_coor[metal_site] - aminos[l_a]))
+            angB = '%.2f' %(self.get_calc_angle(self.metal_coor[metal_site], aminos[l_a], aminos[l_s]))
+            torB = '%.2f' %(self.get_dihedral_angle(self.metal_coor[metal_site], aminos[l_a], aminos[l_s], aminos[l_t]))
+
+            return dis, angB, torB
         else:
             dis =  '%.2f' %(linalg.norm( self.metal_coor[metal_site] - self.coordination_sites_protein[metal_site][aminos]  ))
             return dis
-
-
-
-
 
     # Requires PDB
     # Returns chain of first pdb
@@ -405,114 +385,103 @@ class MetalSiteGeometry:
 
     # Requires residue name, type, number and chain
     # Returns string with constraint remarks
-    def set_remarks_pdb(self,resn,resid,number,chain):
-        strng = 'REMARK   0 BONE TEMPLATE X ZN     0 MATCH MOTIF '+chain+' '+str(resn)+'    '+str(resid)+'   '+str(number)+'\n'
+    def set_remarks_pdb(self,resn,resid,number,chain,metal_chain,metalname ):
+        strng = 'REMARK   0 BONE TEMPLATE '+metal_chain+' '+metalname+'     0 MATCH MOTIF '+chain+' '+str(resn)+'    '+str(resid)+'   '+str(number)+'\n'
         return strng
 
     # Get geometrical constraint, write to file with them
     # Return remarks necessary for Rosetta PDB file
-    def get_rosetta_constraint_files(self, PDB, PDBNAME, METAL, LIGANDNAMES, LIGANDRESNAME):
+    def get_rosetta_constraint_files(self, PDB):
         remark = []
         dummy = 1
-
-        self.chain = self.get_chain(PDB)
-
-        rosetta_cst = open('constraint.cst','w')
-
+        rosetta_cst = []
         # get the primary interactions
         self.get_protein_ligand_metal( PDB )
 
-        for metal_site in self.coordination_sites_protein:
+        for metal_site in self.coordination_sites_protein.keys():
             for ligand in self.coordination_sites_protein[metal_site]:
-
-                # print "Here we go",self.coordination_sites_protein[metal_site][ligand], ligand
-
+                het_name_, chain_, residue_nr_ = metal_site.split()
                 tm = ligand.split()
                 resn =tm[0].rstrip()
-                resid =tm[1].rstrip()
-
-                aminos,atoms = self.get_residue_constraint_pdb(PDB,resid, resn)
+                chain =tm[1].strip()
+                resid =tm[2].rstrip()
+                # there is no chain ID here
+                aminos,atoms = self.get_residue_constraint_pdb(PDB,resid, resn,chain)
 
                 # Define what the different values mean
                 # Fix torsion
                 if( len(atoms) == 3):
-                    a,b,c,d,e = self.get_geometry(atoms,aminos, metal_site )
-
+                    # returns what??
+                    dis, angB, torB  = self.get_geometry(atoms, aminos, metal_site )
                     tmp_key = ligand+"_"+atoms[0]+"_"+atoms[1]+"_"+atoms[2]
-
                     self.metal_coordination[metal_site][tmp_key] = []
-                    self.metal_coordination[metal_site][tmp_key].append(a)
-                    self.metal_coordination[metal_site][tmp_key].append(c)
-                    self.metal_coordination[metal_site][tmp_key].append(e)
+                    self.metal_coordination[metal_site][tmp_key].append(dis)
+                    self.metal_coordination[metal_site][tmp_key].append(angB)
+                    self.metal_coordination[metal_site][tmp_key].append(torB)
 
 
-                    # Adding modification
-                    tmp_constraint = self.write_constraint_file(resn,resid,atoms[0],METAL,a,b,c,d,e,LIGANDNAMES,LIGANDRESNAME)
-                    rosetta_cst.write(tmp_constraint)
-                    # Is this necessary still?
-                    if resn == 'ARG2' or resn == 'ARG3':
-                        resn = 'ARG'
-                    elif resn == 'HIS2':
-                        resn = 'HIS'
+                    # reset metal site
+                    LIGANDRESNAME = metal_site.split()[0]
 
-                    remark.append(self.set_remarks_pdb(resn,resid,dummy, self.chain))
-                    dummy = dummy +1
+                    # ToDo Add chain information in constraints and in remark
+                    if( float(dis) <= self.DISTANCEMETAL):
+                        # Adding modification
+                        tmp_constraint = self.write_constraint_file( resn,resid,atoms[0],chain,dis,angB,torB,het_name_, chain_, residue_nr_,LIGANDRESNAME )
+                        rosetta_cst.append(tmp_constraint) # write(tmp_constraint)
 
+                        # Is this necessary still?
+                        if resn == 'ARG2' or resn == 'ARG3':
+                            resn = 'ARG'
+
+                        elif resn == 'HIS2':
+                            resn = 'HIS'
+
+                        remark.append(self.set_remarks_pdb(resn,resid, dummy,chain,chain_, het_name_))
+                        dummy = dummy +1
                 else:
                     dis = self.get_geometry(atoms,ligand, metal_site)
-
                     self.metal_coordination[metal_site][ligand] = []
-
                     self.metal_coordination[metal_site][ligand].append(dis)
 
-
-        return remark
-                                
-
+        return remark,rosetta_cst
 
     def main(self):
-        parser = OptionParser()
-        parser.add_option('-f',dest='PDB',
-                      help='PDB file with metal ion present default=ZN')
-        parser.add_option('-m',dest='METAL',default='ZN',
+
+        parser = argparse.ArgumentParser(description="Generate restraints around metal site (Default: zinc ion")
+
+        parser.add_argument('-m',dest='METAL',default='ZN',
                       help='Metal ion to get constraints for')
-        parser.add_option('-n',dest='PDBNAME',default='cst.pdb',
+        parser.add_argument('-f',dest='pdbfile',
                       help='Name for output pdb file as input for Rosetta')
-        parser.add_option('-l',dest='LIGANDNAMES',default='ZN V1 V2',
+        parser.add_argument('-l',dest='ligandnames',default='ZN V1 V2',
                       help='Names from ligands involved in constraints e.g. ZN V1 V2')
-        parser.add_option('-t',dest='LIGANDRESNAMES',default='ZN',
+        parser.add_argument('-t',dest='self.ligandresname',default='ZN',
                       help='Residue name of ligand default=ZN')
-        parser.add_option('-a',dest='LIGANDCOOR',default=False,
+        parser.add_argument('-a',dest='LIGANDCOOR',default=False,
                       help='PDB coordinates of ligand appending it to rosetta pdb input')
+        print("fine until here!")
 
+        args_dict = vars(parser.parse_args())
+        for item in args_dict:
+            setattr(self, item, args_dict[item])
 
-        (options, args) = parser.parse_args()
-
-        PDBNAME = options.PDBNAME
-        self.METAL = options.METAL
-        LIGANDNAMES = options.LIGANDNAMES
-        LIGANDRESNAMES = options.LIGANDRESNAMES
-
-        PDB = self.get_pdbfile(options.PDB)
-
-    
-        remark_pdb = open('rosetta_'+PDBNAME,'w')
-        remark = self.get_rosetta_constraint_files(PDB,PDBNAME,self.METAL,LIGANDNAMES,LIGANDRESNAMES)
+        # PDB is the file object of the input file
+        PDB = self.get_pdbfile()
+        remark_pdb = open('rosetta_'+self.pdbfile,'w')
+        remark, constraintfile = self.get_rosetta_constraint_files( PDB )
 
         tmp_pdb = self.get_atoms_pdb(PDB)
         pdb_file = remark + tmp_pdb
-    
-        if(options.LIGANDCOOR):
-            lig_file = self.get_pdbfile(options.LIGANDCOOR)
-            lig_file = self.get_heteroatoms_pdb(lig_file)
-            pdb_file = pdb_file + lig_file
 
-       
+        with open("constraint.cst",'w') as f:
+            for line in constraintfile:
+                f.write(line)
+                
         for line in pdb_file:
             remark_pdb.write(line)
 
         self.write_stats_file()
-        # print "Coordination site: ", self.metal_coordination # self.coordination_sites_protein
+
 
 if __name__ == "__main__":
     run = MetalSiteGeometry()
