@@ -476,7 +476,7 @@ class MetalSiteGeometry:
         with open("constraint.cst",'w') as f:
             for line in constraintfile:
                 f.write(line)
-                
+
         for line in pdb_file:
             remark_pdb.write(line)
 
