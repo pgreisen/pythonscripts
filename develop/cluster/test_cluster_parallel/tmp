@@ -1,3 +1,8 @@
+8 cpus 50 cpus
+real   9m20.709s
+user   64m2.196s
+sys    0m15.342s
+######################
 4 cpus
 real	0m15.466s
 user	0m52.819s

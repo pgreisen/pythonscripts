@@ -60,6 +60,7 @@ class ClusterPDBs():
 
         # Generate processes equal to the number of cores
         pool = multiprocessing.Pool()
+        print("Number of cpus used: ",multiprocessing.cpu_count())
         # Distribute the parameter sets evenly across the cores
         res = pool.map(self.global_alignment, paramlist)
 

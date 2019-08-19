@@ -21,4 +21,3 @@ var1= "NAME"
 fig = get_scatter_plot(df, x, y,'description',var1 )
 offline.iplot(fig, filename='unrooted-tree')
 offline.plot(fig, image='png', filename=var1+".html"+, image_filename=var1,auto_open=False)
-

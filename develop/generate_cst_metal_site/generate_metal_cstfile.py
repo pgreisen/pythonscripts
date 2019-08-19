@@ -140,6 +140,8 @@ class MetalSiteGeometry:
         for line in PDB:
             if line[0:4] == 'ATOM':
                 atm.append(line)
+            if line[0:4] == 'HETA':
+                atm.append(line)
         return atm
 
     # Requires pdb file
@@ -459,7 +461,6 @@ class MetalSiteGeometry:
                       help='Residue name of ligand default=ZN')
         parser.add_argument('-a',dest='LIGANDCOOR',default=False,
                       help='PDB coordinates of ligand appending it to rosetta pdb input')
-        print("fine until here!")
 
         args_dict = vars(parser.parse_args())
         for item in args_dict:

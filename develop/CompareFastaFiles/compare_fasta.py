@@ -43,4 +43,4 @@ for i in range( seqlength ):
 mut = ""
 for j in mutations:
     mut = mut +","+ j
-print mutkey,mut
+print(mutkey,mut)

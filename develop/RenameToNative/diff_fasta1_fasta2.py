@@ -123,8 +123,6 @@ class DiffFasta:
                 mutations = mutations + lc_mutations
                 new_key = self.prefix + mutations  # +"_"+key.split("_")[-1]
                 self.sciworm_format[new_key] = ("", self.design_seq[key]["LC"])
-
-
             else:
                 print("Nothing to do!!!!!!")
                 continue
