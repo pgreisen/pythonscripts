@@ -34,15 +34,21 @@ print( [item for item, count in collections.Counter(debug_sequence).items() if c
 dna_seqs = {}
 
 for key in sequences.keys():
+    stop_of_list = -1
     mut_header = ""
     tmpheader = key[1:].split('_')
-    for i in tmpheader[0:-1]:
+    integer_ = isinstance(tmpheader[-1], int)
+    if(integer_ == False):
+        stop_of_list = len(tmpheader)
+    for i in tmpheader[0:stop_of_list]:
         mut_header += i+"_"
     fastaheader, sequence = ris.run( dnafile, codonFILE, mut_header[0:-1])
     dna_seqs[fastaheader] = sequence
 
+from datetime import date
+today = date.today()
 # write fasta sequence to file
-with open("20180926_Elanco_b13G_designs_462.fasta",'w') as f:
+with open(str(today)+"_aa_sequences.fasta",'w') as f:
     for key,value in dna_seqs.items():
         f.write(">"+key+"\n")
         f.write(value+"\n")
