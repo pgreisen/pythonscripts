@@ -1,0 +1,57 @@
+{
+    "Actual Temperature:": [
+        21.7,
+        21.7,
+        NaN
+    ],
+    "Date": [
+        "2018-10-31 00:00:00"
+    ],
+    "Experiment File Path:": [
+        NaN
+    ],
+    "Plate Number": [
+        "Plate 2"
+    ],
+    "Plate Type": [
+        "96 WELL PLATE"
+    ],
+    "Procedure Details": [
+        NaN
+    ],
+    "Protocol File Path:": [
+        NaN
+    ],
+    "Read": [
+        "Absorbance Endpoint",
+        "Full Plate",
+        "Wavelengths:  600",
+        "Read Speed: Normal,  Delay: 100 msec,  Measurements/Data Point: 8",
+        "Fluorescence Endpoint",
+        "Full Plate",
+        "Filter Set 1",
+        "    Excitation: 485,  Emission: 515",
+        "    Optics: Top,  Gain: 60",
+        "Light Source: Xenon Flash,  Lamp Energy: High",
+        "Read Speed: Normal,  Delay: 100 msec,  Measurements/Data Point: 10",
+        "Read Height: 7 mm"
+    ],
+    "Reader Serial Number:": [
+        1411074
+    ],
+    "Reader Type:": [
+        "Synergy H1"
+    ],
+    "Reading Type": [
+        "Reader"
+    ],
+    "Results": [
+        NaN
+    ],
+    "Software Version": [
+        "2.06.10"
+    ],
+    "Time": [
+        null
+    ]
+}

@@ -1,3 +1,9 @@
+'''
+Uses header to insert codons into DNA string - remember to rename accordingly.
+
+
+'''
+
 import sys
 sys.path.append("/Users/pgreisen/pythonscripts/develop/insert_mutation_into_DNA_string")
 

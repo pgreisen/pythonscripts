@@ -37,8 +37,8 @@ python2.7 ~/bin/setup_RosettaCM.py --fasta $fasta --alignment reduced_hhsearch.h
 ############################################
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/cm_rosetta_homologymodels/qsub.sh;
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/cm_rosetta_homologymodels/run_setup.sh;
-#pth=$hhsearchdir/rosetta_cm
-#for i in $(seq 1 100);
-#do
-#    qsub -v path=$pth,prefix=$i\_$hhsearchdir qsub.sh;
-#done
+pth=$hhsearchdir/rosetta_cm
+for i in $(seq 1 100);
+do
+    qsub -v path=$pth,prefix=$i\_$hhsearchdir qsub.sh;
+done
