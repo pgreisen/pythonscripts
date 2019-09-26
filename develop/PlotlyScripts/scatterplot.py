@@ -19,5 +19,5 @@ def get_scatter_plot(dataframe,xlabel,ylabel,description='description',plottitle
 
 var1= "NAME"
 fig = get_scatter_plot(df, x, y,'description',var1 )
-offline.iplot(fig, filename='unrooted-tree')
-offline.plot(fig, image='png', filename=var1+".html"+, image_filename=var1,auto_open=False)
+offline.iplot(fig, filename=var1+".png",image='png')
+offline.plot(fig, image='png', filename=var1+".html", image_filename=var1,auto_open=False)
