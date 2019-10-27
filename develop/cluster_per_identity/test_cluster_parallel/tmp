@@ -1,0 +1,25 @@
+8 cpus 50 cpus
+real   9m20.709s
+user   64m2.196s
+sys    0m15.342s
+######################
+4 cpus
+real	0m15.466s
+user	0m52.819s
+sys	0m0.804s
+2 cpus
+real	0m27.533s
+user	0m46.893s
+sys	0m1.068s
+1 cpu
+real	0m39.173s
+user	0m37.587s
+sys	0m0.635s
+4 cpus, 50 seqs
+real	11m38.732s
+user	43m35.105s
+sys	0m10.555s
+2 cpus, 50 seqs
+real	17m45.670s
+user	33m10.264s
+sys	0m15.456s

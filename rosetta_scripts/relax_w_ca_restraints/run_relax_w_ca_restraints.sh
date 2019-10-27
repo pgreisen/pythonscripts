@@ -49,7 +49,7 @@ sudo apt-get install -y scons
 
 # Get rosetta executables and database
 pth_on_S3=s3://programexecutables;
-pth_on_S3_pdbs=s3://temppdb/;
+pth_on_S3_pdbs=s3://tmppdb/;
 pth=`pwd`
 if [ ! -d "database" ]; then
     aws s3 cp $pth_on_S3/database.tgz .;
