@@ -1,3 +1,8 @@
+##############################################
+
+
+
+
 ######################################
 # copy script to update ec2 instance - assume it is ubuntu for now
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws/update_ec2_ubuntu_aws_no_python.sh
@@ -8,23 +13,30 @@ sh update_ec2_ubuntu_aws_no_python.sh;
 # are linked or exists from home
 #
 ######################
-##     Enevolv
+##     set path to S3 bucket
 ######################
-aws s3 cp s3://enevolvcomputationalbiology/programs/cartesian_ddg.static.linuxgccrelease.tgz .
-aws s3 cp s3://enevolvcomputationalbiology/programs/relax.static.linuxgccrelease.tgz .
+pth_on_S3=s3://programexecutables;
+pth_on_S3_pdbs=s3://tmppdb/;
+
+
+aws s3 cp $pth_on_S3/cartesian_ddg.static.linuxgccrelease.tgz .
+aws s3 cp $pth_on_S3/relax.static.linuxgccrelease.tgz .
+aws s3 cp $pth_on_S3/database.tgz .;
+
+# unpack files
 for i in *tgz;
 do
     tar zxf $i;
     rm $i;
 done
-aws s3 cp s3://enevolvcomputationalbiology/programs/database.tgz .;
-tar zxf database.tgz;
-rm database.tgz;
-aws s3 cp s3://temppdb . --include="*.zip" --recursive;
+# Next, get pdb file on S3
+aws s3 cp $pth_on_S3_pdbs . --include="*.zip" --recursive;
+
 for tmpzip in *zip;
 do 
     unzip $tmpzip;
 done
+
 ####################
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ddg_cartesian_mutfile_aws/qsub_run_ddg.sh
 
@@ -32,6 +44,7 @@ for pdb in *.pdb;
 do
     tmppdb=$pdb;
 done
+
 cp $tmppdb 1.pdb;
 echo $tmppdb;
 initpdb=1.pdb;

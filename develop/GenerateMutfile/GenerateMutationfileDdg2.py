@@ -11,7 +11,7 @@ class GenerateMutationfileDdg:
     def __init__(self):
         self.pdbfile=""
         self.pdbfile_singleletter = ""
-        self.modulus = 10
+        self.modulus = 20
         self.pdb_ddg = {}
         self.aas = "ARNDCQEGHILKMFPSTWYV"
         self.mutations = ""
