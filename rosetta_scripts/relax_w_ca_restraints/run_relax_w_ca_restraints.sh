@@ -1,7 +1,7 @@
 #!/bin/bash -f
 run_relax() {
     i=1;
-    ncycles=10;
+    ncycles=20;
     ddgcut=1.0;
     start=3;
 while [ $i -lt $ncycles ]
