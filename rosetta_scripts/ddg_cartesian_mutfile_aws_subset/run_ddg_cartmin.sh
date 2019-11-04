@@ -5,7 +5,7 @@
 
 ######################################
 # copy script to update ec2 instance - assume it is ubuntu for now
-wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws/update_ec2_ubuntu_aws_no_python.sh
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws_subset/update_ec2_ubuntu_aws_no_python.sh
 sh update_ec2_ubuntu_aws_no_python.sh;
 ####################################### First minimize the initial pdb
 # it is required for the scripts to work
@@ -38,7 +38,7 @@ do
 done
 
 ####################
-wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ddg_cartesian_mutfile_aws/qsub_run_ddg.sh
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/ddg_cartesian_mutfile_aws_subset/qsub_run_ddg.sh
 
 for pdb in *.pdb;
 do
