@@ -1,0 +1,41 @@
+<ROSETTASCRIPTS>
+
+  <SCOREFXNS>
+
+    <ScoreFunction name="hard_rep" weights="ref2015"/>
+    
+  </SCOREFXNS>
+  
+  <RESIDUE_SELECTORS>
+
+    <Chain name="chA" chains="A"/>
+    <Chain name="chB" chains="B"/>
+
+  </RESIDUE_SELECTORS>
+
+  <TASKOPERATIONS>
+    
+    <InitializeFromCommandline name="init"/>	
+    <SetIGType name="linmem_ig" lin_mem_ig="1"/>
+    <LimitAromaChi2 name="limchi2"/>
+    
+  </TASKOPERATIONS>
+  
+  <FILTERS> 
+    
+  </FILTERS>
+  
+  
+  <MOVERS>
+    
+    <Disulfidize name="ds" match_rt_limit="2.5" max_disulf_score="1.0" min_disulfides="1" max_disulfides="2" min_loop="6" use_l_cys="true" keep_current_disulfides="true" include_current_disulfides="false" use_d_cys="false" set1="chA" set2="chA"/>       
+
+  </MOVERS>
+
+  <PROTOCOLS>
+    
+    <Add mover_name="ds"/>
+
+  </PROTOCOLS>
+
+</ROSETTASCRIPTS>

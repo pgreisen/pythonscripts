@@ -169,7 +169,7 @@ class ParametricHelicalBundle:
 
         full_pdb=open(output_file_name,'w')
         # this value is now set in the constructor
-        # atom_num=1
+        atom_num=1
 
         print "Length of CA_list", len(CA_list)
 
@@ -203,8 +203,6 @@ class ParametricHelicalBundle:
                 transform=old_actual_stub * ~ideal_stub
 
                 print "The transform is equal to ", transform
-
-
 
                 coords=transform*atom[5]
                 full_pdb.write('ATOM %6d  N   GLY %s %3d    %8.3f%8.3f%8.3f%s\n'%(atom_num,chain,res_num,coords.x,coords.y,coords.z,last))

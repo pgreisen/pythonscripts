@@ -1,0 +1,3 @@
+mutfiles and pdb located:
+
+pth_on_S3_pdbs=s3://tmppdb/;

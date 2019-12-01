@@ -154,4 +154,4 @@ class AA_analysis:
             for i in aas:
                 f.write(i + "\n")
         fig = self.get_plotly_histogram_per_AA( dfnew, values[0], values[1], name_of_plot1=values[0], name_of_plot2=values[1])
-        return fig, aas
+        return fig, aas, dfnew

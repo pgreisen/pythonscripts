@@ -1,0 +1,38 @@
+<ROSETTASCRIPTS>
+  <SCOREFXNS>
+    <ScoreFunction name="standardfxn" weights="ref2015"/>
+  </SCOREFXNS>
+  
+  <RESIDUE_SELECTORS>
+
+    <Chain name="chain1" chains="A"/>
+    <Chain name="chain2" chains="B"/>
+    <InterfaceByVector name="strict_interface" grp1_selector="chain1" grp2_selector="chain2" cb_dist_cut="6.0" vector_dist_cut="6.0"/>
+    <Not name="not_interface" selector="strict_interface"/>
+  </RESIDUE_SELECTORS>
+
+
+  <TASKOPERATIONS>
+
+    <InitializeFromCommandline name="init"/>
+    
+    <ExtraRotamersGeneric name="ex1_ex2" ex1="1" ex2="1"/>
+    
+    <OperateOnResidueSubset name="only_pack_interface" selector="not_interface">
+      <PreventRepackingRLT/>
+    </OperateOnResidueSubset>
+
+    
+  </TASKOPERATIONS>
+
+  <MOVERS>
+    <HBNetStapleInterface name="hbnet" scorefxn="standardfxn" task_operations="init,ex1_ex2,only_pack_interface" design_residues="NQSTEDKR"  secondary_search="false" minimize="false" max_replicates="3" max_replicates_before_unsat_check="5" max_replicates_before_branch="5" monte_carlo_branch="true" max_mc_nets="0" write_cst_files="false" write_network_pdbs="false" total_num_mc_runs="5"  hb_threshold="-0.1" />
+ </MOVERS>
+
+ <FILTERS>
+ </FILTERS>
+
+ <PROTOCOLS>
+   <Add mover="hbnet"/>
+ </PROTOCOLS>
+</ROSETTASCRIPTS>

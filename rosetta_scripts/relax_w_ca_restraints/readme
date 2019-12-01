@@ -1,0 +1,4 @@
+# Private the exe is and the format is zip
+# Get rosetta executables and database
+pth_on_S3=s3://programexecutables;
+pth_on_S3_pdbs=s3://tmppdb/;
