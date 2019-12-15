@@ -1,3 +1,4 @@
+-ignore_zero_occupancy false
 -ex1
 -ex2
 -use_input_sc

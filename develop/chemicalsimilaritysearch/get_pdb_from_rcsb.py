@@ -62,7 +62,7 @@ class GetPDBs:
         print(url)
         try:
             urllib.urlretrieve(url, gz_name)
-            #self.writes_to_pdb_format(gz_name,pdbname)
+            self.writes_to_pdb_format(gz_name,pdbname)
         except:
             print("Exit")
         ###'''

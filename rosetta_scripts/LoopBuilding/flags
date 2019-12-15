@@ -1,3 +1,4 @@
+-ignore_zero_occupancy false
 -loops:remodel perturb_kic
 -loops:refine refine_kic
 -kic_rama2b
