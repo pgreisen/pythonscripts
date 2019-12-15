@@ -64,8 +64,9 @@ if [ ! -f "relax.static.linuxgccrelease" ]; then
     aws s3 cp $pth_on_S3/relax.static.linuxgccrelease.tgz . ;
     tar zxf relax.static.linuxgccrelease.tgz;
     rm relax.static.linuxgccrelease.tgz;
-    wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/relax_w_ca_restraints/flags;
 fi
+# getting flags for run - small file so we will get it each time
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/rosetta_scripts/relax_w_ca_restraints/flags;
 # setting path for exe
 exe=$pth/relax.static.linuxgccrelease;
 
