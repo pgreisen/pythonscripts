@@ -73,9 +73,10 @@ class GenerateMutationfileDdg:
         total_count=0
         tmpsum = 0 
         sub = ""
+        dummy = 0
         for tot_var in list_of_variants:
             totsub = 0
-            dummy = 0
+            dummy += 1
             nr = len(tot_var)
             tmpsum += nr
             sub += str(nr)+"\n"
@@ -84,7 +85,7 @@ class GenerateMutationfileDdg:
                 pos=var[1:-1]
                 aa=var[-1]
                 sub += wt+" "+pos+" "+aa+"\n"
-            if( tmpsum >= self.modulus  ):                
+            if( tmpsum >= self.modulus  or dummy == len(list_of_variants) ):                
                 f = open( str(total_count)+".mutfile", 'w')
                 header="total "+str(tmpsum)+"\n"
                 f.write(header)
@@ -93,6 +94,8 @@ class GenerateMutationfileDdg:
                 total_count += 1
                 tmpsum = 0
                 sub = ""
+        print(tmpsum, self.modulus, sub, len(list_of_variants))
+        print(total_count == len(list_of_variants),total_count, dummy)
 
 
 
