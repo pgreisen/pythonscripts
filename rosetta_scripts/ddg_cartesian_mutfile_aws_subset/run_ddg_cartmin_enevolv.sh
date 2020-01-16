@@ -1,8 +1,5 @@
 ##############################################
 
-
-
-
 ######################################
 # copy script to update ec2 instance - assume it is ubuntu for now
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws_subset/update_ec2_ubuntu_aws_no_python.sh
