@@ -13,7 +13,7 @@ sh update_ec2_ubuntu_aws_no_python.sh;
 ##     set path to S3 bucket
 ######################
 pth_on_S3=s3://enevolvcomputationalbiology/programs;
-pth_on_S3_pdbs=s3://tmppdb/;
+pth_on_S3_pdbs=s3://temppdb/;
 
 
 aws s3 cp $pth_on_S3/cartesian_ddg.static.linuxgccrelease.tgz .
