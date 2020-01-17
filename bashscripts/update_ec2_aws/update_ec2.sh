@@ -13,7 +13,7 @@ if [ "$dist" == "\"Ubuntu\"" ]; then
   sudo apt-get install -y zlib1g-dev 
   sudo apt-get install -y scons 
 fi
-if [ "$dist" == "\"Amazon Linux AMI\"" ]; then
+if [ "$dist" == "\"Amazon Linux\"" ]; then
     echo "Amazon Linux AMI";
     sudo yum update -y
     sudo yum install awscli emacs unzip zip scons -y
