@@ -57,6 +57,7 @@ do
     $exe_hhsearch -i ${i%.fasta}.a3m -d $database_pdb -o ${i%.fasta}\_pdb.hhr
     cd ..;
 done
+wait;
 # loop over the directories collected                                                                
 for i in "${ARRAY[@]}"
 do
