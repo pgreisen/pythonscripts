@@ -45,9 +45,11 @@ database_pdb=$pth/hhsearch_databases/pdb70/pdb70;
 # gather seequences from fasta file
 unzip *zip;
 rm *zip;
+ARRAY=();
 for i in *.fasta;
 do
     dst=${i%.fasta}\_hhsearch;
+    ARRAY+=($dst);
     mkdir $dst;
     mv $i $dst;
     cd $dst;
@@ -55,4 +57,13 @@ do
     # gather homologous structures
     $exe_hhsearch -i ${i%.fasta}.a3m -d $database_pdb -o ${i%.fasta}\_pdb.hhr
     cd ..;
+done
+wait;
+# loop over the directories collected                                                                
+for dir in "${ARRAY[@]}"
+do
+    echo "$i";
+    zip -r $dir.zip $dir;
+    aws s3 cp $dir.zip s3://tempfilescm/;
+   # or do whatever with individual element of the array                                              
 done

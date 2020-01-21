@@ -48,7 +48,7 @@ ARRAY=();
 for i in *.fasta;
 do
     dst=${i%.fasta}\_hhsearch;
-    ARRAY+=($i);
+    ARRAY+=($dst);
     mkdir $dst;
     mv $i $dst;
     cd $dst;
@@ -59,10 +59,10 @@ do
 done
 wait;
 # loop over the directories collected                                                                
-for i in "${ARRAY[@]}"
+for dir in "${ARRAY[@]}"
 do
     echo "$i";
-    zip -r $i.zip $i;
-    aws cp $i.zip s3://tempfilescm/;
-   # or do whatever with individual element of the array                                              
+    zip -r $dir.zip $dir;
+    aws s3 cp $dir.zip s3://tempfilescm/;
+   # or do whatever with individual element of the array                                             
 done
