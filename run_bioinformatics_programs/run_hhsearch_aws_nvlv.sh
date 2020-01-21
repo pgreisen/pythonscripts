@@ -1,5 +1,5 @@
 ######################################
-wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws_subset/update_ec2.sh
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws/update_ec2.sh;
 bash update_ec2.sh;
 ######################################
 # next copy executables from S3 bucket
