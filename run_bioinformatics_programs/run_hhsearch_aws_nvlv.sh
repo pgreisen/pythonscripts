@@ -44,9 +44,11 @@ aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive
 # gather seequences
 unzip *zip;
 rm *zip;
+ARRAY=();
 for i in *.fasta;
 do
     dst=${i%.fasta}\_hhsearch;
+    ARRAY+=($i);
     mkdir $dst;
     mv $i $dst;
     cd $dst;
@@ -54,4 +56,12 @@ do
     # gather homologous structures
     $exe_hhsearch -i ${i%.fasta}.a3m -d $database_pdb -o ${i%.fasta}\_pdb.hhr
     cd ..;
+done
+# loop over the directories collected                                                                
+for i in "${ARRAY[@]}"
+do
+    echo "$i";
+    zip -r $i.zip $i;
+    aws cp $i.zip s3://tempfilescm/;
+   # or do whatever with individual element of the array                                              
 done
