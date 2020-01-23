@@ -12,6 +12,7 @@ class RunPSSM:
         self.credentials = ""
         self.file_w_credentials = ""
         self.zipped_fasta_file = ""
+        # a public image id for ubuntu
         self.imageid = 'ami-0ac019f4fcb7cb7e6'
         # Gb on running instance
         self.volumensize = 150
@@ -24,14 +25,28 @@ class RunPSSM:
         self.instance_id = ""
         self.url_instance = ""
         self.keyname = ""
-        self.exe_pssm = "nohup sh run_pssm_nvlv.sh /dev/null 2>&1 &"
+        self.run_file = ""
+        self.exe_pssm = ""
+        # time to wait for the ec2 instance to spin up
+        self.sleep = 60
+        self.vpc = "vpc-0a3c8ad289df9821e"
+        self.subnet = "subnet-03c72665ab3e78032"
+        self.sg = "sg-0a88bfaa0bc258091"
+
+    def set_run_file(self):
+        file = self.run_file.split('/')[-1]
+        #self.exe_pssm = "nohup bash "+file+" /dev/null 2>&1 &"
+        self.exe_pssm = str("nohup bash " + file + " & echo ")
 
 
     def get_setup_and_run(self):
-        getfile = "wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/run_bioinformatics_programs/run_pssm_nvlv.sh"
+        getfile = "wget "+self.run_file
+        self.set_run_file()
         exe='''
         mkdir .aws;
-        echo [default] >>.aws/credentials \n echo aws_access_key_id = '''+self.aws_access_key_id+''' >>.aws/credentials \n echo aws_secret_access_key = '''+self.aws_secret_access_key+''' >> .aws/credentials \n'''+getfile+''' \n '''+self.exe_pssm
+        echo [default] >>.aws/credentials \n echo aws_access_key_id = '''+self.aws_access_key_id+''' >>.aws/credentials \n echo aws_secret_access_key = '''+self.aws_secret_access_key+\
+            ''' >> .aws/credentials \n'''+getfile+''' \n '''+self.exe_pssm+''' \n'''
+        print("Type of return from get_setup_and_run: ", type(exe), exe)
         return exe
 
     def ssh_and_execute_script(self, host, username, command):
@@ -39,29 +54,28 @@ class RunPSSM:
         cert = paramiko.RSAKey.from_private_key_file(self.keyname)
 
         # time for aws to spin up the instance
-        time.sleep(30)
+        time.sleep(self.sleep)
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        client.connect(hostname=host, username=username, timeout=60, pkey = cert)
+        client.connect(hostname=host, username=username, timeout=self.sleep, pkey = cert)
         print("Connected to the server",host)
         print("Executing command --> {}".format(command))
-        stdin, stdout, stderr = client.exec_command(command) #, timeout=10)
+        stdin, stdout, stderr = client.exec_command(command, timeout=self.sleep)
         ssh_output = stdout.read()
         print(ssh_output)
         ssh_error = stderr.read()
         if ssh_error:
+            print("#####1: ",command)
+            print("#########2: ", ssh_error)
             print("Problem occurred while running command:"+ command + " The error is " + ssh_error)
         else:
             print("Job running")
 
-
-
-
     def create_ec2_instance(self):
+        print(self.vpc)
         self.set_credentials()
         ec2 = self.session.resource('ec2')
-
-        vpc = ec2.Vpc('vpc-bce42cdb')
+        vpc = ec2.Vpc(self.vpc)
         # Attributes
         print(vpc.cidr_block)
         print(vpc.state)
@@ -78,7 +92,7 @@ class RunPSSM:
             InstanceType=self.instance_type,
             KeyName=str(self.key),
             BlockDeviceMappings=[{"DeviceName": "/dev/sda1","Ebs" : { "VolumeSize" : self.volumensize }}],
-            NetworkInterfaces=[{'SubnetId': "subnet-4231481a", 'DeviceIndex': 0, 'AssociatePublicIpAddress': True,'Groups': ["sg-000b7b3f619c435cc"]}])
+            NetworkInterfaces=[{'SubnetId': self.subnet, 'DeviceIndex': 0, 'AssociatePublicIpAddress': True,'Groups': [self.sg]}])
 
         for i in instances:
             self.instance_id = i.id
@@ -88,8 +102,7 @@ class RunPSSM:
 
         from time import sleep
         # time to setup ec2 instance
-        sleep(25.0)
-
+        sleep(self.sleep)
         running_instances = ec2.instances.filter(Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
         for instance in running_instances:
             print(self.instance_id,instance.id)
@@ -99,7 +112,6 @@ class RunPSSM:
 
 
     def copy_file_to_S3(self) -> object:
-
         session = boto3.Session(aws_access_key_id=self.aws_access_key_id, aws_secret_access_key=self.aws_secret_access_key)
         s3 = session.resource('s3')
         client = s3.meta.client
@@ -130,33 +142,28 @@ class RunPSSM:
         parser.add_argument('-z', dest='zipped_fasta_file', help='Zip-file to transfer')
         parser.add_argument('-m', dest='imageid', help='ImageId', default="ami-0ac019f4fcb7cb7e6")
         parser.add_argument('-c', dest='credentials', help='')
-        parser.add_argument('-b', dest='bucket', help='')
-        parser.add_argument('-k', dest='keyname', help='')
+        parser.add_argument('-b', dest='bucket', help='Destination of the zip file used to run the desired application')
+        parser.add_argument('-k', dest='keyname', help='Key used to access the instance')
+        parser.add_argument('-r', dest='run_file', help='Bash script containing the run specifications')
+        parser.add_argument('--vpc', dest='vpc', help='VPC - virtual private cloud to use for spinning up ec2 instances',default='vpc-0a3c8ad289df9821e')
 
         args_dict = vars(parser.parse_args())
 
         for item in args_dict:
             setattr(self, item, args_dict[item])
 
-        #print(self.keyname)
-        #assert 1 == 0
-        # getting credential
+         # getting credential
         self.set_credentials_constructor()
         #
         self.copy_file_to_S3()
         # create ec2 instance and get url
         self.create_ec2_instance()
 
-        # ssh and execute cmds
-        ## # client.connect(hostname=self.url_instance,username=self.username,timeout=60) #self.get_setup_and_run()
-
         command = self.get_setup_and_run()
         print(command, self.url_instance, self.username)
         self.ssh_and_execute_script(self.url_instance,self.username,command)
 
 
-
 if __name__ == "__main__":
     run = RunPSSM()
     run.main()
-
