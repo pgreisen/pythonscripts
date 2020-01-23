@@ -45,7 +45,7 @@ class RunPSSM:
         exe='''
         mkdir .aws;
         echo [default] >>.aws/credentials \n echo aws_access_key_id = '''+self.aws_access_key_id+''' >>.aws/credentials \n echo aws_secret_access_key = '''+self.aws_secret_access_key+\
-            ''' >> .aws/credentials \n'''+getfile+''' \n '''+self.exe_pssm+''' \n'''
+            ''' >> .aws/credentials \n'''+getfile+''' && '''+self.exe_pssm+''';'''
         print("Type of return from get_setup_and_run: ", type(exe), exe)
         return exe
 
