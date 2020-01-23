@@ -36,7 +36,7 @@ class RunPSSM:
     def set_run_file(self):
         file = self.run_file.split('/')[-1]
         #self.exe_pssm = "nohup bash "+file+" /dev/null 2>&1 &"
-        self.exe_pssm = str("nohup bash " + file + " & echo ")
+        self.exe_pssm = str(" bash " + file )
 
 
     def get_setup_and_run(self):
@@ -62,14 +62,13 @@ class RunPSSM:
         print("Executing command --> {}".format(command))
         stdin, stdout, stderr = client.exec_command(command, timeout=self.sleep)
         ssh_output = stdout.read()
-        print(ssh_output)
         ssh_error = stderr.read()
         if ssh_error:
-            print("#####1: ",command)
-            print("#########2: ", ssh_error)
             print("Problem occurred while running command:"+ command + " The error is " + ssh_error)
         else:
             print("Job running")
+        # does this work?
+        client.close()
 
     def create_ec2_instance(self):
         print(self.vpc)
