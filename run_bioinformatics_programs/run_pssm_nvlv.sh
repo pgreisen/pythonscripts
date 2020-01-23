@@ -1,7 +1,7 @@
 ######################################
 # copy script to update ec2 instance - assume it is ubuntu for now
 wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws/update_ec2_ubuntu_aws_no_python.sh
-sh update_ec2_ubuntu_aws_no_python.sh;
+bash update_ec2_ubuntu_aws_no_python.sh;
 ######################################
 # next copy executables from S3 bucket
 aws s3 cp s3://tempfilespssm . --include="*.zip" --recursive;

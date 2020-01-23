@@ -110,7 +110,7 @@ class RunPSSM:
         print(self.url_instance)
 
 
-    def copy_file_to_S3(self) -> object:
+    def copy_file_to_s3(self) -> object:
         session = boto3.Session(aws_access_key_id=self.aws_access_key_id, aws_secret_access_key=self.aws_secret_access_key)
         s3 = session.resource('s3')
         client = s3.meta.client
@@ -154,7 +154,7 @@ class RunPSSM:
          # getting credential
         self.set_credentials_constructor()
         #
-        self.copy_file_to_S3()
+        self.copy_file_to_s3()
         # create ec2 instance and get url
         self.create_ec2_instance()
 
