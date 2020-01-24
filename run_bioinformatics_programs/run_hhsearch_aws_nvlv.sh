@@ -1,9 +1,7 @@
 ######################################
-wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws/update_ec2.sh;
-bash update_ec2.sh;
+wget https://raw.githubusercontent.com/pgreisen/pythonscripts/master/bashscripts/update_ec2_aws/update_ec2.sh && bash update_ec2.sh;
 ######################################
 # next copy executables from S3 bucket
-
 # test if files have already been copied
 if [ ! -d "hh-suite" ]; then
     aws s3 cp s3://enevolvcomputationalbiology/databases/hh-suite.tgz .;
