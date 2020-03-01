@@ -6,17 +6,13 @@ if [ "$dist" == "\"Ubuntu\"" ]; then
   sudo apt install -y build-essential;
   sudo apt-get install -y libsqlite3-dev;
   sudo apt install -y libgl1-mesa-dev;
-  sudo apt  install -y awscli 
-  sudo apt install -y emacs
-  sudo apt install -y unzip
-  sudo apt install -y zip
+  sudo apt  install -y awscli python3-pip emacs unzip zip scons
   sudo apt-get install -y zlib1g-dev 
-  sudo apt-get install -y scons 
 fi
 if [ "$dist" == "\"Amazon Linux\"" ]; then
     echo "Amazon Linux AMI";
     sudo yum update -y
-    sudo yum install awscli emacs unzip zip scons -y
+    sudo yum install awscli emacs unzip zip scons python3-pip -y
 fi
 
 

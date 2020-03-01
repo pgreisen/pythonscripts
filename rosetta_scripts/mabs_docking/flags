@@ -1,0 +1,13 @@
+-run::preserve_header
+-out::overwrite
+-packing
+  -use_input_sc
+  -ex1
+  -ex2
+-no_optH false
+-flip_HNQ
+-no_his_his_pairE
+-partners HL_A
+-dock_pert 3 8
+-nstruct 500
+-docking_local_refine

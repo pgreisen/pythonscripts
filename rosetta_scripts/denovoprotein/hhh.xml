@@ -1,0 +1,90 @@
+<ROSETTASCRIPTS>
+  
+  <SCOREFXNS>
+    <ScoreFunction name="sfxn_std"  weights="ref2015"/>
+    <ScoreFunction name="SFXN1" weights="fldsgn_cen">
+      <!-- Reweight scoretype="cenpack" weight="1.0" -->
+      <Reweight scoretype="hbond_sr_bb" weight="1.0" />
+      <Reweight scoretype="hbond_lr_bb" weight="1.0" />
+      <Reweight scoretype="atom_pair_constraint" weight="1.0" />
+      <Reweight scoretype="angle_constraint" weight="1.0" />
+      <Reweight scoretype="dihedral_constraint" weight="1.0" />
+    </ScoreFunction>
+	  
+    <ScoreFunction name="SFXN2" weights="fldsgn_cen">
+      <!-- Reweight scoretype="cenpack" weight="1.0" -->
+      <Reweight scoretype="hbond_sr_bb" weight="1.0" />
+      <Reweight scoretype="hbond_lr_bb" weight="1.0" />
+      <Reweight scoretype="atom_pair_constraint" weight="1.0" />
+      <Reweight scoretype="angle_constraint" weight="1.0" />
+      <Reweight scoretype="dihedral_constraint" weight="1.0" />
+    </ScoreFunction>
+  </SCOREFXNS>
+
+  <TASKOPERATIONS>
+    <LayerDesign name="layer_core_SCN" layer="core" pore_radius="2.0" verbose="true" use_sidechain_neighbors="True" core="4" />
+  </TASKOPERATIONS>
+
+  <FILTERS>
+    <ScoreType name="hbond_sfn" scorefxn="sfxn_std" score_type="hbond_lr_bb" threshold="0"/>
+    <HelixKink name="hk1" blueprint="hhh.4.3.bp"/>
+    <SheetTopology name="sf1" blueprint="hhh.4.3.bp" />
+    <SecondaryStructure name="ss1" blueprint="hhh.4.3.bp.ss" />
+    <CompoundStatement name="cs1">
+      <AND filter_name="ss1" />
+      <AND filter_name="hk1" />
+    </CompoundStatement>
+    <ScoreType name="total_score_cen" score_type="total_score" scorefxn="SFXN2" confidence="0" threshold="0" />
+    <PackStat name="pack" confidence="0"/>
+    <CavityVolume name="cavity" confidence="0"/>
+    <CalculatorFilter name="cavity_threshold" equation="c" threshold="1" confidence="1" >
+		<Var name="c" filter="cavity"/>
+    </CalculatorFilter>
+    <ResidueCount name="AlaCount" residue_types="ALA" max_residue_count="6" confidence="1"/>
+    <AverageDegree name="degree_core_SCN" task_operations="layer_core_SCN" confidence="1" threshold="9.4" />
+    <ResidueCount name="res_count_all" max_residue_count="9999" confidence="0"/>
+    <ResidueCount name="res_count_core_SCN" task_operations="layer_core_SCN" max_residue_count="9999" confidence="0"/>
+    <CalculatorFilter name="percent_core_SCN" equation="- rescount_coreSCN / (rescount3 + 0.01)" threshold="-0.1" confidence="1" >
+      <Var name="rescount3" filter="res_count_all"/>
+      <Var name="rescount_coreSCN" filter="res_count_core_SCN"/>
+    </CalculatorFilter>
+    <BuriedUnsatHbonds name="unsat_hbond" confidence="1" jump_number="0" cutoff="5"/>
+  </FILTERS>
+
+  <TASKOPERATIONS>
+    <LimitAromaChi2 name="limitchi2" include_trp="1" />
+    <LayerDesign name="layer_all" layer="core_boundary_surface_Nterm_Cterm" use_sidechain_neighbors="True" pore_radius="2.0" verbose="true" core="4.0" />
+    <NoRepackDisulfides name="exemptdisulf" />
+  </TASKOPERATIONS>
+
+  <MOVERS>
+	<Dssp name="dssp" />
+	<SetSecStructEnergies name="set_ssene1" scorefxn="SFXN1" blueprint="hhh.4.3.bp" />     
+	<BluePrintBDR name="bdr1" use_abego_bias="1" scorefxn="SFXN1" constraints_NtoC="-1.0" blueprint="hhh.4.3.bp" />
+	<DumpPdb name="dump" fname="pass" tag_time="True"/>
+	<FastDesign name="fastdes" task_operations="limitchi2,layer_all" scorefxn="sfxn_std" clear_designable_residues="0" repeats="2" ramp_down_constraints="0" />
+	<FastDesign name="fastdes4" task_operations="limitchi2,layer_all" scorefxn="sfxn_std" clear_designable_residues="0" repeats="4" ramp_down_constraints="0" />
+	<ParsedProtocol name="build_dssp1" >
+		<Add mover_name="bdr1" />
+		<Add mover_name="dssp" />
+		<Add filter_name="cs1" />
+		<Add filter_name="degree_core_SCN" />
+		<Add mover_name="fastdes"/>
+		<Add filter_name="cavity_threshold" />
+		<Add filter_name="percent_core_SCN" />
+		<Add filter_name="AlaCount" />
+		<Add filter_name="unsat_hbond" />
+		<Add mover_name="dump"/>
+	</ParsedProtocol>
+	<LoopOver name="lover1" mover_name="build_dssp1" iterations="500" drift="0" ms_whenfail="FAIL_DO_NOT_RETRY" />
+	<ParsedProtocol name="phase1" >
+		<Add mover_name="set_ssene1" />
+		<Add mover_name="lover1" />
+	</ParsedProtocol>
+</MOVERS>
+
+<PROTOCOLS>
+	<Add mover_name="phase1" />
+</PROTOCOLS>
+
+</ROSETTASCRIPTS>

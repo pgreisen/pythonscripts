@@ -1,3 +1,4 @@
+#from iteOArtools import *
 from itertools import *
 import os
 import sys
@@ -52,6 +53,7 @@ class Combinations:
         self.fastasequence = ""
         self.processors = 8
         self.gvf = GenerateVariantsinFastafile()
+        self.dummy_count = False
 
     def combinations(self,iterable, r):
         # combinations('ABCD', 2) --> AB AC AD BC BD CD
@@ -155,10 +157,10 @@ class Combinations:
             tmp_chain = "A"
             newfastasequence = self.gvf.get_mutated_fasta_string( tmp_pos, tmp_native, tmp_mutant, newfastasequence)
             name += tmpposition+"_"
+        if( self.dummy_count):
+            name += "_"+str(groupnr)
 
-        name += str(groupnr)
-
-        return name, newfastasequence
+        return name[0:-1], newfastasequence
 
     def get_generator_of_combinations(self):
         b = self.combinations(self.list_of_mutations, self.combi)
@@ -212,6 +214,7 @@ class Combinations:
         combi = sys.argv[2]
         fastafile = sys.argv[3]
         self.setup(inputfile,combi,fastafile)
+        
 
 
 if __name__ == "__main__":

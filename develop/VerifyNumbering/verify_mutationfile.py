@@ -22,6 +22,7 @@ with open(mutationsfile,'r') as f:
 mutations = list(set(mutations))
 fix = []
 for i in mutations:
+
     mutstring = "Mut: "+i[0]+" pos: "+str(i[1:-1])+" WT: "+fastaseq[key][int(i[1:-1])]
 
     if( i[0] != fastaseq[key][int(i[1:-1])-1 ]):
