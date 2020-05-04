@@ -1,17 +1,11 @@
-total 12
-3
-A 202 F
-P 112 R
-H 23 W
-3
-A 202 F
-T 88 N
-H 23 W
-3
-A 202 F
-T 88 S
-H 23 W
-3
-V 325 G
-P 112 R
-T 88 N
+total 5
+1
+V 2 E
+1
+V 2 G
+1
+V 2 H
+1
+V 2 I
+1
+V 2 L

@@ -1,6 +1,6 @@
 
 
-cat 1XQ8.pdb |grep CA
+#cat 1XQ8.pdb |grep CA
 
 # load the protein
 cmd.load("protA.pdb")

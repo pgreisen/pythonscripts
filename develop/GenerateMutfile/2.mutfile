@@ -1,16 +1,11 @@
-total 10
-2
-V 325 G
-T 88 S
-2
-V 325 G
-H 23 W
-2
-P 112 R
-T 88 N
-2
-P 112 R
-T 88 S
-2
-P 112 R
-H 23 W
+total 5
+1
+A 1 K
+1
+A 1 M
+1
+A 1 F
+1
+A 1 P
+1
+A 1 S

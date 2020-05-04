@@ -11,3 +11,4 @@
 -dock_pert 3 8
 -nstruct 500
 -docking_local_refine
+-out:file:silent docks.silent

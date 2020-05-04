@@ -111,7 +111,7 @@ class GenerateMutationfileDdg:
     def main(self):
         parser = argparse.ArgumentParser(description="Generate multiple files as input for ddG calculations in Rosetta")
         parser.add_argument('--pdbfile','-p', dest="pdbfile", help="pdbfile")
-        parser.add_argument('--modulus','-m', dest="modules", help="split each position into multiples")
+        parser.add_argument('--modulus','-m', dest="modulus", help="split each position into multiples")
         parser.add_argument('--file','-f', dest="mutations", help="File with mutations e.g. A203E\nD325F etc")
         parser.add_argument('--number','-n', dest="number", help="Number of mutations e.g. single and double mutations with n = 2",default=1,type=int)
         

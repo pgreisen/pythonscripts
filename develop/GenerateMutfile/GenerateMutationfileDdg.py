@@ -86,7 +86,7 @@ class GenerateMutationfileDdg:
     def main(self):
         parser = argparse.ArgumentParser(description="Generate multiple files as input for ddG calculations in Rosetta")
         parser.add_argument('--pdbfile','-p', dest="pdbfile", help="pdbfile")
-        parser.add_argument('--modulus','-m', dest="modules", help="split each position into multiples")
+        parser.add_argument('--modulus','-m', dest="modulus", help="split each position into multiples")
 
         args_dict = vars(parser.parse_args())
         for item in args_dict:
