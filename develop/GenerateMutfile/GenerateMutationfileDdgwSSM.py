@@ -84,6 +84,7 @@ class GenerateMutationfileDdg:
                 pos=var[1:-1]
                 aa=var[-1]
                 sub += wt+" "+pos+" "+aa+"\n"
+            #print(sub, tmpsum, self.modulus)
             if( tmpsum >= self.modulus  or dummy == len(list_of_variants) ):                
                 f = open( str(total_count)+".mutfile", 'w')
                 header="total "+str(tmpsum)+"\n"
@@ -94,6 +95,37 @@ class GenerateMutationfileDdg:
                 tmpsum = 0
                 sub = ""
 
+##
+    def write_mutation_file_ssm(self, list_of_variants):
+        # header = "total 1\n1\n"
+        # 'D_178': 178
+        total_count=0
+        tmpsum = 0 
+        sub = ""
+        dummy = 0
+        nr = 1
+        for tot_var in list_of_variants:
+            totsub = 0
+            dummy += 1
+            tmpsum += nr
+            sub += str(nr)+"\n"
+            wt=tot_var[0]
+            pos=tot_var[1:-1]
+            aa=tot_var[-1]
+            
+            sub += wt+" "+pos+" "+aa+"\n"
+            if( tmpsum >= self.modulus or dummy == len(list_of_variants) ):                
+                f = open( str(total_count)+".mutfile", 'w')
+                header="total "+str(tmpsum)+"\n"
+                f.write(header)
+                f.write(sub)
+                f.close()
+                total_count += 1
+                tmpsum = 0
+                sub = ""
+
+
+                
     def generate_ssm(self):
         print(len(self.pdbfile_singleletter))
         for i in range(len(self.pdbfile_singleletter)):
@@ -129,33 +161,38 @@ class GenerateMutationfileDdg:
         args_dict = vars(parser.parse_args())
         for item in args_dict:
           setattr(self, item, args_dict[item])
+
+        list_of_variants = []
         if( self.ssm != 0  ):
             self.set_single_letter_pdb()
             self.generate_ssm()
 
-            list = self.generate_mutfile()
+            for i in self.muts.keys():
+                print(self.muts[i])
+                for j in self.muts[i]:
+                    list_of_variants.append( j )
+            self.write_mutation_file_ssm( list_of_variants)
 
         else:
             self.set_mutations()
             list = self.generate_mutfile()
-            
-        list_of_variants = []
-        for i in list:
-            for j in list[i]:
 
-                '''
-                list 1 N2 ('325', '23')
-                325 ['V325G']
-                23 ['H23W']
-                '''
-                b = []
-                for k in j:
-                    b.append( self.muts[k] )
-                c = product(*b)
-                for l in c:
-                    list_of_variants.append(l)
 
-        self.write_mutation_file( list_of_variants)
+            for i in list:
+                for j in list[i]:
+
+                    '''
+                    list 1 N2 ('325', '23')
+                    325 ['V325G']
+                    23 ['H23W']
+                    '''
+                    b = []
+                    for k in j:
+                        b.append( self.muts[k] )
+                    c = product(*b)
+                    for l in c:
+                        list_of_variants.append(l)
+            self.write_mutation_file( list_of_variants)
 
 if __name__ == "__main__":
     run = GenerateMutationfileDdg()

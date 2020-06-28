@@ -9,8 +9,12 @@ import argparse
 from Bio.SubsMat import MatrixInfo as matlist
 import itertools
 import multiprocessing
-
-
+import pandas as pd
+from matplotlib import pyplot as plt
+import numpy as np
+from sklearn.neighbors.nearest_centroid import NearestCentroid
+import random
+random.seed(42)
 '''
 good example here:
 
@@ -32,7 +36,7 @@ class ClusterPDBs():
         #self.scorematrixmatrix = matlist.blosum62
         self.scorematrixmatrix = matlist.pam30
         self.records = None
-
+        
 
     def global_alignment(self,params):
         i = params[0]
@@ -48,6 +52,10 @@ class ClusterPDBs():
         handle = open(self.fastafile, "rU")
         self.records = list(SeqIO.parse(handle, "fasta"))
 
+        lookup = {}
+        for i in self.records:
+            lookup[i.seq] =  i.name
+
         nm_seqs = len(self.records)
         scores = [[0 for i in range(nm_seqs)] for j in range(nm_seqs)]
 
@@ -58,34 +66,63 @@ class ClusterPDBs():
         # Generate a list of tuples where each tuple is a combination of parameters.
         # The list will contain all possible combinations of parameters.
         paramlist = list(itertools.product(seqA,seqB))
+        ##paramlist = list(itertools.combinations(seqA,2))
 
         # Generate processes equal to the number of cores
         pool = multiprocessing.Pool()
         print("Number of cpus used: ",multiprocessing.cpu_count())
         # Distribute the parameter sets evenly across the cores
+        # Global alignment returns this: (s1, s2, score, start, end,i,j)
         res = pool.map(self.global_alignment, paramlist)
 
+        # dataframe to collect all the data
+        columns = ["S1", "S2", "Score", "Start", "End", "i","j"]
+        dfs = []
         for tmp in res:
-            scores[tmp[-2]][tmp[-1]] = tmp[2]
+            score_ = tmp[2]
+            dict_ = {"S1" : tmp[0],
+                     "S2" : tmp[1],
+                     "Score" : score_,
+                     "Start" : tmp[3],
+                     "End" : tmp[4],
+                     "i" : lookup[tmp[0]],
+                     "j" : lookup[tmp[1]]}
+            scores[tmp[-2]][tmp[-1]] = score_
+            dfs.append(pd.DataFrame([dict_]))
+
+        df = pd.concat(dfs)
+        df = df.reset_index()
+        df.to_csv("phylogenetic_data.csv")
 
         from sklearn.metrics import pairwise_distances_argmin_min
-        kmeans = cluster.KMeans(self.clusters)
+        from sklearn.cluster import AgglomerativeClustering 
+        hc = AgglomerativeClustering(n_clusters = self.clusters, linkage='ward') 
 
-        results = kmeans.fit(scores)
-        closest, _ = pairwise_distances_argmin_min(results.cluster_centers_, scores, metric="hamming")
-        centroids = results.cluster_centers_
+        y_hc=hc.fit_predict(scores)
+        cluster_labels = hc.labels_
+               
+        clf = NearestCentroid()
+        clf.fit(scores, y_hc)
 
-        labels = results.labels_
+        target_counts = pd.Series(y_hc).value_counts()
+        target_counts.plot.barh(colors=['#cb181d', '#fb6a4a', '#fcae91', '#fee5d9'],edgecolor='white');
+        plt.title('Cluster Counts')
+        plt.xlabel('Count')
+        plt.ylabel('Cluser');
+        plt.savefig('variants_per_clusters.png')        
+        
+        labels = hc.labels_
         clusters = [[] for i in range(self.clusters)]
         for i in range(0, nm_seqs):
             clusters[labels[i]].append(self.records[i])
 
-        with open("cluster_centers.fasta",'w') as f:
-            for i in range(len(closest)):
-                seq_ = str(self.records[closest[i]].seq)
-                name_ = self.records[closest[i]].name+"_cluster_"+str(i)
+        with open("cluster_centers_stochastic.fasta",'w') as f:
+            for i in range(0, self.clusters):
+                rd_ = random.choice(clusters[i])
+                seq_ = rd_.seq
+                name_ = rd_.name+"_cluster_"+str(i)
                 f.write(">"+name_+"\n")
-                f.write(seq_+"\n")
+                f.write(str(seq_)+"\n")
 
         for i in range(0, len(clusters)):
             output_handle = open("c." + str(i) + ".fasta", "w")
