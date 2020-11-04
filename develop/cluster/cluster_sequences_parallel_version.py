@@ -139,6 +139,7 @@ class ClusterPDBs():
         parser = argparse.ArgumentParser(description="Cluster information")
         parser.add_argument('-g', dest='gap_extend', help='Gap extension', default=-0.5, type=float)
         parser.add_argument('-f', dest='fastafile', help='Fasta file with all sequence to be clustered')
+        parser.add_argument('-c', dest='clusters', help='Number of clusters to generate. ')
 
         args_dict = vars(parser.parse_args())
         for item in args_dict:
