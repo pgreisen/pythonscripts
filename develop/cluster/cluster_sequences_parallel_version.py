@@ -26,7 +26,7 @@ class ClusterPDBs():
 
     def __init__(self):
 
-        self.clusters = 15
+        self.clusters = None
         self.gap_open = -10
         self.gap_extend = -0.5
         self.seqs = {}
@@ -48,6 +48,7 @@ class ClusterPDBs():
 
 
     def set_and_write_clusters(self):
+        print("Number of clusters: ", self.clusters)
 
         handle = open(self.fastafile, "rU")
         self.records = list(SeqIO.parse(handle, "fasta"))
@@ -139,12 +140,11 @@ class ClusterPDBs():
         parser = argparse.ArgumentParser(description="Cluster information")
         parser.add_argument('-g', dest='gap_extend', help='Gap extension', default=-0.5, type=float)
         parser.add_argument('-f', dest='fastafile', help='Fasta file with all sequence to be clustered')
-        parser.add_argument('-c', dest='clusters', help='Number of clusters to generate. ')
+        parser.add_argument('-c', dest='clusters', help='Number of clusters to generate. ', type=int,default=16)
 
         args_dict = vars(parser.parse_args())
         for item in args_dict:
             setattr(self, item, args_dict[item])
-
         self.set_and_write_clusters()
 
 

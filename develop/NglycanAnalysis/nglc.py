@@ -16,4 +16,5 @@ with open(fastafile, 'r') as f:
 for i in fasta_seqs.keys():
     result = []
     result.append( re.findall(r'N[A-Z][ST]',fasta_seqs[i] ) )
-    print("N-Glc present: ",result)
+    if(len(result[0]) > 0):
+        print("N-Glc present: ",result,i)
