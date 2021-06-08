@@ -1,0 +1,66 @@
+{
+    "snippets" : [
+        {
+            "name" : "New example",
+            "code" : [
+                "# This is an example snippet!",
+                "# To create your own, add a new snippet block to the",
+                "# snippets.json file in your jupyter data directory under nbextensions:",
+                "# $(jupyter --data-dir)/nbextensions/snippets/snippets.json",
+                "import this"
+            ]
+        },
+        {
+            "name" : "PlotlyLibraries",
+            "code" : [
+                "import plotly",
+                "from plotly.graph_objs import Scatter, Layout",
+                "import plotly",
+                "import plotly.offline as offline",
+                "import plotly.graph_objs as go",
+                "import plotly.plotly as py",
+                "import plotly.figure_factory as ff",
+                "plotly.offline.init_notebook_mode(connected=False)"
+            ]
+        },
+        {
+            "name" : "PandasNumpySeaborn",
+            "code" : [
+	    	"import pandas as pd",
+		"import seaborn as sns",
+		"import numpy as np",
+		"from scipy.stats import gmean",
+		"import matplotlib.pyplot as plt",
+		"%matplotlib inline"
+            ]
+        },
+        {
+            "name" : "PlotlyScatterPlot",
+            "code" : [
+	    	"%load /Users/pgreisen/pythonscripts/develop/PlotlyScripts/scatterplot.py"
+            ]
+        },
+        {
+            "name" : "Fasta2Dict2Dataframe",
+            "code" : [
+	    	"%load /Users/pgreisen/pythonscripts/develop/ScriptsForJupyterNotebook/fasta2dataframe.py"
+            ]
+        },
+        {
+            "name" : "RenameToWT",
+            "code" : [
+	    	"import sys",
+		"sys.path.append(\"/Users/pgreisen/pythonscripts/develop/RenameToNative\")",
+    		"import RenameRelativeToNativeSeq as rrn",
+		"r_ = rrn.DiffFasta()",
+                "#var_ = r_.diff_sequence_a_b(nn_seq_,test_seq_)"
+            ]
+        },
+        {
+            "name" : "IntersectionTwoLists",
+            "code" : [
+	    	"def intersection(lst1, lst2): \r\n    lst3 = [value for value in lst1 if value in lst2] \r\n    return lst3 "
+            ]
+        }
+    ]
+}
