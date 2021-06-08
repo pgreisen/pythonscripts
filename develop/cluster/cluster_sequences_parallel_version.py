@@ -86,8 +86,8 @@ class ClusterPDBs():
                      "Score" : score_,
                      "Start" : tmp[3],
                      "End" : tmp[4],
-                     "i" : lookup[tmp[0]],
-                     "j" : lookup[tmp[1]]}
+                     "i" : lookup[tmp[0].replace('-','')],
+                     "j" : lookup[tmp[1].replace('-','')]}
             scores[tmp[-2]][tmp[-1]] = score_
             dfs.append(pd.DataFrame([dict_]))
 
@@ -106,7 +106,7 @@ class ClusterPDBs():
         clf.fit(scores, y_hc)
 
         target_counts = pd.Series(y_hc).value_counts()
-        target_counts.plot.barh(colors=['#cb181d', '#fb6a4a', '#fcae91', '#fee5d9'],edgecolor='white');
+        target_counts.plot.barh(edgecolor='white');
         plt.title('Cluster Counts')
         plt.xlabel('Count')
         plt.ylabel('Cluser');
@@ -116,6 +116,7 @@ class ClusterPDBs():
         clusters = [[] for i in range(self.clusters)]
         for i in range(0, nm_seqs):
             clusters[labels[i]].append(self.records[i])
+
 
         with open("cluster_centers_stochastic.fasta",'w') as f:
             for i in range(0, self.clusters):
